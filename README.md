@@ -545,3 +545,64 @@ Creemos que la publicación de datos agregados fomentará colaboración externa 
 Sabremos que hemos tenido éxito cuando al menos 2 actores externos consuman el endpoint público y entreguen retroalimentación formal durante el piloto.
 
 Estas hipótesis se priorizarán por impacto y nivel de incertidumbre; las de mayor riesgo (precisión del modelo, adopción institucional, retención inicial) serán abordadas en los primeros ciclos experimentales para reducir desperdicio de esfuerzo.
+
+#### 1.2.2.4. Lean UX Canvas
+
+### 1.3. Segmentos Objetivo
+
+Esta sección define los segmentos objetivo iniciales sobre los cuales se construirá y validará la propuesta de valor de la plataforma. La selección se orienta a maximizar aprendizaje validado en el menor tiempo, reduciendo incertidumbre sobre adopción y utilidad. Se priorizan únicamente dos segmentos núcleo para mantener foco operativo y claridad en las métricas tempranas.
+
+#### 1.3.1. Segmento: Ciudadano Reportante
+**Descripción:**
+Residente urbano con smartphone (predominio Android) que se desplaza por la ciudad y está dispuesto a registrar incidencias visibles (baches, residuos, luminarias dañadas, daños estructurales menores) mediante fotografía y ubicación automática. Utilizará exclusivamente la aplicación móvil.
+
+**Necesidades Clave:**
+- Canal único y confiable para reportar incidencias sin procesos burocráticos.
+- Confirmación visible y trazable del estado del reporte.
+- Retroalimentación que evidencie que su acción genera efecto.
+
+**Propuesta de Valor Específica:**
+Reducir fricción del registro a menos de 40 segundos, entregar confirmación inmediata y mostrar evolución de estado para incentivar reuso y participación cívica continua.
+
+**Indicadores (Métricas Tempranas):**
+- Tasa de completitud de reporte (foto válida + geolocalización + categoría confirmada). Objetivo piloto: ≥70%.
+- Usuarios recurrentes (segundo reporte dentro de 45 días). Objetivo piloto: ≥30%.
+- Tiempo medio de creación de reporte (apertura → envío). Objetivo piloto: <40 s.
+- Satisfacción percibida sobre transparencia (encuesta corta in‑app). Objetivo piloto: ≥60% positiva.
+
+**Riesgos Principales:**
+- Falta de percepción de impacto (disminuye retención).
+- Problemas de conectividad (impide envío inmediato).
+
+**Mitigaciones:**
+- Notificaciones de avance / cierre.
+- Modo offline con sincronización diferida.
+- Mensajes educativos breves sobre cómo tomar fotos válidas.
+
+#### 1.3.2. Segmento: Municipalidad (personal técnico y de gestión)
+**Descripción:**
+Equipo técnico y de gestión (obras, mantenimiento, servicios públicos o innovación) que revisa, prioriza y asigna recursos para intervención de incidencias. Consumirá exclusivamente el dashboard web (visualización geoespacial, panel de métricas y filtros).
+
+**Necesidades Clave:**
+- Consolidación automática de reportes ciudadanos filtrando ruido y duplicados.
+- Priorización visual (mapas de calor, ranking por severidad / frecuencia).
+- Métricas operativas para soporte de decisiones y rendición de cuentas.
+
+**Propuesta de Valor Específica:**
+Disminuir el tiempo de priorización y brindar evidencia georreferenciada para justificar asignación de cuadrillas y presupuestos menores a mantenimiento correctivo tardío.
+
+**Indicadores (Métricas Tempranas):**
+- Uso semanal del dashboard (≥1 sesión/semana). Objetivo piloto: ≥1 gerencia sostenida.
+- Reducción del tiempo medio de priorización respecto a línea base. Objetivo: ≥40%.
+- Porcentaje de incidencias con primera acción registrada dentro del SLA definido. Objetivo piloto: ≥25% de mejora vs. baseline.
+- Tasa de reportes inválidos tras depuración automática. Objetivo: <15%.
+
+**Riesgos Principales:**
+- Falta de adopción institucional por procesos internos rígidos.
+- Precisión insuficiente del clasificador que genere desconfianza.
+
+**Mitigaciones:**
+- Piloto acotado con feedback quincenal.
+- Ajuste incremental del modelo con dataset local.
+- SLA interno acordado para registrar primera acción.
+
