@@ -441,3 +441,74 @@ Ciudadanos conectados digitalmente (18–45 y segmentos activos de reporte cívi
 **Impacto:**
 
 La ausencia de un circuito transparente y analítico retrasa intervenciones, incrementa costos correctivos frente a mantenimiento preventivo y deteriora la participación cívica sostenida. Un sistema integrado con reporte estructurado, validación automática de imágenes, clasificación asistida por IA y dashboards geoespaciales habilita: reducción de tiempos de priorización, asignación más eficiente de recursos, incremento de confianza ciudadana y generación de datos abiertos para innovación externa. El éxito temprano se medirá a través de adopción inicial (reportes válidos únicos), precisión de clasificación, disminución de reportes inválidos/duplicados, tiempo a primera acción y retención (usuarios que reportan nuevamente en ventana piloto).
+
+#### 1.2.2.2. Lean UX Assumptions
+
+**Business Outcomes:**
+- ≥70% de reportes creados en el piloto con todos los campos completos (foto válida, ubicación, categoría confirmada).
+- ≥80% de precisión promedio del modelo de clasificación de incidencias en dataset de validación local.
+- <15% de reportes inválidos o duplicados tras filtrado automático + revisión mínima.
+- ≥30% de usuarios recurrentes (segundo reporte dentro de 45 días).
+- ≥25% de reducción del tiempo promedio a primera acción municipal registrada (baseline vs. piloto).
+- ≥1 gerencia municipal (distrito piloto) usando el dashboard semanalmente (≥4 sesiones mensuales) durante piloto.
+- ≥40% de reducción del tiempo de priorización manual al disponer de mapas de calor y ranking automatizado.
+
+**Users (Segmentos Objetivo Simplificados):**
+- Ciudadano Reportante: residente urbano con smartphone que observa incidencias y registra evidencia (foto + ubicación) mediante la aplicación móvil.
+- Municipalidad (Gerencia / Unidad Responsable): personal técnico y de gestión que consume analítica (mapas de calor, KPIs) para priorizar y dar seguimiento a intervenciones.
+
+**User Outcomes & Benefits:**
+
+  Ciudadano Reportante:
+  - Registro rápido (≤3 pantallas) y confirmación inmediata de recepción.
+  - Visibilidad del estado de su incidencia que reduce incertidumbre y motiva reuso.
+  - Retroalimentación de cierre que incrementa percepción de efectividad institucional.
+
+  Municipalidad:
+  - Consolidación automática y visual (mapas de calor, filtros temporales) para priorizar.
+  - Reducción de ruido (reportes inválidos/duplicados) que optimiza revisión.
+  - Métricas operativas (tiempo a primera acción, distribución por tipo, severidad) para gestión y rendición de cuentas.
+
+**Feature Assumptions:**
+- Captura guiada (foto + geolocalización automática + sugerencia de categoría por IA).
+- Clasificación automática y validación básica de calidad de imagen.
+- Estado visible del ciclo de vida (recibido, en verificación, programado, en proceso, cerrado).
+- Dashboard geoespacial con mapas de calor, filtros por tipo, tiempo y severidad.
+- Modo offline con sincronización diferida.
+- Notificaciones (push / correo) en hitos clave.
+- (Opcional fase posterior) Publicación de datos agregados anonimizada.
+
+**Business Assumptions:**
+- Creemos que el ciudadano reportará nuevamente si percibe confirmación y avance dentro de un plazo razonable.
+- Creemos que la gerencia municipal adoptará el dashboard si reduce tiempo de priorización y consolida evidencias georreferenciadas.
+- Creemos que la diferenciación radica en la unión de captura estructurada + clasificación automática + visualización geoespacial continua.
+- Creemos que financiamiento inicial puede surgir de presupuesto de modernización o cooperación interinstitucional.
+- Riesgo principal: baja precisión temprana del modelo o falta de acción visible en reportes, afectando retención.
+- Mitigación: ajuste iterativo del modelo con dataset local y acuerdos de SLA mínimos para primera acción.
+
+**User Assumptions:**
+
+- ¿Quién es el usuario?
+
+  Dos segmentos núcleo:
+  - Ciudadano Reportante
+  - Municipalidad (gerencia responsable)
+
+¿Qué problema resuelve nuestro producto?
+
+- Para el ciudadano: falta de canal único y trazable para reportar incidencias. Para la municipalidad: ausencia de consolidación y priorización geoespacial rápida.
+
+¿Qué características son importantes?
+
+- Ciudadano: flujo corto, confirmación inmediata, estado visible. Municipalidad: analítica visual, filtrado, métricas operativas.
+
+¿Dónde encaja en su rutina?
+
+- Ciudadano: durante desplazamientos cuando detecta una incidencia. Municipalidad: sesiones de revisión y planificación diaria/semanal.
+
+¿Cuándo y cómo se usa?
+- App móvil (ciudadano) en el momento del hallazgo; dashboard web (municipalidad) para priorizar y monitorear indicadores.
+
+¿Cómo debe verse y comportarse?
+- App: simple, rápida, ≤3 pasos, validación inmediata. Dashboard: panel claro con mapas responsivos y filtros eficientes.
+
