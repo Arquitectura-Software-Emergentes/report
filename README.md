@@ -30,9 +30,6 @@
 
 <div align="justify">
 
-
-
-
 ## Registro de Versiones del Informe
 
 El objetivo de esta sección es resumir las modificaciones relevantes que se realizan al informe durante el ciclo de vida del proyecto. Esta sección inicia en una página nueva e incluye un cuadro con la siguiente estructura:
@@ -61,37 +58,36 @@ El objetivo de esta sección es resumir las modificaciones relevantes que se rea
 
 <br>Para desarrollar el proyecto, se empleó GitHub como herramienta para gestionar versiones y facilitar la colaboración en tiempo real. A continuación, se proporciona el enlace al repositorio del proyecto:
 
-| **Descripción**            | **Enlace**                                                                 |
-| :-------------------------: | :------------------------------------------------------------------------: |
-| Repositorio del Proyecto    | https://github.com/orgs/Arquitectura-Software-Emergentes/repositories         |
-| Link de la Organización     | https://github.com/orgs/Arquitectura-Software-Emergentes                    |
+|     **Descripción**      |                              **Enlace**                               |
+| :----------------------: | :-------------------------------------------------------------------: |
+| Repositorio del Proyecto | https://github.com/orgs/Arquitectura-Software-Emergentes/repositories |
+| Link de la Organización  |       https://github.com/orgs/Arquitectura-Software-Emergentes        |
 
 **TB1:**
 
 Para el TB1, se asignaron responsabilidades específicas a cada integrante, las cuales se detallan a continuación:
 
 | Miembro del Equipo | Tarea Asignada |
-|       :---:        |      :---:     |
-| Aldo Baldeon       |                |
-| Barbara Quezada    |                |
-| Steve Castillo     |                |
-| Jimena Cama        |                |
-| Jair Castillo      |                |
+| :----------------: | :------------: |
+|    Aldo Baldeon    |                |
+|  Barbara Quezada   |                |
+|   Steve Castillo   |                |
+|    Jimena Cama     |                |
+|   Jair Castillo    |                |
 
 Cabe destacar que, durante la creación del informe, se realizaron commits específicos para cada tarea asignada, lo que permitió garantizar un control de versiones y una colaboración efectiva en tiempo real. El equipo mantuvo reuniones semanales de sincronización para asegurar la coherencia entre los diferentes capítulos y compartir avances.
 
 Miembros
 
-- Aldo Baldeon    (CodAress) 
-- Barbara Quezada (BarbaraQP15) 
-- Steve Castillo  (Salchichon057) 
-- Jimena Cama     (aksonie) 
-- Jair Castillo   (U202211390)
-  
+- Aldo Baldeon (CodAress)
+- Barbara Quezada (BarbaraQP15)
+- Steve Castillo (Salchichon057)
+- Jimena Cama (aksonie)
+- Jair Castillo (U202211390)
+
 El uso de GitHub ha permitido gestionar versiones y fomentar la colaboración en tiempo real, facilitando que los integrantes del equipo trabajen tanto de forma asincrónica como sincrónica en el proyecto. Asimismo, la metodología Gitflow ha posibilitado la creación de diversas ramas para el desarrollo de las tareas asignadas, promoviendo un trabajo autónomo y colaborativo entre los miembros.
 
 La rama "develop" se utilizó como un entorno para integrar las tareas de cada miembro de manera estructurada y organizada, mientras que la rama "main" se destinó a la entrega de la versión final del proyecto. Esta estrategia permitió una revisión conjunta del contenido antes de su integración final, reduciendo errores y asegurando la calidad del informe presentado.
-
 
 # Contenido
 
@@ -106,6 +102,7 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
 ### [Student Outcomes](#student-outcome)
 
 ### [Capítulo I: Introducción](#capítulo-i-introducción)
+
 - [Project Report Collaboration Insights](#project-report-collaboration-insights)
 - [Contenido](#contenido)
   - [Tabla de Contenidos](#tabla-de-contenidos)
@@ -130,8 +127,16 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
   - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo-1)
   - [1.2. Solution Profile](#12-solution-profile)
     - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
+    - [1.2.2. Lean UX Process](#122-lean-ux-process)
+      - [1.2.2.1. Lean UX Problem Statement](#1221-lean-ux-problem-statement)
+      - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+      - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+
+  - [1.3. Segmentos Objetivo](#13-segmentos-objetivo)
 
 ### [Capítulo II: Requirements Elicitation & Analysis](#capc3adtulo-ii-requirements-elicitation--analysis-1)
+
 - [2.1. Competidores](#21-competidores)
   - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
   - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
@@ -148,12 +153,14 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
 - [2.4. Ubiquitous Language](#24-ubiquitous-language)
 
 ### [Capítulo III: Requirements Specification](#capc3adtulo-iii-requirements-specification)
+
 - [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
 - [3.2. User Stories](#32-user-stories)
 - [3.3. Impact Mapping](#33-impact-mapping)
 - [3.4. Product Backlog](#34-product-backlog)
 
 ### [Capítulo IV: Solution Software Design](#capc3adtulo-iv-solution-software-design)
+
 - [4.1. Strategic-Level Domain-Driven Design](#41-strategic-level-domain-driven-design)
   - [4.1.1. Event Storming](#411-event-storming)
     - [4.1.1.1 Candidate Context Discovery](#4111-candidate-context-discovery)
@@ -176,6 +183,7 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
       - [4.2.X.7.2. Bounded Context Database Design Diagram](#42x72-bounded-context-database-design-diagram)
 
 ### [Capítulo V: Solution UI/UX Design](#capc3adtulo-v-solution-uiux-design)
+
 - [5.1. Style Guidelines](#51-style-guidelines)
   - [5.1.1. General Style Guidelines](#511-general-style-guidelines)
   - [5.1.2. Web, Mobile and IoT Style Guidelines](#512-web-mobile-and-iot-style-guidelines)
@@ -196,6 +204,7 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
 - [5.5. Applications Prototyping](#55-applications-prototyping)
 
 ### [Capítulo VI: Product Implementation, Validation & Deployment](#capitulo-vi-product-implementation-validation-deployment)
+
 - [6.1. Software Configuration Management](#61-software-configuration-management)
   - [6.1.1. Software Development Environment Configuration](#611-software-development-environment-configuration)
   - [6.1.2. Source Code Management](#612-source-code-management)
@@ -208,12 +217,12 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
 - [6.3.3. Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
 - [6.4. Video About-the-Product](#64-video-about-the-product)
 
-
 ### [Conclusiones](#conclusiones)
+
 ### [Bibliografía](#bibliografía)
+
 ### [Anexos](#anexos)
-  
- 
+
 # Student Outcome
 
 El curso contribuye al cumplimiento del Student Outcome ABET:
@@ -223,7 +232,6 @@ juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo,
 establecen objetivos, planifican tareas y cumplen objetivos.
 En el siguiente cuadro se describe las acciones realizadas y enunciados de
 conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 5.
-
 
 <table>
     <tr>
@@ -319,12 +327,11 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
     </tr>
 </table>
 
-
 # Capítulo I: Introducción
 
 ## 1.1. Startup Profile
 
-### 1.1.1. Descripción de la Startup 
+### 1.1.1. Descripción de la Startup
 
 **TAVOLO** es una solución tecnológica desarrollada para **optimizar la experiencia en cafeterías peruanas** mediante el uso de **dispositivos IoT** integrados a un sistema web y móvil. Su propuesta se enfoca exclusivamente en resolver los problemas relacionados con la ocupación de mesas, la gestión de reservas y la visualización de información relevante para los comensales, administradores y usuarios superadministradores.
 
@@ -340,16 +347,17 @@ Brindar una solución tecnológica eficiente y accesible para la gestión de afo
 **Visión:**<br>
 Consolidarse como la **solución de referencia en el Perú** para la digitalización de procesos de atención en cafeterías, mediante el uso de tecnología embebida, edge computing y sistemas en la nube, promoviendo una experiencia de consumo más ordenada, rápida y satisfactoria para los comensales, y una gestión más eficiente para los negocios del sector gastronómico.
 
-### 1.1.2. Perfiles de integrantes del equipo  
+### 1.1.2. Perfiles de integrantes del equipo
+
 ## 1.1.2. Perfiles de integrantes del equipo
 
-| Foto | Información |
-|------|-------------|
-| ![Perfil de Aldo](./images/profiles/aldo_profile.jpg) | **Nombre y Apellido:** Aldo Alberto Baldeon Fabian<br>**Código:** U202122633<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Aldo Alberto Baldeon Fabian, estudio la carrera de Ingeniería de Software en la UPC. Escogí esta carrera porque me interesó el desarrollo de aplicaciones. Soy responsable y me gusta trabajar en equipo. Poseo conocimientos básicos en C#, java, JavaScript, HTML y CSS. También, poseo conocimientos intermedios en C + +, SQL y MongoDB, además de contar con experiencia en Git y GitHub. |
-| ![Perfil de Barbara](./images/profiles/barbara_profile.jpg) | **Nombre y Apellido:** Barbara Susana Quezada Portalatino<br>**Código:** U202211800<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Barbara Susana Quezada Portalatino, cursando el séptimo ciclo de la carrera de software, trabajo mayormente bajo un rol de líder que me ayuda a poder organizar no solo la ideas de mi grupo sino que las ideas aterricen en la ejecución. Soy una persona muy disciplinada y detallista. |
-| ![Perfil de Jimena](./images/profiles/jimena_profile.jpg) | **Nombre y Apellido:** Jimena Tamara Cama Salvatierra<br>**Código:** U2022210778<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y actualmente estoy cursando el 7mo ciclo. Me considero una persona curiosa, determinada y organizada. Con la experiencia en proyectos de startup y trabajos en equipo, trabajaré junto a mis compañeros para lograr un óptimo resultado del proyecto. |
-| ![Perfil de Jair](./images/profiles/jair_profile.jpg) | **Nombre y Apellido:** Jair Alexander Castillo Castillo<br>**Código:** U202211390<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y me encuentro en el 7to ciclo. Me considero una persona dedicada, comprensiva y metódica. Con mis habilidades de liderazgo y mi capacidad para trabajar en equipo en un ambiente de respeto, estoy segura de que podré dirigir la implementación de la startup de nuestro proyecto de manera exitosa. |
-| ![Perfil de Franz](./images/profiles/steve_profile.jpg) | **Nombre y Apellido:** Steve Roger Castillo Robles<br>**Código:** U202012378<br>**Carrera:** Ingeniería de Software<br>**Acerca de:**  Soy Steve, estudiante del 9no ciclo de Ingeniería de Software y  desarrollador Full-Stack, con experiencia en tecnologías como Angular, React.js, Next.js, Spring Boot, Flutter, PostgreSQL y servicios cloud como Azure, Firebase y Supabase. Mi experiencia abarca desde el desarrollo y migración de aplicaciones hasta el diseño y optimización de bases de datos, aplicando principios de arquitectura limpia, DDD y metodologías ágiles como Scrum. Me destaco por mi capacidad para trabajar en equipo, mi enfoque metódico y mi constante pasión por aprender y aplicar nuevas tecnologías para llevar los proyectos al siguiente nivel.|
+| Foto                                                        | Información                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Perfil de Aldo](./images/profiles/aldo_profile.jpg)       | **Nombre y Apellido:** Aldo Alberto Baldeon Fabian<br>**Código:** U202122633<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Aldo Alberto Baldeon Fabian, estudio la carrera de Ingeniería de Software en la UPC. Escogí esta carrera porque me interesó el desarrollo de aplicaciones. Soy responsable y me gusta trabajar en equipo. Poseo conocimientos básicos en C#, java, JavaScript, HTML y CSS. También, poseo conocimientos intermedios en C + +, SQL y MongoDB, además de contar con experiencia en Git y GitHub.                                                                                                                                                                                                                                              |
+| ![Perfil de Barbara](./images/profiles/barbara_profile.jpg) | **Nombre y Apellido:** Barbara Susana Quezada Portalatino<br>**Código:** U202211800<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Barbara Susana Quezada Portalatino, cursando el séptimo ciclo de la carrera de software, trabajo mayormente bajo un rol de líder que me ayuda a poder organizar no solo la ideas de mi grupo sino que las ideas aterricen en la ejecución. Soy una persona muy disciplinada y detallista.                                                                                                                                                                                                                                                                                                                                                |
+| ![Perfil de Jimena](./images/profiles/jimena_profile.jpg)   | **Nombre y Apellido:** Jimena Tamara Cama Salvatierra<br>**Código:** U2022210778<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y actualmente estoy cursando el 7mo ciclo. Me considero una persona curiosa, determinada y organizada. Con la experiencia en proyectos de startup y trabajos en equipo, trabajaré junto a mis compañeros para lograr un óptimo resultado del proyecto.                                                                                                                                                                                                                                                                                                                     |
+| ![Perfil de Jair](./images/profiles/jair_profile.jpg)       | **Nombre y Apellido:** Jair Alexander Castillo Castillo<br>**Código:** U202211390<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y me encuentro en el 7to ciclo. Me considero una persona dedicada, comprensiva y metódica. Con mis habilidades de liderazgo y mi capacidad para trabajar en equipo en un ambiente de respeto, estoy segura de que podré dirigir la implementación de la startup de nuestro proyecto de manera exitosa.                                                                                                                                                                                                                                                                    |
+| ![Perfil de Franz](./images/profiles/steve_profile.jpg)     | **Nombre y Apellido:** Steve Roger Castillo Robles<br>**Código:** U202012378<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Steve, estudiante del 9no ciclo de Ingeniería de Software y desarrollador Full-Stack, con experiencia en tecnologías como Angular, React.js, Next.js, Spring Boot, Flutter, PostgreSQL y servicios cloud como Azure, Firebase y Supabase. Mi experiencia abarca desde el desarrollo y migración de aplicaciones hasta el diseño y optimización de bases de datos, aplicando principios de arquitectura limpia, DDD y metodologías ágiles como Scrum. Me destaco por mi capacidad para trabajar en equipo, mi enfoque metódico y mi constante pasión por aprender y aplicar nuevas tecnologías para llevar los proyectos al siguiente nivel. |
 
 ## 1.2. Solution Profile
 
@@ -418,3 +426,18 @@ El proyecto integra tecnologías emergentes adaptadas al contexto limeño:
 - Para ciudadanos: Canal directo y transparente para reportar problemas y seguimiento.
 - Para Lima: Transformación hacia una smart city, reducción de costos operativos y cierre de la brecha digital.
 
+### 1.2.2. Lean UX Process
+
+#### 1.2.2.1. Lean UX Problem Statement
+
+**Problem Statement:**
+
+La gestión de incidencias urbanas en Lima Metropolitana es actualmente reactiva, fragmentada y opaca para el ciudadano. Los canales existentes (teléfono, formularios municipales aislados o visitas presenciales) no ofrecen confirmación estructurada, trazabilidad del estado ni consolidación de datos para análisis transversal.
+
+**Problema:**
+
+Ciudadanos conectados digitalmente (18–45 y segmentos activos de reporte cívico) experimentan frustración y desconfianza al no poder visualizar el progreso de sus reportes de baches, residuos, luminarias dañadas u otras incidencias del espacio público. Paralelamente, las gerencias municipales carecen de un repositorio unificado y de analítica geoespacial que permita detectar patrones (hotspots) y priorizar intervenciones preventivas. Esto ocasiona: duplicidad de reclamos, tiempos prolongados a primera acción, uso ineficiente de cuadrillas y percepción negativa de respuesta institucional.
+
+**Impacto:**
+
+La ausencia de un circuito transparente y analítico retrasa intervenciones, incrementa costos correctivos frente a mantenimiento preventivo y deteriora la participación cívica sostenida. Un sistema integrado con reporte estructurado, validación automática de imágenes, clasificación asistida por IA y dashboards geoespaciales habilita: reducción de tiempos de priorización, asignación más eficiente de recursos, incremento de confianza ciudadana y generación de datos abiertos para innovación externa. El éxito temprano se medirá a través de adopción inicial (reportes válidos únicos), precisión de clasificación, disminución de reportes inválidos/duplicados, tiempo a primera acción y retención (usuarios que reportan nuevamente en ventana piloto).
