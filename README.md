@@ -106,23 +106,30 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
 ### [Student Outcomes](#student-outcome)
 
 ### [Capítulo I: Introducción](#capítulo-i-introducción)
+- [Project Report Collaboration Insights](#project-report-collaboration-insights)
+- [Contenido](#contenido)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+    - [Registro de Versiones del Informe](#registro-de-versiones-del-informe-1)
+    - [Project Report Collaboration Insights](#project-report-collaboration-insights-1)
+    - [Contenido](#contenido-1)
+    - [Student Outcomes](#student-outcomes)
+    - [Capítulo I: Introducción](#capítulo-i-introducción)
+    - [Capítulo II: Requirements Elicitation \& Analysis](#capítulo-ii-requirements-elicitation--analysis)
+    - [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+    - [Capítulo IV: Solution Software Design](#capítulo-iv-solution-software-design)
+    - [Capítulo V: Solution UI/UX Design](#capítulo-v-solution-uiux-design)
+    - [Capítulo VI: Product Implementation, Validation \& Deployment](#capítulo-vi-product-implementation-validation--deployment)
+    - [Conclusiones](#conclusiones)
+    - [Bibliografía](#bibliografía)
+    - [Anexos](#anexos)
+- [Student Outcome](#student-outcome)
+- [Capítulo I: Introducción](#capítulo-i-introducción-1)
   - [1.1. Startup Profile](#11-startup-profile)
     - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
     - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo-1)
   - [1.2. Solution Profile](#12-solution-profile)
     - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
-    - [1.2.2. Lean UX Process](#122-lean-ux-process)
-      - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
-      - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
-          - [**Business Outcomes:**](#business-outcomes)
-          - [**Users:**](#users)
-          - [**User Outcomes \& Benefits:**](#user-outcomes--benefits)
-          - [**Feature Assumptions:**](#feature-assumptions)
-          - [**Business Assumptions:**](#business-assumptions)
-          - [**User Assumptions:**](#user-assumptions)
-      - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
-      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
-  - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
 
 ### [Capítulo II: Requirements Elicitation & Analysis](#capc3adtulo-ii-requirements-elicitation--analysis-1)
 - [2.1. Competidores](#21-competidores)
@@ -346,9 +353,9 @@ Consolidarse como la **solución de referencia en el Perú** para la digitalizac
 
 ## 1.2. Solution Profile
 
-# Plataforma Urbana Inteligente para Lima [Nombre del proyecto]
+**[Nombre del proyecto]**
 
-Nuestra propuesta es crear una plataforma urbana inteligente centrada en Lima, que aprovecha tecnologías de visión por computadora y análisis geoespacial para transformar la gestión de incidencias urbanas. A través de una aplicación móvil, los limeños podrán reportar problemas como baches, grafitis, basura o incidencias estructurales (por ejemplo, daños en infraestructura pública), adjuntando fotografías y ubicación automática. Estas imágenes serán procesadas por un backend con inteligencia artificial, donde un sistema de visión por computadora entrenado con datos locales identificará y clasificará automáticamente cada incidencia. Por ejemplo, la detección de baches puede automatizarse en tiempo real, facilitando que los municipios prioricen reparaciones de manera eficiente.
+Nuestra propuesta es crear una plataforma urbana inteligente centrada en Lima, que aprovecha tecnologías de visión por computadora y análisis geoespacial para transformar la gestión de incidencias urbanas. A través de una aplicación móvil, los limeños podrán reportar problemas como baches, grafitis, basura o incidencias estructurales (por ejemplo, daños en infraestructura pública), adjuntando fotografías y ubicación automática. Estas imágenes serán procesadas por un backend con inteligencia artificial, donde un sistema de visión por computadora entrenado con datos locales identificará y clasificará automáticamente cada incidencia.
 
 Simultáneamente, la plataforma generará mapas de calor georreferenciados utilizando herramientas de análisis geoespacial, mostrando en tiempo real las zonas con mayor concentración de reportes. Estas herramientas permitirán a las autoridades visualizar la distribución de incidencias por distrito y planificar intervenciones de forma estratégica.
 
@@ -410,8 +417,4 @@ El proyecto integra tecnologías emergentes adaptadas al contexto limeño:
 - Para autoridades: Detección automatizada, mapas de calor y KPIs en tiempo real.
 - Para ciudadanos: Canal directo y transparente para reportar problemas y seguimiento.
 - Para Lima: Transformación hacia una smart city, reducción de costos operativos y cierre de la brecha digital.
-
-**Fuentes:** Datos de población, densidad y conectividad: INEI. Ejemplos de aplicación de visión por computadora: publicaciones especializadas. Eficacia de herramientas de análisis geoespacial: blogs técnicos. Estadística de congestión: reportes oficiales. Diseño del sistema: estudios recientes de detección de baches con smartphones. Todo adaptado al contexto exclusivo de Lima.
-
-Este es mi nuevo proyecto, aún no tiene nombre. [Nombre de la startup]
 
