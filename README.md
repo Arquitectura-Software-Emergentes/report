@@ -512,3 +512,36 @@ La ausencia de un circuito transparente y analítico retrasa intervenciones, inc
 ¿Cómo debe verse y comportarse?
 - App: simple, rápida, ≤3 pasos, validación inmediata. Dashboard: panel claro con mapas responsivos y filtros eficientes.
 
+#### 1.2.2.3. Lean UX Hypothesis Statements
+
+A continuación, se presentan las hipótesis clave relacionadas con las funcionalidades y comportamientos esperados. Cada hipótesis es específica y medible.
+
+- Hypothesis Statement 1:
+Creemos que un flujo de reporte simplificado (foto + geolocalización + sugerencia de categoría) reducirá la fricción inicial y aumentará la completitud de datos.
+Sabremos que hemos tenido éxito cuando ≥70% de los reportes del primer mes incluyan foto válida, coordenadas y categoría confirmada sin edición manual.
+
+- Hypothesis Statement 2:
+Creemos que la clasificación automática mediante un modelo entrenado localmente disminuirá la proporción de reportes inválidos o irrelevantes.
+Sabremos que hemos tenido éxito cuando la tasa de reportes descartados manualmente sea <15% y la precisión validada sea ≥80%.
+
+- Hypothesis Statement 3:
+Creemos que mostrar estados visibles del ciclo de vida incrementará la retención y el re-reporte responsable.
+Sabremos que hemos tenido éxito cuando ≥30% de los usuarios con un primer reporte registren un segundo dentro de 45 días.
+
+- Hypothesis Statement 4:
+Creemos que un dashboard geoespacial con mapas de calor temporales permitirá priorizar intervenciones preventivas de forma más eficiente.
+Sabremos que hemos tenido éxito cuando al menos 1 gerencia lo use semanalmente y reporte una reducción ≥20% en tiempo de priorización comparado con la línea base.
+
+- Hypothesis Statement 5:
+Creemos que notificaciones de avance y cierre aumentarán la percepción de transparencia y satisfacción.
+Sabremos que hemos tenido éxito cuando >60% de encuestados indiquen satisfacción con la visibilidad del proceso y el NPS del seguimiento sea ≥30.
+
+- Hypothesis Statement 6:
+Creemos que el modo offline incrementará la cobertura en zonas de conectividad limitada.
+Sabremos que hemos tenido éxito cuando ≥15% de los reportes provengan de sesiones iniciadas sin conexión y sincronizadas posteriormente.
+
+- Hypothesis Statement 7:
+Creemos que la publicación de datos agregados fomentará colaboración externa y reutilización.
+Sabremos que hemos tenido éxito cuando al menos 2 actores externos consuman el endpoint público y entreguen retroalimentación formal durante el piloto.
+
+Estas hipótesis se priorizarán por impacto y nivel de incertidumbre; las de mayor riesgo (precisión del modelo, adopción institucional, retención inicial) serán abordadas en los primeros ciclos experimentales para reducir desperdicio de esfuerzo.
