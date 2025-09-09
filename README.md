@@ -175,35 +175,35 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
         <td>
             <b>TB1:</b><br>
             <b>Baldeon Fabian, Aldo Alberto</b><br>
-            - He demostrado liderazgo colaborando activamente con Jair en el desarrollo del Capítulo I y en el diseño táctico de la solución. Asumí el liderazgo en la elaboración del perfil de la startup, la definición de los antecedentes, el desarrollo del Lean UX Process, y el diseño a nivel táctico del software con el enfoque de Domain-Driven Design. Esto ha permitido consolidar una visión común del proyecto.
+            - 
             <br><br> 
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - He demostrado la capacidad de trabajar eficazmente en equipos multidisciplinarios, asumiendo roles de liderazgo compartido para la toma de decisiones y el logro de objetivos comunes. En el desarrollo de proyectos, fomenté un entorno inclusivo donde cada integrante pudo aportar sus fortalezas, promoviendo la comunicación abierta, la planificación conjunta de tareas y la adaptación ante cambios.
+            - 
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
-            - He liderado en conjunto con Aldo el desarrollo del Capítulo I, enfocándome especialmente en la elaboración del Lean UX Canvas y la definición de hipótesis. Asimismo, tomé la iniciativa en la elaboración del To-Be Scenario Mapping y el Impact Mapping, consolidando así la visión futura del sistema.
+            - 
             <br><br>
             <b>Castillo Robles, Steve Roger</b><br>
-            - Asumí un rol de liderazgo en el Capítulo II, enfocándome en el análisis de requerimientos. Me encargué del análisis competitivo, diseño y evaluación de entrevistas, así como del Needfinding completo. Lideré la exploración profunda de las necesidades de los usuarios para alinear los requerimientos con la visión del producto.
+            - 
             <br><br>
             <b>Quezada Portalatino, Barbara Susana</b><br>
-            - He compartido el liderazgo del Capítulo IV con Jimena, asegurando que el diseño de alto nivel del sistema refleje la arquitectura definida y cumpla con las expectativas funcionales. También aporté activamente en la redacción del backlog y en las historias de usuario del sistema.
+            - 
             <br><br>
             <b>TP1:</b><br>
             <b>Baldeon Fabian, Aldo Alberto</b><br>
-            - He trabajado en equipo asumiendo responsabilidades clave del frontend y backend, lo cual me permitió brindar liderazgo conjunto en el desarrollo de funcionalidades como el inicio de sesión, registro y navegación, asegurando cohesión entre el equipo técnico.
+            - 
             <br><br>
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - Asumí un rol de liderazgo dentro del equipo al desarrollar las directrices de estilo y prototipado de interfaces, guiando visualmente a los demás miembros para mantener la coherencia del diseño en todas las plataformas.
+            - 
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
-            - Participé de manera activa en el equipo asumiendo el liderazgo en aspectos técnicos como pruebas, documentación de servicios y la gestión del módulo de mesas, lo que fortaleció la estructura del desarrollo.
+            - 
             <br><br>
             <b>Castillo Robles, Steve Roger</b><br>
-            - Aporté liderazgo en la definición de la experiencia de usuario, wireframes, flujos y configuración del entorno de desarrollo, asegurando que las decisiones técnicas se alinearan con los objetivos del equipo.
+            - 
             <br><br>
             <b>Quezada Portalatino, Barbara Susana</b><br>
-            - Desde el área de arquitectura de la información y la implementación de la landing page y servicios, proporcioné liderazgo conjunto asegurando que los contenidos estuvieran correctamente estructurados y fueran accesibles.
+            - 
             <br><br>
         </td>
         <td>
@@ -219,35 +219,35 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
         <td>
             <b>TB1:</b><br>
             <b>Baldeon Fabian, Aldo Alberto</b><br>
-            - He contribuido a crear un entorno de trabajo participativo al compartir avances de forma constante, establecer cronogramas claros y ayudar a coordinar las entregas de los distintos capítulos. Me aseguré de cumplir los objetivos asignados dentro de los plazos, especialmente en los apartados de análisis y diseño de la solución.
+            - 
             <br><br> 
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - He demostrado la capacidad de crear un entorno de trabajo colaborativo e inclusivo, en el que se valora la participación activa de todos los integrantes del equipo. A lo largo del desarrollo del proyecto, trabajé en la definición de metas comunes, la planificación de tareas con enfoque estratégico y el cumplimiento de los objetivos establecidos, asegurando una gestión eficiente del tiempo y los recursos.
+            - 
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
-            - He aportado al trabajo grupal coordinando con los demás miembros la integración de los entregables del Capítulo III, asegurando que los insumos de análisis sean reflejados en las historias de usuario y el backlog. Mi planificación detallada ha permitido cumplir los entregables sin contratiempos.
+            - 
             <br><br>
             <b>Castillo Robles, Steve Roger</b><br>
-            - Organicé sesiones para compartir hallazgos con el equipo, facilitando un espacio abierto para retroalimentación. Además, establecí objetivos claros para cada sección del capítulo y cumplí con cada uno dentro del tiempo estimado.
+            - 
             <br><br>
             <b>Quezada Portalatino, Barbara Susana</b><br>
-            - Promoví la colaboración mediante la constante retroalimentación con el equipo y la organización de sesiones de revisión conjunta. Gracias a una planificación ordenada y objetiva, logré cumplir con todos los entregables asignados, manteniendo una sinergia adecuada con Jimena y el resto del equipo.
+            - 
             <br><br>
             <b>TP1:</b>
             <b>Baldeon Fabian, Aldo Alberto</b><br>
-            - Contribuí activamente a un entorno colaborativo e inclusivo, proponiendo metas claras para el avance del desarrollo de pantallas y el backend, planificando tareas específicas y cumpliendo los entregables según lo definido en los sprints.
+            - 
             <br><br>
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - Fomenté un entorno colaborativo e inclusivo durante el diseño UX/UI, facilitando la planificación de tareas de diseño, estableciendo metas claras por sprint y asegurando que los entregables cumplan los estándares de calidad definidos.
+            - 
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
-            - Establecí y cumplí metas relacionadas al testing y documentación, planificando mis tareas de manera coordinada con el equipo, fomentando una colaboración efectiva que permitió lograr los objetivos del sprint.
+            - 
             <br><br>
             <b>Castillo Robles, Steve Roger</b><br>
-            - Planifiqué y ejecuté tareas relacionadas a la configuración del software y estándares de código, promoviendo un entorno colaborativo, con comunicación clara y objetivos bien definidos, logrando avances significativos en los entregables del proyecto.
+            - 
             <br><br>
             <b>Quezada Portalatino, Barbara Susana</b><br>
-            - Fui parte activa en la planificación de tareas y definición de objetivos del equipo, garantizando que tanto los sistemas de navegación como el contenido cumplieran con los estándares de calidad y usabilidad esperados.
+            - 
             <br><br>
         </td>
         <td>
@@ -264,19 +264,7 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
 
 ### 1.1.1. Descripción de la Startup
 
-**TAVOLO** es una solución tecnológica desarrollada para **optimizar la experiencia en cafeterías peruanas** mediante el uso de **dispositivos IoT** integrados a un sistema web y móvil. Su propuesta se enfoca exclusivamente en resolver los problemas relacionados con la ocupación de mesas, la gestión de reservas y la visualización de información relevante para los comensales, administradores y usuarios superadministradores.
-
-Para los comensales, TAVOLO permite visualizar el menú digital de una sede, conocer la disponibilidad de mesas en tiempo real, realizar reservas y consultar detalles de las mismas. También se ofrece la posibilidad de visualizar la ubicación de todas las sedes en un mapa interactivo, registrarse como nuevo usuario o iniciar sesión para acceder a funcionalidades personalizadas. Estas características permiten al usuario planificar su visita con antelación y evitar tiempos de espera innecesarios. Un estudio reciente de Apoyo Consultoría (2023) reveló que el 62 % de los limeños evita acudir a locales con alta concurrencia si no puede consultar previamente la disponibilidad, lo cual respalda la utilidad de este enfoque preventivo basado en datos en tiempo real.
-
-Desde el panel de administración, los administradores pueden gestionar la sede que se les ha asignado. Esto incluye agregar nuevas mesas, eliminar aquellas que ya no estén en uso, visualizar todas las reservas registradas en su local y confirmar que están gestionando la sede correcta. Esta funcionalidad permite a los encargados mantener un control actualizado del aforo, planificar la atención de manera eficiente y optimizar la logística operativa. La digitalización de estas tareas manuales no solo mejora la precisión en la gestión, sino que también incrementa la productividad del personal administrativo.
-
-TAVOLO se presenta así como una respuesta concreta y realista a los desafíos cotidianos que enfrentan las cafeterías en Perú. No pretende cubrir todo el ciclo de negocio de un restaurante, sino **centrarse exclusivamente en la mejora del proceso de aforo, reservas y atención al cliente**. Este enfoque especializado y realista busca generar impacto directo en la experiencia del usuario y en la eficiencia del negocio, con una implementación que puede ser gradual, asequible y con bajo nivel de complejidad técnica.
-
-**Mision:**<br>
-Brindar una solución tecnológica eficiente y accesible para la gestión de aforo en cafeterías peruanas, utilizando dispositivos IoT y plataformas digitales que permitan a los comensales acceder a información en tiempo real, y a los administradores optimizar la ocupación de mesas y las reservas, **mejorando así la experiencia del cliente y la operación del negocio.**
-
-**Visión:**<br>
-Consolidarse como la **solución de referencia en el Perú** para la digitalización de procesos de atención en cafeterías, mediante el uso de tecnología embebida, edge computing y sistemas en la nube, promoviendo una experiencia de consumo más ordenada, rápida y satisfactoria para los comensales, y una gestión más eficiente para los negocios del sector gastronómico.
+[actualizar]
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
@@ -483,6 +471,7 @@ El siguiente Lean UX Canvas presentado busca estructurar la propuesta presentada
 
 ![lean_ux_canvas](<images/lean_ux_canvas/LEAN UX CANVAS.png>)
 
+
 Esta propuesta aborda la gestión fragmentada de incidencias urbanas en Lima mediante una aplicación móvil ciudadana, un backend con inteligencia artificial de visión por computadora y un dashboard geoespacial para autoridades. Los principales beneficiarios son los ciudadanos, que ganan un canal confiable y trazable, y las municipalidades, que obtienen herramientas de priorización basadas en datos. 
 
 El éxito se medirá en términos de reportes válidos, precisión en la clasificación, reducción de tiempos de respuesta y adopción institucional. La hipótesis central sostiene que la combinación de captura estructurada, validación automática y analítica geoespacial generará mayor eficiencia y confianza. Para validar esto, el primer aprendizaje clave es confirmar la disposición de las municipalidades a adoptar la plataforma, lo cual se evaluará con un prototipo de baja fidelidad en pruebas iniciales con ciudadanos y funcionarios.
@@ -491,7 +480,7 @@ El éxito se medirá en términos de reportes válidos, precisión en la clasifi
 
 Esta sección define los segmentos objetivo iniciales sobre los cuales se construirá y validará la propuesta de valor de la plataforma. La selección se orienta a maximizar aprendizaje validado en el menor tiempo, reduciendo incertidumbre sobre adopción y utilidad. Se priorizan únicamente dos segmentos núcleo para mantener foco operativo y claridad en las métricas tempranas.
 
-**Segmento: Ciudadano Reportante**
+### 1.3.1 ***Segmento: Ciudadano Reportante***
 
 **Descripción:** Residente urbano con smartphone (predominio Android) que se desplaza por la ciudad y está dispuesto a registrar incidencias visibles (baches, residuos, luminarias dañadas, daños estructurales menores) mediante fotografía y ubicación automática. Utilizará exclusivamente la aplicación móvil.
 
@@ -517,7 +506,7 @@ Esta sección define los segmentos objetivo iniciales sobre los cuales se constr
 - Modo offline con sincronización diferida.
 - Mensajes educativos breves sobre cómo tomar fotos válidas.
 
-**Segmento: Municipalidad (personal técnico y de gestión)**
+### 1.3.2 ***Segmento: Municipalidad (personal técnico y de gestión)***
 
 **Descripción:** Equipo técnico y de gestión (obras, mantenimiento, servicios públicos o innovación) que revisa, prioriza y asigna recursos para intervención de incidencias. Consumirá exclusivamente el dashboard web (visualización geoespacial, panel de métricas y filtros).
 
