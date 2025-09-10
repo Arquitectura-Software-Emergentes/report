@@ -418,3 +418,100 @@ El proyecto integra tecnologías emergentes adaptadas al contexto limeño:
 - Para ciudadanos: Canal directo y transparente para reportar problemas y seguimiento.
 - Para Lima: Transformación hacia una smart city, reducción de costos operativos y cierre de la brecha digital.
 
+# Capítulo II: Requirements Elicitation & Analysis
+
+## 2.1. Competidores
+
+### 2.1.1. Competidores identificados
+
+Se identificaron los siguientes competidores y proyectos relacionados dentro del contexto académico y de soluciones ciudadanas:
+
+| Competidor / Trabajo | Tipo | Descripción breve | Fortalezas principales |
+|---|---:|---|---|
+| **TheShield App** | App de seguridad ciudadana | Aplicación móvil orientada a reportes y alertas de seguridad; incluye gestión y moderación de incidencias. | Orientación comunitaria; reglas de moderación; adopción vecinal. |
+| **Proyectos UPC — Módulos Reportes/Dashboard** | Prototipos / Trabajos académicos | Varios trabajos que incluyen paneles de control y módulos de reporte ciudadano; suelen ser prototipos o MVPs de gestión. | Conceptos validados; prototipos funcionales; enfoque analítico. |
+| **Tesis y estudios — Conservación vial / Baches** | Investigación académica / Técnica | Tesis enfocadas en identificación de baches, métricas de mantenimiento y propuestas de intervención; menos foco en UX/app. | Rigor técnico; metodologías aplicables a priorización de mantenimiento. |
+
+---
+
+### 2.1.2. Análisis competitivo
+
+**Objetivo:** Identificar similitudes, diferencias y ventajas competitivas frente a los trabajos y soluciones detectadas.
+
+**Resumen comparativo (alto nivel):**
+
+| Ítem / Atributo | Nuestra Plataforma (Propuesta) | TheShield App | Proyectos UPC (Reportes/Dashboard) | Tesis Conservación Vial |
+|---|---:|---|---|---|
+| **Perfil / overview** | App móvil + backend con detección IA (YOLO), PostGIS y dashboards geoespaciales para reportes urbanos. | App centrada en seguridad ciudadana (reportes y alertas). | Prototipos con paneles de control y gestión de reportes. | Estudios técnicos sobre identificación y priorización de baches. |
+| **Valor ofrecido** | Detección automática + mapas de calor + priorización para municipalidades; API para integración. | Canal de reporte y gestión de incidentes de seguridad. | Visualización de datos y métricas; enfoque académico/prueba de concepto. | Metodologías y métricas para mantenimiento vial; poco foco en UX. |
+| **Mercado objetivo** | Municipios, equipos de mantenimiento, ciudadanos, ONGs. | Vecinos y comités de seguridad. | Organizaciones que requieren gestión de procesos y reporting. | Autoridades técnicas y consultoras de infraestructura. |
+| **Fortalezas** | IA geoespacial y priorización; enfoque integrable con SIG. | Adopción comunitaria y reglas de moderación. | Prototipos funcionales y validados en contexto académico. | Rigor técnico y metodológico en mantenimiento vial. |
+| **Debilidades** | Necesidad de dataset local y validación municipal; recursos para despliegue. | Alcance limitado a seguridad; no enfocado en infraestructura vial. | Escalabilidad y soporte limitados; entregables académicos. | No orientado a producto; falta UX / integración con apps. |
+
+---
+
+### 2.1.3. Estrategias y tácticas frente a competidores
+
+A continuación se detallan estrategias (nivel estratégico) y tácticas (acciones operativas) recomendadas para posicionar la plataforma y enfrentar a los competidores identificados.
+
+#### 3.1 Estrategias (alto nivel)
+
+- **Diferenciación técnica por IA + enfoque geoespacial:** modelo YOLO entrenado con datos locales y mapas de calor para priorizar incidencias.
+- **Go-to-Market B2G / B2B2C:** pilotos con municipalidades pequeñas para validar flujo operativo y KPIs.
+- **Posicionamiento como plataforma de datos:** APIs y datos anonimizados para atraer academia, consultoras y ONGs.
+- **Verificación híbrida (IA + validación humana):** reducir falsos reportes y aumentar la confianza municipal.
+
+#### 3.2 Tácticas (acciones concretas)
+
+- **Producto:** Implementar filtro inicial con IA en el móvil, sincronización offline y flag de confianza en cada reporte. Documentar endpoints de la API en anexos.
+- **Piloto:** Ofrecer un piloto de 3 meses con un distrito pequeño. KPIs sugeridos: tiempo medio de atención, % de reportes verificados, reducción de falsos positivos.
+- **Comercial:** Talleres de adopción con gerencias de obras; dashboards personalizados para supervisores.
+- **Marketing / Comunidad:** Programa de embajadores vecinales para promover uso y moderar reportes.
+- **Alianzas:** MOUs con municipalidades para acceso a datos SIG y flujos de atención; acuerdos con universidades para validación y dataset.
+- **Defensa competitiva:** Lanzar MVP centrado en una categoría (p.ej. baches) y mostrar resultados cuantificables antes de escalar.
+
+---
+
+## 2.2. Entrevistas
+
+### 2.2.1. Diseño de entrevistas
+
+> *(Espacio para diseño de guías, objetivos por perfil, preguntas semi-estructuradas, duración estimada y consentimiento.)*
+
+### 2.2.2. Registro de entrevistas
+
+> *(Plantilla sugerida: ID entrevista, fecha, entrevistador, rol entrevistado, notas, transcripción/URL, etiquetas temáticas.)*
+
+### 2.2.3. Análisis de entrevistas
+
+> *(Métodos sugeridos: codificación abierta, afinidad de insights, matriz de hallazgos por prioridad, frases representativas y conclusiones clave.)*
+
+---
+
+## 2.3. Needfinding
+
+### 2.3.1. User Personas
+
+> *(Plantillas de persona: nombre ficticio, edad, rol, objetivos, frustraciones, contexto de uso, citas relevantes, jornada típica.)*
+
+### 2.3.2. User Task Matrix
+
+> *(Matriz que cruza tareas principales con frecuencia, prioridad, actor responsable y métricas de éxito.)*
+
+### 2.3.3. Empathy Mapping
+
+> *(Secciones: dice, piensa, hace, siente — con insights derivados de entrevistas y observación.)*
+
+### 2.3.4. As-is Scenario Mapping
+
+> *(Mapa del escenario actual: actores, artefactos, flujos de información, puntos de dolor, oportunidades.)*
+
+---
+
+## 2.4. Ubiquitous Language
+
+> *(Definición de términos compartidos entre stakeholders, por ejemplo: “Incidencia”, “Reporte verificado”, “Mapa de calor”, “Prioridad”, “Ticket de mantenimiento”, “Nivel de confianza”, etc. Incluir glosario con definiciones claras para evitar ambigüedad entre equipo técnico y expertos de dominio.)*
+
+---
+
+
