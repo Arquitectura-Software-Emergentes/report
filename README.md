@@ -476,17 +476,214 @@ A continuación se detallan estrategias (nivel estratégico) y tácticas (accion
 
 ### 2.2.1. Diseño de entrevistas
 
-> *(Espacio para diseño de guías, objetivos por perfil, preguntas semi-estructuradas, duración estimada y consentimiento.)*
+Para comprender las necesidades, comportamientos y expectativas de nuestros segmentos objetivo, se ha diseñado un proceso de entrevistas estructurado con guías específicas por perfil. Estas entrevistas buscan validar hipótesis clave sobre el uso de la plataforma y descubrir insights no anticipados.
+#### **Objetivos generales de las entrevistas**
+
+- Validar el problema percibido de gestión reactiva de incidencias urbanas
+- Entender el flujo actual de reporte y seguimiento de problemas urbanos
+- Identificar barreras potenciales para la adopción de la plataforma
+- Descubrir preferencias específicas sobre experiencia de usuario y funcionalidades
+- Recopilar información sobre patrones de uso de tecnología móvil
+
+#### **A. Entrevista: Ciudadano Reportante**
+
+Preguntas demográficas y contextuales
+1. ¿Cuál es su nombre y edad?
+2. ¿En qué distrito de Lima reside actualmente?
+
+Experiencia actual con problemas urbanos
+1. ¿Ha observado problemas de infraestructura en su distrito durante el último mes? ¿Cuáles?
+2. Cuando detecta un problema urbano (bache, basura acumulada, poste caído), ¿suele reportarlo? ¿Por qué sí o por qué no?
+3. Si ha reportado alguna vez, ¿qué canales utilizó? ¿Cómo fue su experiencia?
+4. ¿Recibió algún tipo de seguimiento o confirmación? ¿Observó que el problema fuera resuelto?
+
+Validación de concepto
+1. ¿Qué le parece la idea de una aplicación que le permita reportar problemas urbanos con una foto y geolocalización automática?
+2. ¿Qué beneficios personales percibiría al usar esta plataforma?
+3. ¿Le interesaría ver reportes de otros ciudadanos en su zona? ¿Por qué?
+4. ¿Qué factores lo motivarían a utilizar la aplicación de forma recurrente?
+
+#### **B. Entrevista: Personal Municipal**
+
+Preguntas de contexto profesional
+1. ¿Cuál es su nombre y cargo dentro de la municipalidad?
+2. ¿Cuánto tiempo lleva trabajando en gestión municipal?
+3. ¿Cuáles son sus principales responsabilidades relacionadas con infraestructura urbana?
+
+Proceso actual de gestión de incidencias
+1. ¿Cómo llegan actualmente los reportes ciudadanos sobre problemas de infraestructura?
+2. ¿Qué proceso siguen desde que se recibe un reporte hasta su resolución?
+3. ¿Cómo determinan la prioridad de atención entre múltiples reportes?
+
+Métricas y toma de decisiones
+1. ¿Utilizan actualmente mapas o visualizaciones geográficas para análisis de incidencias?
+2. ¿Cuentan con información histórica sobre patrones de problemas urbanos? ¿Cómo la utilizan?
+
+Validación de concepto
+1. ¿Qué utilidad le ve a una plataforma con estas características?
+2. ¿Qué métricas o visualizaciones específicas serían más valiosas para su trabajo? _(Ejem: Concentración de incidencias según zona, satisfacción cuidadana tras la resolucipon del problema, etc)_
+3. ¿Qué preocupaciones tendría sobre la implementación de este sistema?
+4. ¿Sería compatible con sus sistemas actuales? ¿Qué consideraciones de integración serían importantes?
+
 
 ### 2.2.2. Registro de entrevistas
 
-> *(Plantilla sugerida: ID entrevista, fecha, entrevistador, rol entrevistado, notas, transcripción/URL, etiquetas temáticas.)*
+#### Entrevista 01
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Ciudadano Reportante
+- **Evidencia de la reunión:**
+<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
+
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:** 
+[Entrevistas - Ciudadanos.mp4](https://drive.google.com/file/d/1234567890/view)
+
+#### Entrevista 02
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Ciudadano Reportante
+- **Evidencia de la reunión:**
+<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
+
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:** 
+[Entrevistas - Ciudadanos.mp4](https://drive.google.com/file/d/1234567890/view)
+
+#### Entrevista 03
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Ciudadano Reportante
+- **Evidencia de la reunión:**
+<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
+
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:** 
+[Entrevistas - Ciudadanos.mp4](https://drive.google.com/file/d/1234567890/view)
+
+#### Entrevista 04
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Personal Municipal
+- **Evidencia de la reunión:**
+<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
+
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:** 
+[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
+
+### Entrevista 05
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Personal Municipal
+- **Evidencia de la reunión:**
+<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
+
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:** 
+[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
+
+#### Entrevista 06
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Personal Municipal
+- **Evidencia de la reunión:**
+<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
+
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:** 
+[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
 
 ### 2.2.3. Análisis de entrevistas
 
-> *(Métodos sugeridos: codificación abierta, afinidad de insights, matriz de hallazgos por prioridad, frases representativas y conclusiones clave.)*
+Para el proyecto de Plataforma Urbana Inteligente para Lima, se realizaron entrevistas a 3 ciudadanos reportantes y 3 funcionarios municipales de diversos distritos de Lima Metropolitana. A partir de sus respuestas, se identificaron las siguientes características y patrones:
 
----
+#### Hallazgos clave - Ciudadanos Reportantes:
+
+- **Perfil demográfico**: [Porcentaje]% de los entrevistados tienen entre [rango de edad] años, con residencia principalmente en los distritos de [nombres de distritos].
+
+- **Experiencia con problemas urbanos**: [Porcentaje]% ha observado problemas de infraestructura en su distrito durante el último mes, siendo los más comunes [listar problemas frecuentes].
+
+- **Comportamiento de reporte**: [Porcentaje]% ha intentado reportar algún problema urbano, principalmente a través de [canales más utilizados].
+
+- **Nivel de satisfacción con canales actuales**: [Porcentaje]% expresa frustración con los mecanismos de reporte existentes, principalmente debido a [razones principales].
+
+- **Seguimiento de reportes**: [Porcentaje]% indica no haber recibido ningún tipo de confirmación o seguimiento después de reportar un problema.
+
+- **Uso de dispositivos móviles**: [Porcentaje]% utiliza smartphones de forma regular para diversas actividades, con [sistema operativo predominante] como plataforma principal.
+
+- **Aceptación del concepto**: [Porcentaje]% muestra interés alto o muy alto en utilizar una aplicación para reportar problemas urbanos con foto y geolocalización automática.
+
+- **Motivadores para adopción recurrente**:
+  - [Porcentaje]% valora la transparencia y visibilidad del estado del reporte
+  - [Porcentaje]% considera importante ver el impacto real de sus reportes
+  - [Porcentaje]% mencionó la importancia de una interfaz sencilla y rápida
+
+#### Hallazgos clave - Personal Municipal:
+
+- **Perfil profesional**: Los entrevistados tienen un promedio de [número] años de experiencia en gestión municipal, con responsabilidades en [áreas principales].
+
+- **Proceso actual de gestión**: [Porcentaje]% indica que los reportes ciudadanos llegan principalmente a través de [canales más comunes], siguiendo un flujo que toma en promedio [tiempo] para ser procesados.
+
+- **Herramientas de análisis**: [Porcentaje]% no utiliza actualmente mapas o visualizaciones geográficas para el análisis de incidencias urbanas.
+
+- **Priorización de atención**: La mayoría determina la prioridad basándose en [criterios más comunes], sin un sistema estructurado de clasificación.
+
+- **Información histórica**: [Porcentaje]% no cuenta con sistemas eficientes para utilizar datos históricos en la prevención o planificación de mantenimiento urbano.
+
+- **Aceptación del concepto**: [Porcentaje]% considera que una plataforma con las características propuestas sería [nivel de utilidad] para su trabajo.
+
+- **Métricas valoradas**: Las visualizaciones y métricas más valoradas por el personal municipal incluyen:
+  - [Porcentaje]% - [Métrica o visualización específica]
+  - [Porcentaje]% - [Métrica o visualización específica]
+  - [Porcentaje]% - [Métrica o visualización específica]
+
+- **Preocupaciones de implementación**: Las principales inquietudes expresadas fueron:
+  - [Preocupación 1]
+  - [Preocupación 2]
+  - [Preocupación 3]
+
+#### Validación de hipótesis:
+
+| Hipótesis | Resultado | Evidencia |
+|-----------|-----------|-----------|
+| Los ciudadanos están frustrados con los canales actuales de reporte | [Validada/No validada] | [Porcentaje]% expresó frustración con los canales actuales debido a [razones principales] |
+| Los problemas de conectividad son una barrera significativa | [Validada/No validada] | [Porcentaje]% reporta problemas frecuentes de conectividad en [situaciones específicas] |
+| La retroalimentación sobre estado del reporte es crítica para adopción | [Validada/No validada] | [Porcentaje]% mencionó la importancia de recibir actualizaciones sobre el estado de sus reportes |
+| Los municipios carecen de herramientas para visualizar patrones | [Validada/No validada] | [Porcentaje]% de funcionarios municipales confirmó no utilizar mapas o visualizaciones geoespaciales |
+| La clasificación automática de incidencias agilizaría procesos | [Validada/No validada] | [Porcentaje]% de funcionarios identificó valor en la automatización de la clasificación |
+
+#### Conclusiones y recomendaciones:
+
+1. **[Conclusión principal 1]**: Basado en [hallazgos específicos], recomendamos [acción concreta].
+
+2. **[Conclusión principal 2]**: Los datos muestran que [patrón identificado], por lo que se debería priorizar [característica o enfoque].
+
+3. **[Conclusión principal 3]**: La brecha entre [expectativa] y [realidad actual] representa una oportunidad para [propuesta de valor específica].
+
+4. **[Conclusión principal 4]**: Para incrementar la adopción y retención de usuarios, es fundamental [recomendación basada en entrevistas].
+
+5. **[Conclusión principal 5]**: Las preocupaciones sobre [tema específico] deben ser abordadas mediante [estrategia o característica].
+
+
 
 ## 2.3. Needfinding
 
