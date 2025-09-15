@@ -534,11 +534,6 @@ Esta sección define los segmentos objetivo iniciales sobre los cuales se constr
 - Ajuste incremental del modelo con dataset local.
 - SLA interno acordado para registrar primera acción.
 
-=======
-=======
->>>>>>> 3c05ea4c8ca3cca835d1a0b59a44f3c745d54894
-# Capítulo II: Requirements Elicitation & Analysis
-
 ## 2.1. Competidores
 
 ### 2.1.1. Competidores identificados
