@@ -30,9 +30,6 @@
 
 <div align="justify">
 
-
-
-
 ## Registro de Versiones del Informe
 
 El objetivo de esta sección es resumir las modificaciones relevantes que se realizan al informe durante el ciclo de vida del proyecto. Esta sección inicia en una página nueva e incluye un cuadro con la siguiente estructura:
@@ -61,77 +58,55 @@ El objetivo de esta sección es resumir las modificaciones relevantes que se rea
 
 <br>Para desarrollar el proyecto, se empleó GitHub como herramienta para gestionar versiones y facilitar la colaboración en tiempo real. A continuación, se proporciona el enlace al repositorio del proyecto:
 
-| **Descripción**            | **Enlace**                                                                 |
-| :-------------------------: | :------------------------------------------------------------------------: |
-| Repositorio del Proyecto    | https://github.com/orgs/Arquitectura-Software-Emergentes/repositories         |
-| Link de la Organización     | https://github.com/orgs/Arquitectura-Software-Emergentes                    |
+|     **Descripción**      |                              **Enlace**                               |
+| :----------------------: | :-------------------------------------------------------------------: |
+| Repositorio del Proyecto | https://github.com/orgs/Arquitectura-Software-Emergentes/repositories |
+| Link de la Organización  |       https://github.com/orgs/Arquitectura-Software-Emergentes        |
 
 **TB1:**
 
 Para el TB1, se asignaron responsabilidades específicas a cada integrante, las cuales se detallan a continuación:
 
 | Miembro del Equipo | Tarea Asignada |
-|       :---:        |      :---:     |
-| Aldo Baldeon       |                |
-| Barbara Quezada    |                |
-| Steve Castillo     |                |
-| Jimena Cama        |                |
-| Jair Castillo      |                |
+| :----------------: | :------------: |
+|    Aldo Baldeon    |                |
+|  Barbara Quezada   |                |
+|   Steve Castillo   |                |
+|    Jimena Cama     |                |
+|   Jair Castillo    |                |
 
 Cabe destacar que, durante la creación del informe, se realizaron commits específicos para cada tarea asignada, lo que permitió garantizar un control de versiones y una colaboración efectiva en tiempo real. El equipo mantuvo reuniones semanales de sincronización para asegurar la coherencia entre los diferentes capítulos y compartir avances.
 
 Miembros
 
-- Aldo Baldeon    (CodAress) 
-- Barbara Quezada (BarbaraQP15) 
-- Steve Castillo  (Salchichon057) 
-- Jimena Cama     (aksonie) 
-- Jair Castillo   (U202211390)
-  
+- Aldo Baldeon (CodAress)
+- Barbara Quezada (BarbaraQP15)
+- Steve Castillo (Salchichon057)
+- Jimena Cama (aksonie)
+- Jair Castillo (U202211390)
+
 El uso de GitHub ha permitido gestionar versiones y fomentar la colaboración en tiempo real, facilitando que los integrantes del equipo trabajen tanto de forma asincrónica como sincrónica en el proyecto. Asimismo, la metodología Gitflow ha posibilitado la creación de diversas ramas para el desarrollo de las tareas asignadas, promoviendo un trabajo autónomo y colaborativo entre los miembros.
 
 La rama "develop" se utilizó como un entorno para integrar las tareas de cada miembro de manera estructurada y organizada, mientras que la rama "main" se destinó a la entrega de la versión final del proyecto. Esta estrategia permitió una revisión conjunta del contenido antes de su integración final, reduciendo errores y asegurando la calidad del informe presentado.
-
 
 # Contenido
 
 ## Tabla de Contenidos
 
-### [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
+## Capítulo I: Introducción
+- [1.1. Startup Profile](#11-startup-profile)
+  - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+  - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+- [1.2. Solution Profile](#12-solution-profile)
+  - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
+  - [1.2.2. Lean UX Process](#122-lean-ux-process)
+    - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+    - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+    - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+    - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+- [1.3. Segmentos objetivo](#13-segmentos-objetivo)
 
-### [Project Report Collaboration Insights](#project-report-collaboration-insights)
-
-### [Contenido](#contenido)
-
-### [Student Outcomes](#student-outcome)
-
-### [Capítulo I: Introducción](#capítulo-i-introducción)
-- [Project Report Collaboration Insights](#project-report-collaboration-insights)
-- [Contenido](#contenido)
-  - [Tabla de Contenidos](#tabla-de-contenidos)
-    - [Registro de Versiones del Informe](#registro-de-versiones-del-informe-1)
-    - [Project Report Collaboration Insights](#project-report-collaboration-insights-1)
-    - [Contenido](#contenido-1)
-    - [Student Outcomes](#student-outcomes)
-    - [Capítulo I: Introducción](#capítulo-i-introducción)
-    - [Capítulo II: Requirements Elicitation \& Analysis](#capítulo-ii-requirements-elicitation--analysis)
-    - [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
-    - [Capítulo IV: Solution Software Design](#capítulo-iv-solution-software-design)
-    - [Capítulo V: Solution UI/UX Design](#capítulo-v-solution-uiux-design)
-    - [Capítulo VI: Product Implementation, Validation \& Deployment](#capítulo-vi-product-implementation-validation--deployment)
-    - [Conclusiones](#conclusiones)
-    - [Bibliografía](#bibliografía)
-    - [Anexos](#anexos)
-- [Student Outcome](#student-outcome)
-- [Capítulo I: Introducción](#capítulo-i-introducción-1)
-  - [1.1. Startup Profile](#11-startup-profile)
-    - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
-    - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
-  - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo-1)
-  - [1.2. Solution Profile](#12-solution-profile)
-    - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
-
-### [Capítulo II: Requirements Elicitation & Analysis](#capc3adtulo-ii-requirements-elicitation--analysis-1)
+## Capítulo II: Requirements Elicitation & Analysis
 - [2.1. Competidores](#21-competidores)
   - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
   - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
@@ -142,78 +117,43 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
 - [2.3. Needfinding](#23-needfinding)
   - [2.3.1. User Personas](#231-user-personas)
   - [2.3.2. User Task Matrix](#232-user-task-matrix)
-  - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
-  - [2.3.4. Empathy Mapping](#234-empathy-mapping)
-  - [2.3.5. As-is Scenario Mapping](#235-as-is-scenario-mapping)
+  - [2.3.3. Empathy Mapping](#233-empathy-mapping)
+  - [2.3.4. As-is Scenario Mapping](#234-as-is-scenario-mapping)
 - [2.4. Ubiquitous Language](#24-ubiquitous-language)
 
-### [Capítulo III: Requirements Specification](#capc3adtulo-iii-requirements-specification)
+## Capítulo III: Requirements Specification
 - [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
 - [3.2. User Stories](#32-user-stories)
 - [3.3. Impact Mapping](#33-impact-mapping)
 - [3.4. Product Backlog](#34-product-backlog)
 
-### [Capítulo IV: Solution Software Design](#capc3adtulo-iv-solution-software-design)
-- [4.1. Strategic-Level Domain-Driven Design](#41-strategic-level-domain-driven-design)
-  - [4.1.1. Event Storming](#411-event-storming)
-    - [4.1.1.1 Candidate Context Discovery](#4111-candidate-context-discovery)
-    - [4.1.1.2 Domain Message Flows Modeling](#4112-domain-message-flows-modeling)
-    - [4.1.1.3 Bounded Context Canvases](#4113-bounded-context-canvases)
-  - [4.1.2. Context Mapping](#412-context-mapping)
-  - [4.1.3. Software Architecture](#413-software-architecture)
-    - [4.1.3.1. Software Architecture System Landscape Diagram](#4131-software-architecture-system-landscape-diagram)
-    - [4.1.3.2. Software Architecture Context Level Diagrams](#4132-software-architecture-context-level-diagrams)
-    - [4.1.3.3. Software Architecture Deployment Diagrams](#4133-software-architecture-deployment-diagrams)
-- [4.2. Tactical-Level Domain-Driven Design](#42-tactical-level-domain-driven-design)
-  - [4.2.X. Bounded Context: Bounded Context Name](#42x-bounded-context-bounded-context-name)
-    - [4.2.X.1. Domain Layer](#42x1-domain-layer)
-    - [4.2.X.2. Interface Layer](#42x2-interface-layer)
-    - [4.2.X.3. Application Layer](#42x3-application-layer)
-    - [4.2.X.4. Infrastructure Layer](#42x4-infrastructure-layer)
-    - [4.2.X.6. Bounded Context Software Architecture Component Level Diagrams](#42x6-bounded-context-software-architecture-component-level-diagrams)
-    - [4.2.X.7. Bounded Context Software Architecture Code Level Diagrams](#42x7-bounded-context-software-architecture-code-level-diagrams)
-      - [4.2.X.7.1. Bounded Context Domain Layer Class Diagrams](#42x71-bounded-context-domain-layer-class-diagrams)
-      - [4.2.X.7.2. Bounded Context Database Design Diagram](#42x72-bounded-context-database-design-diagram)
-
-### [Capítulo V: Solution UI/UX Design](#capc3adtulo-v-solution-uiux-design)
-- [5.1. Style Guidelines](#51-style-guidelines)
-  - [5.1.1. General Style Guidelines](#511-general-style-guidelines)
-  - [5.1.2. Web, Mobile and IoT Style Guidelines](#512-web-mobile-and-iot-style-guidelines)
-- [5.2. Information Architecture](#52-information-architecture)
-  - [5.2.1. Organization Systems](#521-organization-systems)
-  - [5.2.2. Labeling Systems](#522-labeling-systems)
-  - [5.2.3. SEO Tags and Meta Tags](#523-seo-tags-and-meta-tags)
-  - [5.2.4. Searching Systems](#524-searching-systems)
-  - [5.2.5. Navigation Systems](#525-navigation-systems)
-- [5.3. Landing Page UI Design](#53-landing-page-ui-design)
-  - [5.3.1. Landing Page Wireframe](#531-landing-page-wireframe)
-  - [5.3.2. Landing Page Mock-up](#532-landing-page-mock-up)
-- [5.4. Applications UX/UI Design](#54-applications-uxui-design)
-  - [5.4.1. Applications Wireframes](#541-applications-wireframes)
-  - [5.4.2. Applications Wireflow Diagrams](#542-applications-wireflow-diagrams)
-  - [5.4.3. Applications Mock-ups](#543-applications-mock-ups)
-  - [5.4.4. Applications User Flow Diagrams](#544-applications-user-flow-diagrams)
-- [5.5. Applications Prototyping](#55-applications-prototyping)
-
-### [Capítulo VI: Product Implementation, Validation & Deployment](#capitulo-vi-product-implementation-validation-deployment)
-- [6.1. Software Configuration Management](#61-software-configuration-management)
-  - [6.1.1. Software Development Environment Configuration](#611-software-development-environment-configuration)
-  - [6.1.2. Source Code Management](#612-source-code-management)
-  - [6.1.3. Source Code Style Guide & Conventions](#613-source-code-style-guide-conventions)
-  - [6.1.4. Software Deployment Configuration](#614-software-deployment-configuration)
-- [6.2. Landing Page, Services & Applications Implementation](#62-landing-page-services--applications-implementation)
-- [6.3. Validation Interviews](#63-validation-interviews)
-- [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
-- [6.3.2. Registro de Entrevistas](#632-registro-de-entrevistass)
-- [6.3.3. Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
-- [6.4. Video About-the-Product](#64-video-about-the-product)
+## Capítulo IV: Strategic-Level Software Design
+- [4.1. Strategic-Level Attribute-Driven Design](#41-strategic-level-attribute-driven-design)
+  - [4.1.1. Design Purpose](#411-design-purpose)
+  - [4.1.2. Attribute-Driven Design Inputs](#412-attribute-driven-design-inputs)
+    - [4.1.2.1. Primary Functionality (Primary User Stories)](#4121-primary-functionality-primary-user-stories)
+    - [4.1.2.2. Quality attribute Scenarios](#4122-quality-attribute-scenarios)
+    - [4.1.2.3. Constraints](#4123-constraints)
+    - [4.1.2.4. Architectural Drivers Backlog](#4124-architectural-drivers-backlog)
+  - [4.1.3. Architectural Design Decisions](#413-architectural-design-decisions)
+  - [4.1.4. Quality Attribute Scenario Refinements](#414-quality-attribute-scenario-refinements)
+- [4.2. Strategic-Level Domain-Driven Design](#42-strategic-level-domain-driven-design)
+  - [4.2.1. EventStorming](#421-eventstorming)
+  - [4.2.2. Candidate Context Discovery](#422-candidate-context-discovery)
+  - [4.2.3. Domain Message Flows Modeling](#423-domain-message-flows-modeling)
+  - [4.2.4. Bounded Context Canvases](#424-bounded-context-canvases)
+  - [4.2.5. Context Mapping](#425-context-mapping)
+- [4.3. Software Architecture](#43-software-architecture)
+  - [4.3.1. Software Architecture System Landscape Diagram](#431-software-architecture-system-landscape-diagram)
+  - [4.3.2. Software Architecture Context Level Diagrams](#432-software-architecture-context-level-diagrams)
+  - [4.3.3. Software Architecture Container Level Diagrams](#433-software-architecture-container-level-diagrams)
+  - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
 
 
 ### [Conclusiones](#conclusiones)
 ### [Bibliografía](#bibliografía)
 ### [Anexos](#anexos)
-  
- 
+
 # Student Outcome
 
 El curso contribuye al cumplimiento del Student Outcome ABET:
@@ -223,7 +163,6 @@ juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo,
 establecen objetivos, planifican tareas y cumplen objetivos.
 En el siguiente cuadro se describe las acciones realizadas y enunciados de
 conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 5.
-
 
 <table>
     <tr>
@@ -236,35 +175,35 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
         <td>
             <b>TB1:</b><br>
             <b>Baldeon Fabian, Aldo Alberto</b><br>
-            - He demostrado liderazgo colaborando activamente con Jair en el desarrollo del Capítulo I y en el diseño táctico de la solución. Asumí el liderazgo en la elaboración del perfil de la startup, la definición de los antecedentes, el desarrollo del Lean UX Process, y el diseño a nivel táctico del software con el enfoque de Domain-Driven Design. Esto ha permitido consolidar una visión común del proyecto.
+            - 
             <br><br> 
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - He demostrado la capacidad de trabajar eficazmente en equipos multidisciplinarios, asumiendo roles de liderazgo compartido para la toma de decisiones y el logro de objetivos comunes. En el desarrollo de proyectos, fomenté un entorno inclusivo donde cada integrante pudo aportar sus fortalezas, promoviendo la comunicación abierta, la planificación conjunta de tareas y la adaptación ante cambios.
+            - 
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
-            - He liderado en conjunto con Aldo el desarrollo del Capítulo I, enfocándome especialmente en la elaboración del Lean UX Canvas y la definición de hipótesis. Asimismo, tomé la iniciativa en la elaboración del To-Be Scenario Mapping y el Impact Mapping, consolidando así la visión futura del sistema.
+            - 
             <br><br>
             <b>Castillo Robles, Steve Roger</b><br>
-            - Asumí un rol de liderazgo en el Capítulo II, enfocándome en el análisis de requerimientos. Me encargué del análisis competitivo, diseño y evaluación de entrevistas, así como del Needfinding completo. Lideré la exploración profunda de las necesidades de los usuarios para alinear los requerimientos con la visión del producto.
+            - 
             <br><br>
             <b>Quezada Portalatino, Barbara Susana</b><br>
-            - He compartido el liderazgo del Capítulo IV con Jimena, asegurando que el diseño de alto nivel del sistema refleje la arquitectura definida y cumpla con las expectativas funcionales. También aporté activamente en la redacción del backlog y en las historias de usuario del sistema.
+            - 
             <br><br>
             <b>TP1:</b><br>
             <b>Baldeon Fabian, Aldo Alberto</b><br>
-            - He trabajado en equipo asumiendo responsabilidades clave del frontend y backend, lo cual me permitió brindar liderazgo conjunto en el desarrollo de funcionalidades como el inicio de sesión, registro y navegación, asegurando cohesión entre el equipo técnico.
+            - 
             <br><br>
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - Asumí un rol de liderazgo dentro del equipo al desarrollar las directrices de estilo y prototipado de interfaces, guiando visualmente a los demás miembros para mantener la coherencia del diseño en todas las plataformas.
+            - 
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
-            - Participé de manera activa en el equipo asumiendo el liderazgo en aspectos técnicos como pruebas, documentación de servicios y la gestión del módulo de mesas, lo que fortaleció la estructura del desarrollo.
+            - 
             <br><br>
             <b>Castillo Robles, Steve Roger</b><br>
-            - Aporté liderazgo en la definición de la experiencia de usuario, wireframes, flujos y configuración del entorno de desarrollo, asegurando que las decisiones técnicas se alinearan con los objetivos del equipo.
+            - 
             <br><br>
             <b>Quezada Portalatino, Barbara Susana</b><br>
-            - Desde el área de arquitectura de la información y la implementación de la landing page y servicios, proporcioné liderazgo conjunto asegurando que los contenidos estuvieran correctamente estructurados y fueran accesibles.
+            - 
             <br><br>
         </td>
         <td>
@@ -280,35 +219,35 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
         <td>
             <b>TB1:</b><br>
             <b>Baldeon Fabian, Aldo Alberto</b><br>
-            - He contribuido a crear un entorno de trabajo participativo al compartir avances de forma constante, establecer cronogramas claros y ayudar a coordinar las entregas de los distintos capítulos. Me aseguré de cumplir los objetivos asignados dentro de los plazos, especialmente en los apartados de análisis y diseño de la solución.
+            - 
             <br><br> 
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - He demostrado la capacidad de crear un entorno de trabajo colaborativo e inclusivo, en el que se valora la participación activa de todos los integrantes del equipo. A lo largo del desarrollo del proyecto, trabajé en la definición de metas comunes, la planificación de tareas con enfoque estratégico y el cumplimiento de los objetivos establecidos, asegurando una gestión eficiente del tiempo y los recursos.
+            - 
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
-            - He aportado al trabajo grupal coordinando con los demás miembros la integración de los entregables del Capítulo III, asegurando que los insumos de análisis sean reflejados en las historias de usuario y el backlog. Mi planificación detallada ha permitido cumplir los entregables sin contratiempos.
+            - 
             <br><br>
             <b>Castillo Robles, Steve Roger</b><br>
-            - Organicé sesiones para compartir hallazgos con el equipo, facilitando un espacio abierto para retroalimentación. Además, establecí objetivos claros para cada sección del capítulo y cumplí con cada uno dentro del tiempo estimado.
+            - 
             <br><br>
             <b>Quezada Portalatino, Barbara Susana</b><br>
-            - Promoví la colaboración mediante la constante retroalimentación con el equipo y la organización de sesiones de revisión conjunta. Gracias a una planificación ordenada y objetiva, logré cumplir con todos los entregables asignados, manteniendo una sinergia adecuada con Jimena y el resto del equipo.
+            - 
             <br><br>
             <b>TP1:</b>
             <b>Baldeon Fabian, Aldo Alberto</b><br>
-            - Contribuí activamente a un entorno colaborativo e inclusivo, proponiendo metas claras para el avance del desarrollo de pantallas y el backend, planificando tareas específicas y cumpliendo los entregables según lo definido en los sprints.
+            - 
             <br><br>
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - Fomenté un entorno colaborativo e inclusivo durante el diseño UX/UI, facilitando la planificación de tareas de diseño, estableciendo metas claras por sprint y asegurando que los entregables cumplan los estándares de calidad definidos.
+            - 
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
-            - Establecí y cumplí metas relacionadas al testing y documentación, planificando mis tareas de manera coordinada con el equipo, fomentando una colaboración efectiva que permitió lograr los objetivos del sprint.
+            - 
             <br><br>
             <b>Castillo Robles, Steve Roger</b><br>
-            - Planifiqué y ejecuté tareas relacionadas a la configuración del software y estándares de código, promoviendo un entorno colaborativo, con comunicación clara y objetivos bien definidos, logrando avances significativos en los entregables del proyecto.
+            - 
             <br><br>
             <b>Quezada Portalatino, Barbara Susana</b><br>
-            - Fui parte activa en la planificación de tareas y definición de objetivos del equipo, garantizando que tanto los sistemas de navegación como el contenido cumplieran con los estándares de calidad y usabilidad esperados.
+            - 
             <br><br>
         </td>
         <td>
@@ -319,37 +258,25 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
     </tr>
 </table>
 
-
 # Capítulo I: Introducción
 
 ## 1.1. Startup Profile
 
-### 1.1.1. Descripción de la Startup 
+### 1.1.1. Descripción de la Startup
 
-**TAVOLO** es una solución tecnológica desarrollada para **optimizar la experiencia en cafeterías peruanas** mediante el uso de **dispositivos IoT** integrados a un sistema web y móvil. Su propuesta se enfoca exclusivamente en resolver los problemas relacionados con la ocupación de mesas, la gestión de reservas y la visualización de información relevante para los comensales, administradores y usuarios superadministradores.
+[actualizar]
 
-Para los comensales, TAVOLO permite visualizar el menú digital de una sede, conocer la disponibilidad de mesas en tiempo real, realizar reservas y consultar detalles de las mismas. También se ofrece la posibilidad de visualizar la ubicación de todas las sedes en un mapa interactivo, registrarse como nuevo usuario o iniciar sesión para acceder a funcionalidades personalizadas. Estas características permiten al usuario planificar su visita con antelación y evitar tiempos de espera innecesarios. Un estudio reciente de Apoyo Consultoría (2023) reveló que el 62 % de los limeños evita acudir a locales con alta concurrencia si no puede consultar previamente la disponibilidad, lo cual respalda la utilidad de este enfoque preventivo basado en datos en tiempo real.
+### 1.1.2. Perfiles de integrantes del equipo
 
-Desde el panel de administración, los administradores pueden gestionar la sede que se les ha asignado. Esto incluye agregar nuevas mesas, eliminar aquellas que ya no estén en uso, visualizar todas las reservas registradas en su local y confirmar que están gestionando la sede correcta. Esta funcionalidad permite a los encargados mantener un control actualizado del aforo, planificar la atención de manera eficiente y optimizar la logística operativa. La digitalización de estas tareas manuales no solo mejora la precisión en la gestión, sino que también incrementa la productividad del personal administrativo.
-
-TAVOLO se presenta así como una respuesta concreta y realista a los desafíos cotidianos que enfrentan las cafeterías en Perú. No pretende cubrir todo el ciclo de negocio de un restaurante, sino **centrarse exclusivamente en la mejora del proceso de aforo, reservas y atención al cliente**. Este enfoque especializado y realista busca generar impacto directo en la experiencia del usuario y en la eficiencia del negocio, con una implementación que puede ser gradual, asequible y con bajo nivel de complejidad técnica.
-
-**Mision:**<br>
-Brindar una solución tecnológica eficiente y accesible para la gestión de aforo en cafeterías peruanas, utilizando dispositivos IoT y plataformas digitales que permitan a los comensales acceder a información en tiempo real, y a los administradores optimizar la ocupación de mesas y las reservas, **mejorando así la experiencia del cliente y la operación del negocio.**
-
-**Visión:**<br>
-Consolidarse como la **solución de referencia en el Perú** para la digitalización de procesos de atención en cafeterías, mediante el uso de tecnología embebida, edge computing y sistemas en la nube, promoviendo una experiencia de consumo más ordenada, rápida y satisfactoria para los comensales, y una gestión más eficiente para los negocios del sector gastronómico.
-
-### 1.1.2. Perfiles de integrantes del equipo  
 ## 1.1.2. Perfiles de integrantes del equipo
 
-| Foto | Información |
-|------|-------------|
-| ![Perfil de Aldo](./images/profiles/aldo_profile.jpg) | **Nombre y Apellido:** Aldo Alberto Baldeon Fabian<br>**Código:** U202122633<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Aldo Alberto Baldeon Fabian, estudio la carrera de Ingeniería de Software en la UPC. Escogí esta carrera porque me interesó el desarrollo de aplicaciones. Soy responsable y me gusta trabajar en equipo. Poseo conocimientos básicos en C#, java, JavaScript, HTML y CSS. También, poseo conocimientos intermedios en C + +, SQL y MongoDB, además de contar con experiencia en Git y GitHub. |
-| ![Perfil de Barbara](./images/profiles/barbara_profile.jpg) | **Nombre y Apellido:** Barbara Susana Quezada Portalatino<br>**Código:** U202211800<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Barbara Susana Quezada Portalatino, cursando el séptimo ciclo de la carrera de software, trabajo mayormente bajo un rol de líder que me ayuda a poder organizar no solo la ideas de mi grupo sino que las ideas aterricen en la ejecución. Soy una persona muy disciplinada y detallista. |
-| ![Perfil de Jimena](./images/profiles/jimena_profile.jpg) | **Nombre y Apellido:** Jimena Tamara Cama Salvatierra<br>**Código:** U2022210778<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y actualmente estoy cursando el 7mo ciclo. Me considero una persona curiosa, determinada y organizada. Con la experiencia en proyectos de startup y trabajos en equipo, trabajaré junto a mis compañeros para lograr un óptimo resultado del proyecto. |
-| ![Perfil de Jair](./images/profiles/jair_profile.jpg) | **Nombre y Apellido:** Jair Alexander Castillo Castillo<br>**Código:** U202211390<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y me encuentro en el 7to ciclo. Me considero una persona dedicada, comprensiva y metódica. Con mis habilidades de liderazgo y mi capacidad para trabajar en equipo en un ambiente de respeto, estoy segura de que podré dirigir la implementación de la startup de nuestro proyecto de manera exitosa. |
-| ![Perfil de Franz](./images/profiles/steve_profile.jpg) | **Nombre y Apellido:** Steve Roger Castillo Robles<br>**Código:** U202012378<br>**Carrera:** Ingeniería de Software<br>**Acerca de:**  |
+| Foto                                                        | Información                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Perfil de Aldo](./images/profiles/aldo_profile.jpg)       | **Nombre y Apellido:** Aldo Alberto Baldeon Fabian<br>**Código:** U202122633<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Aldo Alberto Baldeon Fabian, estudio la carrera de Ingeniería de Software en la UPC. Escogí esta carrera porque me interesó el desarrollo de aplicaciones. Soy responsable y me gusta trabajar en equipo. Poseo conocimientos básicos en C#, java, JavaScript, HTML y CSS. También, poseo conocimientos intermedios en C + +, SQL y MongoDB, además de contar con experiencia en Git y GitHub.                                                                                                                                                                                                                                              |
+| ![Perfil de Barbara](./images/profiles/barbara_profile.jpg) | **Nombre y Apellido:** Barbara Susana Quezada Portalatino<br>**Código:** U202211800<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Barbara Susana Quezada Portalatino, cursando el séptimo ciclo de la carrera de software, trabajo mayormente bajo un rol de líder que me ayuda a poder organizar no solo la ideas de mi grupo sino que las ideas aterricen en la ejecución. Soy una persona muy disciplinada y detallista.                                                                                                                                                                                                                                                                                                                                                |
+| ![Perfil de Jimena](./images/profiles/jimena_profile.jpg)   | **Nombre y Apellido:** Jimena Tamara Cama Salvatierra<br>**Código:** U2022210778<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y actualmente estoy cursando el 8vo ciclo. Me considero una persona curiosa, determinada y organizada. Con la experiencia en proyectos de startup y trabajos en equipo, trabajaré junto a mis compañeros para lograr un óptimo resultado del proyecto.                                                                                                                                                                                                                                                                                                                     |
+| ![Perfil de Jair](./images/profiles/jair_profile.jpg)       | **Nombre y Apellido:** Jair Alexander Castillo Castillo<br>**Código:** U202211390<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y me encuentro en el 7to ciclo. Me considero una persona dedicada, comprensiva y metódica. Con mis habilidades de liderazgo y mi capacidad para trabajar en equipo en un ambiente de respeto, estoy segura de que podré dirigir la implementación de la startup de nuestro proyecto de manera exitosa.                                                                                                                                                                                                                                                                    |
+| ![Perfil de Franz](./images/profiles/steve_profile.jpg)     | **Nombre y Apellido:** Steve Roger Castillo Robles<br>**Código:** U202012378<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Steve, estudiante del 9no ciclo de Ingeniería de Software y desarrollador Full-Stack, con experiencia en tecnologías como Angular, React.js, Next.js, Spring Boot, Flutter, PostgreSQL y servicios cloud como Azure, Firebase y Supabase. Mi experiencia abarca desde el desarrollo y migración de aplicaciones hasta el diseño y optimización de bases de datos, aplicando principios de arquitectura limpia, DDD y metodologías ágiles como Scrum. Me destaco por mi capacidad para trabajar en equipo, mi enfoque metódico y mi constante pasión por aprender y aplicar nuevas tecnologías para llevar los proyectos al siguiente nivel. |
 
 ## 1.2. Solution Profile
 
@@ -417,4 +344,191 @@ El proyecto integra tecnologías emergentes adaptadas al contexto limeño:
 - Para autoridades: Detección automatizada, mapas de calor y KPIs en tiempo real.
 - Para ciudadanos: Canal directo y transparente para reportar problemas y seguimiento.
 - Para Lima: Transformación hacia una smart city, reducción de costos operativos y cierre de la brecha digital.
+
+### 1.2.2. Lean UX Process
+
+#### 1.2.2.1. Lean UX Problem Statement
+
+**Problem Statement:**
+
+La gestión de incidencias urbanas en Lima Metropolitana es actualmente reactiva, fragmentada y opaca para el ciudadano. Los canales existentes (teléfono, formularios municipales aislados o visitas presenciales) no ofrecen confirmación estructurada, trazabilidad del estado ni consolidación de datos para análisis transversal.
+
+**Problema:**
+
+Ciudadanos conectados digitalmente (18–45 y segmentos activos de reporte cívico) experimentan frustración y desconfianza al no poder visualizar el progreso de sus reportes de baches, residuos, luminarias dañadas u otras incidencias del espacio público. Paralelamente, las gerencias municipales carecen de un repositorio unificado y de analítica geoespacial que permita detectar patrones (hotspots) y priorizar intervenciones preventivas. Esto ocasiona: duplicidad de reclamos, tiempos prolongados a primera acción, uso ineficiente de cuadrillas y percepción negativa de respuesta institucional.
+
+**Impacto:**
+
+La ausencia de un circuito transparente y analítico retrasa intervenciones, incrementa costos correctivos frente a mantenimiento preventivo y deteriora la participación cívica sostenida. Un sistema integrado con reporte estructurado, validación automática de imágenes, clasificación asistida por IA y dashboards geoespaciales habilita: reducción de tiempos de priorización, asignación más eficiente de recursos, incremento de confianza ciudadana y generación de datos abiertos para innovación externa. El éxito temprano se medirá a través de adopción inicial (reportes válidos únicos), precisión de clasificación, disminución de reportes inválidos/duplicados, tiempo a primera acción y retención (usuarios que reportan nuevamente en ventana piloto).
+
+#### 1.2.2.2. Lean UX Assumptions
+
+**Business Outcomes:**
+- ≥70% de reportes creados en el piloto con todos los campos completos (foto válida, ubicación, categoría confirmada).
+- ≥80% de precisión promedio del modelo de clasificación de incidencias en dataset de validación local.
+- <15% de reportes inválidos o duplicados tras filtrado automático + revisión mínima.
+- ≥30% de usuarios recurrentes (segundo reporte dentro de 45 días).
+- ≥25% de reducción del tiempo promedio a primera acción municipal registrada (baseline vs. piloto).
+- ≥1 gerencia municipal (distrito piloto) usando el dashboard semanalmente (≥4 sesiones mensuales) durante piloto.
+- ≥40% de reducción del tiempo de priorización manual al disponer de mapas de calor y ranking automatizado.
+
+**Users (Segmentos Objetivo Simplificados):**
+- Ciudadano Reportante: residente urbano con smartphone que observa incidencias y registra evidencia (foto + ubicación) mediante la aplicación móvil.
+- Municipalidad (Gerencia / Unidad Responsable): personal técnico y de gestión que consume analítica (mapas de calor, KPIs) para priorizar y dar seguimiento a intervenciones.
+
+**User Outcomes & Benefits:**
+
+  Ciudadano Reportante:
+  - Registro rápido (≤3 pantallas) y confirmación inmediata de recepción.
+  - Visibilidad del estado de su incidencia que reduce incertidumbre y motiva reuso.
+  - Retroalimentación de cierre que incrementa percepción de efectividad institucional.
+
+  Municipalidad:
+  - Consolidación automática y visual (mapas de calor, filtros temporales) para priorizar.
+  - Reducción de ruido (reportes inválidos/duplicados) que optimiza revisión.
+  - Métricas operativas (tiempo a primera acción, distribución por tipo, severidad) para gestión y rendición de cuentas.
+
+**Feature Assumptions:**
+- Captura guiada (foto + geolocalización automática + sugerencia de categoría por IA).
+- Clasificación automática y validación básica de calidad de imagen.
+- Estado visible del ciclo de vida (recibido, en verificación, programado, en proceso, cerrado).
+- Dashboard geoespacial con mapas de calor, filtros por tipo, tiempo y severidad.
+- Modo offline con sincronización diferida.
+- Notificaciones (push / correo) en hitos clave.
+- (Opcional fase posterior) Publicación de datos agregados anonimizada.
+
+**Business Assumptions:**
+- Creemos que el ciudadano reportará nuevamente si percibe confirmación y avance dentro de un plazo razonable.
+- Creemos que la gerencia municipal adoptará el dashboard si reduce tiempo de priorización y consolida evidencias georreferenciadas.
+- Creemos que la diferenciación radica en la unión de captura estructurada + clasificación automática + visualización geoespacial continua.
+- Creemos que financiamiento inicial puede surgir de presupuesto de modernización o cooperación interinstitucional.
+- Riesgo principal: baja precisión temprana del modelo o falta de acción visible en reportes, afectando retención.
+- Mitigación: ajuste iterativo del modelo con dataset local y acuerdos de SLA mínimos para primera acción.
+
+**User Assumptions:**
+
+- ¿Quién es el usuario?
+
+  Dos segmentos núcleo:
+  - Ciudadano Reportante
+  - Municipalidad (gerencia responsable)
+
+¿Qué problema resuelve nuestro producto?
+
+- Para el ciudadano: falta de canal único y trazable para reportar incidencias. Para la municipalidad: ausencia de consolidación y priorización geoespacial rápida.
+
+¿Qué características son importantes?
+
+- Ciudadano: flujo corto, confirmación inmediata, estado visible. Municipalidad: analítica visual, filtrado, métricas operativas.
+
+¿Dónde encaja en su rutina?
+
+- Ciudadano: durante desplazamientos cuando detecta una incidencia. Municipalidad: sesiones de revisión y planificación diaria/semanal.
+
+¿Cuándo y cómo se usa?
+- App móvil (ciudadano) en el momento del hallazgo; dashboard web (municipalidad) para priorizar y monitorear indicadores.
+
+¿Cómo debe verse y comportarse?
+- App: simple, rápida, ≤3 pasos, validación inmediata. Dashboard: panel claro con mapas responsivos y filtros eficientes.
+
+#### 1.2.2.3. Lean UX Hypothesis Statements
+
+A continuación, se presentan las hipótesis clave relacionadas con las funcionalidades y comportamientos esperados. Cada hipótesis es específica y medible.
+
+- Hypothesis Statement 1:
+Creemos que un flujo de reporte simplificado (foto + geolocalización + sugerencia de categoría) reducirá la fricción inicial y aumentará la completitud de datos.
+Sabremos que hemos tenido éxito cuando ≥70% de los reportes del primer mes incluyan foto válida, coordenadas y categoría confirmada sin edición manual.
+
+- Hypothesis Statement 2:
+Creemos que la clasificación automática mediante un modelo entrenado localmente disminuirá la proporción de reportes inválidos o irrelevantes.
+Sabremos que hemos tenido éxito cuando la tasa de reportes descartados manualmente sea <15% y la precisión validada sea ≥80%.
+
+- Hypothesis Statement 3:
+Creemos que mostrar estados visibles del ciclo de vida incrementará la retención y el re-reporte responsable.
+Sabremos que hemos tenido éxito cuando ≥30% de los usuarios con un primer reporte registren un segundo dentro de 45 días.
+
+- Hypothesis Statement 4:
+Creemos que un dashboard geoespacial con mapas de calor temporales permitirá priorizar intervenciones preventivas de forma más eficiente.
+Sabremos que hemos tenido éxito cuando al menos 1 gerencia lo use semanalmente y reporte una reducción ≥20% en tiempo de priorización comparado con la línea base.
+
+- Hypothesis Statement 5:
+Creemos que notificaciones de avance y cierre aumentarán la percepción de transparencia y satisfacción.
+Sabremos que hemos tenido éxito cuando >60% de encuestados indiquen satisfacción con la visibilidad del proceso y el NPS del seguimiento sea ≥30.
+
+- Hypothesis Statement 6:
+Creemos que el modo offline incrementará la cobertura en zonas de conectividad limitada.
+Sabremos que hemos tenido éxito cuando ≥15% de los reportes provengan de sesiones iniciadas sin conexión y sincronizadas posteriormente.
+
+- Hypothesis Statement 7:
+Creemos que la publicación de datos agregados fomentará colaboración externa y reutilización.
+Sabremos que hemos tenido éxito cuando al menos 2 actores externos consuman el endpoint público y entreguen retroalimentación formal durante el piloto.
+
+Estas hipótesis se priorizarán por impacto y nivel de incertidumbre; las de mayor riesgo (precisión del modelo, adopción institucional, retención inicial) serán abordadas en los primeros ciclos experimentales para reducir desperdicio de esfuerzo.
+
+#### 1.2.2.4. Lean UX Canvas
+
+El siguiente Lean UX Canvas presentado busca estructurar la propuesta presentada. Diseñada bajo los principios de Lean UX con el fin de validar tempranamente las hipótesis de valor y factibilidad. Este marco sintetiza el problema central, los objetivos de negocio, los usuarios clave y las soluciones planteadas, permitiendo orientar el diseño hacia resultados medibles y enfocados en las verdaderas necesidades de ciudadanos y autoridades municipales.
+
+![lean_ux_canvas](<images/lean_ux_canvas/LEAN UX CANVAS.png>)
+
+
+Esta propuesta aborda la gestión fragmentada de incidencias urbanas en Lima mediante una aplicación móvil ciudadana, un backend con inteligencia artificial de visión por computadora y un dashboard geoespacial para autoridades. Los principales beneficiarios son los ciudadanos, que ganan un canal confiable y trazable, y las municipalidades, que obtienen herramientas de priorización basadas en datos. 
+
+El éxito se medirá en términos de reportes válidos, precisión en la clasificación, reducción de tiempos de respuesta y adopción institucional. La hipótesis central sostiene que la combinación de captura estructurada, validación automática y analítica geoespacial generará mayor eficiencia y confianza. Para validar esto, el primer aprendizaje clave es confirmar la disposición de las municipalidades a adoptar la plataforma, lo cual se evaluará con un prototipo de baja fidelidad en pruebas iniciales con ciudadanos y funcionarios.
+
+### 1.3. Segmentos Objetivo
+
+Esta sección define los segmentos objetivo iniciales sobre los cuales se construirá y validará la propuesta de valor de la plataforma. La selección se orienta a maximizar aprendizaje validado en el menor tiempo, reduciendo incertidumbre sobre adopción y utilidad. Se priorizan únicamente dos segmentos núcleo para mantener foco operativo y claridad en las métricas tempranas.
+
+### 1.3.1 ***Segmento: Ciudadano Reportante***
+
+**Descripción:** Residente urbano con smartphone (predominio Android) que se desplaza por la ciudad y está dispuesto a registrar incidencias visibles (baches, residuos, luminarias dañadas, daños estructurales menores) mediante fotografía y ubicación automática. Utilizará exclusivamente la aplicación móvil.
+
+**Necesidades Clave:**
+- Canal único y confiable para reportar incidencias sin procesos burocráticos.
+- Confirmación visible y trazable del estado del reporte.
+- Retroalimentación que evidencie que su acción genera efecto.
+
+**Propuesta de Valor Específica:** Reducir fricción del registro a menos de 40 segundos, entregar confirmación inmediata y mostrar evolución de estado para incentivar reuso y participación cívica continua.
+
+**Indicadores (Métricas Tempranas):**
+- Tasa de completitud de reporte (foto válida + geolocalización + categoría confirmada). Objetivo piloto: ≥70%.
+- Usuarios recurrentes (segundo reporte dentro de 45 días). Objetivo piloto: ≥30%.
+- Tiempo medio de creación de reporte (apertura → envío). Objetivo piloto: <40 s.
+- Satisfacción percibida sobre transparencia (encuesta corta in‑app). Objetivo piloto: ≥60% positiva.
+
+**Riesgos Principales:**
+- Falta de percepción de impacto (disminuye retención).
+- Problemas de conectividad (impide envío inmediato).
+
+**Mitigaciones:**
+- Notificaciones de avance / cierre.
+- Modo offline con sincronización diferida.
+- Mensajes educativos breves sobre cómo tomar fotos válidas.
+
+### 1.3.2 ***Segmento: Municipalidad (personal técnico y de gestión)***
+
+**Descripción:** Equipo técnico y de gestión (obras, mantenimiento, servicios públicos o innovación) que revisa, prioriza y asigna recursos para intervención de incidencias. Consumirá exclusivamente el dashboard web (visualización geoespacial, panel de métricas y filtros).
+
+**Necesidades Clave:** 
+- Consolidación automática de reportes ciudadanos filtrando ruido y duplicados.
+- Priorización visual (mapas de calor, ranking por severidad / frecuencia).
+- Métricas operativas para soporte de decisiones y rendición de cuentas.
+
+**Propuesta de Valor Específica:** Disminuir el tiempo de priorización y brindar evidencia georreferenciada para justificar asignación de cuadrillas y presupuestos menores a mantenimiento correctivo tardío.
+
+**Indicadores (Métricas Tempranas):**
+- Uso semanal del dashboard (≥1 sesión/semana). Objetivo piloto: ≥1 gerencia sostenida.
+- Reducción del tiempo medio de priorización respecto a línea base. Objetivo: ≥40%.
+- Porcentaje de incidencias con primera acción registrada dentro del SLA definido. Objetivo piloto: ≥25% de mejora vs. baseline.
+- Tasa de reportes inválidos tras depuración automática. Objetivo: <15%.
+
+**Riesgos Principales:**
+- Falta de adopción institucional por procesos internos rígidos.
+- Precisión insuficiente del clasificador que genere desconfianza.
+
+**Mitigaciones:**
+- Piloto acotado con feedback quincenal.
+- Ajuste incremental del modelo con dataset local.
+- SLA interno acordado para registrar primera acción.
 
