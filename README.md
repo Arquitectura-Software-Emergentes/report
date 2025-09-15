@@ -656,7 +656,8 @@ Validación de concepto
 
 - **Inicio:** 0:00
 - **Fin:** 3:24
-- **Enlace de entrevista:** 
+- **Enlace de entrevista:**
+
 [https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing](https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing)
 
 #### Entrevista 02
@@ -671,7 +672,8 @@ Validación de concepto
 
 - **Inicio:** 0:00
 - **Fin:** 3:05
-- **Enlace de entrevista:** 
+- **Enlace de entrevista:**
+
 [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
 
 #### Entrevista 03
@@ -681,11 +683,9 @@ Validación de concepto
 - **Distrito:** xxx
 - **Perfil:** Ciudadano Reportante
 - **Evidencia de la reunión:**
-
-
 - **Inicio:** xxx
 - **Fin:** xxx
-- **Enlace de entrevista:** 
+- **Enlace de entrevista:**
 [Entrevistas - Ciudadanos.mp4](https://drive.google.com/file/d/1234567890/view)
 
 #### Entrevista 04
