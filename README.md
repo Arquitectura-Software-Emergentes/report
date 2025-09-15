@@ -802,11 +802,66 @@ Para el proyecto de Plataforma Urbana Inteligente para Lima, se realizaron entre
 
 ### 2.3.1. User Personas
 
-> *(Plantillas de persona: nombre ficticio, edad, rol, objetivos, frustraciones, contexto de uso, citas relevantes, jornada típica.)*
+
+#### Ciudadano Reportante
+
+**Carlos Mendoza** representa al segmento de ciudadanos proactivos que utilizan la tecnología para mejorar su entorno urbano. Con 34 años y residente de Comas, Carlos combina su rutina diaria de trabajo y responsabilidades familiares con una participación cívica consciente. Su experiencia con aplicaciones móviles y frustración con los canales tradicionales de reporte lo convierten en el usuario ideal para adoptar una plataforma digital que le permita reportar problemas urbanos de manera eficiente. Su principal motivación es contribuir al mejoramiento de su distrito mientras obtiene transparencia sobre el seguimiento de sus reportes.
+
+![User Persona 1](./images/needfinding/user-persona-cuidadano.png)
+
+#### Personal Municipal
+
+**Fátima Garaycochea** encarna el perfil del funcionario municipal moderno que busca optimizar la gestión de incidencias urbanas mediante herramientas tecnológicas. Como Supervisora de Mantenimiento Urbano en Surquillo con 8 años de experiencia, Fátima enfrenta diariamente el desafío de coordinar recursos limitados para atender múltiples reportes ciudadanos. Su expertise en gestión de equipos y análisis de datos la posiciona como usuaria clave para adoptar dashboards geoespaciales que le permitan tomar decisiones basadas en evidencia, reducir tiempos de priorización y mejorar la eficiencia operativa de su equipo.
+
+![User Persona 2](./images/needfinding/user-persona-personalmunicipio.png)
 
 ### 2.3.2. User Task Matrix
 
-> *(Matriz que cruza tareas principales con frecuencia, prioridad, actor responsable y métricas de éxito.)*
+Los segmentos considerados para este análisis son:
+- **Carlos Mendoza** (Ciudadano Reportante): Representa a residentes urbanos que identifican y reportan problemas de infraestructura
+- **Fátima Garaycochea** (Personal Municipal): Representa al equipo técnico municipal que gestiona y resuelve incidencias urbanas
+
+#### Matriz de Tareas - Carlos Mendoza (Ciudadano Reportante)
+
+| **Tareas** | **Frecuencia** | **Importancia** |
+|------------|:--------------:|:---------------:|
+| **Observar problemas urbanos durante desplazamientos diarios** | Alta | Alta |
+| **Tomar fotografías de incidencias detectadas** | Media | Alta |
+| **Reportar problemas identificados a autoridades** | Media | Alta |
+| **Buscar información sobre estado de reportes enviados** | Media | Alta |
+| **Consultar rutas alternativas para evitar zonas problemáticas** | Alta | Media |
+| **Verificar ubicación exacta de problemas antes de reportar** | Media | Media |
+| **Comunicarse con vecinos sobre problemas comunes del área** | Baja | Media |
+| **Buscar canales oficiales de comunicación municipal** | Baja | Alta |
+| **Documentar horarios o condiciones específicas de los problemas** | Baja | Media |
+
+#### Matriz de Tareas - Fátima Garaycochea (Personal Municipal)
+
+| **Tareas** | **Frecuencia** | **Importancia** |
+|------------|:--------------:|:---------------:|
+| **Revisar reportes ciudadanos recibidos** | Alta | Alta |
+| **Validar veracidad de reportes** | Alta | Alta |
+| **Priorizar incidencias según urgencia** | Alta | Alta |
+| **Asignar cuadrillas de trabajo a incidencias específicas** | Alta | Alta |
+| **Generar reportes de gestión semanales** | Media | Alta |
+| **Consultar mapas para ubicar incidencias geográficamente** | Alta | Media |
+| **Monitorear cumplimiento de plazos de resolución** | Alta | Alta |
+| **Comunicar avances a ciudadanos reportantes** | Baja | Media |
+| **Analizar patrones geográficos de incidencias** | Baja | Media |
+| **Evaluar efectividad de intervenciones realizadas** | Baja | Alta |
+| **Coordinar con otras áreas municipales** | Media | Media |
+| **Actualizar estados de incidencias en sistemas internos** | Alta | Media |
+| **Planificar mantenimiento preventivo basado en datos históricos** | Baja | Alta |
+
+#### Análisis de Resultados
+
+**Principales diferencias entre User Personas:**
+
+La diferencia fundamental radica en la naturaleza de sus responsabilidades: Carlos se enfoca en detectar y comunicar problemas como ciudadano individual, mientras que Fátima gestiona recursos y coordina equipos como funcionaria municipal. Esto se refleja en el volumen y complejidad de sus tareas, Carlos maneja actividades más directas y puntuales relacionadas con la observación y reporte, mientras que Fátima supervisa procesos continuos que requieren análisis, priorización y coordinación institucional. Además, el impacto de sus decisiones varía significativamente: las acciones de Carlos afectan principalmente su experiencia personal y entorno inmediato, mientras que las decisiones de Fátima impactan a múltiples ciudadanos y determinan la eficiencia del servicio público municipal.
+
+**Principales coincidencias entre User Personas:**
+
+Ambos usuarios comparten la necesidad fundamental de información precisa sobre ubicaciones geográficas, aunque con propósitos diferentes, Carlos para reportar correctamente y Fátima para planificar intervenciones efectivas. También valoran el seguimiento y monitoreo del progreso de las incidencias: Carlos necesita transparencia sobre el estado de sus reportes para mantener confianza en el sistema, mientras que Fátima requiere visibilidad para cumplir con los plazos de resolución y rendir cuentas. Finalmente, ambos se benefician de una comunicación bidireccional eficiente, donde Carlos puede transmitir información clara sobre problemas urbanos y Fátima puede proporcionar actualizaciones sobre las acciones tomadas, creando un ciclo de retroalimentación que fortalece la participación ciudadana y mejora la gestión municipal.
 
 ### 2.3.3. Empathy Mapping
 
