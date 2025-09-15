@@ -345,6 +345,8 @@ El proyecto integra tecnologías emergentes adaptadas al contexto limeño:
 - Para ciudadanos: Canal directo y transparente para reportar problemas y seguimiento.
 - Para Lima: Transformación hacia una smart city, reducción de costos operativos y cierre de la brecha digital.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 ### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statement
@@ -532,3 +534,297 @@ Esta sección define los segmentos objetivo iniciales sobre los cuales se constr
 - Ajuste incremental del modelo con dataset local.
 - SLA interno acordado para registrar primera acción.
 
+=======
+=======
+>>>>>>> 3c05ea4c8ca3cca835d1a0b59a44f3c745d54894
+# Capítulo II: Requirements Elicitation & Analysis
+
+## 2.1. Competidores
+
+### 2.1.1. Competidores identificados
+
+Se identificaron los siguientes competidores y proyectos relacionados dentro del contexto académico y de soluciones ciudadanas:
+
+| Competidor / Trabajo | Tipo | Descripción breve | Fortalezas principales |
+|---|---:|---|---|
+| **TheShield App** | App de seguridad ciudadana | Aplicación móvil orientada a reportes y alertas de seguridad; incluye gestión y moderación de incidencias. | Orientación comunitaria; reglas de moderación; adopción vecinal. |
+| **Proyectos UPC — Módulos Reportes/Dashboard** | Prototipos / Trabajos académicos | Varios trabajos que incluyen paneles de control y módulos de reporte ciudadano; suelen ser prototipos o MVPs de gestión. | Conceptos validados; prototipos funcionales; enfoque analítico. |
+| **Tesis y estudios — Conservación vial / Baches** | Investigación académica / Técnica | Tesis enfocadas en identificación de baches, métricas de mantenimiento y propuestas de intervención; menos foco en UX/app. | Rigor técnico; metodologías aplicables a priorización de mantenimiento. |
+
+---
+
+### 2.1.2. Análisis competitivo
+
+**Objetivo:** Identificar similitudes, diferencias y ventajas competitivas frente a los trabajos y soluciones detectadas.
+
+**Resumen comparativo (alto nivel):**
+
+| Ítem / Atributo | Nuestra Plataforma (Propuesta) | TheShield App | Proyectos UPC (Reportes/Dashboard) | Tesis Conservación Vial |
+|---|---:|---|---|---|
+| **Perfil / overview** | App móvil + backend con detección IA (YOLO), PostGIS y dashboards geoespaciales para reportes urbanos. | App centrada en seguridad ciudadana (reportes y alertas). | Prototipos con paneles de control y gestión de reportes. | Estudios técnicos sobre identificación y priorización de baches. |
+| **Valor ofrecido** | Detección automática + mapas de calor + priorización para municipalidades; API para integración. | Canal de reporte y gestión de incidentes de seguridad. | Visualización de datos y métricas; enfoque académico/prueba de concepto. | Metodologías y métricas para mantenimiento vial; poco foco en UX. |
+| **Mercado objetivo** | Municipios, equipos de mantenimiento, ciudadanos, ONGs. | Vecinos y comités de seguridad. | Organizaciones que requieren gestión de procesos y reporting. | Autoridades técnicas y consultoras de infraestructura. |
+| **Fortalezas** | IA geoespacial y priorización; enfoque integrable con SIG. | Adopción comunitaria y reglas de moderación. | Prototipos funcionales y validados en contexto académico. | Rigor técnico y metodológico en mantenimiento vial. |
+| **Debilidades** | Necesidad de dataset local y validación municipal; recursos para despliegue. | Alcance limitado a seguridad; no enfocado en infraestructura vial. | Escalabilidad y soporte limitados; entregables académicos. | No orientado a producto; falta UX / integración con apps. |
+
+---
+
+### 2.1.3. Estrategias y tácticas frente a competidores
+
+A continuación se detallan estrategias (nivel estratégico) y tácticas (acciones operativas) recomendadas para posicionar la plataforma y enfrentar a los competidores identificados.
+
+#### 3.1 Estrategias (alto nivel)
+
+- **Diferenciación técnica por IA + enfoque geoespacial:** modelo YOLO entrenado con datos locales y mapas de calor para priorizar incidencias.
+- **Go-to-Market B2G / B2B2C:** pilotos con municipalidades pequeñas para validar flujo operativo y KPIs.
+- **Posicionamiento como plataforma de datos:** APIs y datos anonimizados para atraer academia, consultoras y ONGs.
+- **Verificación híbrida (IA + validación humana):** reducir falsos reportes y aumentar la confianza municipal.
+
+#### 3.2 Tácticas (acciones concretas)
+
+- **Producto:** Implementar filtro inicial con IA en el móvil, sincronización offline y flag de confianza en cada reporte. Documentar endpoints de la API en anexos.
+- **Piloto:** Ofrecer un piloto de 3 meses con un distrito pequeño. KPIs sugeridos: tiempo medio de atención, % de reportes verificados, reducción de falsos positivos.
+- **Comercial:** Talleres de adopción con gerencias de obras; dashboards personalizados para supervisores.
+- **Marketing / Comunidad:** Programa de embajadores vecinales para promover uso y moderar reportes.
+- **Alianzas:** MOUs con municipalidades para acceso a datos SIG y flujos de atención; acuerdos con universidades para validación y dataset.
+- **Defensa competitiva:** Lanzar MVP centrado en una categoría (p.ej. baches) y mostrar resultados cuantificables antes de escalar.
+
+---
+
+## 2.2. Entrevistas
+
+### 2.2.1. Diseño de entrevistas
+
+Para comprender las necesidades, comportamientos y expectativas de nuestros segmentos objetivo, se ha diseñado un proceso de entrevistas estructurado con guías específicas por perfil. Estas entrevistas buscan validar hipótesis clave sobre el uso de la plataforma y descubrir insights no anticipados.
+#### **Objetivos generales de las entrevistas**
+
+- Validar el problema percibido de gestión reactiva de incidencias urbanas
+- Entender el flujo actual de reporte y seguimiento de problemas urbanos
+- Identificar barreras potenciales para la adopción de la plataforma
+- Descubrir preferencias específicas sobre experiencia de usuario y funcionalidades
+- Recopilar información sobre patrones de uso de tecnología móvil
+
+#### **A. Entrevista: Ciudadano Reportante**
+
+Preguntas demográficas y contextuales
+1. ¿Cuál es su nombre y edad?
+2. ¿En qué distrito de Lima reside actualmente?
+
+Experiencia actual con problemas urbanos
+1. ¿Ha observado problemas de infraestructura en su distrito durante el último mes? ¿Cuáles?
+2. Cuando detecta un problema urbano (bache, basura acumulada, poste caído), ¿suele reportarlo? ¿Por qué sí o por qué no?
+3. Si ha reportado alguna vez, ¿qué canales utilizó? ¿Cómo fue su experiencia?
+4. ¿Recibió algún tipo de seguimiento o confirmación? ¿Observó que el problema fuera resuelto?
+
+Validación de concepto
+1. ¿Qué le parece la idea de una aplicación que le permita reportar problemas urbanos con una foto y geolocalización automática?
+2. ¿Qué beneficios personales percibiría al usar esta plataforma?
+3. ¿Le interesaría ver reportes de otros ciudadanos en su zona? ¿Por qué?
+4. ¿Qué factores lo motivarían a utilizar la aplicación de forma recurrente?
+
+#### **B. Entrevista: Personal Municipal**
+
+Preguntas de contexto profesional
+1. ¿Cuál es su nombre y cargo dentro de la municipalidad?
+2. ¿Cuánto tiempo lleva trabajando en gestión municipal?
+3. ¿Cuáles son sus principales responsabilidades relacionadas con infraestructura urbana?
+
+Proceso actual de gestión de incidencias
+1. ¿Cómo llegan actualmente los reportes ciudadanos sobre problemas de infraestructura?
+2. ¿Qué proceso siguen desde que se recibe un reporte hasta su resolución?
+3. ¿Cómo determinan la prioridad de atención entre múltiples reportes?
+
+Métricas y toma de decisiones
+1. ¿Utilizan actualmente mapas o visualizaciones geográficas para análisis de incidencias?
+2. ¿Cuentan con información histórica sobre patrones de problemas urbanos? ¿Cómo la utilizan?
+
+Validación de concepto
+1. ¿Qué utilidad le ve a una plataforma con estas características?
+2. ¿Qué métricas o visualizaciones específicas serían más valiosas para su trabajo? _(Ejem: Concentración de incidencias según zona, satisfacción cuidadana tras la resolucipon del problema, etc)_
+3. ¿Qué preocupaciones tendría sobre la implementación de este sistema?
+4. ¿Sería compatible con sus sistemas actuales? ¿Qué consideraciones de integración serían importantes?
+
+
+### 2.2.2. Registro de entrevistas
+
+#### Entrevista 01
+- **Nombres:** Rosalynn
+- **Apellidos:** Saavedra
+- **Edad:** 47 años
+- **Distrito:** Lurigancho - Chosica
+- **Perfil:** Ciudadano Reportante
+- **Evidencia de la reunión:**
+
+![interview_rosalynn](images/interviews/interview_rosalynn.png)
+
+- **Inicio:** 0:00
+- **Fin:** 3:24
+- **Enlace de entrevista:** [https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing](https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing)
+
+#### Entrevista 02
+- **Nombres:** Silvia
+- **Apellidos:** Salvatierra
+- **Edad:** 51 años
+- **Distrito:** Callao - Bellavista
+- **Perfil:** Ciudadano Reportante
+- **Evidencia de la reunión:**
+
+![interview_silvia](images/interviews/interview_silvia.png)
+
+- **Inicio:** 0:00
+- **Fin:** 3:05
+- **Enlace de entrevista:** [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
+
+#### Entrevista 03
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Ciudadano Reportante
+- **Evidencia de la reunión:**
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:**
+[Entrevistas - Ciudadanos.mp4](https://drive.google.com/file/d/1234567890/view)
+
+#### Entrevista 04
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Personal Municipal
+- **Evidencia de la reunión:**
+<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
+
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:** 
+[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
+
+### Entrevista 05
+- **Nombres:** xxx
+- **Apellidos:** xxx
+- **Edad:** xxx
+- **Distrito:** xxx
+- **Perfil:** Personal Municipal
+- **Evidencia de la reunión:**
+<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
+
+- **Inicio:** xxx
+- **Fin:** xxx
+- **Enlace de entrevista:** 
+[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
+
+#### Entrevista 06
+- **Nombres:** Ana
+- **Apellidos:** Torres
+- **Edad:** 32
+- **Distrito:** San Miguel
+- **Perfil:** Personal Municipal
+- **Evidencia de la reunión:**
+
+![interview_ana](images/interviews/entrevista_ana.jpg)
+
+- **Inicio:** 0:00
+- **Fin:** 2:05
+- **Enlace de entrevista:** 
+[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
+
+### 2.2.3. Análisis de entrevistas
+
+Para el proyecto de Plataforma Urbana Inteligente para Lima, se realizaron entrevistas a 3 ciudadanos reportantes y 3 funcionarios municipales de diversos distritos de Lima Metropolitana. A partir de sus respuestas, se identificaron las siguientes características y patrones:
+
+#### Hallazgos clave - Ciudadanos Reportantes:
+
+- **Perfil demográfico**: [Porcentaje]% de los entrevistados tienen entre [rango de edad] años, con residencia principalmente en los distritos de [nombres de distritos].
+
+- **Experiencia con problemas urbanos**: [Porcentaje]% ha observado problemas de infraestructura en su distrito durante el último mes, siendo los más comunes [listar problemas frecuentes].
+
+- **Comportamiento de reporte**: [Porcentaje]% ha intentado reportar algún problema urbano, principalmente a través de [canales más utilizados].
+
+- **Nivel de satisfacción con canales actuales**: [Porcentaje]% expresa frustración con los mecanismos de reporte existentes, principalmente debido a [razones principales].
+
+- **Seguimiento de reportes**: [Porcentaje]% indica no haber recibido ningún tipo de confirmación o seguimiento después de reportar un problema.
+
+- **Uso de dispositivos móviles**: [Porcentaje]% utiliza smartphones de forma regular para diversas actividades, con [sistema operativo predominante] como plataforma principal.
+
+- **Aceptación del concepto**: [Porcentaje]% muestra interés alto o muy alto en utilizar una aplicación para reportar problemas urbanos con foto y geolocalización automática.
+
+- **Motivadores para adopción recurrente**:
+  - [Porcentaje]% valora la transparencia y visibilidad del estado del reporte
+  - [Porcentaje]% considera importante ver el impacto real de sus reportes
+  - [Porcentaje]% mencionó la importancia de una interfaz sencilla y rápida
+
+#### Hallazgos clave - Personal Municipal:
+
+- **Perfil profesional**: Los entrevistados tienen un promedio de [número] años de experiencia en gestión municipal, con responsabilidades en [áreas principales].
+
+- **Proceso actual de gestión**: [Porcentaje]% indica que los reportes ciudadanos llegan principalmente a través de [canales más comunes], siguiendo un flujo que toma en promedio [tiempo] para ser procesados.
+
+- **Herramientas de análisis**: [Porcentaje]% no utiliza actualmente mapas o visualizaciones geográficas para el análisis de incidencias urbanas.
+
+- **Priorización de atención**: La mayoría determina la prioridad basándose en [criterios más comunes], sin un sistema estructurado de clasificación.
+
+- **Información histórica**: [Porcentaje]% no cuenta con sistemas eficientes para utilizar datos históricos en la prevención o planificación de mantenimiento urbano.
+
+- **Aceptación del concepto**: [Porcentaje]% considera que una plataforma con las características propuestas sería [nivel de utilidad] para su trabajo.
+
+- **Métricas valoradas**: Las visualizaciones y métricas más valoradas por el personal municipal incluyen:
+  - [Porcentaje]% - [Métrica o visualización específica]
+  - [Porcentaje]% - [Métrica o visualización específica]
+  - [Porcentaje]% - [Métrica o visualización específica]
+
+- **Preocupaciones de implementación**: Las principales inquietudes expresadas fueron:
+  - [Preocupación 1]
+  - [Preocupación 2]
+  - [Preocupación 3]
+
+#### Validación de hipótesis:
+
+| Hipótesis | Resultado | Evidencia |
+|-----------|-----------|-----------|
+| Los ciudadanos están frustrados con los canales actuales de reporte | [Validada/No validada] | [Porcentaje]% expresó frustración con los canales actuales debido a [razones principales] |
+| Los problemas de conectividad son una barrera significativa | [Validada/No validada] | [Porcentaje]% reporta problemas frecuentes de conectividad en [situaciones específicas] |
+| La retroalimentación sobre estado del reporte es crítica para adopción | [Validada/No validada] | [Porcentaje]% mencionó la importancia de recibir actualizaciones sobre el estado de sus reportes |
+| Los municipios carecen de herramientas para visualizar patrones | [Validada/No validada] | [Porcentaje]% de funcionarios municipales confirmó no utilizar mapas o visualizaciones geoespaciales |
+| La clasificación automática de incidencias agilizaría procesos | [Validada/No validada] | [Porcentaje]% de funcionarios identificó valor en la automatización de la clasificación |
+
+#### Conclusiones y recomendaciones:
+
+1. **[Conclusión principal 1]**: Basado en [hallazgos específicos], recomendamos [acción concreta].
+
+2. **[Conclusión principal 2]**: Los datos muestran que [patrón identificado], por lo que se debería priorizar [característica o enfoque].
+
+3. **[Conclusión principal 3]**: La brecha entre [expectativa] y [realidad actual] representa una oportunidad para [propuesta de valor específica].
+
+4. **[Conclusión principal 4]**: Para incrementar la adopción y retención de usuarios, es fundamental [recomendación basada en entrevistas].
+
+5. **[Conclusión principal 5]**: Las preocupaciones sobre [tema específico] deben ser abordadas mediante [estrategia o característica].
+
+
+
+## 2.3. Needfinding
+
+### 2.3.1. User Personas
+
+> *(Plantillas de persona: nombre ficticio, edad, rol, objetivos, frustraciones, contexto de uso, citas relevantes, jornada típica.)*
+
+### 2.3.2. User Task Matrix
+
+> *(Matriz que cruza tareas principales con frecuencia, prioridad, actor responsable y métricas de éxito.)*
+
+### 2.3.3. Empathy Mapping
+
+> *(Secciones: dice, piensa, hace, siente — con insights derivados de entrevistas y observación.)*
+
+### 2.3.4. As-is Scenario Mapping
+
+> *(Mapa del escenario actual: actores, artefactos, flujos de información, puntos de dolor, oportunidades.)*
+
+---
+
+## 2.4. Ubiquitous Language
+
+> *(Definición de términos compartidos entre stakeholders, por ejemplo: “Incidencia”, “Reporte verificado”, “Mapa de calor”, “Prioridad”, “Ticket de mantenimiento”, “Nivel de confianza”, etc. Incluir glosario con definiciones claras para evitar ambigüedad entre equipo técnico y expertos de dominio.)*
+
+---
