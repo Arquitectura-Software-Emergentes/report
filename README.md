@@ -713,16 +713,17 @@ Validación de concepto
 [Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
 
 #### Entrevista 06
-- **Nombres:** xxx
-- **Apellidos:** xxx
-- **Edad:** xxx
-- **Distrito:** xxx
+- **Nombres:** Ana
+- **Apellidos:** Torres
+- **Edad:** 32
+- **Distrito:** San Miguel
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
 
-- **Inicio:** xxx
-- **Fin:** xxx
+![interview_ana](images/interviews/entrevista_ana.jpg)
+
+- **Inicio:** 0:00
+- **Fin:** 2:05
 - **Enlace de entrevista:** 
 [Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
 
