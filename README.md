@@ -346,6 +346,7 @@ El proyecto integra tecnologías emergentes adaptadas al contexto limeño:
 - Para Lima: Transformación hacia una smart city, reducción de costos operativos y cierre de la brecha digital.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statement
@@ -534,6 +535,8 @@ Esta sección define los segmentos objetivo iniciales sobre los cuales se constr
 - SLA interno acordado para registrar primera acción.
 
 =======
+=======
+>>>>>>> 3c05ea4c8ca3cca835d1a0b59a44f3c745d54894
 # Capítulo II: Requirements Elicitation & Analysis
 
 ## 2.1. Competidores
@@ -825,5 +828,3 @@ Para el proyecto de Plataforma Urbana Inteligente para Lima, se realizaron entre
 > *(Definición de términos compartidos entre stakeholders, por ejemplo: “Incidencia”, “Reporte verificado”, “Mapa de calor”, “Prioridad”, “Ticket de mantenimiento”, “Nivel de confianza”, etc. Incluir glosario con definiciones claras para evitar ambigüedad entre equipo técnico y expertos de dominio.)*
 
 ---
-
-
