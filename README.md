@@ -822,4 +822,121 @@ Para el proyecto de Plataforma Urbana Inteligente para Lima, se realizaron entre
 
 > *(Definición de términos compartidos entre stakeholders, por ejemplo: “Incidencia”, “Reporte verificado”, “Mapa de calor”, “Prioridad”, “Ticket de mantenimiento”, “Nivel de confianza”, etc. Incluir glosario con definiciones claras para evitar ambigüedad entre equipo técnico y expertos de dominio.)*
 
----
+# Capítulo IV: Strategic-Level Software Design
+
+## 4.1. Strategic-Level Attribute-Driven Design
+
+### 4.1.1. Design Purpose
+
+El propósito del diseño arquitectónico de LimaUrban es establecer una base técnica sólida que permita la transformación digital de la gestión de incidencias urbanas, integrando tecnologías emergentes como análisis geoespacial e inteligencia artificial para crear un ecosistema eficiente de reporte y gestión ciudadana.
+
+**Problemática:**
+
+Los ciudadanos limeños enfrentan desafíos significativos para reportar incidencias urbanas debido a la falta de canales de comunicación eficientes y transparentes con las autoridades municipales. Los sistemas tradicionales de reporte son lentos, poco intuitivos y no ofrecen seguimiento en tiempo real, lo que genera desconfianza ciudadana y retrasos en la resolución de problemas urbanos críticos como baches, semáforos dañados, acumulación de basura y vandalismo.
+
+**Objetivos principales del diseño:**
+
+1. **Automatización inteligente del procesamiento de incidencias:** Mediante sistemas de visión por computadora con modelos YOLO entrenados localmente, la arquitectura debe procesar automáticamente reportes ciudadanos con fotografías, clasificando y validando incidencias en tiempo real para reducir el trabajo manual y mejorar la precisión.
+
+2. **Escalabilidad y disponibilidad urbana:** La solución debe soportar la carga de 10 mil habitantes, garantizando disponibilidad del 99.5% y capacidad de procesar miles de reportes simultáneos durante emergencias urbanas o eventos críticos.
+
+3. **Integración geoespacial avanzada:** La arquitectura debe facilitar la generación de mapas de calor dinámicos que permitan a las autoridades municipales identificar la zona con más reportes de incidencias.
+
+4. **Experiencia ciudadana simplificada:** Diseñar interfaces que reduzcan el tiempo de reporte a menos de 40 segundos, incluyendo captura fotográfica, geolocalización automática y confirmación de recepción.
+
+5. **Interoperabilidad institucional:** Establecer APIs estandarizadas que permitan la integración con sistemas municipales existentes, facilitando el intercambio de datos y la adopción por parte de diferentes distritos de Lima Metropolitana.
+
+### 4.1.2. Attribute-Driven Design Inputs
+
+#### 4.1.2.1. Primary Functionality (Primary User Stories)
+
+Las siguientes User Stories representan las funcionalidades primarias que tienen mayor impacto arquitectónico y son críticas para el éxito de la plataforma:
+
+| Epic/User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|-------------------|--------|-------------|------------------------|-------------------------|
+| US01 | Reporte de Incidencia con Foto | Como ciudadano, quiero reportar una incidencia urbana adjuntando una fotografía y ubicación automática para documentar el problema de forma completa. | **Escenario 1:** Captura exitosa<br>Dado que el ciudadano detecta una incidencia<br>Cuando abre la app y toma una fotografía<br>Entonces el sistema captura automáticamente las coordenadas GPS y permite categorizar la incidencia y la guarda en su base de datos<br><br>**Escenario 2:** Rechazo de captura<br>Dado que el usuario quiere descartar la foto<br>Cuando el usuario le da al icono de cámara otra vez<br>Entonces el sistema le permite otro intento de foto y se queda esperando la confirmación de la foto| EP01 |
+| US02 | Clasificación Automática con IA | Como sistema, quiero clasificar automáticamente las incidencias reportadas mediante IA para reducir el trabajo manual de revisión. | **Escenario 1:** Clasificación precisa<br>Dado que se recibe una imagen de incidencia<br>Cuando el modelo YOLO procesa la imagen<br>Entonces debe clasificar correctamente el tipo de incidencia (bache, basura, vandalismo, semáforo dañado) con precisión ≥80%<br><br>**Escenario 2:** Clasificación manual en caso falle<br>Dado que el modelo YOLO no puede clasificar una imagen<br>Cuando la confianza es <70%<br>Entonces el sistema envía la incidencia para revisión manual por personal municipal | EP02 |
+| US03 | Dashboard Geoespacial Municipal | Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial. | **Escenario 1:** Visualización de hotspots<br>Dado que existen múltiples reportes en el sistema<br>Cuando accedo al dashboard de "Mapa de Incidencias"<br>Entonces debo ver mapas de calor actualizados que muestren concentración de incidencias por zona<br><br>**Escenario 2:** Filtrado temporal<br>Dado que estoy en el dashboard<br>Cuando aplico filtros de búsqueda<br>Entonces debo ver la información específica que quiero<br><br>**Escenario 3:** No hay información sobre una zona<br>Dado que no hay incidencias en una zona<br>Cuando el usuario quiere ver la zona<br>Entonces el sistema le muestra un mensaje de "No hay incidencias en esta zona"| EP03 |
+| US04 | Seguimiento de Estado | Como ciudadano, quiero ver el progreso de mi reporte para mantenerme informado sobre su resolución. | **Escenario 1:** Visualización de cambio de estado<br>Dado que mi reporte cambia de estado<br>Cuando el personal municipal actualiza el progreso<br>Entonces debo ver el nuevo estado de mi reporte<br><br>**Escenario 2:** Transparencia del proceso<br>Dado que accedo a mi historial de reportes<br>Cuando consulto un reporte específico<br>Entonces debo ver el historial completo de estados y acciones realizadas | EP01 |
+
+#### 4.1.2.2. Quality Attribute Scenarios
+
+| Atributo | Fuente | Estímulo | Artefacto | Entorno | Respuesta | Medida |
+|----------|--------|----------|----------|---------|-----------|---------|
+| **Disponibilidad** | Ciudadano | Solicitud de reporte durante hora pico (8:00-9:00 AM) | Aplicación móvil y backend | Operación normal con alta concurrencia | Sistema procesa el reporte sin interrupciones | 99.5% de disponibilidad mensual, tiempo de respuesta <3 segundos |
+| **Rendimiento** | Sistema IA | Procesamiento de 100 imágenes simultáneas para clasificación | Modelo YOLO y backend de IA | Carga normal de operación | Todas las imágenes son procesadas y clasificadas | 95% de imágenes procesadas en <5 segundos |
+| **Precisión** | Modelo ML | Imagen de bache en condiciones de iluminación variable | Modelo de visión por computadora | Dataset de validación con 1000 imágenes locales | Clasificación correcta del tipo de incidencia | Precisión ≥80% en condiciones reales de Lima |
+| **Escalabilidad** | Múltiples usuarios | 10,000 reportes simultáneos durante emergencia urbana | Arquitectura modular monolítica | Pico de carga durante emergencia | Sistema mantiene operatividad sin degradación | Procesamiento de 10K reportes/hora sin latencia >5s |
+| **Usabilidad** | Ciudadano nuevo | Primer uso de la aplicación para reportar incidencia | Interfaz móvil | Usuario sin experiencia técnica previa | Usuario completa reporte exitoso | 90% de usuarios nuevos completan reporte en <40 segundos |
+| **Interoperabilidad** | Sistema municipal | Solicitud de datos via API para integración | API pública de la plataforma | Integración con sistema SIG municipal | Datos entregados en formato estándar | 100% compatibilidad con estándares GeoJSON y OGC |
+
+#### 4.1.2.3. Constraints
+
+Las siguientes restricciones técnicas han sido establecidas por el cliente y son no negociables para la elaboración de la solución:
+
+| Technical Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|-------------------|--------|-------------|------------------------|-------------------------|
+| TS01 | Infraestructura Azure | La plataforma debe desplegarse exclusivamente en servicios de Microsoft Azure para cumplir con políticas de infraestructura municipal | - Utilizar Azure App Service para el backend<br>- Azure Database para almacenamiento<br> | Todos los Epics |
+| TS02 | Frontend Web Angular | El dashboard municipal debe desarrollarse en Angular para mantener coherencia con sistemas municipales existentes | - Implementar Angular 15+<br>- Compatibilidad con navegadores modernos<br>- Integración con APIs REST | EP03 |
+| TS03 | Backend Java Spring Boot | El backend debe utilizar Java Spring Boot como framework principal para aprovechar expertise del equipo de desarrollo | - Spring Boot 3.0+<br>- Arquitectura REST<br>- Integración con base de datos relacional | Todos los Epics |
+| TS04 | Arquitectura Modular Monolítica | Implementar arquitectura modular dentro de un monolito para simplificar despliegue inicial manteniendo flexibilidad futura | - Módulos bien definidos por dominio<br>- Interfaces claras entre módulos<br>- Posibilidad de migración futura a microservicios | Todos los Epics |
+| TS05 | Aplicación Móvil Flutter | El componente móvil para ciudadanos debe desarrollarse en Flutter para soportar Android e iOS con una sola base de código | - Flutter 3.0+<br>- Soporte para cámara y GPS<br>- | EP01 |
+| TS06 | Visión Artificial YOLO | Utilizar específicamente modelos YOLO para clasificación de incidencias mediante visión artificial | - Implementar YOLOv8 o superior<br>- Entrenamiento con dataset local de Lima<br>- Precisión mínima del 80% | EP02 |
+
+#### 4.1.2.4. Architectural Drivers Backlog
+
+Resultado del proceso de Quality Attribute Workshop, priorizando drivers por importancia para stakeholders e impacto en complejidad técnica arquitectónica:
+
+| Driver ID | Título de Driver | Descripción | Importancia para Stakeholders | Impacto en Architecture Technical Complexity |
+|-----------|-----------------|-------------|------------------------------|-------------------------------------------|
+| QA01 | Precisión de Clasificación IA | Garantizar ≥80% de precisión en la clasificación automática de incidencias mediante visión por computadora YOLO para reducir trabajo manual municipal | High | High |
+| QA02 | Escalabilidad Urbana | Soportar 10,000+ reportes simultáneos durante emergencias manteniendo rendimiento <5s para toda la población objetivo | High | High |
+| C01 | Restricción Tecnológica Azure | Desplegar exclusivamente en Azure cumpliendo políticas municipales de infraestructura cloud | High | High |
+| FD01 | Reporte con Geolocalización | Permitir captura automática de ubicación GPS y fotografía para documentación completa de incidencias urbanas | High | Medium |
+| FD02 | Dashboard Geoespacial | Proporcionar mapas de calor interactivos y análisis temporal para priorización municipal de intervenciones | High | High |
+| QA03 | Disponibilidad Ciudadana | Mantener 99.5% disponibilidad mensual para garantizar acceso continuo de ciudadanos a la plataforma de reportes | High | Medium |
+| C02 | Arquitectura Modular Monolítica | Implementar estructura modular dentro de monolito para balance entre simplicidad de despliegue y flexibilidad | High | Medium |
+| QA04 | Experiencia de Usuario Móvil | Lograr que 90% de usuarios nuevos completen reportes en <40 segundos con interfaz Flutter intuitiva | High | Medium |
+| C03 | Backend Spring Boot | Utilizar Java Spring Boot como framework obligatorio para backend aprovechando expertise del equipo | Medium | Medium |
+| QA05 | Seguridad de Datos | Proteger información ciudadana y prevenir reportes maliciosos mediante autenticación y validación robusta | Medium | High |
+| C04 | Frontend Angular Municipal | Desarrollar dashboard web en Angular para coherencia con sistemas municipales existentes | Medium | Low |
+| QA06 | Interoperabilidad Municipal | Facilitar integración con sistemas SIG municipales existentes mediante APIs estándar y formatos compatibles | Medium | Medium |
+
+### 4.1.3. Architectural Design Decisions
+
+Durante el proceso del Quality Attribute Workshop, se evaluaron múltiples patrones arquitectónicos para cada driver crítico. A continuación se presenta el análisis de las decisiones más importantes:
+
+#### Candidate Pattern Evaluation Matrix
+
+| Driver ID | Título de Driver | Patrón 1: Modular Monolith | Patrón 2: Microservicios | Patrón 3: Layered Architecture |
+|-----------|-----------------|---------------------------|-------------------------|------------------------------|
+| **QA01** | Precisión de Clasificación IA | **Pro:** Menor latencia para procesamiento IA<br>**Con:** Acoplamiento con otros módulos | **Pro:** Servicio IA independiente<br>**Con:** Latencia de red adicional | **Pro:** Separación clara de responsabilidades<br>**Con:** Complejidad en procesamiento asíncrono |
+| **QA02** | Escalabilidad Urbana | **Pro:** Escalado vertical simple<br>**Con:** Limitaciones en escalado horizontal | **Pro:** Escalado granular por servicio<br>**Con:** Complejidad de orquestación | **Pro:** Escalado por capas<br>**Con:** Cuellos de botella en capas inferiores |
+| **C01** | Restricción Azure | **Pro:** Despliegue simple en App Service<br>**Con:** Menos flexibilidad de servicios | **Pro:** Aprovecha servicios Azure nativos<br>**Con:** Mayor complejidad de configuración | **Pro:** Compatible con servicios Azure<br>**Con:** Subutilización de capacidades cloud |
+
+**Decisión Final:** Se seleccionó **Modular Monolith** como patrón principal debido a:
+- Cumplimiento con restricción de simplicidad de despliegue inicial
+- Menor complejidad operacional para el equipo municipal
+- Facilidad de migración futura a microservicios cuando sea necesario
+- Mejor rendimiento para procesamiento de IA al evitar latencia de red
+
+#### Evaluación de Patrones para Procesamiento de IA
+
+| Aspecto | YOLO Embebido | YOLO como Servicio | YOLO Híbrido |
+|---------|---------------|-------------------|--------------|
+| **Latencia** | <100ms | 200-500ms | 100-200ms |
+| **Escalabilidad** | Limitada por hardware | Alta | Media |
+| **Mantenimiento** | Complejo | Simple | Medio |
+| **Costo** | Bajo | Alto | Medio |
+
+**Decisión:** YOLO Embebido dentro del monolito para minimizar latencia y cumplir con requisitos de precisión.
+
+### 4.1.4. Quality Attribute Scenario Refinements
+
+Al finalizar el Quality Attribute Workshop, se refinaron los escenarios más críticos para guiar la implementación:
+
+| Scenario # | Scenario | Business Goals | Relevant Quality Attributes | Stimulus Source | Environment | Artifact | Response | Response Measure | Questions | Issues |
+|------------|----------|----------------|---------------------------|----------------|-------------|----------|----------|------------------|-----------|---------|
+| **1** | Ciudadano reporta bache durante hora pico matutina con alta concurrencia | Mantener confianza ciudadana asegurando disponibilidad durante períodos de máxima demanda | Disponibilidad, Rendimiento, Escalabilidad | Usuario móvil en Lima Metropolitana | Hora pico con 5,000+ usuarios concurrentes | Aplicación Flutter y backend Spring Boot | Sistema procesa reporte, clasifica imagen YOLO y confirma recepción | 99% de reportes procesados en <3 segundos durante horas pico | ¿Cómo garantizar rendimiento cuando tráfico aumenta 10x durante emergencias? | Implementar cache distribuido y optimización de consultas |
+| **2** | Modelo IA clasifica imagen de grafiti en condiciones de iluminación nocturna | Reducir trabajo manual de validación municipal manteniendo alta precisión | Precisión, Confiabilidad | Aplicación móvil con cámara estándar | Dataset validación con 1,000 imágenes representativas de Lima | Modelo YOLO entrenado con datos locales | Clasificación como "Vandalismo/Grafiti" con nivel de confianza | 80% de precisión en clasificación con confianza ≥70% | ¿Cómo mantener precisión con imágenes de calidad variable? | Entrenar modelo con dataset aumentado incluyendo variaciones típicas |
+| **3** | Personal municipal visualiza patrones deterioro vial para planificación semanal | Optimizar asignación de recursos mediante análisis geoespacial predictivo | Usabilidad, Rendimiento, Interoperabilidad | Personal municipal autorizado | Dashboard Angular con 500+ reportes acumulados | Sistema análisis geoespacial con PostGIS | Mapa de calor interactivo con concentraciones de incidencias viales | Visualización completa en <2 segundos con filtros temporales | ¿Cómo integrar insights con sistemas municipales existentes? | Diseñar APIs compatibles con estándares SIG municipales |
