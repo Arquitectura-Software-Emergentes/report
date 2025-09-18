@@ -306,10 +306,8 @@ El impacto se concentra en Lima Metropolitana, especialmente en distritos céntr
 
 **¿Quiénes son los beneficiarios?**
 
-- Autoridades municipales: Alcaldes y gerencias de obras que requieren herramientas para supervisar infraestructuras y priorizar recursos.
-- Ciudadanos limeños: Vecinos que reportan problemas y pueden dar seguimiento a sus solicitudes.
-- Personal operativo municipal: Obreros y contratistas que asignan cuadrillas de mantenimiento de manera eficiente.
-- Sector privado y académico: Empresas y universidades que acceden a datos abiertos para estudios de urbanismo y desarrollo de soluciones complementarias.
+- **Ciudadanos limeños:** Vecinos que reportan problemas y pueden dar seguimiento a sus solicitudes, obteniendo transparencia en el proceso de resolución.
+- **Autoridades municipales:** Personal técnico y de gestión (gerencias de obras, mantenimiento, servicios públicos) que requieren herramientas para supervisar infraestructuras, priorizar recursos y asignar cuadrillas de manera eficiente.
 
 **¿Por qué persiste el problema?**
 
@@ -329,7 +327,7 @@ Las consecuencias son notables: la congestión vehicular y el deterioro vial obl
 
 **Beneficiarios directos e impacto adicional**
 
-La plataforma impacta a casi toda la población de Lima (~10.29 millones), permitiendo a las autoridades detectar incidencias temprano, asignar recursos óptimamente y tomar decisiones informadas. Los equipos de mantenimiento visualizan puntos críticos y asignan cuadrillas eficientemente, mientras que los ciudadanos cuentan con un canal claro para reportar problemas y recibir transparencia en el seguimiento. El sector privado y académico accede a datos abiertos para estudios y desarrollo de soluciones. Además, Lima avanzaría hacia una ciudad más inteligente y resiliente, optimizando inversiones y mejorando la preparación ante emergencias.
+La plataforma impacta a casi toda la población de Lima (~10.29 millones), permitiendo a las autoridades municipales detectar incidencias temprano, asignar recursos óptimamente y tomar decisiones informadas. El personal municipal visualiza puntos críticos mediante mapas de calor y dashboards analíticos, facilitando la priorización y asignación eficiente de recursos. Los ciudadanos cuentan con un canal claro para reportar problemas y recibir transparencia en el seguimiento. Además, Lima avanzaría hacia una ciudad más inteligente y resiliente, optimizando inversiones y mejorando la preparación ante emergencias.
 
 **Innovación tecnológica y valor diferencial**
 
@@ -397,7 +395,6 @@ La ausencia de un circuito transparente y analítico retrasa intervenciones, inc
 - Dashboard geoespacial con mapas de calor, filtros por tipo, tiempo y severidad.
 - Modo offline con sincronización diferida.
 - Notificaciones (push / correo) en hitos clave.
-- (Opcional fase posterior) Publicación de datos agregados anonimizada.
 
 **Business Assumptions:**
 - Creemos que el ciudadano reportará nuevamente si percibe confirmación y avance dentro de un plazo razonable.
@@ -461,10 +458,6 @@ Sabremos que hemos tenido éxito cuando >60% de encuestados indiquen satisfacci�
 Creemos que el modo offline incrementará la cobertura en zonas de conectividad limitada.
 Sabremos que hemos tenido éxito cuando ≥15% de los reportes provengan de sesiones iniciadas sin conexión y sincronizadas posteriormente.
 
-- Hypothesis Statement 7:
-Creemos que la publicación de datos agregados fomentará colaboración externa y reutilización.
-Sabremos que hemos tenido éxito cuando al menos 2 actores externos consuman el endpoint público y entreguen retroalimentación formal durante el piloto.
-
 Estas hipótesis se priorizarán por impacto y nivel de incertidumbre; las de mayor riesgo (precisión del modelo, adopción institucional, retención inicial) serán abordadas en los primeros ciclos experimentales para reducir desperdicio de esfuerzo.
 
 #### 1.2.2.4. Lean UX Canvas
@@ -508,7 +501,7 @@ Esta sección define los segmentos objetivo iniciales sobre los cuales se constr
 - Modo offline con sincronización diferida.
 - Mensajes educativos breves sobre cómo tomar fotos válidas.
 
-### 1.3.2 ***Segmento: Municipalidad (personal técnico y de gestión)***
+### 1.3.2 ***Segmento: personal Municipal (técnico y de gestión)***
 
 **Descripción:** Equipo técnico y de gestión (obras, mantenimiento, servicios públicos o innovación) que revisa, prioriza y asigna recursos para intervención de incidencias. Consumirá exclusivamente el dashboard web (visualización geoespacial, panel de métricas y filtros).
 
@@ -558,7 +551,7 @@ Se identificaron los siguientes competidores y proyectos relacionados dentro del
 |---|---:|---|---|---|
 | **Perfil / overview** | App móvil + backend con detección IA (YOLO), PostGIS y dashboards geoespaciales para reportes urbanos. | App centrada en seguridad ciudadana (reportes y alertas). | Prototipos con paneles de control y gestión de reportes. | Estudios técnicos sobre identificación y priorización de baches. |
 | **Valor ofrecido** | Detección automática + mapas de calor + priorización para municipalidades; API para integración. | Canal de reporte y gestión de incidentes de seguridad. | Visualización de datos y métricas; enfoque académico/prueba de concepto. | Metodologías y métricas para mantenimiento vial; poco foco en UX. |
-| **Mercado objetivo** | Municipios, equipos de mantenimiento, ciudadanos, ONGs. | Vecinos y comités de seguridad. | Organizaciones que requieren gestión de procesos y reporting. | Autoridades técnicas y consultoras de infraestructura. |
+| **Mercado objetivo** | Ciudadanos limeños y personal municipal. | Vecinos y comités de seguridad. | Organizaciones que requieren gestión de procesos y reporting. | Autoridades técnicas y consultoras de infraestructura. |
 | **Fortalezas** | IA geoespacial y priorización; enfoque integrable con SIG. | Adopción comunitaria y reglas de moderación. | Prototipos funcionales y validados en contexto académico. | Rigor técnico y metodológico en mantenimiento vial. |
 | **Debilidades** | Necesidad de dataset local y validación municipal; recursos para despliegue. | Alcance limitado a seguridad; no enfocado en infraestructura vial. | Escalabilidad y soporte limitados; entregables académicos. | No orientado a producto; falta UX / integración con apps. |
 
@@ -571,8 +564,8 @@ A continuación se detallan estrategias (nivel estratégico) y tácticas (accion
 #### 3.1 Estrategias (alto nivel)
 
 - **Diferenciación técnica por IA + enfoque geoespacial:** modelo YOLO entrenado con datos locales y mapas de calor para priorizar incidencias.
-- **Go-to-Market B2G / B2B2C:** pilotos con municipalidades pequeñas para validar flujo operativo y KPIs.
-- **Posicionamiento como plataforma de datos:** APIs y datos anonimizados para atraer academia, consultoras y ONGs.
+- **Go-to-Market B2G / B2C:** pilotos con municipalidades pequeñas para validar flujo operativo y KPIs.
+- **Posicionamiento dual ciudadano-municipal:** canal directo para reportes ciudadanos con herramientas analíticas para personal municipal.
 - **Verificación híbrida (IA + validación humana):** reducir falsos reportes y aumentar la confianza municipal.
 
 #### 3.2 Tácticas (acciones concretas)
@@ -580,8 +573,8 @@ A continuación se detallan estrategias (nivel estratégico) y tácticas (accion
 - **Producto:** Implementar filtro inicial con IA en el móvil, sincronización offline y flag de confianza en cada reporte. Documentar endpoints de la API en anexos.
 - **Piloto:** Ofrecer un piloto de 3 meses con un distrito pequeño. KPIs sugeridos: tiempo medio de atención, % de reportes verificados, reducción de falsos positivos.
 - **Comercial:** Talleres de adopción con gerencias de obras; dashboards personalizados para supervisores.
-- **Marketing / Comunidad:** Programa de embajadores vecinales para promover uso y moderar reportes.
-- **Alianzas:** MOUs con municipalidades para acceso a datos SIG y flujos de atención; acuerdos con universidades para validación y dataset.
+- **Marketing / Comunidad:** Programa de embajadores vecinales para promover uso ciudadano responsable.
+- **Alianzas:** MOUs con municipalidades para acceso a datos SIG y flujos de atención.
 - **Defensa competitiva:** Lanzar MVP centrado en una categoría (p.ej. baches) y mostrar resultados cuantificables antes de escalar.
 
 ---
