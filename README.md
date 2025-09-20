@@ -1191,6 +1191,7 @@ Resultado del proceso de Quality Attribute Workshop, priorizando drivers por imp
 
 ### 4.2.3. Domain Message Flows Modeling
 
+### 4.2.3. Domain Message Flows Modeling
 ##### 1) Registro de ciudadano
 El ciudadano completa un formulario en la app con email, contraseña y datos de perfil.  
 La app envía la solicitud al **Servicio de Usuarios**, que valida que el correo no exista, cifra la contraseña y crea la cuenta en estado “pendiente de confirmación”.  
@@ -1198,7 +1199,7 @@ Luego envía un correo con enlace/token de confirmación y devuelve a la app el 
 
 ##### **Éxito:** cuenta creada y correo de verificación enviado.  
 ##### **Errores comunes:** email duplicado, contraseña débil, fallo al enviar el correo (reintento asíncrono).
-![flows](./images/flows/flow_registro_usuario.jpg)
+![flows](./images/flows/flow_iam.png)
 ---
 
 ##### 2) Inicio de sesión del personal municipal 
@@ -1208,7 +1209,7 @@ Si el perfil no existe, el sistema realiza un **alta automática** con los datos
 
 ##### **Éxito:** sesión iniciada con los privilegios correctos.  
 ##### **Errores típicos:** credenciales inválidas/expiradas, usuario sin rol asignado.
-![flows](./images/flows/flow_inicio_Sesion_municipal.jpg)
+![flows](./images/flows/flow_iam_muni.png)
 ---
 
 ##### 3) Reporte de incidencia con foto
@@ -1218,7 +1219,7 @@ El servicio valida datos, intenta **deduplicar** reportes similares y publica el
 
 ##### **Éxito:** incidencia registrada y lista para seguimiento en tiempo real.  
 ##### **Errores comunes:** subida fallida, coordenadas fuera del municipio, duplicado detectado.
-![flows](./images/flows/flow_reporte_incidencia.jpg)
+![flows](./images/flows/flow_reporte.png)
 ---
 
 ##### 4) Dashboard geoespacial municipal
@@ -1228,7 +1229,20 @@ El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones
 
 ##### **Éxito:** mapa interactivo con métricas agregadas.  
 ##### **Errores probables:** tileset no disponible, rango sin datos, límites de cuota del servicio de mapas.
-![flows](./images/flows/flow_dashboard_municipal.jpg)
+![flows](./images/flows/flow_geospacial.png)
+
+### 4.2.4. Bounded Context Canvases
+##### Gestión de Usuarios Bounded Context Canvase
+![Bounded_canvases](./images/bounded/bounded_usuarios.png)
+
+##### Reporte de Incidencias Bounded Context Canvase
+![Bounded_canvases](./images/bounded/bounded_reportes.png)
+
+##### Gestión y Monitoreo de Incidencias Bounded Context Canvase
+![Bounded_canvases](./images/bounded/bounded_gestion_incidentes.jpg)
+
+##### Comunicación y Notificaciones Bounded Context Canvase
+![Bounded_canvases](./images/bounded/bounded_comunicacion_notificaciones.png)
 
 ### 4.2.4. Bounded Context Canvases
 ##### Gestión de Usuarios Bounded Context Canvase
