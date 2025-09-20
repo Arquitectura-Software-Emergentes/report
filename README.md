@@ -1223,8 +1223,8 @@ El ciudadano completa un formulario en la app con email, contraseña y datos de 
 La app envía la solicitud al **Servicio de Usuarios**, que valida que el correo no exista, cifra la contraseña y crea la cuenta en estado “pendiente de confirmación”.  
 Luego envía un correo con enlace/token de confirmación y devuelve a la app el identificador del usuario.
 
-**Éxito:** cuenta creada y correo de verificación enviado.  
-**Errores comunes:** email duplicado, contraseña débil, fallo al enviar el correo (reintento asíncrono).
+##### **Éxito:** cuenta creada y correo de verificación enviado.  
+##### **Errores comunes:** email duplicado, contraseña débil, fallo al enviar el correo (reintento asíncrono).
 ![flows](./images/flows/flow_registro_usuario.jpg)
 ---
 
@@ -1233,8 +1233,8 @@ El agente municipal pulsa “Iniciar sesión” en el **Panel Web** y envía sus
 El servicio verifica usuario/contraseña, genera un **token de sesión** y el **Servicio de Usuarios** devuelve el perfil local con roles y permisos.  
 Si el perfil no existe, el sistema realiza un **alta automática** con los datos mínimos.
 
-**Éxito:** sesión iniciada con los privilegios correctos.  
-**Errores típicos:** credenciales inválidas/expiradas, usuario sin rol asignado.
+##### **Éxito:** sesión iniciada con los privilegios correctos.  
+##### **Errores típicos:** credenciales inválidas/expiradas, usuario sin rol asignado.
 ![flows](./images/flows/flow_inicio_Sesion_municipal.jpg)
 ---
 
@@ -1243,8 +1243,8 @@ El ciudadano captura una foto, describe el problema y la app sube la imagen a un
 La app resuelve la dirección/zona con un **servicio de mapas** y envía todo al **Servicio de Incidencias**.  
 El servicio valida datos, intenta **deduplicar** reportes similares y publica el evento *IncidentCreated*, devolviendo `201` con el id y estado inicial.
 
-**Éxito:** incidencia registrada y lista para seguimiento en tiempo real.  
-**Errores comunes:** subida fallida, coordenadas fuera del municipio, duplicado detectado.
+##### **Éxito:** incidencia registrada y lista para seguimiento en tiempo real.  
+##### **Errores comunes:** subida fallida, coordenadas fuera del municipio, duplicado detectado.
 ![flows](./images/flows/flow_reporte_incidencia.jpg)
 ---
 
@@ -1253,8 +1253,8 @@ El planificador abre el tablero en el panel y este solicita al **Servicio de Ana
 Analytics responde con la URL del **tileset**, leyenda y totales; el panel carga esas capas en el **proveedor de mapas** y renderiza el mapa interactivo.  
 El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones.
 
-**Éxito:** mapa interactivo con métricas agregadas.  
-**Errores probables:** tileset no disponible, rango sin datos, límites de cuota del servicio de mapas.
+##### **Éxito:** mapa interactivo con métricas agregadas.  
+##### **Errores probables:** tileset no disponible, rango sin datos, límites de cuota del servicio de mapas.
 ![flows](./images/flows/flow_dashboard_municipal.jpg)
 
 ### 4.2.4. Bounded Context Canvases
