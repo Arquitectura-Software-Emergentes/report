@@ -1053,173 +1053,135 @@ Las siguientes User Stories representan las funcionalidades primarias que tienen
 | **TS07** | **WebSocket para Notificaciones** | Comunicación en tiempo real para actualizaciones de estado y badges de notificación | E01 |
 | **TS04** | **Georreferenciación Azure Maps** | Integración con servicios de mapas para visualización geoespacial y heatmaps | E05 |
 
-#### 4.1.2.2. Quality Attribute Scenarios
+Aquí están las secciones actualizadas para reflejar los cambios en Primary Functionality:
 
+## 4.1.2.2. Quality Attribute Scenarios
 En esta sección se incluye la especificación de la primera versión de los escenarios de atributos de calidad que tienen mayor impacto en la arquitectura de la solución LimaUrban. Los escenarios identificados están directamente relacionados con las funcionalidades primarias del sistema y abordan aspectos críticos como disponibilidad, rendimiento, precisión de IA, escalabilidad y usabilidad. Estos escenarios sirven como input fundamental para el proceso de diseño arquitectónico y permiten validar que la solución cumple con los estándares de calidad requeridos para la gestión urbana inteligente.
 
-##### Escenario QA-01: Disponibilidad durante Alta Concurrencia
+### Escenario QA-01: Disponibilidad durante Alta Concurrencia
 
-| **Campo**               | **Descripción**                                                                                                                                                                                    |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Ciudadano reporta incidencia urbana durante hora pico matutina cuando miles de usuarios acceden simultáneamente al sistema para registrar problemas de infraestructura en toda Lima Metropolitana. |
-| **ID**                  | QA-01                                                                                                                                                                                              |
-| **User Stories**        | US01 – Reporte de Incidencia con Foto                                                                                                                                                              |
-| **Atributo de Calidad** | Disponibilidad                                                                                                                                                                                     |
-| **Fuente de Estímulo**  | Ciudadano limeño                                                                                                                                                                                   |
-| **Estímulo**            | Usuario intenta reportar una incidencia durante hora pico (8:00-9:00 AM) cuando el sistema experimenta alta concurrencia de 5,000+ usuarios simultáneos.                                           |
-| **Artefacto**           | Aplicación móvil Flutter y backend Django                                                                                                                                                          |
-| **Entorno**             | Operación normal con alta concurrencia durante horarios de mayor movilidad urbana en Lima                                                                                                          |
-| **Respuesta**           | El sistema procesa el reporte, captura la geolocalización, almacena la fotografía y confirma la recepción sin interrupciones.                                                                      |
-| **Medida de respuesta** | El sistema debe mantener 99.5% de disponibilidad mensual y procesar reportes en menos de 3 segundos durante picos de carga.                                                                        |
+| **Campo** | **Descripción** |
+|-----------|-----------------|
+| **Escenario** | Ciudadano reporta incidencia urbana durante hora pico matutina cuando miles de usuarios acceden simultáneamente al sistema para registrar problemas de infraestructura en toda Lima Metropolitana. |
+| **ID** | QA-01 |
+| **User Stories** | US16 – Reporte de Incidencia con Foto |
+| **Atributo de Calidad** | Disponibilidad |
+| **Fuente de Estímulo** | Ciudadano limeño |
+| **Estímulo** | Usuario intenta reportar una incidencia durante hora pico (8:00-9:00 AM) cuando el sistema experimenta alta concurrencia de 5,000+ usuarios simultáneos. |
+| **Artefacto** | Aplicación móvil Flutter y backend Django |
+| **Entorno** | Operación normal con alta concurrencia durante horarios de mayor movilidad urbana en Lima |
+| **Respuesta** | El sistema procesa el reporte, captura la geolocalización, almacena la fotografía y confirma la recepción sin interrupciones. |
+| **Medida de respuesta** | El sistema debe mantener 99.5% de disponibilidad mensual y procesar reportes en menos de 3 segundos durante picos de carga. |
 
-##### Escenario QA-02: Precisión del Modelo de IA
+### Escenario QA-02: Rendimiento del Dashboard Geoespacial
 
-| **Campo**               | **Descripción**                                                                                                                                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | El modelo de inteligencia artificial debe clasificar automáticamente imágenes de incidencias urbanas enviadas por ciudadanos para reducir el trabajo manual del personal municipal. |
-| **ID**                  | QA-02                                                                                                                                                                               |
-| **User Stories**        | US02 – Clasificación Automática con IA                                                                                                                                              |
-| **Atributo de Calidad** | Precisión                                                                                                                                                                           |
-| **Fuente de Estímulo**  | Sistema de visión por computadora                                                                                                                                                   |
-| **Estímulo**            | El modelo YOLO recibe una imagen de bache o acumulación de basura en condiciones variables de iluminación y calidad fotográfica típicas de reportes ciudadanos.          |
-| **Artefacto**           | Modelo YOLO entrenado con dataset local de Lima (mínimo 2,000 imágenes: 1,000 baches + 1,000 basura)                                                                                                                                     |
-| **Entorno**             | Dataset de validación con 1,000 imágenes representativas de incidencias urbanas reales en Lima Metropolitana                                                                        |
-| **Respuesta**           | El sistema clasifica correctamente el tipo de incidencia y asigna un nivel de confianza a la predicción.                                                                            |
-| **Medida de respuesta** | El modelo debe alcanzar precisión ≥80% en condiciones reales y procesar cada imagen en menos de 2 segundos.                                                                         |
+| **Campo** | **Descripción** |
+|-----------|-----------------|
+| **Escenario** | Personal municipal necesita visualizar patrones geoespaciales de incidencias para planificar intervenciones preventivas y optimizar asignación de recursos de mantenimiento urbano. |
+| **ID** | QA-02 |
+| **User Stories** | US11 – Dashboard Geoespacial Municipal |
+| **Atributo de Calidad** | Rendimiento |
+| **Fuente de Estímulo** | Personal municipal autorizado |
+| **Estímulo** | Funcionario municipal accede al dashboard para generar mapas de calor con filtros temporales sobre una base de datos con 500+ reportes acumulados. |
+| **Artefacto** | Dashboard Angular integrado con sistema de análisis geoespacial PostGIS |
+| **Entorno** | Sesión de trabajo normal con base de datos poblada con reportes históricos de múltiples distritos |
+| **Respuesta** | El sistema genera visualizaciones interactivas de mapas de calor, aplicando filtros y mostrando concentraciones de incidencias por zona geográfica. |
+| **Medida de respuesta** | Visualización completa de mapas de calor en menos de 2 segundos, incluyendo aplicación de filtros temporales y geográficos. |
 
-##### Escenario QA-03: Escalabilidad durante Emergencias
+### Escenario QA-03: Escalabilidad durante Emergencias
 
-| **Campo**               | **Descripción**                                                                                                                                                                |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Escenario**           | Durante una emergencia urbana (inundación, terremoto), miles de ciudadanos reportan incidencias simultáneamente, sobrecargando el sistema con un volumen excepcional de datos. |
-| **ID**                  | QA-03                                                                                                                                                                          |
-| **User Stories**        | US01 – Reporte de Incidencia con Foto, US02 – Clasificación Automática con IA                                                                                                  |
-| **Atributo de Calidad** | Escalabilidad                                                                                                                                                                  |
-| **Fuente de Estímulo**  | Múltiples usuarios durante emergencia                                                                                                                                          |
-| **Estímulo**            | 10,000 ciudadanos intentan reportar incidencias simultáneamente durante una emergencia urbana que afecta múltiples distritos de Lima.                                          |
-| **Artefacto**           | Arquitectura modular monolítica desplegada en Azure                                                                                                                            |
-| **Entorno**             | Pico de carga excepcional durante emergencia que supera 10x el tráfico normal                                                                                                  |
-| **Respuesta**           | El sistema mantiene operatividad sin degradación significativa, procesando todos los reportes y mantiendo tiempos de respuesta aceptables.                                     |
-| **Medida de respuesta** | Capacidad de procesar 10,000+ reportes por hora manteniendo latencia <5 segundos sin pérdida de datos.                                                                         |
+| **Campo** | **Descripción** |
+|-----------|-----------------|
+| **Escenario** | Durante una emergencia urbana (inundación, terremoto), miles de ciudadanos reportan incidencias simultáneamente, sobrecargando el sistema con un volumen excepcional de datos. |
+| **ID** | QA-03 |
+| **User Stories** | US16 – Reporte de Incidencia con Foto, US06 – Actualizar Estado de Incidencia |
+| **Atributo de Calidad** | Escalabilidad |
+| **Fuente de Estímulo** | Múltiples usuarios durante emergencia |
+| **Estímulo** | 10,000 ciudadanos intentan reportar incidencias simultáneamente durante una emergencia urbana que afecta múltiples distritos de Lima. |
+| **Artefacto** | Arquitectura modular monolítica desplegada en Azure |
+| **Entorno** | Pico de carga excepcional durante emergencia que supera 10x el tráfico normal |
+| **Respuesta** | El sistema mantiene operatividad sin degradación significativa, procesando todos los reportes y mantiendo tiempos de respuesta aceptables. |
+| **Medida de respuesta** | Capacidad de procesar 10,000+ reportes por hora manteniendo latencia <5 segundos sin pérdida de datos. |
 
-##### Escenario QA-04: Rendimiento del Dashboard Geoespacial
+### Escenario QA-04: Usabilidad para Usuarios Nuevos
 
-| **Campo**               | **Descripción**                                                                                                                                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Personal municipal necesita visualizar patrones geoespaciales de incidencias para planificar intervenciones preventivas y optimizar asignación de recursos de mantenimiento urbano. |
-| **ID**                  | QA-04                                                                                                                                                                               |
-| **User Stories**        | US03 – Dashboard Geoespacial Municipal                                                                                                                                              |
-| **Atributo de Calidad** | Rendimiento                                                                                                                                                                         |
-| **Fuente de Estímulo**  | Personal municipal autorizado                                                                                                                                                       |
-| **Estímulo**            | Funcionario municipal accede al dashboard para generar mapas de calor con filtros temporales sobre una base de datos con 500+ reportes acumulados.                                  |
-| **Artefacto**           | Dashboard Angular integrado con sistema de análisis geoespacial PostGIS                                                                                                             |
-| **Entorno**             | Sesión de trabajo normal con base de datos poblada con reportes históricos de múltiples distritos                                                                                   |
-| **Respuesta**           | El sistema genera visualizaciones interactivas de mapas de calor, aplicando filtros y mostrando concentraciones de incidencias por zona geográfica.                                 |
-| **Medida de respuesta** | Visualización completa de mapas de calor en menos de 2 segundos, incluyendo aplicación de filtros temporales y geográficos.                                                         |
+| **Campo** | **Descripción** |
+|-----------|-----------------|
+| **Escenario** | Un ciudadano sin experiencia técnica previa utiliza la aplicación móvil por primera vez para reportar una incidencia urbana, requiriendo una experiencia intuitiva y eficiente. |
+| **ID** | QA-04 |
+| **User Stories** | US16 – Reporte de Incidencia con Foto |
+| **Atributo de Calidad** | Usabilidad |
+| **Fuente de Estímulo** | Ciudadano nuevo |
+| **Estímulo** | Usuario sin experiencia previa descarga la aplicación e intenta completar su primer reporte de incidencia urbana siguiendo la interfaz intuitiva. |
+| **Artefacto** | Interfaz móvil Flutter |
+| **Entorno** | Usuario real sin capacitación previa, utilizando smartphone estándar en condiciones normales de uso |
+| **Respuesta** | El usuario completa exitosamente el reporte incluyendo fotografía, geolocalización y categorización sin asistencia externa. |
+| **Medida de respuesta** | 90% de usuarios nuevos deben completar su primer reporte en menos de 40 segundos sin errores críticos. |
 
-##### Escenario QA-05: Usabilidad para Usuarios Nuevos
+### Escenario QA-05: Comunicación en Tiempo Real
 
-| **Campo**               | **Descripción**                                                                                                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Un ciudadano sin experiencia técnica previa utiliza la aplicación móvil por primera vez para reportar una incidencia urbana, requiriendo una experiencia intuitiva y eficiente. |
-| **ID**                  | QA-05                                                                                                                                                                           |
-| **User Stories**        | US01 – Reporte de Incidencia con Foto                                                                                                                                           |
-| **Atributo de Calidad** | Usabilidad                                                                                                                                                                      |
-| **Fuente de Estímulo**  | Ciudadano nuevo                                                                                                                                                                 |
-| **Estímulo**            | Usuario sin experiencia previa descarga la aplicación e intenta completar su primer reporte de incidencia urbana siguiendo la interfaz intuitiva.                               |
-| **Artefacto**           | Interfaz móvil Flutter                                                                                                                                                          |
-| **Entorno**             | Usuario real sin capacitación previa, utilizando smartphone estándar en condiciones normales de uso                                                                             |
-| **Respuesta**           | El usuario completa exitosamente el reporte incluyendo fotografía, geolocalización y categorización sin asistencia externa.                                                     |
-| **Medida de respuesta** | 90% de usuarios nuevos deben completar su primer reporte en menos de 40 segundos sin errores críticos.                                                                          |
+| **Campo** | **Descripción** |
+|-----------|-----------------|
+| **Escenario** | Ciudadano reportante y personal municipal requieren comunicación bidireccional en tiempo real sobre el progreso de incidencias para mantener transparencia y coordinación efectiva. |
+| **ID** | QA-05 |
+| **User Stories** | US21 – Seguimiento de Estado, US06 – Actualizar Estado de Incidencia |
+| **Atributo de Calidad** | Disponibilidad de Comunicación |
+| **Fuente de Estímulo** | Sistema de notificaciones WebSocket |
+| **Estímulo** | Personal municipal actualiza el estado de una incidencia de "En Verificación" a "En Proceso" y necesita notificar automáticamente al ciudadano reportante. |
+| **Artefacto** | Sistema de notificaciones WebSocket y módulo de gestión de estados |
+| **Entorno** | Operación normal con múltiples usuarios conectados simultáneamente |
+| **Respuesta** | El sistema envía notificación push al ciudadano, actualiza badge de notificaciones y registra el cambio en el historial de la incidencia. |
+| **Medida de respuesta** | 95% de notificaciones entregadas en menos de 5 segundos, con badge actualizado automáticamente. |
 
-##### Escenario QA-06: Interoperabilidad con Sistemas Municipales
+### Escenario QA-06: Interoperabilidad con Sistemas Municipales
 
-| **Campo**               | **Descripción**                                                                                                                                                            |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Sistemas municipales existentes requieren integración con la plataforma para intercambiar datos de incidencias y mantener sincronización con procesos operativos actuales. |
-| **ID**                  | QA-06                                                                                                                                                                      |
-| **User Stories**        | US03 – Dashboard Geoespacial Municipal                                                                                                                                     |
-| **Atributo de Calidad** | Interoperabilidad                                                                                                                                                          |
-| **Fuente de Estímulo**  | Sistema municipal externo                                                                                                                                                  |
-| **Estímulo**            | Sistema SIG municipal solicita datos de incidencias vía API para integración con flujos de trabajo de mantenimiento existentes.                                            |
-| **Artefacto**           | API pública de la plataforma LimaUrban                                                                                                                                     |
-| **Entorno**             | Integración con sistemas municipales heredados que utilizan estándares GIS convencionales                                                                                  |
-| **Respuesta**           | La API entrega datos estructurados en formatos estándar compatibles con sistemas municipales existentes.                                                                   |
-| **Medida de respuesta** | 100% compatibilidad con estándares GeoJSON y OGC, con tiempo de respuesta API <1 segundo para consultas estándar.                                                          |
+| **Campo** | **Descripción** |
+|-----------|-----------------|
+| **Escenario** | Sistemas municipales existentes requieren integración con la plataforma para intercambiar datos de incidencias y mantener sincronización con procesos operativos actuales. |
+| **ID** | QA-06 |
+| **User Stories** | US11 – Dashboard Geoespacial Municipal |
+| **Atributo de Calidad** | Interoperabilidad |
+| **Fuente de Estímulo** | Sistema municipal externo |
+| **Estímulo** | Sistema SIG municipal solicita datos de incidencias vía API para integración con flujos de trabajo de mantenimiento existentes. |
+| **Artefacto** | API pública de la plataforma LimaUrban |
+| **Entorno** | Integración con sistemas municipales heredados que utilizan estándares GIS convencionales |
+| **Respuesta** | La API entrega datos estructurados en formatos estándar compatibles con sistemas municipales existentes. |
+| **Medida de respuesta** | 100% compatibilidad con estándares GeoJSON y OGC, con tiempo de respuesta API <1 segundo para consultas estándar. |
 
-#### 4.1.2.3. Constraints
+---
 
+## 4.1.2.3. Constraints
 Las siguientes restricciones técnicas han sido establecidas por el cliente y son no negociables para la elaboración de la solución:
 
-| Technical Story ID | Título                          | Descripción                                                                                                                                                                                                                                     | Criterios de Aceptación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Relacionado con (Epic ID) |
-| ------------------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| TS01               | Infraestructura Azure           | Como equipo de desarrollo, quiero desplegar la plataforma exclusivamente en servicios de Microsoft Azure para cumplir con las políticas de infraestructura municipal establecidas y garantizar soporte técnico oficial.                         | **Escenario 1:** Despliegue exitoso en Azure<br>**Dado que** necesitamos cumplir políticas municipales de infraestructura cloud<br>**Cuando** desplegamos el backend y base de datos<br>**Entonces** debe utilizarse Azure App Service para el backend y Azure Database para almacenamiento<br>**Y** todos los servicios deben estar dentro del ecosistema Azure<br><br>**Escenario 2:** Validación de servicios<br>**Dado que** la infraestructura debe ser exclusivamente Azure<br>**Cuando** se configura el entorno de producción<br>**Entonces** no debe utilizarse ningún servicio de AWS, Google Cloud u otros proveedores<br>**Y** debe documentarse la justificación de cada servicio Azure seleccionado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Todos los Epics           |
-| TS02               | Frontend Web Angular            | Como desarrollador frontend, quiero implementar el dashboard municipal en Angular para mantener coherencia con los sistemas municipales existentes y aprovechar la expertise del equipo en este framework.                                      | **Escenario 1:** Compatibilidad con sistemas municipales<br>**Dado que** existen sistemas Angular en la municipalidad<br>**Cuando** desarrollo el dashboard municipal<br>**Entonces** debe usar Angular 15+ con TypeScript<br>**Y** debe ser compatible con navegadores Chrome, Firefox y Edge<br><br>**Escenario 2:** Integración API exitosa<br>**Dado que** necesito conectar con el backend Django<br>**Cuando** implemento las funcionalidades del dashboard<br>**Entonces** debe integrarse correctamente con APIs REST<br>**Y** debe manejar errores de conectividad de forma elegante<br><br>**Escenario 3:** Fallo de compatibilidad<br>**Dado que** un navegador no soporta las funcionalidades<br>**Cuando** un usuario accede desde Internet Explorer<br>**Entonces** debe mostrar un mensaje de navegador no compatible<br>**Y** sugerir navegadores alternativos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | EP03                      |
-| TS03               | Backend Python Django           | Como arquitecto de software, quiero utilizar Python Django como framework principal del backend para aprovechar la integración nativa con el ecosistema de machine learning y YOLO, optimizando el rendimiento de la clasificación de imágenes. | **Escenario 1:** Implementación del framework<br>**Dado que** necesito integración nativa con YOLO y OpenCV<br>**Cuando** desarrollo los servicios del backend<br>**Entonces** debe usar Django 4.0+ con Python 3.9+<br>**Y** debe implementar arquitectura REST con Django REST Framework<br><br>**Escenario 2:** Integración con base de datos<br>**Dado que** necesito persistencia de datos<br>**Cuando** configuro la conexión a la base de datos<br>**Entonces** debe integrarse correctamente con Azure Database (PostgreSQL)<br>**Y** debe registrar errores apropiadamente para monitoring<br><br>**Escenario 3:** Integración ML nativa<br>**Dado que** requiero procesamiento de imágenes con YOLO<br>**Cuando** proceso un reporte con imagen<br>**Entonces** debe ejecutar el modelo YOLO directamente sin servicios externos<br>**Y** debe procesar la imagen en menos de 2 segundos                                .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Todos los Epics           |
-| TS04               | Arquitectura Modular Monolítica | Como arquitecto de sistema, quiero implementar una arquitectura modular dentro de un monolito para simplificar el despliegue inicial manteniendo la flexibilidad para futuras migraciones a microservicios.                                     | **Escenario 1:** Separación modular exitosa<br>**Dado que** necesito flexibilidad futura para migración<br>**Cuando** diseño la arquitectura del sistema<br>**Entonces** debe tener módulos bien definidos por dominio (Reportes, IA, Gestión, Analytics)<br>**Y** cada módulo debe tener interfaces claras sin dependencias circulares<br><br>**Escenario 2:** Preparación para migración<br>**Dado que** puede requerirse migración a microservicios en el futuro<br>**Cuando** implemento los módulos<br>**Entonces** cada módulo debe poder separarse sin refactoring mayor<br><br>**Escenario 3:** Violación de modularidad<br>**Dado que** un desarrollador intenta crear dependencia directa entre módulos<br>**Cuando** compila el código<br>**Entonces** deben activarse reglas de análisis estático que detecten violaciones<br>**Y** debe fallar el build hasta corregir la violación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Todos los Epics           |
-| TS05               | Aplicación Móvil Flutter        | Como desarrollador móvil, quiero desarrollar la aplicación ciudadana en Flutter para soportar Android e iOS con una sola base de código y reducir costos de desarrollo y mantenimiento.                                                         | **Escenario 1:** Multiplataforma exitosa<br>**Dado que** necesito soporte para Android e iOS<br>**Cuando** desarrollo la aplicación móvil<br>**Entonces** debe usar Flutter 3.0+ con Dart 3.0+<br>**Y** debe funcionar nativamente en ambas plataformas sin código específico<br><br>**Escenario 2:** Acceso a funcionalidades nativas<br>**Dado que** requiero acceso a cámara y GPS<br>**Cuando** implemento el reporte de incidencias<br>**Entonces** debe acceder correctamente a hardware del dispositivo<br>**Y** debe solicitar permisos de forma clara al usuario<br><br>**Escenario 3:** Fallo de permisos<br>**Dado que** el usuario deniega permisos de cámara<br>**Cuando** intenta reportar una incidencia<br>**Entonces** debe mostrar mensaje explicativo sobre la necesidad del permiso<br>**Y** debe ofrecer alternativa de cargar foto desde galería<br><br>**Escenario 4:** Dispositivo incompatible<br>**Dado que** un dispositivo muy antiguo no soporta la versión mínima<br>**Cuando** intenta instalar la aplicación<br>**Entonces** debe mostrar mensaje de compatibilidad en la tienda<br>**Y** debe sugerir actualización del sistema operativo                                                                                                                                                                                                                                                                                                                                                        | EP01                      |
-| TS06               | Visión Artificial YOLO          | Como especialista en IA, quiero utilizar específicamente modelos YOLO para la clasificación de incidencias mediante visión artificial para garantizar precisión y rendimiento óptimos en el contexto urbano limeño.                             | **Escenario 1:** Implementación del modelo especializado<br>**Dado que** necesito clasificación automática de incidencias<br>**Cuando** proceso imágenes de reportes ciudadanos<br>**Entonces** debe usar YOLOv8 o superior entrenado con dataset local de Lima (mínimo 2,000 imágenes)<br>**Y** debe procesar imágenes en menos de 2 segundos<br>**Y** debe clasificar únicamente baches y basura<br><br>**Escenario 2:** Precisión para categorías específicas<br>**Dado que** el modelo debe ser confiable para uso municipal<br>**Cuando** clasifica 500 imágenes de validación por categoría<br>**Entonces** debe alcanzar precisión mínima del 80% para baches y basura<br>**Y** debe asignar nivel de confianza a cada clasificación<br><br>**Escenario 3:** Requisitos de dataset de entrenamiento<br>**Dado que** requiero entrenar el modelo con datos locales<br>**Cuando** preparo el dataset<br>**Entonces** debe incluir mínimo 1,000 imágenes de baches en calles de Lima<br>**Y** debe incluir mínimo 1,000 imágenes de basura en espacios públicos limeños<br>**Y** debe incluir variaciones de iluminación, ángulos y condiciones meteorológicas<br><br>**Escenario 4:** Clasificación con baja confianza<br>**Dado que** recibo una imagen ambigua o de mala calidad<br>**Cuando** el modelo procesa la imagen<br>**Entonces** debe asignar confianza <70% si no puede clasificar claramente<br>**Y** debe marcar el reporte para revisión manual | EP02                      | | EP02                      |
+| Technical Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|-------------------|--------|-------------|------------------------|-------------------------|
+| TS01 | Infraestructura Azure | Como equipo de desarrollo, quiero desplegar la plataforma exclusivamente en servicios de Microsoft Azure para cumplir con las políticas de infraestructura municipal establecidas y garantizar soporte técnico oficial. | **Escenario 1:** Despliegue exitoso en Azure<br>**Dado que** necesitamos cumplir políticas municipales de infraestructura cloud<br>**Cuando** desplegamos el backend y base de datos<br>**Entonces** debe utilizarse Azure App Service para el backend y Azure Database para almacenamiento<br>**Y** todos los servicios deben estar dentro del ecosistema Azure<br><br>**Escenario 2:** Validación de servicios<br>**Dado que** la infraestructura debe ser exclusivamente Azure<br>**Cuando** se configura el entorno de producción<br>**Entonces** no debe utilizarse ningún servicio de AWS, Google Cloud u otros proveedores<br>**Y** debe documentarse la justificación de cada servicio Azure seleccionado | Todos los Epics |
+| TS02 | Base de Datos Escalable | Como equipo técnico, quiero configurar una base de datos en Azure SQL Database con escalabilidad automática para manejar el crecimiento de información de incidencias y usuarios. | **Escenario 1:** Configuración inicial exitosa<br>**Dado que** se crea la base de datos en Azure SQL<br>**Cuando** se conecta con la plataforma<br>**Entonces** queda lista para almacenar información<br><br>**Escenario 2:** Escalabilidad automática<br>**Dado que** aumenta la cantidad de registros<br>**Cuando** la carga supera el umbral<br>**Entonces** la base de datos escala automáticamente | Todos los Epics |
+| TS03 | Frontend Web Angular | Como desarrollador frontend, quiero implementar el dashboard municipal en Angular para mantener coherencia con los sistemas municipales existentes y aprovechar la expertise del equipo en este framework. | **Escenario 1:** Compatibilidad con sistemas municipales<br>**Dado que** existen sistemas Angular en la municipalidad<br>**Cuando** desarrollo el dashboard municipal<br>**Entonces** debe usar Angular 15+ con TypeScript<br>**Y** debe ser compatible con navegadores Chrome, Firefox y Edge<br><br>**Escenario 2:** Integración API exitosa<br>**Dado que** necesito conectar con el backend<br>**Cuando** implemento las funcionalidades del dashboard<br>**Entonces** debe integrarse correctamente con APIs REST<br>**Y** debe manejar errores de conectividad de forma elegante | E05 |
+| TS04 | Aplicación Móvil Flutter | Como desarrollador móvil, quiero desarrollar la aplicación ciudadana en Flutter para soportar Android e iOS con una sola base de código y reducir costos de desarrollo y mantenimiento. | **Escenario 1:** Multiplataforma exitosa<br>**Dado que** necesito soporte para Android e iOS<br>**Cuando** desarrollo la aplicación móvil<br>**Entonces** debe usar Flutter 3.0+ con Dart 3.0+<br>**Y** debe funcionar nativamente en ambas plataformas<br><br>**Escenario 2:** Acceso a funcionalidades nativas<br>**Dado que** requiero acceso a cámara y GPS<br>**Cuando** implemento el reporte de incidencias<br>**Entonces** debe acceder correctamente a hardware del dispositivo<br>**Y** debe solicitar permisos de forma clara al usuario | E02 |
+| TS05 | Comunicación WebSocket | Como developer, quiero implementar comunicación en tiempo real mediante WebSocket para las notificaciones, para que los badges de incidentes y los mensajes se actualicen automáticamente sin necesidad de refrescar la aplicación. | **Escenario 1:** Envío de notificación en tiempo real<br>**Dado que** se registra un nuevo incidente<br>**Cuando** el servidor lo transmite mediante WebSocket<br>**Entonces** el cliente recibe la notificación automáticamente<br><br>**Escenario 2:** Actualización de badge en tiempo real<br>**Dado que** hay un incidente nuevo<br>**Cuando** el cliente recibe el evento<br>**Entonces** el badge del ícono de notificaciones incrementa su valor<br><br>**Escenario 3:** Reinicio de badge<br>**Dado que** el badge muestra incidentes pendientes<br>**Cuando** el usuario abre el módulo de notificaciones<br>**Entonces** el badge se reinicia a 0 | E04 |
+| TS06 | Georreferenciación Azure Maps | Como equipo de desarrollo, quiero integrar servicios de mapas de Azure Maps para mostrar incidencias en un tablero geoespacial con mapas de calor interactivos. | **Escenario 1:** Visualización en mapa<br>**Dado que** existen incidencias registradas<br>**Cuando** se abre el tablero<br>**Entonces** se muestran las incidencias en el mapa con su ubicación georreferenciada<br><br>**Escenario 2:** Generación de mapas de calor<br>**Dado que** el usuario necesita ver concentraciones<br>**Cuando** selecciona vista de mapa de calor<br>**Entonces** se generan visualizaciones de densidad por zona geográfica | E05 |
+
+---
 
 ## 4.1.2.4. Architectural Drivers Backlog
-
 Resultado del proceso de Quality Attribute Workshop, priorizando drivers por importancia para stakeholders e impacto en complejidad técnica arquitectónica:
 
-| **Driver ID** | **Título**                      | **Descripción**                                                                                                                                       | **Importancia** | **Complejidad** |
-| ------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | --------------- |
-| **QA01**      | Precisión de Clasificación IA   | Garantizar ≥80% de precisión en la clasificación automática de incidencias mediante visión por computadora YOLO para reducir trabajo manual municipal | High            | High            |
-| **QA02**      | Escalabilidad Urbana            | Soportar 10,000+ reportes simultáneos durante emergencias manteniendo rendimiento <5s para toda la población objetivo                                 | High            | High            |
-| **C01**       | Restricción Tecnológica Azure   | Desplegar exclusivamente en Azure cumpliendo políticas municipales de infraestructura cloud                                                           | High            | High            |
-| **FD01**      | Reporte con Geolocalización     | Permitir captura automática de ubicación GPS y fotografía para documentación completa de incidencias urbanas                                          | High            | Medium          |
-| **FD02**      | Dashboard Geoespacial           | Proporcionar mapas de calor interactivos y análisis temporal para priorización municipal de intervenciones                                            | High            | High            |
-| **QA03**      | Disponibilidad Ciudadana        | Mantener 99.5% disponibilidad mensual para garantizar acceso continuo de ciudadanos a la plataforma de reportes                                       | High            | Medium          |
-| **C02**       | Arquitectura Modular Monolítica | Implementar estructura modular dentro de monolito para balance entre simplicidad de despliegue y flexibilidad                                         | High            | Medium          |
-| **QA04**      | Experiencia de Usuario Móvil    | Lograr que 90% de usuarios nuevos completen reportes en <40 segundos con interfaz Flutter intuitiva                                                   | High            | Medium          |
-| **C03**       | Backend Django                  | Utilizar Python Django como framework obligatorio para backend aprovechando la integración nativa con YOLO y el ecosistema de ML                      | Medium          | Medium          |
-| **QA05**      | Seguridad de Datos              | Proteger información ciudadana y prevenir reportes maliciosos mediante autenticación y validación robusta                                             | Medium          | High            |
-| **C04**       | Frontend Angular Municipal      | Desarrollar dashboard web en Angular para coherencia con sistemas municipales existentes                                                              | Medium          | Low             |
-| **QA06**      | Interoperabilidad Municipal     | Facilitar integración con sistemas SIG municipales existentes mediante APIs estándar y formatos compatibles                                           | Medium          | Medium          |
+| **Driver ID** | **Título** | **Descripción** | **Importancia** | **Complejidad** |
+|---------------|------------|-----------------|----------------|-----------------|
+| **QA01** | Disponibilidad durante Alta Concurrencia | Mantener 99.5% disponibilidad mensual procesando reportes en <3 segundos durante picos de 5,000+ usuarios simultáneos | High | High |
+| **QA02** | Rendimiento Dashboard Geoespacial | Generar mapas de calor interactivos en <2 segundos con filtros temporales para 500+ reportes acumulados | High | High |
+| **C01** | Restricción Tecnológica Azure | Desplegar exclusivamente en Azure cumpliendo políticas municipales de infraestructura cloud | High | Medium |
+| **FD01** | Reporte con Geolocalización Flutter | Permitir captura automática de ubicación GPS y fotografía mediante app Flutter multiplataforma | High | Medium |
+| **FD02** | Gestión de Estados de Incidencias | Sistema de actualización de estados con notificaciones automáticas bidireccionales entre ciudadanos y personal municipal | High | Medium |
+| **QA03** | Escalabilidad durante Emergencias | Soportar 10,000+ reportes por hora manteniendo latencia <5 segundos durante emergencias urbanas | High | High |
+| **QA04** | Experiencia de Usuario Móvil | Lograr que 90% de usuarios nuevos completen reportes en <40 segundos con interfaz Flutter intuitiva | High | Medium |
+| **C02** | Frontend Angular Municipal | Desarrollar dashboard web en Angular para coherencia con sistemas municipales existentes | Medium | Low |
+| **C03** | Comunicación WebSocket Tiempo Real | Implementar notificaciones automáticas con badges dinámicos para transparencia del proceso municipal | Medium | Medium |
+| **C04** | Georreferenciación Azure Maps | Integrar Azure Maps para visualización geoespacial y generación de mapas de calor interactivos | Medium | Medium |
+| **QA05** | Interoperabilidad Municipal | Facilitar integración con sistemas SIG municipales mediante APIs compatibles con estándares GeoJSON y OGC | Medium | Medium |
+| **QA06** | Seguridad de Datos Ciudadanos | Proteger información personal y prevenir reportes maliciosos mediante autenticación robusta | Medium | High |
 
-El formato ahora es mucho más legible, con tablas claras que separan cada escenario y un backlog de drivers bien estructurado para facilitar la lectura y comprensión.
-
-### 4.1.3. Architectural Design Decisions
-
-Durante el proceso del Quality Attribute Workshop, se evaluaron múltiples patrones arquitectónicos para cada driver crítico. A continuación se presenta el análisis de las decisiones más importantes:
-
-#### Candidate Pattern Evaluation Matrix
-
-| Driver ID | Título de Driver              | Patrón 1: Modular Monolith                                                               | Patrón 2: Microservicios                                                                  | Patrón 3: Layered Architecture                                                                    |
-| --------- | ----------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **QA01**  | Precisión de Clasificación IA | **Pro:** Menor latencia para procesamiento IA<br>**Con:** Acoplamiento con otros módulos | **Pro:** Servicio IA independiente<br>**Con:** Latencia de red adicional                  | **Pro:** Separación clara de responsabilidades<br>**Con:** Complejidad en procesamiento asíncrono |
-| **QA02**  | Escalabilidad Urbana          | **Pro:** Escalado vertical simple<br>**Con:** Limitaciones en escalado horizontal        | **Pro:** Escalado granular por servicio<br>**Con:** Complejidad de orquestación           | **Pro:** Escalado por capas<br>**Con:** Cuellos de botella en capas inferiores                    |
-| **C01**   | Restricción Azure             | **Pro:** Despliegue simple en App Service<br>**Con:** Menos flexibilidad de servicios    | **Pro:** Aprovecha servicios Azure nativos<br>**Con:** Mayor complejidad de configuración | **Pro:** Compatible con servicios Azure<br>**Con:** Subutilización de capacidades cloud           |
-
-**Decisión Final:** Se seleccionó **Modular Monolith** como patrón principal debido a:
-
-- Cumplimiento con restricción de simplicidad de despliegue inicial
-- Menor complejidad operacional para el equipo municipal
-- Facilidad de migración futura a microservicios cuando sea necesario
-- Mejor rendimiento para procesamiento de IA al evitar latencia de red
-
-#### Evaluación de Patrones para Procesamiento de IA
-
-| Aspecto           | YOLO Embebido         | YOLO como Servicio | YOLO Híbrido |
-| ----------------- | --------------------- | ------------------ | ------------ |
-| **Latencia**      | <100ms                | 200-500ms          | 100-200ms    |
-| **Escalabilidad** | Limitada por hardware | Alta               | Media        |
-| **Mantenimiento** | Complejo              | Simple             | Medio        |
-| **Costo**         | Bajo                  | Alto               | Medio        |
-
-**Decisión:** YOLO Embebido dentro del monolito para minimizar latencia y cumplir con requisitos de precisión.
-
-### 4.1.4. Quality Attribute Scenario Refinements
-
-Al finalizar el Quality Attribute Workshop, se refinaron los escenarios más críticos para guiar la implementación:
-
-| Scenario # | Scenario                                                                        | Business Goals                                                                            | Relevant Quality Attributes                | Stimulus Source                      | Environment                                                   | Artifact                                 | Response                                                            | Response Measure                                              | Questions                                                                    | Issues                                                               |
-| ---------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------ | ------------------------------------ | ------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| **1**      | Ciudadano reporta bache durante hora pico matutina con alta concurrencia        | Mantener confianza ciudadana asegurando disponibilidad durante períodos de máxima demanda | Disponibilidad, Rendimiento, Escalabilidad | Usuario móvil en Lima Metropolitana  | Hora pico con 5,000+ usuarios concurrentes                    | Aplicación Flutter y backend Spring Boot | Sistema procesa reporte, clasifica imagen YOLO y confirma recepción | 99% de reportes procesados en < 3 segundos durante horas pico | ¿Cómo garantizar rendimiento cuando tráfico aumenta 10x durante emergencias? | Implementar cache distribuido y optimización de consultas            |
-| **2**      | Modelo IA clasifica imagen de bache en condiciones de iluminación nocturna    | Reducir trabajo manual de validación municipal manteniendo alta precisión                 | Precisión, Confiabilidad                   | Aplicación móvil con cámara estándar | Dataset validación con 500 imágenes de baches representativas de Lima | Modelo YOLO entrenado con datos locales (mínimo 2,000 imágenes)  | Clasificación como "Bache" con nivel de confianza      | 80% de precisión en clasificación con confianza ≥70%          | ¿Cómo mantener precisión con imágenes de calidad variable?                   | Entrenar modelo con dataset aumentado incluyendo variaciones típicas |
-| **3**      | Personal municipal visualiza patrones deterioro vial para planificación semanal | Optimizar asignación de recursos mediante análisis geoespacial predictivo                 | Usabilidad, Rendimiento, Interoperabilidad | Personal municipal autorizado        | Dashboard Angular con 500+ reportes acumulados                | Sistema análisis geoespacial con PostGIS | Mapa de calor interactivo con concentraciones de incidencias viales | Visualización completa en <2 segundos con filtros temporales  | ¿Cómo integrar insights con sistemas municipales existentes?                 | Diseñar APIs compatibles con estándares SIG municipales              |
 
 ## 4.2. Strategic-Level Domain-Driven Design
 
@@ -1228,6 +1190,7 @@ Al finalizar el Quality Attribute Workshop, se refinaron los escenarios más cr�
 ### 4.2.2. Candidate Context Discovery
 
 ### 4.2.3. Domain Message Flows Modeling
+
 ##### 1) Registro de ciudadano
 El ciudadano completa un formulario en la app con email, contraseña y datos de perfil.  
 La app envía la solicitud al **Servicio de Usuarios**, que valida que el correo no exista, cifra la contraseña y crea la cuenta en estado “pendiente de confirmación”.  
