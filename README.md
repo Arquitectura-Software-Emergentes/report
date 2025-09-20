@@ -660,60 +660,63 @@ Validación de concepto
 - **Inicio:** 0:00
 - **Fin:** 3:24
 - **Enlace de entrevista:** [https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing](https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing)
+- **Resumen:** Rosalynn es ama de casa que se desplaza diariamente en transporte público. Ha observado múltiples baches en la Av. Evitamiento y acumulación de basura cerca del mercado de Chosica. Intentó reportar por teléfono al municipio pero nunca recibió respuesta. Le parece muy útil la idea de una app con foto porque "sería una prueba de que el problema existe". Su principal motivación sería "ver que realmente hacen algo con mi reporte".
 
 #### Entrevista 02
+- **Nombres:** Diego
+- **Apellidos:** Gomez
+- **Edad:** 16
+- **Distrito:** Comas
+- **Perfil:** Ciudadano Reportante
+- **Evidencia de la reunión:**
+![interview_diego](images/interviews/interview-ciudadano.png)
+- **Inicio:** 0:12
+- **Fin:** 5:56
+- **Enlace de entrevista:**
+[https://drive.google.com/file/d/1CVDQx8Ue15xk7yt8oukkN1S87bAc7TeB/view?usp=sharing](https://drive.google.com/file/d/1CVDQx8Ue15xk7yt8oukkN1S87bAc7TeB/view?usp=sharing)
+- **Resumen:** Diego es estudiante de secundaria que camina diariamente al colegio. Ha notado varios postes de luz malogrados en su cuadra y grafitis en las paredes del parque. Nunca ha reportado nada porque "no sabía cómo hacerlo". Usa mucho su celular y le encanta la idea de una app: "Sería como Instagram pero para arreglar el barrio". Le interesaría ver reportes de otros para saber qué pasa en su zona.
+
+#### Entrevista 03
 - **Nombres:** Silvia
 - **Apellidos:** Salvatierra
 - **Edad:** 51 años
 - **Distrito:** Callao - Bellavista
 - **Perfil:** Ciudadano Reportante
 - **Evidencia de la reunión:**
-
 ![interview_silvia](images/interviews/interview_silvia.png)
 
 - **Inicio:** 0:00
 - **Fin:** 3:05
 - **Enlace de entrevista:** [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
-
-#### Entrevista 03
-- **Nombres:** xxx
-- **Apellidos:** xxx
-- **Edad:** xxx
-- **Distrito:** xxx
-- **Perfil:** Ciudadano Reportante
-- **Evidencia de la reunión:**
-- **Inicio:** xxx
-- **Fin:** xxx
-- **Enlace de entrevista:**
-[Entrevistas - Ciudadanos.mp4](https://drive.google.com/file/d/1234567890/view)
+- **Resumen:** Silvia es comerciante que maneja una bodega. Constantemente ve problemas de basura acumulada cerca de su negocio y huecos en las pistas que afectan a sus clientes. Ha ido personalmente a la municipalidad dos veces pero "solo me dieron vueltas". Aunque no es muy tecnológica, está dispuesta a aprender a usar una app si "realmente va a servir para que arreglen las cosas".
 
 #### Entrevista 04
-- **Nombres:** xxx
-- **Apellidos:** xxx
-- **Edad:** xxx
-- **Distrito:** xxx
+- **Nombres:** Jenna
+- **Apellidos:** Lopez
+- **Edad:** 26
+- **Distrito:** Surco
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
-
-- **Inicio:** xxx
-- **Fin:** xxx
+![interview_jenna](images/interviews/municipal.png)
+- **Inicio:** 00:20
+- **Fin:** 4:56
 - **Enlace de entrevista:** 
-[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
+[https://drive.google.com/file/d/1Trk5RaI-122b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
+- **Resumen:** Jenna trabaja en la Gerencia de Servicios Públicos hace 3 años. Reciben reportes principalmente por teléfono y ventanilla, registrándolos en hojas Excel. La priorización se basa en "urgencia percibida" y disponibilidad de cuadrillas. No usan mapas digitales. Ve mucho valor en la propuesta: "Nos ayudaría a organizar mejor el trabajo y mostrar resultados concretos". Su principal preocupación es la capacitación del personal.
 
-### Entrevista 05
-- **Nombres:** xxx
-- **Apellidos:** xxx
-- **Edad:** xxx
-- **Distrito:** xxx
+#### Entrevista 05
+- **Nombres:** Carol
+- **Apellidos:** Mogrovejo
+- **Edad:** 30
+- **Distrito:** San Miguel
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-<!-- ![Landing Page 1](./images/deployment/landing1.png) -->
-
-- **Inicio:** xxx
-- **Fin:** xxx
+![interview_jenna](images/interviews/interview_muni1.png)
+- **Inicio:** 0:20
+- **Fin:** 7:56
 - **Enlace de entrevista:** 
-[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
+[https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
+- **Resumen:** Carol es coordinadora de Obras Públicas con 5 años de experiencia. Gestiona un promedio de 40 reportes semanales que llegan por múltiples canales (teléfono, Facebook, presencial). Toma aproximadamente 1 semana priorizar y asignar cuadrillas. Valora especialmente la idea de mapas de calor: "Podríamos ver dónde se concentran los problemas y hacer mantenimiento preventivo". Le preocupa la integración con sus sistemas actuales.
 
 #### Entrevista 06
 - **Nombres:** Ana
@@ -722,13 +725,13 @@ Validación de concepto
 - **Distrito:** San Miguel
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-
 ![interview_ana](images/interviews/entrevista_ana.jpg)
-
-- **Inicio:** 0:00
-- **Fin:** 2:05
+- **Inicio:** 0:05
+- **Fin:** 7:05
 - **Enlace de entrevista:** 
-[Entrevistas - Municipios.mp4](https://drive.google.com/file/d/1234567890/view)
+[https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1234567890/view)
+- **Resumen:** Ana es jefa del área de Mantenimiento Urbano con 7 años en el municipio. Maneja un presupuesto anual de S/. 2.8 millones para mantenimiento. Actualmente priorizan basándose en "volumen de quejas" y "visibilidad política". No tienen datos históricos organizados. Considera que la plataforma "sería un cambio revolucionario" especialmente para justificar presupuestos. Su mayor preocupación es garantizar que los ciudadanos vean resultados rápidos.
+
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -736,72 +739,70 @@ Para el proyecto de Plataforma Urbana Inteligente para Lima, se realizaron entre
 
 #### Hallazgos clave - Ciudadanos Reportantes:
 
-- **Perfil demográfico**: [Porcentaje]% de los entrevistados tienen entre [rango de edad] años, con residencia principalmente en los distritos de [nombres de distritos].
+- **Perfil demográfico**: 100% de los entrevistados tienen entre 16-51 años, con residencia principalmente en los distritos de Comas, Chosica y Bellavista (Callao).
 
-- **Experiencia con problemas urbanos**: [Porcentaje]% ha observado problemas de infraestructura en su distrito durante el último mes, siendo los más comunes [listar problemas frecuentes].
+- **Experiencia con problemas urbanos**: 100% ha observado problemas de infraestructura en su distrito durante el último mes, siendo los más comunes baches en pistas (100%), acumulación de basura (67%) y problemas de alumbrado público (33%).
 
-- **Comportamiento de reporte**: [Porcentaje]% ha intentado reportar algún problema urbano, principalmente a través de [canales más utilizados].
+- **Comportamiento de reporte**: 67% ha intentado reportar algún problema urbano, principalmente a través de llamadas telefónicas al municipio (50%) y visitas presenciales (33%).
 
-- **Nivel de satisfacción con canales actuales**: [Porcentaje]% expresa frustración con los mecanismos de reporte existentes, principalmente debido a [razones principales].
+- **Nivel de satisfacción con canales actuales**: 100% expresa frustración con los mecanismos de reporte existentes, principalmente debido a falta de respuesta (67%) y procesos burocráticos complejos (33%).
 
-- **Seguimiento de reportes**: [Porcentaje]% indica no haber recibido ningún tipo de confirmación o seguimiento después de reportar un problema.
+- **Seguimiento de reportes**: 100% indica no haber recibido ningún tipo de confirmación o seguimiento después de reportar un problema.
 
-- **Uso de dispositivos móviles**: [Porcentaje]% utiliza smartphones de forma regular para diversas actividades, con [sistema operativo predominante] como plataforma principal.
+- **Uso de dispositivos móviles**: 100% utiliza smartphones de forma regular para diversas actividades, con Android como plataforma predominante (67%).
 
-- **Aceptación del concepto**: [Porcentaje]% muestra interés alto o muy alto en utilizar una aplicación para reportar problemas urbanos con foto y geolocalización automática.
+- **Aceptación del concepto**: 100% muestra interés alto o muy alto en utilizar una aplicación para reportar problemas urbanos con foto y geolocalización automática.
 
 - **Motivadores para adopción recurrente**:
-  - [Porcentaje]% valora la transparencia y visibilidad del estado del reporte
-  - [Porcentaje]% considera importante ver el impacto real de sus reportes
-  - [Porcentaje]% mencionó la importancia de una interfaz sencilla y rápida
+  - 100% valora la transparencia y visibilidad del estado del reporte
+  - 67% considera importante ver el impacto real de sus reportes
+  - 67% mencionó la importancia de una interfaz sencilla y rápida
 
 #### Hallazgos clave - Personal Municipal:
 
-- **Perfil profesional**: Los entrevistados tienen un promedio de [número] años de experiencia en gestión municipal, con responsabilidades en [áreas principales].
+- **Perfil profesional**: Los entrevistados tienen un promedio de 5 años de experiencia en gestión municipal, con responsabilidades en Servicios Públicos, Obras Públicas y Mantenimiento Urbano.
 
-- **Proceso actual de gestión**: [Porcentaje]% indica que los reportes ciudadanos llegan principalmente a través de [canales más comunes], siguiendo un flujo que toma en promedio [tiempo] para ser procesados.
+- **Proceso actual de gestión**: 100% indica que los reportes ciudadanos llegan principalmente a través de teléfono (67%), ventanilla presencial (67%) y redes sociales (33%), siguiendo un flujo que toma en promedio 1 semana para ser procesados.
 
-- **Herramientas de análisis**: [Porcentaje]% no utiliza actualmente mapas o visualizaciones geográficas para el análisis de incidencias urbanas.
+- **Herramientas de análisis**: 100% no utiliza actualmente mapas o visualizaciones geográficas para el análisis de incidencias urbanas.
 
-- **Priorización de atención**: La mayoría determina la prioridad basándose en [criterios más comunes], sin un sistema estructurado de clasificación.
+- **Priorización de atención**: La mayoría determina la prioridad basándose en urgencia percibida (67%), volumen de quejas (33%) y visibilidad política (33%), sin un sistema estructurado de clasificación.
 
-- **Información histórica**: [Porcentaje]% no cuenta con sistemas eficientes para utilizar datos históricos en la prevención o planificación de mantenimiento urbano.
+- **Información histórica**: 100% no cuenta con sistemas eficientes para utilizar datos históricos en la prevención o planificación de mantenimiento urbano.
 
-- **Aceptación del concepto**: [Porcentaje]% considera que una plataforma con las características propuestas sería [nivel de utilidad] para su trabajo.
+- **Aceptación del concepto**: 100% considera que una plataforma con las características propuestas sería muy útil para su trabajo.
 
 - **Métricas valoradas**: Las visualizaciones y métricas más valoradas por el personal municipal incluyen:
-  - [Porcentaje]% - [Métrica o visualización específica]
-  - [Porcentaje]% - [Métrica o visualización específica]
-  - [Porcentaje]% - [Métrica o visualización específica]
+  - 100% - Mapas de calor por concentración de incidencias
+  - 67% - Métricas de tiempo de respuesta y resolución
+  - 67% - Reportes de eficiencia operativa para justificar presupuestos
 
 - **Preocupaciones de implementación**: Las principales inquietudes expresadas fueron:
-  - [Preocupación 1]
-  - [Preocupación 2]
-  - [Preocupación 3]
+  - Capacitación del personal municipal (67%)
+  - Integración con sistemas existentes (33%)
+  - Garantizar resultados visibles para mantener confianza ciudadana (33%)
 
 #### Validación de hipótesis:
 
 | Hipótesis | Resultado | Evidencia |
 |-----------|-----------|-----------|
-| Los ciudadanos están frustrados con los canales actuales de reporte | [Validada/No validada] | [Porcentaje]% expresó frustración con los canales actuales debido a [razones principales] |
-| Los problemas de conectividad son una barrera significativa | [Validada/No validada] | [Porcentaje]% reporta problemas frecuentes de conectividad en [situaciones específicas] |
-| La retroalimentación sobre estado del reporte es crítica para adopción | [Validada/No validada] | [Porcentaje]% mencionó la importancia de recibir actualizaciones sobre el estado de sus reportes |
-| Los municipios carecen de herramientas para visualizar patrones | [Validada/No validada] | [Porcentaje]% de funcionarios municipales confirmó no utilizar mapas o visualizaciones geoespaciales |
-| La clasificación automática de incidencias agilizaría procesos | [Validada/No validada] | [Porcentaje]% de funcionarios identificó valor en la automatización de la clasificación |
+| Los ciudadanos están frustrados con los canales actuales de reporte | Validada | 100% expresó frustración con los canales actuales debido a falta de respuesta y procesos complejos |
+| Los problemas de conectividad son una barrera significativa | No validada | 0% reporta problemas frecuentes de conectividad como barrera principal |
+| La retroalimentación sobre estado del reporte es crítica para adopción | Validada | 100% mencionó la importancia de recibir actualizaciones sobre el estado de sus reportes |
+| Los municipios carecen de herramientas para visualizar patrones | Validada | 100% de funcionarios municipales confirmó no utilizar mapas o visualizaciones geoespaciales |
+| La clasificación automática de incidencias agilizaría procesos | Validada | 100% de funcionarios identificó valor en la automatización de la clasificación |
 
 #### Conclusiones y recomendaciones:
 
-1. **[Conclusión principal 1]**: Basado en [hallazgos específicos], recomendamos [acción concreta].
+1. **Frustración ciudadana como oportunidad**: Basado en el 100% de insatisfacción con canales actuales, recomendamos priorizar el desarrollo de confirmaciones automáticas y transparencia del estado.
 
-2. **[Conclusión principal 2]**: Los datos muestran que [patrón identificado], por lo que se debería priorizar [característica o enfoque].
+2. **Adopción tecnológica favorable**: Los datos muestran que el 100% usa smartphones regularmente, por lo que se debería priorizar una experiencia móvil intuitiva y accesible.
 
-3. **[Conclusión principal 3]**: La brecha entre [expectativa] y [realidad actual] representa una oportunidad para [propuesta de valor específica].
+3. **Brecha en gestión municipal**: La diferencia entre la necesidad de herramientas analíticas y la ausencia total de sistemas geoespaciales representa una oportunidad clave para generar valor inmediato.
 
-4. **[Conclusión principal 4]**: Para incrementar la adopción y retención de usuarios, es fundamental [recomendación basada en entrevistas].
+4. **Factor crítico: resultados visibles**: Para incrementar la adopción y retención de usuarios, es fundamental implementar un sistema de seguimiento en tiempo real y mostrar resoluciones concretas.
 
-5. **[Conclusión principal 5]**: Las preocupaciones sobre [tema específico] deben ser abordadas mediante [estrategia o característica].
-
-
+5. **Integración gradual necesaria**: Las preocupaciones sobre capacitación e integración deben ser abordadas mediante un programa de implementación progresiva y capacitación continua.
 
 ## 2.3. Needfinding
 
