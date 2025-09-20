@@ -1299,7 +1299,100 @@ El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones
 ##### Comunicación y Notificaciones Bounded Context Canvase
 ![Bounded_canvases](./images/bounded/bounded_comunicacion_notificaciones.png)
 
-### 4.2.5. Context Mapping
+## 4.2.5. Context Mapping
+
+Con los Bounded Contexts identificados (IAM, Incidencias, Analytics y Location), se procedió a construir los **context maps**, es decir, las visualizaciones que permiten entender cómo se relacionan entre sí. El proceso incluyó la exploración de alternativas de agrupamiento y separación, considerando preguntas como:
+
+- ¿Qué ocurriría si el manejo de georreferenciación se integrara al contexto de incidencias en lugar de estar aislado?
+- ¿Qué beneficios tendría separar el contexto de Analytics para evitar sobrecargar el de Incidencias?
+- ¿Es necesario que IAM tenga dependencia directa con Analytics o basta con su relación con Incidencias?
+
+Estas reflexiones permitieron validar que la división propuesta mantiene un balance entre independencia y colaboración, reduciendo acoplamientos innecesarios y asegurando que cada contexto tenga un propósito bien definido.
+
+![Context-Mapping](./images/bounded/context-mapping.png)
+
+#### Proceso de Exploración de Alternativas
+
+##### Alternativa 1: Fusión de Location Context con Incidencias Context
+
+**Pregunta evaluada:** "¿Qué pasaría si movemos las capacidades geoespaciales al contexto de Incidencias?"
+
+**Análisis:**
+- **Ventajas:** Simplicidad arquitectónica, menos comunicación entre contextos
+- **Desventajas:** Sobrecarga del contexto de Incidencias con responsabilidades geoespaciales complejas, dificultad para reutilizar servicios de mapas en otros contextos futuros
+- **Decisión:** Mantener separado Location Context para preservar la especialización en análisis geoespacial y facilitar futuras expansiones
+
+##### Alternativa 2: Fusión de Analytics Context con Incidencias Context
+
+**Pregunta evaluada:** "¿Qué pasaría si descomponemos las capacidades de Analytics y movemos la generación de reportes básicos a Incidencias?"
+
+**Análisis:**
+- **Ventajas:** Reducción de latencia para consultas simples, menor complejidad de integración
+- **Desventajas:** Mezcla de responsabilidades operativas con analíticas, limitaciones para análisis complejos futuros
+- **Decisión:** Mantener Analytics separado para preservar la especialización en Business Intelligence y análisis predictivo
+
+##### Alternativa 3: Creación de Shared Service para Notificaciones
+
+**Pregunta evaluada:** "¿Qué pasaría si creamos un shared service para reducir la duplicación de notificaciones entre múltiples bounded contexts?"
+
+**Análisis:**
+- **Ventajas:** Centralización de lógica de notificaciones, consistencia en mensajería
+- **Desventajas:** Dependencia compartida que podría generar acoplamiento
+- **Decisión:** Implementar como servicio compartido dentro del contexto de Incidencias, manteniendo interfaces bien definidas
+
+##### Alternativa 4: Aislamiento de Core Capabilities en IAM
+
+**Pregunta evaluada:** "¿Qué pasaría si aislamos las core capabilities de autenticación y movemos la gestión de perfiles a un contexto aparte?"
+
+**Análisis:**
+- **Ventajas:** Mayor seguridad y especialización en autenticación
+- **Desventajas:** Fragmentación excesiva para el alcance actual del proyecto
+- **Decisión:** Mantener gestión de identidades unificada en IAM Context
+
+
+El análisis de alternativas condujo al siguiente Context Map, que establece las relaciones entre los cuatro bounded contexts identificados:
+
+#### Patrones de Relación Aplicados
+
+##### 1. Customer/Supplier Pattern
+- **IAM → Incidencias:** IAM actúa como proveedor de identidades verificadas
+- **Incidencias → Analytics:** Incidencias provee datos para análisis
+- **Incidencias → Location:** Incidencias provee coordenadas para visualización
+- **Location → Analytics:** Location provee mapas de calor para dashboards
+
+##### 2. Conformist Pattern
+- **IAM ← Azure AD:** Adopta completamente el modelo de autenticación de Azure
+- **Location ← Azure Maps:** Se conforma a las APIs y estándares de Azure Maps
+
+##### 3. Anti-corruption Layer Pattern
+- **Incidencias ← EmailJS:** Capa de abstracción para servicios de email externos
+
+#### Comunicación Entre Contextos
+
+##### Comunicación Síncrona (REST API)
+- **IAM → Incidencias:** Validación de tokens de usuario
+- **Incidencias → Location:** Resolución de coordenadas a direcciones
+- **Analytics ← Multiple Contexts:** Consulta de datos para reportes
+
+##### Comunicación Asíncrona (Domain Events)
+- **Incidencias:** `IncidentCreated`, `IncidentStatusUpdated`
+- **IAM:** `UserRegistered`, `UserAuthenticated`
+- **Analytics:** `ReportGenerated`
+
+##### Comunicación en Tiempo Real (WebSocket)
+- **Incidencias → UI:** Notificaciones de cambio de estado
+- **Analytics → UI:** Actualizaciones de dashboards en vivo
+
+
+La arquitectura de Context Mapping seleccionada logra:
+
+1. **Separación de Responsabilidades:** Cada contexto tiene un propósito específico sin solapamientos
+2. **Bajo Acoplamiento:** Las dependencias están claramente definidas y son unidireccionales
+3. **Alta Cohesión:** Las capacidades dentro de cada contexto están relacionadas
+4. **Escalabilidad:** Permite evolución independiente de cada contexto
+5. **Integración Externa:** Maneja apropiadamente las dependencias con servicios de Azure
+
+Esta estructura facilita el desarrollo en equipos paralelos, el testing independiente y futuras migraciones hacia microservicios si el proyecto escala significativamente.
 
 ## 4.3. Software Architecture
 
