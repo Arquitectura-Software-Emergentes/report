@@ -1263,8 +1263,30 @@ El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones
 
 ### 4.3.1. Software Architecture System Landscape Diagram
 
+![System Landscape](./images/c4/c4_landscape.png)
+
+Este diagrama panorámico (System Landscape) presenta una vista simplificada del ecosistema de la plataforma "Urban Lima". Agrupa a los usuarios, el sistema principal y los sistemas externos en bloques únicos para ofrecer una visión de alto nivel sobre las interacciones principales: los usuarios (ciudadanos y personal municipal) reportan y consultan incidencias; la plataforma central procesa y visualiza datos geoespaciales; y los sistemas externos (servicios de mapas y envío de correos) son consumidos por la plataforma. Es útil para audiencias no técnicas y para situar la plataforma dentro de su contexto operativo.
+
 ### 4.3.2. Software Architecture Context Level Diagrams
+
+![System Context](./images/c4/c4_context.png)
+
+El diagrama de contexto muestra con mayor detalle los actores externos y las relaciones directas con el sistema "Urban Lima - Plataforma de Inteligencia Urbana". Identifica claramente:
+- Actores: Ciudadano y Personal Municipal.
+- Servicios externos consumidos: EmailJS (envío de notificaciones) y Mapbox (servicios geoespaciales).
+
+El objetivo de este nivel es dejar explícitas las dependencias externas, los flujos de datos principales (por ejemplo, envío de notificaciones y peticiones de mapas) y las expectativas de interoperabilidad con otros sistemas municipales.
 
 ### 4.3.3. Software Architecture Container Level Diagrams
 
+![Container Diagram](./images/c4/c4_containers.png)
+
+El diagrama de contenedores desglosa el sistema en componentes desplegables y lógicos: aplicaciones cliente (aplicación móvil Flutter, aplicación web Angular y landing page), el backend (API REST), el servicio de modelos IA, la base de datos y servicios auxiliares (p. ej. EmailJS, Mapbox). Muestra cómo los contenedores se comunican (REST, WebSocket para notificaciones, almacenamiento de archivos) y cuáles son sus responsabilidades principales —por ejemplo, el backend expone la API REST que implementa los bounded contexts y coordina el acceso a la base de datos y servicios externos—.
+
 ### 4.3.4. Software Architecture Deployment Diagrams
+
+![Deployment Diagram](./images/c4/diagram_deployment.png)
+
+Descripción breve del Diagrama de Despliegue:
+
+Diagrama que muestra de forma concisa la topología de despliegue de Urban Lima: clientes (móvil y web), el servidor backend (API REST), servidores de apoyo (IA para inferencia y base de datos PostGIS) y servicios externos (mapas y correo). Indica las comunicaciones principales (HTTPS para clientes y servicios externos, SQL para la base de datos y HTTP para inferencia) y sirve como referencia general para decisiones de dimensionamiento y seguridad en el despliegue.
