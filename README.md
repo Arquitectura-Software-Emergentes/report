@@ -1220,6 +1220,17 @@ Al finalizar el Quality Attribute Workshop, se refinaron los escenarios más cr�
 ### 4.2.3. Domain Message Flows Modeling
 
 ### 4.2.4. Bounded Context Canvases
+##### Gestión de Usuarios Bounded Context Canvase
+![Bounded_canvases](./images/bounded/bounded_usuarios.png)
+
+##### Reporte de Incidencias Bounded Context Canvase
+![Bounded_canvases](./images/bounded/bounded_reportes.png)
+
+##### Gestión y Monitoreo de Incidencias Bounded Context Canvase
+![Bounded_canvases](./images/bounded/bounded_gestion_incidentes.jpg)
+
+##### Comunicación y Notificaciones Bounded Context Canvase
+![Bounded_canvases](./images/bounded/bounded_comunicacion_notificaciones.png)
 
 ### 4.2.5. Context Mapping
 
