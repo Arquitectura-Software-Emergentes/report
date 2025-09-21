@@ -183,7 +183,7 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
             - 
             <br><br> 
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - 
+            - Me comuniqué oralmente con mi equipo explicando la propuesta de la idea y el impacto esperado. Expuse de forma clara cómo los segmentos objetivos aportaban valor al proyecto y utilicé un lenguaje adecuado para que la información fuera comprensible para personas con diferentes especialidades.
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
             - 
@@ -227,7 +227,7 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
             - 
             <br><br> 
             <b>Cama Salvatierra, Jimena Tamara</b><br>
-            - 
+            - Redacté y estructuré los user stories y el impact mapping, presentando con objetividad los requerimientos funcionales y el alineamiento estratégico de la propuesta. También definí los segmentos objetivos en la documentación, asegurando que la información escrita se entendiera tanto por un público técnico como no técnico.
             <br><br>
             <b>Castillo Castillo, Jair Alexander</b><br>
             - 
@@ -1811,3 +1811,13 @@ El diagrama de contenedores desglosa el sistema en componentes desplegables y l�
 Descripción breve del Diagrama de Despliegue:
 
 Diagrama que muestra de forma concisa la topología de despliegue de Urban Lima: clientes (móvil y web), el servidor backend (API REST), servidores de apoyo (IA para inferencia y base de datos PostGIS) y servicios externos (mapas y correo). Indica las comunicaciones principales (HTTPS para clientes y servicios externos, SQL para la base de datos y HTTP para inferencia) y sirve como referencia general para decisiones de dimensionamiento y seguridad en el despliegue.
+
+### Conclusiones
+
+Con este proyecto demostramos de manera integral la viabilidad y el impacto positivo de una plataforma urbana inteligente, diseñada para conectar de forma efectiva a la ciudadanía con el personal municipal y crear un ecosistema digital colaborativo que transforma la gestión de la ciudad. Desarrollamos un sistema que centraliza la gestión de incidencias, trámites y otros procesos municipales, lo que nos permite atender de manera más eficiente y ordenada las necesidades de los ciudadanos, asegurando un registro estructurado y trazable de cada solicitud. 
+
+Nuestra arquitectura se concibe como escalable y adaptable, brindándonos la capacidad de integrar nuevas funcionalidades, ajustar los procesos existentes y responder con agilidad a las demandas emergentes de la ciudad, garantizando la sostenibilidad tecnológica del proyecto a mediano y largo plazo.
+
+Durante todo el desarrollo aplicamos metodologías ágiles y el enfoque de Lean UX, lo que nos permite iterar continuamente sobre nuestras soluciones, priorizar la experiencia del usuario y validar tempranamente cada funcionalidad, asegurando que cada componente del sistema cumpla con las expectativas y necesidades reales de los usuarios finales. De esta manera, el proyecto no solo optimiza la eficiencia operativa y la gestión de recursos municipales, sino que también fortalece la participación activa de los ciudadanos, promueve la transparencia y genera confianza en la gestión pública. 
+
+En conjunto, nuestras acciones aportan un valor estratégico tangible para la municipalidad, facilitando la toma de decisiones basada en datos confiables, fomentando la innovación urbana y consolidando una ciudad más organizada, segura y receptiva a las necesidades de su población.
