@@ -10,9 +10,9 @@
     <!--<strong>name startup</strong>-->
 </div>
 
-<h3> Team Members: </h3>
-
 <div align="center">
+
+<h3> Team Members: </h3>
 
 | Member                              |    Code    |
 | :---------------------------------- | :--------: |
