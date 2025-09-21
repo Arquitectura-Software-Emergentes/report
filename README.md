@@ -1571,11 +1571,53 @@ Resultado del proceso de Quality Attribute Workshop, priorizando drivers por imp
 
 ## 4.2. Strategic-Level Domain-Driven Design
 
+El proceso de **Domain-Driven Design** aplicado en Urban Lima nos permitió organizar el dominio de la solución en áreas delimitadas de responsabilidad. Esta división se realizó en dos fases: primero con la sesión de **EventStorming**, donde se visualizaron los eventos centrales del sistema y sus relaciones, y posteriormente con el **Candidate Context Discovery**, donde se definieron los **Bounded Contexts** específicos del proyecto.
+
+- **Miro Board - Event Storming y DDD:** [Tablero de Event-Storming](https://miro.com/welcomeonboard/ek8ya3dQQW54WFdodkVEckNPNWVxUmlEVURYKytJVVpndXB5dklQbGVQY3ZydjVIV2FUdkpROG81V1krWThYSzFqQXF0NHMxanZHYWJtUmM1RTgzTy9lUnk0bFdmNkVFWnFhamo2cEJaZ2xEN1BOQzBDUkN0M205eDFLclN3N3VNakdSWkpBejJWRjJhRnhhb1UwcS9BPT0hdjE=?share_link_id=250207850579)
+
+
 ### 4.2.1. EventStorming
+La sesión de EventStorming se centró en mapear los flujos clave del sistema a partir de las historias de usuario priorizadas. Durante la dinámica se identificaron los siguientes elementos relevantes para el proyecto:
+![event-storming](./images/bounded/event-storming.png)
+
+- **Eventos principales**: *Usuario municipal registrado*, *Ciudadano registrado*, *Sesión iniciada*, *Incidencia creada*, *Estado actualizado*, *Reporte exportado*, *Mapa geoespacial generado*.  
+- **Comandos clave**: *Registrar usuario*, *Iniciar sesión*, *Reportar incidencia con foto y ubicación*, *Actualizar estado*, *Asignar prioridad*, *Generar reporte CSV*.  
+- **Agregados principales**: *Usuario*, *Incidencia*, *Reporte*.  
+- **Sistemas externos**: *Azure Active Directory* (autenticación), *Azure SQL Database* (persistencia y escalabilidad), *Azure Maps* (georreferenciación).  
+
+El análisis permitió seguir una línea temporal desde el registro de los actores (municipales y ciudadanos), la creación y gestión de incidencias, hasta la explotación de la información a nivel de reportes y dashboards. Con este mapeo se identificaron dependencias críticas (ejemplo: no es posible registrar incidencias sin un usuario autenticado) y se evidenciaron las transiciones que marcan puntos de separación natural dentro del sistema.
 
 ### 4.2.2. Candidate Context Discovery
 
-### 4.2.3. Domain Message Flows Modeling
+A partir del EventStorming, se llevó a cabo la sesión de Candidate Context Discovery, cuyo objetivo fue organizar los eventos y comandos en **Bounded Contexts** que respondieran a responsabilidades específicas. El resultado fue la definición de cuatro contextos estratégicos en Urban Lima:
+
+#### IAM Context
+Este contexto agrupa todo lo relacionado con la **gestión de identidades y accesos**. Incluye los procesos de registro y autenticación tanto para ciudadanos como para personal municipal. También contempla la integración con **Azure Active Directory** para reforzar la seguridad y garantizar la administración centralizada de credenciales. Su relevancia radica en ser el punto de entrada seguro a la plataforma.
+![event-storming](./images/bounded/event-storming4.png)
+
+#### Incidencias Context
+Se ocupa de todos los procesos de **registro, autenticación y control de acceso** tanto para ciudadanos como para personal municipal. Aquí se definieron funcionalidades como la creación de cuentas, inicio y cierre de sesión, y la validación de credenciales a través de Azure Active Directory.  
+
+![event-storming](./images/bounded/event-storming3.png)
+
+En Urban Lima, este contexto asegura que la plataforma solo sea utilizada por usuarios autorizados, protegiendo la información sensible y garantizando el cumplimiento de políticas de seguridad municipales.
+
+#### Analytics Context
+Reúne las capacidades de **generación de reportes y análisis de datos**. Abarca la visualización de totales de incidencias, filtros por múltiples criterios y la construcción de dashboards de seguimiento.  
+
+![event-storming](./images/bounded/event-storming2.png)
+
+En Urban Lima, este contexto es clave para que la municipalidad pueda tomar decisiones informadas, asignar recursos y medir la efectividad de sus intervenciones. Su delimitación independiente permite concentrar las reglas de negocio relacionadas con el análisis, sin mezclarlas con la operación diaria de incidencias.
+
+#### Location Context
+Enfocado en la **dimensión geoespacial** de la información, este contexto integra Azure Maps para mostrar incidencias en mapas de calor, aplicar filtros geográficos y permitir la exploración espacial de los reportes.  
+
+![event-storming](./images/bounded/event-storming1.png)
+
+Para Urban Lima, este contexto añade un valor diferencial, ya que convierte los reportes ciudadanos en información territorial, facilitando la priorización de zonas críticas y la planificación urbana basada en datos reales.
+
+El ejercicio permitió transformar un conjunto amplio de historias de usuario en un modelo estratégico con **cuatro Bounded Contexts claramente definidos**: IAM, Incidencias, Analytics y Location. Cada uno representa una frontera natural dentro del dominio, con responsabilidades claras y un lenguaje propio. Esta separación estratégica constituye la base para implementar una **arquitectura monolítica modular en Urban Lima**, manteniendo la coherencia del dominio y evitando solapamientos entre áreas.
+
 
 ### 4.2.3. Domain Message Flows Modeling
 ##### 1) Registro de ciudadano
@@ -1643,7 +1685,100 @@ El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones
 ##### Comunicación y Notificaciones Bounded Context Canvase
 ![Bounded_canvases](./images/bounded/bounded_comunicacion_notificaciones.png)
 
-### 4.2.5. Context Mapping
+## 4.2.5. Context Mapping
+
+Con los Bounded Contexts identificados (IAM, Incidencias, Analytics y Location), se procedió a construir los **context maps**, es decir, las visualizaciones que permiten entender cómo se relacionan entre sí. El proceso incluyó la exploración de alternativas de agrupamiento y separación, considerando preguntas como:
+
+- ¿Qué ocurriría si el manejo de georreferenciación se integrara al contexto de incidencias en lugar de estar aislado?
+- ¿Qué beneficios tendría separar el contexto de Analytics para evitar sobrecargar el de Incidencias?
+- ¿Es necesario que IAM tenga dependencia directa con Analytics o basta con su relación con Incidencias?
+
+Estas reflexiones permitieron validar que la división propuesta mantiene un balance entre independencia y colaboración, reduciendo acoplamientos innecesarios y asegurando que cada contexto tenga un propósito bien definido.
+
+![Context-Mapping](./images/bounded/context-mapping.png)
+
+#### Proceso de Exploración de Alternativas
+
+##### Alternativa 1: Fusión de Location Context con Incidencias Context
+
+**Pregunta evaluada:** "¿Qué pasaría si movemos las capacidades geoespaciales al contexto de Incidencias?"
+
+**Análisis:**
+- **Ventajas:** Simplicidad arquitectónica, menos comunicación entre contextos
+- **Desventajas:** Sobrecarga del contexto de Incidencias con responsabilidades geoespaciales complejas, dificultad para reutilizar servicios de mapas en otros contextos futuros
+- **Decisión:** Mantener separado Location Context para preservar la especialización en análisis geoespacial y facilitar futuras expansiones
+
+##### Alternativa 2: Fusión de Analytics Context con Incidencias Context
+
+**Pregunta evaluada:** "¿Qué pasaría si descomponemos las capacidades de Analytics y movemos la generación de reportes básicos a Incidencias?"
+
+**Análisis:**
+- **Ventajas:** Reducción de latencia para consultas simples, menor complejidad de integración
+- **Desventajas:** Mezcla de responsabilidades operativas con analíticas, limitaciones para análisis complejos futuros
+- **Decisión:** Mantener Analytics separado para preservar la especialización en Business Intelligence y análisis predictivo
+
+##### Alternativa 3: Creación de Shared Service para Notificaciones
+
+**Pregunta evaluada:** "¿Qué pasaría si creamos un shared service para reducir la duplicación de notificaciones entre múltiples bounded contexts?"
+
+**Análisis:**
+- **Ventajas:** Centralización de lógica de notificaciones, consistencia en mensajería
+- **Desventajas:** Dependencia compartida que podría generar acoplamiento
+- **Decisión:** Implementar como servicio compartido dentro del contexto de Incidencias, manteniendo interfaces bien definidas
+
+##### Alternativa 4: Aislamiento de Core Capabilities en IAM
+
+**Pregunta evaluada:** "¿Qué pasaría si aislamos las core capabilities de autenticación y movemos la gestión de perfiles a un contexto aparte?"
+
+**Análisis:**
+- **Ventajas:** Mayor seguridad y especialización en autenticación
+- **Desventajas:** Fragmentación excesiva para el alcance actual del proyecto
+- **Decisión:** Mantener gestión de identidades unificada en IAM Context
+
+
+El análisis de alternativas condujo al siguiente Context Map, que establece las relaciones entre los cuatro bounded contexts identificados:
+
+#### Patrones de Relación Aplicados
+
+##### 1. Customer/Supplier Pattern
+- **IAM → Incidencias:** IAM actúa como proveedor de identidades verificadas
+- **Incidencias → Analytics:** Incidencias provee datos para análisis
+- **Incidencias → Location:** Incidencias provee coordenadas para visualización
+- **Location → Analytics:** Location provee mapas de calor para dashboards
+
+##### 2. Conformist Pattern
+- **IAM ← Azure AD:** Adopta completamente el modelo de autenticación de Azure
+- **Location ← Azure Maps:** Se conforma a las APIs y estándares de Azure Maps
+
+##### 3. Anti-corruption Layer Pattern
+- **Incidencias ← EmailJS:** Capa de abstracción para servicios de email externos
+
+#### Comunicación Entre Contextos
+
+##### Comunicación Síncrona (REST API)
+- **IAM → Incidencias:** Validación de tokens de usuario
+- **Incidencias → Location:** Resolución de coordenadas a direcciones
+- **Analytics ← Multiple Contexts:** Consulta de datos para reportes
+
+##### Comunicación Asíncrona (Domain Events)
+- **Incidencias:** `IncidentCreated`, `IncidentStatusUpdated`
+- **IAM:** `UserRegistered`, `UserAuthenticated`
+- **Analytics:** `ReportGenerated`
+
+##### Comunicación en Tiempo Real (WebSocket)
+- **Incidencias → UI:** Notificaciones de cambio de estado
+- **Analytics → UI:** Actualizaciones de dashboards en vivo
+
+
+La arquitectura de Context Mapping seleccionada logra:
+
+1. **Separación de Responsabilidades:** Cada contexto tiene un propósito específico sin solapamientos
+2. **Bajo Acoplamiento:** Las dependencias están claramente definidas y son unidireccionales
+3. **Alta Cohesión:** Las capacidades dentro de cada contexto están relacionadas
+4. **Escalabilidad:** Permite evolución independiente de cada contexto
+5. **Integración Externa:** Maneja apropiadamente las dependencias con servicios de Azure
+
+Esta estructura facilita el desarrollo en equipos paralelos, el testing independiente y futuras migraciones hacia microservicios si el proyecto escala significativamente.
 
 ## 4.3. Software Architecture
 
