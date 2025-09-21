@@ -1847,7 +1847,7 @@ Descripción breve del Diagrama de Despliegue:
 
 Diagrama que muestra de forma concisa la topología de despliegue de Urban Lima: clientes (móvil y web), el servidor backend (API REST), servidores de apoyo (IA para inferencia y base de datos PostGIS) y servicios externos (mapas y correo). Indica las comunicaciones principales (HTTPS para clientes y servicios externos, SQL para la base de datos y HTTP para inferencia) y sirve como referencia general para decisiones de dimensionamiento y seguridad en el despliegue.
 
-### Conclusiones
+# Conclusiones
 
 Con este proyecto demostramos de manera integral la viabilidad y el impacto positivo de una plataforma urbana inteligente, diseñada para conectar de forma efectiva a la ciudadanía con el personal municipal y crear un ecosistema digital colaborativo que transforma la gestión de la ciudad. Desarrollamos un sistema que centraliza la gestión de incidencias, trámites y otros procesos municipales, lo que nos permite atender de manera más eficiente y ordenada las necesidades de los ciudadanos, asegurando un registro estructurado y trazable de cada solicitud.
 
