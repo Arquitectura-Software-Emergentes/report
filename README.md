@@ -1918,12 +1918,21 @@ Diagrama que muestra de forma concisa la topología de despliegue de Urban Lima:
 ### 5.1.4. Infrastructure Layer
 
 ### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+Este diagrama de componentes ilustra la arquitectura del contexto IAM usando Supabase como Backend as a Service, donde las aplicaciones Flutter y Angular se conectan mediante SDKs nativos que facilitan la comunicación directa con servicios gestionados, eliminando la necesidad de un backend personalizado. El flujo permite que las aplicaciones envíen credenciales a través de conexiones HTTPS seguras hacia Supabase Auth, que maneja el ciclo completo de identidades incluyendo registro, login y generación de tokens JWT, mientras se comunica con PostgreSQL para almacenar datos de usuarios de forma segura. La arquitectura integra Row Level Security para garantizar acceso controlado a datos y genera automáticamente APIs REST mediante PostgREST, creando un flujo bidireccional donde los SDKs procesan respuestas y actualizan interfaces en tiempo real para una experiencia fluida y segura en el sistema Urban Lima.
+
+![IAM COMPONENT Diagram](./images/bounded/iam/component.png)
 
 ### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+El siguiente diagrama de clases representa el modelo de dominio del IAM Context, diseñado para trabajar con Supabase como Backend as a Service. Las clases mantienen la lógica de negocio esencial mientras Supabase maneja la persistencia y autenticación a nivel de infraestructura.
+
+
 
 #### 5.1.6.2. Bounded Context Database Design Diagram
+El siguiente diagrama de base de datos está diseñado para funcionar con Supabase, aprovechando PostgreSQL con funcionalidades extendidas como Row Level Security (RLS), triggers automáticos y integración nativa con Supabase Auth.
+
+
 
 ## 5.2. Bounded Context: Incidents Context
 
