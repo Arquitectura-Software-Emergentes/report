@@ -1964,12 +1964,127 @@ Diagrama que muestra de forma concisa la topología de despliegue de Urban Lima:
 # Capítulo VI: Solution UX Design
 ## 6.1. Style Guidelines.
 ### 6.1.1. General Style Guidelines.
+
+En el General Style Guideline se reuniren los lineamientos visuales y de diseño que debe seguir un proyecto para mantener coherencia en su identidad. Su propósito principal es asegurar que todos los elementos gráficos, como logotipo, tipografía, paleta de colores, cuerpo de texto y botones, se utilicen de manera consistente, lo que refuerza la imagen del proyecto y facilita la experiencia del usuario. Además, de funcionar como una guía de referencia tanto para diseñadores como para desarrolladores, evitando inconsistencias y permitiendo que el producto evolucione sin perder unidad visual ni funcional.
+
+![general_style_guideline](images/style_guideline/general_style_guideline.png)
+<br>
+
+Se muestra el logo que refuerza el reconocimiento de marca y se utiliza en todas las interfaces principales. El _body text_ emplea una tipografía clara y legible, por ello se eligió Space Grotesk. La paleta de colores está cuidadosamente seleccionada para transmitir la personalidad del proyecto, aplicando tonos principales y secundarios de manera uniforme en fondos, textos y elementos destacados. Los botones se diseñan con estilos coherentes, respetando la paleta definida y manteniendo estados diferenciados que garantizan una experiencia de interacción uniforme.
+
 ### 6.1.2. Web, Mobile & Devices Style Guidelines.
+
+**Mobile Style Guideline**
+
+Esta guía establece los principios de diseño y usabilidad para aplicaciones móviles, con el objetivo de mantener consistencia visual y funcional en todas las pantallas. Su finalidad es optimizar la experiencia del usuario en dispositivos móviles, considerando aspectos clave como legibilidad en pantallas reducidas, uso eficiente del espacio, interacción táctil y navegación intuitiva. Este documento sirve como referencia para diseñadores y desarrolladores, garantizando que la aplicación móvil se construya bajo estándares unificados que refuercen la identidad del proyecto, aseguren accesibilidad y ofrezcan una experiencia fluida y coherente en diferentes tamaños de pantalla y sistemas operativos.
+
+![mobile_style_guideline](images/style_guideline/mobile_style_guideline.png)
+
+En los estilos presentados, se establece la paleta de colores con los colores principales de la aplicación además de la tipografía, el GRID que se usará para la aplicaicón móvil y la barra de navegación, entre otros componentes.
+
+**Web Style Guideline**
+
+En esta sección se defininen los estándares de diseño y presentación para aplicaciones y sitios web, con el objetivo de mantener coherencia visual, funcional y de marca en todas las páginas. Su propósito es guiar a diseñadores y desarrolladores en la implementación de elementos como tipografía, paleta de colores, botones, logotipo y layouts, asegurando que la experiencia del usuario sea uniforme, intuitiva y accesible en distintos navegadores y tamaños de pantalla. Además, esta guía facilita la creación de interfaces consistentes, mejora la usabilidad, refuerza la identidad visual del proyecto y permite que los equipos trabajen de manera alineada y eficiente.
+
+![web_style_guideline](images/style_guideline/web_style_guideline.png)
+
+En los estilos presentados, se establece la paleta de colores con los colores principales de la aplicación además de la tipografía, el GRID que se usará para la aplicaicón web y la barra de navegación, entre otros componentes.
+
 ## 6.2. Information Architecture.
 ### 6.2.2. Labeling Systems.
+
+<br>Este sistema de etiquetado se integró en nuestro tablero de gestión de tareas (Trello/Jira) y permite identificar rápidamente el tipo de trabajo pendiente ([FEAT], [FIX]), su prioridad ([P1], [P2]) y el módulo involucrado ([UI], [DB]). Por ejemplo, la tarea [FEAT][P1][UI][TODO] Crear pantalla de inicio indica que es una nueva funcionalidad prioritaria de interfaz aún pendiente de desarrollo.<br>
+
+| **Etiqueta**            | **Descripción**               |
+|---------------------|---------------------------|
+| **Tipo de tarea**       |                           |
+| [FEAT]              | Nueva característica      |
+| [FIX]               | Corrección de errores     |
+| [REFACTOR]          | Refactorización de código |
+| [DOCS]              | Documentación             |
+| [TEST]              | Pruebas                   |
+| **Prioridad**           |                           |
+| [P1]                | Alta prioridad            |
+| [P2]                | Prioridad media           |
+| [P3]                | Baja prioridad            |
+| **Módulo o componente** |                           |
+| [UI]                | Interfaz de usuario       |
+| [API]               | Lógica de la API          |
+| [DB]                | Base de datos             |
+| [AUTH]              | Autenticación             |
+| [PERF]              | Rendimiento               |
+| **Estado**              |                           |
+| [TODO]              | Por hacer                 |
+| [WIP]               | En progreso               |
+| [REVIEW]            | En revisión               |
+| [DONE]              | Completado                |
+
+
 ### 6.2.3. Searching Systems.
+
+El sistema de búsqueda propuesto para LimaUrban permitirá a los usuarios personalizar su experiencia de aventurera de acuerdo a sus preferencias. Este sistema facilitará el uso de la aplicación filtrandolo por zona, tipo, prioridad, fecha. Los filtros disponibles serán:
+
+| Nombre del filtro    | Descripción                                                                                                              |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------|
+| Zonas  | Permitirá ver los incidentes por zonas registradas.         |
+| Tipo  | Permitirá organizar por tipo de incidente   |
+| Prioridad    | Permitirá filtrar por prioridad de incidentes.    |
+| Fecha        | Permitirá filtrar por fecha en la que se cargó el incidente.     |
+
+
 ### 6.2.4. SEO Tags and Meta Tags.
+
+La implementación de estas etiquetas ayudan al posicionamiento de la página en los motores de búsqueda.
+Título
+Indica el tema de la página, debe ser corto y descriptivo, debe mantenerse entre los 55 y 60 caracteres.
+
+    <title>LimaUrban</title>
+
+**Descripción** <br>
+Es una breve descripción  de la página.
+
+	<meta name= “description” content= “loremipsum loremipsum”/>
+
+Robots
+Indican a los motores de búsqueda de lo que deben hacer con la página.
+index/noindex: Indica al motor de búsqueda si debe mostrar la página en el SERP o no.
+follow/nofollow: Les dice a los motores qué hacer con los enlaces en ese objetivo.
+Tipo de contenido
+Es útil para que los motores de búsqueda identifiquen el idioma de la página.
+
+    <meta http-equiv= “tipo de contenido” content= “text/html charset-utf-8” />
+    <meta http-equiv= “tipo de contenido” content= “text/html charset-ISO-6059-1” />
+
+Searchbox de enlaces
+Se utiliza para controlar el cuadro de búsqueda de enlaces del sitio de Google
+
+    <meta name= “google” content = “nositelinkssearchbox”/>
+
+Viewport Meta Tag 
+Es crucial para asegurar que el contenido se vea bien en dispositivos móviles.
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 ### 6.2.5. Navigation Systems.
+
+En la app móvil para los ciudadanos, se optó por el patrón de navegación tipo bottom bar, facilitando el acceso a secciones críticas con el pulgar. En la web para las autoridades, se emplea una barra lateral fija, siguiendo principios de navegación persistente, para evitar pérdida de contexto. Este diseño prioriza las tareas más frecuentes: explorar, buscar y gestionar cuenta, con énfasis visual en los íconos y retroalimentación activa al seleccionar secciones.
+
+**Ciudadano**
+| Nombre | Descripción                                                                                                              |
+|--------|--------------------------------------------------------------------------------------------------------------------------|
+| Inicio | Le muestra un resumen personal de su interacción en la aplicación y su actividad reciente. |
+| Incidencias | El ciudadano podrá ver pertes cercanos registrados por otros ciudadanos.                                                         |
+| Reportar | El ciudadano podrá subir una foto con descripción adjunta para reportar una incidencia.                                                         |
+| Perfil | Este apartado permite que el usuario gestione su cuenta.                                                                 |
+<br>
+
+**Autoridad**
+| Nombre       | Descripción                                                                                          |
+|--------------|------------------------------------------------------------------------------------------------------|
+| Incidencias  | Le muestra los incidentes de todos los ciudadanos.              |
+| Mapa | Mostrará un mapa y un mapa de calor con las incidencias. |
+| Perfil       | Este apartado permite que el usuario gestione su cuenta.                                             |
+
 ## 6.3. Landing Page UI Design.
 ### 6.3.1. Landing Page Wireframe.
 ### 6.3.2. Landing Page Mock-up.
