@@ -1909,13 +1909,263 @@ Diagrama que muestra de forma concisa la topología de despliegue de Urban Lima:
 
 ## 5.1. Bounded Context: IAM Context
 
+Este bounded context se encarga de identificar usuarios, autenticarlos y autorizarlos según su rol (Ciudadano, Municipal). Cubre: registro de ciudadanos y personal municipal, verificación de correo, inicio/cierre de sesión, emisión/rotación de tokens, gestión de roles/permisos y auditoría de acciones de acceso.
+
 ### 5.1.1. Domain Layer
+
+En esta capa se modela el core de IAM con Entities, Value Objects, Aggregates, Domain Services, Repositories (interfaces) y Domain Events.
+
+#### Aggregates Roots
+ 
+##### User (Aggregate Root)
+
+Propósito: representar la cuenta de usuario.
+
+**Atributos**
+
+| Nombre | Tipo | Visibilidad | Descripción |
+|--------|------|-------------|-------------|
+| userId | UUID | Private | Identificador único del usuario |
+| email | String | Private | Correo electrónico del usuario |
+| passwordHash | String | Private | Hash de la contraseña |
+| status | Enum | Private | ACTIVE\|BLOCKED |
+| createdAt | DateTime | Private | Fecha de creación |
+
+**Relaciones**
+
+1..* con Role (vía asignaciones); 1..* con AuditLog.
+
+**Invariantes**
+
+email único; status consistente con verificación de correo.
+
+**Métodos**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+|--------|-----------------|-------------|-------------|
+| register | void | Public | register(email, rawPassword) |
+| changePassword | void | Public | changePassword(old, new) |
+| block | void | Public | block(reason) |
+
+##### Role
+
+Propósito: agrupar permisos y simplificar autorización.
+
+**Atributos**
+
+| Nombre | Tipo | Visibilidad | Descripción |
+|--------|------|-------------|-------------|
+| roleId | UUID | Private | Identificador único del rol |
+| code | Enum | Private | CITIZEN\|MUNICIPAL |
+| description | String | Private | Descripción del rol |
+
+**Relaciones**
+
+many-to-many con Permission (a través de RolePermission).
+
+##### Permission (Value Object / enumeración)
+
+Propósito: representar capacidades atómicas (p.ej., INCIDENT_REVIEW, INCIDENT_ASSIGN).
+
+
+##### RoleAssignment (Entity)
+
+Propósito: asignar uno o más roles a un User.
+
+**Atributos**
+
+| Nombre | Tipo | Visibilidad | Descripción |
+|--------|------|-------------|-------------|
+| userId | UUID | Private | Identificador del usuario |
+| roleId | UUID | Private | Identificador del rol |
+| grantedAt | DateTime | Private | Fecha de asignación |
+| grantedBy | UUID | Private | Usuario que asignó el rol |
+
+##### RefreshToken (Entity)
+
+Propósito: soporte a sesiones seguras y rotación de tokens.
+
+**Atributos**
+
+| Nombre | Tipo | Visibilidad | Descripción |
+|--------|------|-------------|-------------|
+| tokenId | UUID | Private | Identificador único del token |
+| userId | UUID | Private | Identificador del usuario |
+| expiresAt | DateTime | Private | Fecha de expiración |
+| isRevoked | Boolean | Private | Indica si el token está revocado |
+
+
+##### AuditLog
+
+Propósito: rastrear eventos de seguridad (login, intentos fallidos, asignaciones de rol, etc.).
+
+**Atributos**
+
+| Nombre | Tipo | Visibilidad | Descripción |
+|--------|------|-------------|-------------|
+| auditId | UUID | Private | Identificador único del log |
+| userId | UUID | Private | Identificador del usuario |
+| action | String | Private | Acción realizada |
+| entityId | UUID | Private | Identificador de la entidad (opcional) |
+| createdAt | DateTime | Private | Fecha del evento |
+
+
+#### Value Objects
+
+Email, PasswordHash, UserId, RoleId, PermissionCode.
+
+Garantizan formato/validez y evitan primitive obsession.
+
+#### Domain Services
+
+| Servicio | Descripción |
+|----------|-------------|
+| PasswordService | verifica fortaleza, reutilización y caducidad. |
+| AuthorizationService | evalúa hasRole(user, role) y can(user, permission). |
+| CaptchaPolicy | regla de negocio que exige captcha en registro/login tras N intentos. |
+| TokenService | generación, rotation y refresh tokens. |
+
+#### Repositories (interfaces)
+
+UserRepository (por email/id), RoleRepository, RoleAssignmentRepository, RefreshTokenRepository, AuditLogRepository.
+
+#### Domain Events
+
+UserRegistered, LoginSucceeded, LoginFailed, RoleAssigned, RoleRevoked, PasswordChanged, LogoutPerformed.
 
 ### 5.1.2. Interface Layer
 
+esta capa publica endpoints REST y maneja validaciones superficiales (DTOs, captcha, rate limit).
+
+#### Controllers
+
+##### AuthController
+
+Controlador para los métodos de autenticación y registro de usuarios.
+
+| Endpoint | Descripción |
+|----------|-------------|
+| POST /auth/register-citizen | correo/clave, permisos de cámara/ubicación si aplica al flujo |
+| POST /auth/register-municipal | Registro de personal municipal |
+| POST /auth/login | Inicio de sesión |
+| POST /auth/logout | Cierre de sesión |
+| POST /auth/refresh | Renovación de token |
+| POST /auth/request-password-reset | Solicitar restablecimiento de contraseña |
+| POST /auth/reset-password | Restablecer contraseña |
+
+##### UserController
+
+Controlador para la gestión de usuarios.
+
+| Endpoint | Descripción |
+|----------|-------------|
+| GET /me | perfil y roles
+| GET /users/{id} | Obtener usuario por ID |
+| GET /users/{id}/roles | Obtener roles de un usuario |
+
+##### RoleController
+
+Controlador para la gestión de roles y permisos.
+
+| Endpoint | Descripción |
+|----------|-------------|
+| GET /roles | Listar roles disponibles |
+| GET /permissions | Listar permisos disponibles |
+| POST /users/{id}/roles/{roleId} | asignar |
+| DELETE /users/{id}/roles/{roleId} | revocar |
+
+##### AuditController
+
+Controlador para consulta de eventos de auditoría.
+
+| Endpoint | Descripción |
+|----------|-------------|
+| GET /audits?userId=&action=&from=&to= | consulta de eventos de seguridad |
+
+#### Respuestas típicas
+
+| Código | Descripción |
+|--------|-------------|
+| 200/201 | OK/Creado |
+| 400 | validación |
+| 401 | no autenticado |
+| 403 | no autorizado |
+| 409 | duplicado |
+| 429 | rate limit |
+| 500 | error interno |
+
 ### 5.1.3. Application Layer
 
+Aquí los Command/Query Handlers orquestan los flujos de negocio de IAM y delegan en el dominio y repositorios
+
+#### Command handlers
+
+##### RegisterCitizenCommandHandler
+
+Gestiona la ejecución del registro de ciudadanos
+
+| Pasos |
+|-------|
+| validar DTO → User.register() → persistir  → AuditLog(LOG_USER_REGISTERED). |
+
+##### RegisterMunicipalUserCommandHandler
+
+Gestiona la ejecución del registro de personal municipal
+
+| Descripción |
+|-------------|
+| Incluye validación del rol MUNICIPAL y (opcional) aprobación interna. |
+
+##### LoginCommandHandler
+
+Gestiona la ejecución del inicio de sesión
+
+| Pasos |
+|-------|
+| Verifica credenciales → políticas de bloqueo → emite accessToken + refreshToken → AuditLog(LOG_LOGIN_OK/FAIL). |
+
+#### Otros Commands
+
+| Command |
+|---------|
+| RequestPasswordResetCommand, ResetPasswordCommand. |
+| AssignRoleCommand / RevokeRoleCommand → actualiza RoleAssignment (registra auditoría). |
+| LogoutCommand, RefreshTokenCommand → rotate y/o invalidate RefreshToken. |
+
+#### Queries & Query Handlers
+
+| Query | Descripción |
+|-------|-------------|
+| GetCurrentUserQuery | perfil + roles/permisos |
+| ListRolesQuery, ListPermissionsQuery | Listar roles y permisos del sistema |
+| ListAuditLogsQuery | filtro por usuario/acción/rango |
+
+#### Reglas transaccionales
+
+| Regla |
+|-------|
+| Registro/Login envuelven cambios en una transacción atómica (usuario + tokens + auditoría). |
+| Idempotencia en  request-password-reset. |
+
 ### 5.1.4. Infrastructure Layer
+
+Esta capa implementa repositorios, mapeos relacionales y adapters a servicios externos
+
+#### Persistencia (mapeo a tu esquema)
+
+##### Tablas principales
+
+| Tabla | Estructura |
+|-------|-----------|
+| user | user_id PK, email UNIQUE, password_hash, status, created_at |
+| role | role_id PK, code UNIQUE, description |
+| role_permission | role_id FK, permission_code PK/FK |
+| audit_log | audit_id PK, user_id FK, action, entity_id, created_at |
+
+#### Repositorios (implementaciones)
+
+JpaUserRepository/UserRepository, RoleRepository, RoleAssignmentRepository, RefreshTokenRepository, AuditLogRepository.
+
 
 ### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
 Este diagrama de componentes ilustra la arquitectura del contexto IAM usando Supabase como Backend as a Service, donde las aplicaciones Flutter y Angular se conectan mediante SDKs nativos que facilitan la comunicación directa con servicios gestionados, eliminando la necesidad de un backend personalizado. El flujo permite que las aplicaciones envíen credenciales a través de conexiones HTTPS seguras hacia Supabase Auth, que maneja el ciclo completo de identidades incluyendo registro, login y generación de tokens JWT, mientras se comunica con PostgreSQL para almacenar datos de usuarios de forma segura. La arquitectura integra Row Level Security para garantizar acceso controlado a datos y genera automáticamente APIs REST mediante PostgREST, creando un flujo bidireccional donde los SDKs procesan respuestas y actualizan interfaces en tiempo real para una experiencia fluida y segura en el sistema Urban Lima.
