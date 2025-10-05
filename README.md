@@ -2177,7 +2177,7 @@ Este diagrama de componentes ilustra la arquitectura del contexto IAM usando Sup
 #### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
 El siguiente diagrama de clases representa el modelo de dominio del IAM Context, diseñado para trabajar con Supabase como Backend as a Service. Las clases mantienen la lógica de negocio esencial mientras Supabase maneja la persistencia y autenticación a nivel de infraestructura.
 
-
+![IAM Diagram](./images/bounded/iam/diagramdeclases.png)
 
 #### 5.1.6.2. Bounded Context Database Design Diagram
 El siguiente diagrama de base de datos está diseñado para funcionar con Supabase, aprovechando PostgreSQL con funcionalidades extendidas como Row Level Security (RLS), triggers automáticos y integración nativa con Supabase Auth.
