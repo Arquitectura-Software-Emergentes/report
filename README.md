@@ -189,7 +189,7 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
   - [5.3.6. Bounded Context Software Architecture Code Level Diagrams](#536-bounded-context-software-architecture-code-level-diagrams)
     - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
     - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
-    
+
 ## Capítulo VI: Solution UX Design
 
 - [6.1. Style Guidelines](#61-style-guidelines)
@@ -1916,4 +1916,61 @@ Nuestra arquitectura se concibe como escalable y adaptable, brindándonos la cap
 Durante todo el desarrollo aplicamos metodologías ágiles y el enfoque de Lean UX, lo que nos permite iterar continuamente sobre nuestras soluciones, priorizar la experiencia del usuario y validar tempranamente cada funcionalidad, asegurando que cada componente del sistema cumpla con las expectativas y necesidades reales de los usuarios finales. De esta manera, el proyecto no solo optimiza la eficiencia operativa y la gestión de recursos municipales, sino que también fortalece la participación activa de los ciudadanos, promueve la transparencia y genera confianza en la gestión pública.
 
 En conjunto, nuestras acciones aportan un valor estratégico tangible para la municipalidad, facilitando la toma de decisiones basada en datos confiables, fomentando la innovación urbana y consolidando una ciudad más organizada, segura y receptiva a las necesidades de su población.
+
+# Capítulo V: Tactical-Level Software Design
+
+## 5.1. Bounded Context: IAM Context
+
+### 5.1.1. Domain Layer
+
+### 5.1.2. Interface Layer
+
+### 5.1.3. Application Layer
+
+### 5.1.4. Infrastructure Layer
+
+### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+#### 5.1.6.2. Bounded Context Database Design Diagram
+
+## 5.2. Bounded Context: Incidents Context
+
+### 5.2.1. Domain Layer
+
+### 5.2.2. Interface Layer
+
+### 5.2.3. Application Layer
+
+### 5.2.4. Infrastructure Layer
+
+### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+#### 5.2.6.2. Bounded Context Database Design Diagram
+
+## 5.3. Bounded Context: Location Context
+
+### 5.3.1. Domain Layer
+
+### 5.3.2. Interface Layer
+
+### 5.3.3. Application Layer
+
+### 5.3.4. Infrastructure Layer
+
+### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+### 5.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+#### 5.3.6.2. Bounded Context Database Design Diagram
+
 
