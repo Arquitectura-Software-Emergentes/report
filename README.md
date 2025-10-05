@@ -2186,21 +2186,289 @@ El siguiente diagrama de base de datos está diseñado para funcionar con Supaba
 
 ## 5.2. Bounded Context: Incidents Context
 
+Este bounded context se encarga de gestionar el ciclo de vida completo de las incidencias urbanas reportadas por los ciudadanos. Cubre desde el registro inicial de incidencias con fotografías y geolocalización, hasta su resolución final por parte del personal municipal. Incluye funcionalidades como: creación de reportes con validación automática de duplicados, asignación de prioridades, actualización de estados, gestión de comentarios bidireccionales entre ciudadanos y personal municipal, seguimiento del historial de cambios, y generación de notificaciones en tiempo real. Este contexto es fundamental para mantener la transparencia y trazabilidad en la gestión municipal de problemas urbanos.
+
 ### 5.2.1. Domain Layer
+
+En esta capa se modela el core del contexto de Incidencias con Aggregates, Entities, Value Objects, Domain Services, Repositories (interfaces) y Domain Events.
+
+#### Aggregates y Entities Identificados
+
+##### Incident (Aggregate Root)
+
+**Propósito:** Representar una incidencia urbana reportada por un ciudadano.
+
+| **Atributo** | **Tipo** | **Visibilidad** | **Descripción** |
+|--------------|----------|-----------------|-----------------|
+| incidentId | UUID | Private | Identificador único del incidente |
+| title | String | Private | Título descriptivo del incidente |
+| description | String | Private | Descripción detallada del problema reportado |
+| type | IncidentType | Private | Tipo de incidencia (bache, basura, graffiti, infraestructura, etc.) |
+| status | IncidentStatus | Private | Estado actual (PENDING, IN_PROGRESS, RESOLVED, CLOSED) |
+| priority | Priority | Private | Nivel de prioridad (LOW, MEDIUM, HIGH, CRITICAL) |
+| location | Location | Private | Ubicación georreferenciada del incidente |
+| reportedBy | UserId | Private | ID del ciudadano que reportó |
+| assignedTo | UserId | Private | ID del personal municipal asignado |
+| photoUrls | List<String> | Private | URLs de las fotografías adjuntas |
+| createdAt | DateTime | Private | Fecha y hora de creación |
+| updatedAt | DateTime | Private | Fecha y hora de última actualización |
+| resolvedAt | DateTime | Private | Fecha y hora de resolución |
+
+**Relaciones:** 1..* con Comment, 1..* con StatusHistory
+
+**Invariantes:** location debe estar dentro de los límites de Lima Metropolitana; status debe seguir flujo válido de estados.
+
+**Métodos:**
+
+| **Nombre** | **Tipo de retorno** | **Visibilidad** | **Descripción** |
+|------------|---------------------|-----------------|-----------------|
+| reportIncident | void | Public | Registra una nueva incidencia |
+| updateStatus | void | Public | Actualiza el estado de la incidencia |
+| assignPriority | void | Public | Asigna nivel de prioridad |
+| addComment | void | Public | Añade comentario al historial |
+| assignToMunicipalStaff | void | Public | Asigna incidencia a personal municipal |
+| markAsResolved | void | Public | Marca la incidencia como resuelta |
+| close | void | Public | Cierra la incidencia |
+
+##### Comment (Entity)
+
+**Propósito:** Representar comentarios y comunicación entre ciudadanos y personal municipal.
+
+| **Atributo** | **Tipo** | **Visibilidad** | **Descripción** |
+|--------------|----------|-----------------|-----------------|
+| commentId | UUID | Private | Identificador único del comentario |
+| incidentId | UUID | Private | ID del incidente al que pertenece |
+| authorId | UUID | Private | ID del usuario que escribió el comentario |
+| content | String | Private | Contenido del comentario |
+| authorType | UserType | Private | Tipo de usuario (CITIZEN, MUNICIPAL) |
+| createdAt | DateTime | Private | Fecha y hora de creación |
+
+##### StatusHistory (Entity)
+
+**Propósito:** Mantener el historial de cambios de estado de las incidencias para transparencia y auditoría.
+
+| **Atributo** | **Tipo** | **Visibilidad** | **Descripción** |
+|--------------|----------|-----------------|-----------------|
+| historyId | UUID | Private | Identificador único del registro |
+| incidentId | UUID | Private | ID del incidente |
+| previousStatus | IncidentStatus | Private | Estado anterior |
+| newStatus | IncidentStatus | Private | Estado nuevo |
+| changedBy | UUID | Private | ID del usuario que realizó el cambio |
+| changeReason | String | Private | Motivo del cambio de estado |
+| changedAt | DateTime | Private | Fecha y hora del cambio |
+
+#### Value Objects
+
+##### Location
+| **Atributo** | **Tipo** | **Descripción** |
+|--------------|----------|-----------------|
+| latitude | Double | Coordenada de latitud |
+| longitude | Double | Coordenada de longitud |
+| address | String | Dirección textual |
+| district | String | Distrito donde se ubica |
+| zone | String | Zona específica |
+
+##### IncidentType (Enum)
+- POTHOLE (Bache)
+- TRASH (Basura) 
+- GRAFFITI (Graffiti)
+- STREET_LIGHTING (Alumbrado público)
+- INFRASTRUCTURE (Infraestructura)
+- TRAFFIC_SIGNS (Señalización vial)
+- GREEN_AREAS (Áreas verdes)
+- OTHER (Otro)
+
+##### IncidentStatus (Enum)
+- PENDING (Pendiente)
+- IN_REVIEW (En revisión)
+- IN_PROGRESS (En progreso)
+- RESOLVED (Resuelto)
+- CLOSED (Cerrado)
+- REJECTED (Rechazado)
+
+##### Priority (Enum)
+- LOW (Baja)
+- MEDIUM (Media)
+- HIGH (Alta)
+- CRITICAL (Crítica)
 
 ### 5.2.2. Interface Layer
 
+Esta capa expone los controladores que permiten la interacción con las entidades del dominio a través de solicitudes HTTP.
+
+#### IncidentController
+
+Controlador para los métodos CRUD relacionado con las incidencias urbanas.
+
+| **Atributos** |  |  |  |
+|---------------|---------------|---------------|---------------|
+| **Nombre** | **Tipo** | **Visibilidad** | **Descripción** |
+| incident Command Handler | IIncident Command Handler | Private | Servicio del gestor de comandos |
+| incident Query Handler | IIncident Query Handler | Private | Servicio del gestor de queries |
+
+| **Métodos** |  |  |  |
+|-------------|-------------|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Visibilidad** | **Descripción** |
+| reportIncident | ResponseEntity | Public | Método para reportar una nueva incidencia |
+| getIncidents | ResponseEntity | Public | Solicitar todas las incidencias |
+| getIncidents ByStatus | ResponseEntity | Public | Solicitar las incidencias filtradas por estado |
+| getIncident ById | ResponseEntity | Public | Solicitar la incidencia por su id |
+| getIncidents ByUserId | ResponseEntity | Public | Solicitar las incidencias reportadas por un usuario |
+| updateIncident Status | ResponseEntity | Public | Actualizar el estado de una incidencia |
+| assignIncident Priority | ResponseEntity | Public | Asignar prioridad a una incidencia |
+| assignIncident ToStaff | ResponseEntity | Public | Asignar incidencia a personal municipal |
+| addComment ToIncident | ResponseEntity | Public | Añadir comentario a una incidencia |
+| getIncident Comments | ResponseEntity | Public | Obtener comentarios de una incidencia |
+| getIncident History | ResponseEntity | Public | Obtener historial de cambios de estado |
+| filterIncidents ByType | ResponseEntity | Public | Filtrar incidencias por tipo |
+| filterIncidents ByLocation | ResponseEntity | Public | Filtrar incidencias por ubicación |
+| filterIncidents ByPriority | ResponseEntity | Public | Filtrar incidencias por prioridad |
+| closeIncident | ResponseEntity | Public | Cerrar una incidencia |
+
 ### 5.2.3. Application Layer
+
+Esta capa maneja la lógica de negocio y las interacciones entre los comandos y eventos, así como los servicios de aplicación.
+
+#### Command handlers
+
+##### IncidentCommandHandler
+
+Gestiona la ejecución de comandos de las incidencias
+
+| **Atributos** |  |  |  |
+|---------------|---------------|---------------|---------------|
+| **Nombre** | **Tipo** | **Visibilidad** | **Descripción** |
+| Incident Repository | IIncident Repository | Private | Repositorio de las incidencias |
+| User Repository | IUser Repository | Private | Repositorio de los usuarios |
+| Location Service | ILocation Service | Private | Servicio de geolocalización |
+| Notification Service | INotification Service | Private | Servicio de notificaciones |
+
+| **Métodos** |  |  |  |
+|-------------|-------------|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Visibilidad** | **Descripción** |
+| create Incident | Incident | Public | Método para crear una nueva incidencia con foto y ubicación |
+| update IncidentStatus | Incident | Public | Método para actualizar el estado de una incidencia |
+| assign IncidentPriority | Incident | Public | Método para asignar prioridad a una incidencia |
+| assign IncidentToStaff | Incident | Public | Método para asignar incidencia a personal municipal |
+| add CommentToIncident | Comment | Public | Método para añadir comentario a una incidencia |
+| close Incident | Incident | Public | Método para cerrar una incidencia |
+
+#### Query handlers
+
+##### IncidentQueryHandler
+
+Gestiona la ejecución de queries de las incidencias
+
+| **Atributos** |  |  |  |
+|---------------|---------------|---------------|---------------|
+| **Nombre** | **Tipo** | **Visibilidad** | **Descripción** |
+| Incident Repository | IIncident Repository | Private | Repositorio de las incidencias |
+| User Repository | IUser Repository | Private | Repositorio de los usuarios |
+| Comment Repository | IComment Repository | Private | Repositorio de los comentarios |
+| StatusHistory Repository | IStatusHistory Repository | Private | Repositorio del historial de estados |
+
+| **Métodos** |  |  |  |
+|-------------|-------------|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Visibilidad** | **Descripción** |
+| getIncidents | List.Incident | Public | Retorna todas las incidencias |
+| getIncidents ByStatus | List.Incident | Public | Retorna las incidencias filtradas por estado |
+| getIncident ById | Incident | Public | Retorna la incidencia por su id |
+| getIncidents ByUserId | List.Incident | Public | Retorna las incidencias reportadas por un usuario |
+| getIncidents ByType | List.Incident | Public | Retorna las incidencias filtradas por tipo |
+| getIncidents ByLocation | List.Incident | Public | Retorna las incidencias filtradas por ubicación |
+| getIncidents ByPriority | List.Incident | Public | Retorna las incidencias filtradas por prioridad |
+| getIncident Comments | List.Comment | Public | Retorna los comentarios de una incidencia |
+| getIncident History | List.StatusHistory | Public | Retorna el historial de cambios de una incidencia |
 
 ### 5.2.4. Infrastructure Layer
 
+Esta capa se encarga de la persistencia de datos y las interacciones con servicios externos.
+
+#### IIncidentRepository
+
+Interfaz que define los métodos para gestionar las incidencias
+
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| findIncident ByStatus | List.Incident | Retorna las incidencias filtradas por estado |
+| findIncident ByUserId | List.Incident | Retorna las incidencias reportadas por un usuario |
+| findIncident ByType | List.Incident | Retorna las incidencias filtradas por tipo |
+| findIncident ByLocation | List.Incident | Retorna las incidencias filtradas por ubicación geográfica |
+| findIncident ByPriority | List.Incident | Retorna las incidencias filtradas por nivel de prioridad |
+| findIncident ById | Incident | Retorna una incidencia específica por su identificador |
+| save Incident | Incident | Guarda una nueva incidencia en la base de datos |
+| update Incident | Incident | Actualiza una incidencia existente |
+| delete Incident | Boolean | Elimina una incidencia de la base de datos |
+
+#### ICommentRepository
+
+Interfaz que representa la tabla "Comment" y maneja los métodos para gestionar comentarios
+
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| findComments ByIncidentId | List.Comment | Retorna todos los comentarios de una incidencia específica |
+| findComment ById | Comment | Retorna un comentario específico por su identificador |
+| save Comment | Comment | Guarda un nuevo comentario en la base de datos |
+| update Comment | Comment | Actualiza un comentario existente |
+| delete Comment | Boolean | Elimina un comentario de la base de datos |
+
+#### IStatusHistoryRepository
+
+Interfaz que representa la tabla "StatusHistory" y maneja el historial de cambios de estado
+
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| findHistory ByIncidentId | List.StatusHistory | Retorna el historial completo de cambios de una incidencia |
+| findHistory ByUserId | List.StatusHistory | Retorna el historial de cambios realizados por un usuario |
+| save StatusHistory | StatusHistory | Guarda un nuevo registro de cambio de estado |
+| findLatest StatusByIncidentId | StatusHistory | Retorna el último cambio de estado de una incidencia |
+
+#### ILocationService
+
+Interfaz para servicios de geolocalización externos
+
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| validateLocation | Boolean | Valida si las coordenadas están dentro de Lima Metropolitana |
+| getAddress FromCoordinates | String | Convierte coordenadas GPS en dirección textual |
+| getDistrict FromCoordinates | String | Obtiene el distrito basado en coordenadas |
+| calculateDistance | Double | Calcula distancia entre dos ubicaciones |
+
+#### INotificationService
+
+Interfaz para servicios de notificaciones en tiempo real
+
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| sendStatusUpdate Notification | Boolean | Envía notificación de cambio de estado via WebSocket |
+| sendComment Notification | Boolean | Envía notificación de nuevo comentario |
+| sendAssignment Notification | Boolean | Notifica asignación de incidencia a personal municipal |
+| updateNotification Badge | Boolean | Actualiza contador de notificaciones en tiempo real |
+
 ### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+El siguiente diagrama de componentes ilustra la arquitectura interna del bounded context de Incidencias, mostrando la organización por capas (Domain, Application, Interface e Infrastructure) y las dependencias entre componentes. Esta representación facilita la comprensión de cómo los diferentes elementos colaboran para gestionar el ciclo de vida completo de las incidencias urbanas.
+
+![Incidents Component Diagram](./images/bounded/incidents/incidents_components_diagram.png)
 
 ### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 5.2.6.1. Bounded Context Domain Layer Class Diagrams
 
+El diagrama de clases del dominio presenta la estructura completa del bounded context de Incidencias, con **Incident** como aggregate root central rodeado de las entidades **Comment** y **StatusHistory**. El diagrama abarca todas las capas arquitectónicas (Interface, Application, Infrastructure) con sus respectivos controladores, handlers CQRS, repositorios e interfaces de servicios externos, proporcionando una vista integral de la implementación siguiendo principios de Domain-Driven Design.
+
+![Incidents Class Diagram](./images/bounded/incidents/incidents_class_diagram.png)
+
 #### 5.2.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos define la estructura de persistencia específica del bounded context de Incidencias, mostrando únicamente las tablas que pertenecen al core de este contexto: **incidents** como tabla principal del aggregate root, **comments** para la comunicación entre usuarios, y **status_history** para auditoría de cambios. Las referencias a otros bounded contexts (como user_id hacia IAM) se modelan como simples UUIDs sin foreign keys físicas, respetando la autonomía del contexto y los principios de microservicios donde cada bounded context mantiene su propia base de datos independiente.
+
+![Incidents Data Base Diagram](./images/bounded/incidents/incidents_bd_diagram.png)
 
 ## 5.3. Bounded Context: Location Context
 
