@@ -63,17 +63,15 @@ El objetivo de esta sección es resumir las modificaciones relevantes que se rea
 | Repositorio del Proyecto | https://github.com/orgs/Arquitectura-Software-Emergentes/repositories |
 | Link de la Organización  |       https://github.com/orgs/Arquitectura-Software-Emergentes        |
 
-**TB1:**
-
-Para el TB1, se asignaron responsabilidades específicas a cada integrante, las cuales se detallan a continuación:
+Para el Trabajo Parcial, se asignaron responsabilidades específicas a cada integrante, las cuales se detallan a continuación:
 
 | Miembro del Equipo | Tarea Asignada |
 | :----------------: | :------------: |
-|    Aldo Baldeon    |                |
-|  Barbara Quezada   |                |
-|   Steve Castillo   |                |
-|    Jimena Cama     |                |
-|   Jair Castillo    |                |
+|    Aldo Baldeon    | Desarrollo del Capítulo I (Introducción), incluyendo la definición del startup profile, solution profile, análisis de antecedentes y problemática, proceso Lean UX y identificación de segmentos objetivo. Colaboración en la arquitectura de software del Capítulo IV. |
+|  Barbara Quezada   | Elaboración del Capítulo II (Requirements Elicitation & Analysis), enfocándose en el análisis competitivo, diseño y ejecución de entrevistas, actividades de needfinding (user personas, empathy mapping, as-is scenario mapping) y definición del ubiquitous language. |
+|   Steve Castillo   | Desarrollo del Capítulo III (Requirements Specification), incluyendo to-be scenario mapping, especificación de user stories, impact mapping y estructuración del product backlog. Contribución en la definición de la startup en el Capítulo I. |
+|    Jimena Cama     | Elaboración del Capítulo IV (Strategic-Level Software Design), enfocándose en el strategic-level attribute-driven design, análisis de quality attribute scenarios, identificación de constraints y desarrollo de diagramas arquitectónicos C4. Apoyo en la definición de segmentos objetivo del Capítulo I. |
+|   Jair Castillo    | Desarrollo del strategic-level domain-driven design del Capítulo IV, incluyendo EventStorming, candidate context discovery, domain message flows modeling, bounded context canvases y context mapping. Colaboración en el análisis competitivo del Capítulo II. |
 
 Cabe destacar que, durante la creación del informe, se realizaron commits específicos para cada tarea asignada, lo que permitió garantizar un control de versiones y una colaboración efectiva en tiempo real. El equipo mantuvo reuniones semanales de sincronización para asegurar la coherencia entre los diferentes capítulos y compartir avances.
 
@@ -152,6 +150,66 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
   - [4.3.2. Software Architecture Context Level Diagrams](#432-software-architecture-context-level-diagrams)
   - [4.3.3. Software Architecture Container Level Diagrams](#433-software-architecture-container-level-diagrams)
   - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
+  ## Capítulo V: Tactical-Level Software Design
+- [5.1. Bounded Context: Iam Context](#51-bounded-context-nombre-del-contexto)
+  - [5.1.1. Domain Layer](#511-domain-layer)
+  - [5.1.2. Interface Layer](#512-interface-layer)
+  - [5.1.3. Application Layer](#513-application-layer)
+  - [5.1.4. Infrastructure Layer](#514-infrastructure-layer)
+  - [5.1.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
+  - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
+    - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+    - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+
+- [5.2. Bounded Context: Incidents Context](#51-bounded-context-nombre-del-contexto)
+  - [5.2.1. Domain Layer](#511-domain-layer)
+  - [5.2.2. Interface Layer](#512-interface-layer)
+  - [5.2.3. Application Layer](#513-application-layer)
+  - [5.2.4. Infrastructure Layer](#514-infrastructure-layer)
+  - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
+  - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
+    - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+    - [5.2.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+    - [5.2. Bounded Context: Incidents Context](#51-bounded-context-nombre-del-contexto)
+  - [5.2.1. Domain Layer](#511-domain-layer)
+  - [5.2.2. Interface Layer](#512-interface-layer)
+  - [5.2.3. Application Layer](#513-application-layer)
+  - [5.2.4. Infrastructure Layer](#514-infrastructure-layer)
+  - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
+  - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
+    - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+    - [5.2.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+
+- [5.3. Bounded Context: Location Context](#53-bounded-context-analytics-context)
+  - [5.3.1. Domain Layer](#531-domain-layer)
+  - [5.3.2. Interface Layer](#532-interface-layer)
+  - [5.3.3. Application Layer](#533-application-layer)
+  - [5.3.4. Infrastructure Layer](#534-infrastructure-layer)
+  - [5.3.5. Bounded Context Software Architecture Component Level Diagrams](#535-bounded-context-software-architecture-component-level-diagrams)
+  - [5.3.6. Bounded Context Software Architecture Code Level Diagrams](#536-bounded-context-software-architecture-code-level-diagrams)
+    - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
+    - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
+    
+## Capítulo VI: Solution UX Design
+
+- [6.1. Style Guidelines](#61-style-guidelines)
+  - [6.1.1. General Style Guidelines](#611-general-style-guidelines)
+  - [6.1.2. Web, Mobile & Devices Style Guidelines](#612-web-mobile--devices-style-guidelines)
+- [6.2. Information Architecture](#62-information-architecture)
+  - [6.2.1. Organization Systems](#621-organization-systems)
+  - [6.2.2. Labeling Systems](#622-labeling-systems)
+  - [6.2.3. Searching Systems](#623-searching-systems)
+  - [6.2.4. SEO Tags and Meta Tags](#624-seo-tags-and-meta-tags)
+  - [6.2.5. Navigation Systems](#625-navigation-systems)
+- [6.3. Landing Page UI Design](#63-landing-page-ui-design)
+  - [6.3.1. Landing Page Wireframe](#631-landing-page-wireframe)
+  - [6.3.2. Landing Page Mock-up](#632-landing-page-mock-up)
+- [6.4. Applications UX/UI Design](#64-applications-uxui-design)
+  - [6.4.1. Applications Wireframes](#641-applications-wireframes)
+  - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
+  - [6.4.3. Applications Mock-ups](#643-applications-mock-ups)
+  - [6.4.4. Applications User Flow Diagrams](#644-applications-user-flow-diagrams)
+- [6.5. Applications Prototyping](#65-applications-prototyping)
 
 ### [Conclusiones](#conclusiones)
 
@@ -1847,6 +1905,8 @@ Descripción breve del Diagrama de Despliegue:
 
 Diagrama que muestra de forma concisa la topología de despliegue de Urban Lima: clientes (móvil y web), el servidor backend (API REST), servidores de apoyo (IA para inferencia y base de datos PostGIS) y servicios externos (mapas y correo). Indica las comunicaciones principales (HTTPS para clientes y servicios externos, SQL para la base de datos y HTTP para inferencia) y sirve como referencia general para decisiones de dimensionamiento y seguridad en el despliegue.
 
+
+
 # Conclusiones
 
 Con este proyecto demostramos de manera integral la viabilidad y el impacto positivo de una plataforma urbana inteligente, diseñada para conectar de forma efectiva a la ciudadanía con el personal municipal y crear un ecosistema digital colaborativo que transforma la gestión de la ciudad. Desarrollamos un sistema que centraliza la gestión de incidencias, trámites y otros procesos municipales, lo que nos permite atender de manera más eficiente y ordenada las necesidades de los ciudadanos, asegurando un registro estructurado y trazable de cada solicitud.
@@ -1856,3 +1916,4 @@ Nuestra arquitectura se concibe como escalable y adaptable, brindándonos la cap
 Durante todo el desarrollo aplicamos metodologías ágiles y el enfoque de Lean UX, lo que nos permite iterar continuamente sobre nuestras soluciones, priorizar la experiencia del usuario y validar tempranamente cada funcionalidad, asegurando que cada componente del sistema cumpla con las expectativas y necesidades reales de los usuarios finales. De esta manera, el proyecto no solo optimiza la eficiencia operativa y la gestión de recursos municipales, sino que también fortalece la participación activa de los ciudadanos, promueve la transparencia y genera confianza en la gestión pública.
 
 En conjunto, nuestras acciones aportan un valor estratégico tangible para la municipalidad, facilitando la toma de decisiones basada en datos confiables, fomentando la innovación urbana y consolidando una ciudad más organizada, segura y receptiva a las necesidades de su población.
+
