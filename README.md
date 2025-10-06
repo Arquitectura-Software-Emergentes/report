@@ -2072,17 +2072,17 @@ En la app móvil para los ciudadanos, se optó por el patrón de navegación tip
 **Ciudadano**
 | Nombre | Descripción                                                                                                              |
 |--------|--------------------------------------------------------------------------------------------------------------------------|
-| Inicio | Le muestra un resumen personal de su interacción en la aplicación y su actividad reciente. |
-| Incidencias | El ciudadano podrá ver pertes cercanos registrados por otros ciudadanos.                                                         |
-| Reportar | El ciudadano podrá subir una foto con descripción adjunta para reportar una incidencia.                                                         |
+| Inicio | Le muestra un resumen personal de su interacción en la aplicación y su actividad reciente.                               |
+| Incidencias | El ciudadano podrá ver pertes cercanos registrados por otros ciudadanos.                                            |
+| Reportar | El ciudadano podrá subir una foto con descripción adjunta para reportar una incidencia.                                |
 | Perfil | Este apartado permite que el usuario gestione su cuenta.                                                                 |
 <br>
 
 **Autoridad**
 | Nombre       | Descripción                                                                                          |
 |--------------|------------------------------------------------------------------------------------------------------|
-| Incidencias  | Le muestra los incidentes de todos los ciudadanos.              |
-| Mapa | Mostrará un mapa y un mapa de calor con las incidencias. |
+| Incidencias  | Le muestra los incidentes de todos los ciudadanos.                                                   |
+| Mapa | Mostrará un mapa y un mapa de calor con las incidencias.                                                     |
 | Perfil       | Este apartado permite que el usuario gestione su cuenta.                                             |
 
 ## 6.3. Landing Page UI Design.
@@ -2214,7 +2214,24 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 
 ### 6.4.2. Applications Wireflow Diagrams.
 
+Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
+
 #### **Aplicación web**
+
+**User Goal: Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.** Este objetivo abarca la experiencia del usuario al explorar la página principal de la plataforma.<br>
+![alt text](images/wireflow_diagram/inicio_sesion.png)
+
+**User Goal: Como personal municipal, quiero ver el número total de incidencias registradas para monitorear el volumen general.** Este objetivo refleja la necesidad del usuario de ver un dashboard para la gestión de los incidentes. <br>
+![alt text](images/wireflow_diagram/ver-total-incidencias.png)
+
+**User Goal: Como personal municipal, quiero enviar comentarios en las incidencias para comunicar acciones tomadas.** Este objetivo refleja la necesidad del usuario de ver los detalles del incidente y mantener informado al ciudadano sobre los avances.<br>
+![alt text](images/wireflow_diagram/ver-detalle.png)
+
+**User Goal: Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial.** Este objetivo refleja la necesidad del usuario de ver un dashboard para la gestión de los incidentes.<br>
+![alt text](images/wireflow_diagram/maps.png)
+
+**User Goal: Como personal municipal, quiero ver los detalles de la municipalidad para acceder a información institucional centralizada.** Este objetivo refleja la necesidad del usuario de ver más información sobre su cuenta en LimaUrban. <br>
+![alt text](images/wireflow_diagram/cuenta-personalmunicipal.png)
 
 
 #### **Aplicación móvil**
@@ -2279,7 +2296,7 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 
 ### 6.4.3. Applications User Flow Diagrams.
 
-Link del User Flow: https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing
+Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
 
 #### **Aplicación web**
 **User Goal: Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.** Este objetivo abarca la experiencia del usuario al explorar la página principal de la plataforma.
@@ -2339,7 +2356,7 @@ Link del User Flow: https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz
 
 ![alt text](images/application-protoyping/web-prototyping.png)
 
-Video de explicación: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk
+Video de explicación:<br> [ https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk]( https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk)
 
 #### **Aplicación móvil**
 **Aplicación móvil**
@@ -2357,7 +2374,7 @@ Video de explicación: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210
 
 ![alt text](images/application-protoyping/mobile.png)
 
-Video de explicación: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v
+Video de explicación: <br> [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v)
 
 # Conclusiones
 
