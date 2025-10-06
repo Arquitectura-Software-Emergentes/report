@@ -2477,21 +2477,1024 @@ El diagrama de base de datos define la estructura de persistencia específica de
 
 ## 5.3. Bounded Context: Location Context
 
+El Location Context es responsable del análisis geoespacial de incidencias urbanas en Lima Metropolitana. Su propósito es generar inteligencia geográfica mediante mapas de calor, detección de clusters y análisis estadísticos por distrito, permitiendo al personal municipal tomar decisiones informadas sobre priorización de intervenciones. Este bounded context consume datos de incidencias del Incidents Context pero no gestiona su ciclo de vida, enfocándose exclusivamente en la dimensión espacial y temporal.
+
+Se implementa **Clean Architecture** con 4 capas concéntricas respetando la **Dependency Rule** (las dependencias siempre apuntan hacia el centro):
+
+```
+┌─────────────────────────────────────────────────┐
+│  Interface Layer (Controllers, DTOs)            │  ← Capa más externa
+│  └─ Depende de: Application Layer               │
+├─────────────────────────────────────────────────┤
+│  Application Layer (Use Cases, CQRS Handlers)   │
+│  └─ Depende de: Domain Layer                    │
+├─────────────────────────────────────────────────┤
+│  Infrastructure Layer (Repositories, Services)  │
+│  └─ Implementa interfaces del: Domain Layer     │
+├─────────────────────────────────────────────────┤
+│  Domain Layer (Entities, VOs, Services)         │  ← Núcleo (sin dependencias)
+│  └─ Sin dependencias externas                   │
+└─────────────────────────────────────────────────┘
+```
+
+**Beneficios de esta arquitectura:**
+- **Independencia de frameworks:** Domain Layer no conoce Django, Supabase ni tecnologías específicas
+- **Testabilidad:** Cada capa puede probarse aisladamente mediante mocks de interfaces
+- **Flexibilidad:** Cambiar tecnologías (ej: PostgreSQL → MongoDB) solo afecta Infrastructure Layer
+- **Separación de concerns:** Lógica de negocio aislada de detalles técnicos
+
 ### 5.3.1. Domain Layer
+
+**Propósito:** Núcleo del bounded context que contiene la lógica de negocio pura sin dependencias externas. Esta es la capa más interna y estable.
+
+**Responsabilidades:**
+- Modelar conceptos del dominio usando DDD patterns (Aggregates, Entities, Value Objects)
+- Definir reglas de negocio e invariantes
+- Emitir Domain Events para comunicación desacoplada
+- Exponer interfaces (Repository pattern) que la Infrastructure Layer implementará
+
+**Características:**
+- **Sin dependencias externas:** No usa Django, Supabase, ni ninguna biblioteca de infraestructura
+- **Testeable:** Lógica pura que puede probarse sin bases de datos ni servicios externos
+- **Estable:** Cambios mínimos en el tiempo, enfocada en el core del negocio
+
+En esta capa se modela el core de Location con Aggregates, Entities, Value Objects, Domain Services, Repositories (interfaces) y Domain Events aplicando patrones DDD.
+
+#### Aggregates Roots
+
+##### GeoSpatialAnalysis (Aggregate Root)
+
+Propósito: representar un análisis geoespacial completo de incidencias en un área y período específicos, conteniendo puntos de mapa de calor y clusters detectados.
+
+**Atributos**
+
+| Nombre        | Tipo                  | Visibilidad | Descripción                                             |
+| ------------- | --------------------- | ----------- | ------------------------------------------------------- |
+| analysisId    | UUID                  | Private     | Identificador único del análisis                        |
+| boundingBox   | BoundingBox           | Private     | Área geográfica analizada (Value Object)                |
+| timeRange     | DateTimeRange         | Private     | Período temporal del análisis (Value Object)            |
+| district      | District              | Private     | Distrito de Lima analizado (opcional, Value Object)     |
+| heatmapData   | List<HeatmapPoint>    | Private     | Puntos del mapa de calor (Entities)                     |
+| clusters      | List<IncidentCluster> | Private     | Clusters detectados (Entities)                          |
+| filters       | AnalysisFilters       | Private     | Filtros aplicados (Value Object)                        |
+| generatedAt   | DateTime              | Private     | Fecha de generación                                     |
+| requestedBy   | UserId                | Private     | Usuario municipal que solicitó (Value Object)           |
+| domainEvents  | List<DomainEvent>     | Private     | Eventos de dominio acumulados                           |
+
+**Relaciones**
+
+1..* con HeatmapPoint (composition); 1..* con IncidentCluster (composition).
+
+**Invariantes**
+
+- boundingBox debe estar dentro de Lima Metropolitana (-12.25° a -11.80° lat, -77.15° a -76.70° lng)
+- timeRange no puede exceder 365 días
+- heatmapData debe tener al menos 1 punto para ser válido
+- Si district está presente, boundingBox debe estar dentro de sus límites
+
+**Métodos**
+
+| Nombre            | Tipo de retorno   | Visibilidad | Descripción                                                       |
+| ----------------- | ----------------- | ----------- | ----------------------------------------------------------------- |
+| create            | GeoSpatialAnalysis | Public (static) | Crea nuevo análisis validando Lima bounds                         |
+| generateHeatmap   | void              | Public      | Genera puntos de mapa de calor basados en incidencias            |
+| applyFilters      | void              | Public      | Aplica filtros y regenera análisis                                |
+| detectClusters    | void              | Public      | Ejecuta algoritmo DBSCAN para detectar agrupaciones              |
+| addHeatmapPoint   | void              | Public      | Agrega punto validando intensidad                                 |
+| calculateMaxIntensity | float         | Public      | Calcula intensidad máxima de todos los puntos                     |
+| exportToGeoJSON   | string            | Public      | Exporta análisis a formato GeoJSON para integración externa      |
+
+#### Entities
+
+##### HeatmapPoint (Entity)
+
+Propósito: representar un punto individual en el mapa de calor con intensidad calculada basada en concentración de incidencias.
+
+**Atributos**
+
+| Nombre         | Tipo           | Visibilidad | Descripción                                           |
+| -------------- | -------------- | ----------- | ----------------------------------------------------- |
+| pointId        | UUID           | Private     | Identificador único del punto                         |
+| coordinates    | Coordinates    | Private     | Ubicación geográfica (Value Object)                   |
+| intensity      | float          | Private     | Intensidad normalizada (0.0 a 1.0)                    |
+| incidentCount  | int            | Private     | Número de incidencias en este punto                   |
+| incidentTypes  | List<string>   | Private     | Tipos de incidencias presentes                        |
+| createdAt      | DateTime       | Private     | Fecha de creación                                     |
+
+**Métodos**
+
+| Nombre              | Tipo de retorno | Visibilidad | Descripción                                              |
+| ------------------- | --------------- | ----------- | -------------------------------------------------------- |
+| calculateIntensity  | float           | Public      | Calcula intensidad basada en incidencias cercanas        |
+| isHotspot           | bool            | Public      | Determina si excede umbral de hotspot (>0.7)             |
+| distanceTo          | float           | Public      | Calcula distancia a otro punto (metros, Haversine)       |
+
+##### IncidentCluster (Entity)
+
+Propósito: representar una agrupación geográfica de incidencias detectada por algoritmo de clustering que requiere intervención coordinada.
+
+**Atributos**
+
+| Nombre         | Tipo              | Visibilidad | Descripción                                        |
+| -------------- | ----------------- | ----------- | -------------------------------------------------- |
+| clusterId      | UUID              | Private     | Identificador único del cluster                    |
+| centroid       | Coordinates       | Private     | Punto central del cluster (Value Object)           |
+| radius         | float             | Private     | Radio del cluster en metros                        |
+| incidentIds    | List<UUID>        | Private     | IDs de incidencias pertenecientes al cluster       |
+| priority       | ClusterPriority   | Private     | Prioridad: HIGH, MEDIUM, LOW (Enum)                |
+| affectedArea   | float             | Private     | Área afectada en metros cuadrados                  |
+| createdAt      | DateTime          | Private     | Fecha de detección                                 |
+
+**Métodos**
+
+| Nombre              | Tipo de retorno    | Visibilidad | Descripción                                         |
+| ------------------- | ------------------ | ----------- | --------------------------------------------------- |
+| calculateCentroid   | Coordinates        | Public      | Calcula centroide geográfico de incidencias         |
+| addIncident         | void               | Public      | Agrega incidencia al cluster                        |
+| getAffectedArea     | float              | Public      | Calcula área de influencia (πr²)                    |
+| determinePriority   | ClusterPriority    | Public      | Determina prioridad basada en densidad y tipos      |
+
+#### Value Objects
+
+##### Coordinates
+
+Propósito: representar un punto geográfico específico usando sistema WGS 84.
+
+**Atributos**
+
+| Nombre    | Tipo    | Visibilidad | Descripción                              |
+| --------- | ------- | ----------- | ---------------------------------------- |
+| latitude  | Decimal | Public      | Latitud (-12.25 a -11.80 para Lima)      |
+| longitude | Decimal | Public      | Longitud (-77.15 a -76.70 para Lima)     |
+
+**Métodos**
+
+| Nombre        | Tipo de retorno | Visibilidad | Descripción                                    |
+| ------------- | --------------- | ----------- | ---------------------------------------------- |
+| distanceTo    | float           | Public      | Calcula distancia a otro punto (Haversine)     |
+| isWithinLima  | bool            | Public      | Valida si está dentro de bounds de Lima        |
+| toGeoJSON     | Dict            | Public      | Convierte a formato GeoJSON Point              |
+
+##### BoundingBox
+
+Propósito: definir un rectángulo geográfico que delimita el área de análisis.
+
+**Atributos**
+
+| Nombre     | Tipo        | Visibilidad | Descripción                         |
+| ---------- | ----------- | ----------- | ----------------------------------- |
+| northEast  | Coordinates | Public      | Esquina noreste del rectángulo      |
+| southWest  | Coordinates | Public      | Esquina suroeste del rectángulo     |
+
+**Métodos**
+
+| Nombre        | Tipo de retorno | Visibilidad | Descripción                                 |
+| ------------- | --------------- | ----------- | ------------------------------------------- |
+| contains      | bool            | Public      | Verifica si un punto está dentro del box    |
+| getAreaKm2    | float           | Public      | Calcula área en kilómetros cuadrados        |
+| toPolygon     | string          | Public      | Convierte a representación polígono JSON    |
+
+##### District
+
+Propósito: representar un distrito administrativo de Lima usando código UBIGEO oficial.
+
+**Atributos**
+
+| Nombre | Tipo   | Visibilidad | Descripción                              |
+| ------ | ------ | ----------- | ---------------------------------------- |
+| code   | string | Public      | Código UBIGEO (6 dígitos)                |
+| name   | string | Public      | Nombre oficial del distrito              |
+
+**Métodos**
+
+| Nombre      | Tipo de retorno | Visibilidad | Descripción                                          |
+| ----------- | --------------- | ----------- | ---------------------------------------------------- |
+| isValid     | bool            | Public      | Valida código contra lista de 43 distritos de Lima   |
+| getUbigeo   | string          | Public      | Retorna código UBIGEO formateado                     |
+| fromCode    | District        | Public (static) | Factory method para crear desde código            |
+
+##### DateTimeRange
+
+Propósito: representar un período temporal con validaciones de duración máxima.
+
+**Atributos**
+
+| Nombre | Tipo     | Visibilidad | Descripción                    |
+| ------ | -------- | ----------- | ------------------------------ |
+| start  | DateTime | Public      | Inicio del rango temporal      |
+| end    | DateTime | Public      | Fin del rango temporal         |
+
+**Métodos**
+
+| Nombre    | Tipo de retorno | Visibilidad | Descripción                                      |
+| --------- | --------------- | ----------- | ------------------------------------------------ |
+| duration  | timedelta       | Public      | Calcula duración total                           |
+| overlaps  | bool            | Public      | Verifica solapamiento con otro rango             |
+| contains  | bool            | Public      | Verifica si timestamp está dentro del rango      |
+
+##### AnalysisFilters
+
+Propósito: encapsular criterios de filtrado aplicados al análisis geoespacial.
+
+**Atributos**
+
+| Nombre         | Tipo            | Visibilidad | Descripción                                   |
+| -------------- | --------------- | ----------- | --------------------------------------------- |
+| district       | District        | Public      | Distrito a analizar (opcional)                |
+| incidentTypes  | List<string>    | Public      | Tipos de incidencias a incluir                |
+| minIntensity   | float           | Public      | Umbral mínimo de intensidad (0.0 a 1.0)       |
+| timeWindow     | string          | Public      | Ventana temporal: last_7_days, last_30_days   |
+
+#### Enumerations
+
+##### ClusterPriority
+
+Propósito: clasificar prioridad de clusters según densidad y tipos de incidencias.
+
+| Valor  | Descripción                                                 |
+| ------ | ----------------------------------------------------------- |
+| HIGH   | Cluster crítico con alta densidad o incidencias peligrosas |
+| MEDIUM | Cluster moderado que requiere atención planificada          |
+| LOW    | Cluster de baja prioridad para monitoreo                    |
+
+##### HeatmapIntensity
+
+Propósito: clasificar niveles de intensidad de puntos del mapa de calor.
+
+| Valor    | Descripción                         |
+| -------- | ----------------------------------- |
+| CRITICAL | Intensidad ≥ 0.85 (zona crítica)    |
+| HIGH     | Intensidad 0.70 - 0.84 (alta)       |
+| MODERATE | Intensidad 0.40 - 0.69 (moderada)   |
+| LOW      | Intensidad < 0.40 (baja)            |
+
+#### Domain Services
+
+##### HeatmapGenerationService
+
+Propósito: generar mapas de calor aplicando algoritmos de interpolación espacial sobre incidencias.
+
+**Métodos**
+
+| Nombre                   | Parámetros                                                             | Retorno              | Descripción                                                    |
+| ------------------------ | ---------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------- |
+| generateHeatmap          | incidents: List<Incident>, boundingBox: BoundingBox                    | List<HeatmapPoint>   | Genera grid de puntos con intensidades calculadas              |
+| calculatePointIntensity  | location: Coordinates, incidents: List<Incident>, radius: float        | float                | Calcula intensidad basada en incidencias dentro del radio      |
+| interpolateIntensity     | points: List<HeatmapPoint>                                             | List<HeatmapPoint>   | Aplica interpolación para suavizar transiciones de intensidad  |
+
+##### ClusterDetectionService
+
+Propósito: detectar agrupaciones geográficas de incidencias usando algoritmo DBSCAN.
+
+**Métodos**
+
+| Nombre                    | Parámetros                                                              | Retorno                | Descripción                                                 |
+| ------------------------- | ----------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------- |
+| detectClusters            | incidents: List<Incident>, maxDistance: float, minPoints: int           | List<IncidentCluster>  | Ejecuta DBSCAN y retorna clusters detectados                |
+| applyDBSCAN               | points: List<Coordinates>, eps: float, minSamples: int                  | List<List<UUID>>       | Implementación algoritmo DBSCAN                             |
+| calculateClusterPriority  | cluster: IncidentCluster                                                | ClusterPriority        | Determina prioridad basada en densidad y tipos críticos     |
+
+##### GeospatialQueryService
+
+Propósito: ejecutar consultas geoespaciales complejas usando algoritmos de proximidad.
+
+**Métodos**
+
+| Nombre                      | Parámetros                                   | Retorno           | Descripción                                              |
+| --------------------------- | -------------------------------------------- | ----------------- | -------------------------------------------------------- |
+| findIncidentsInRadius       | center: Coordinates, radius: float           | List<Incident>    | Busca incidencias dentro de radio usando Haversine       |
+| calculateHotspots           | threshold: float                             | List<District>    | Identifica distritos con intensidad > threshold          |
+| findIncidentsInBoundingBox  | box: BoundingBox                             | List<Incident>    | Filtra incidencias dentro de rectángulo geográfico       |
+
+#### Domain Events
+
+##### HeatmapGenerated
+
+Propósito: notifica que se completó la generación de un mapa de calor.
+
+**Atributos**
+
+| Nombre        | Tipo         | Descripción                              |
+| ------------- | ------------ | ---------------------------------------- |
+| analysisId    | UUID         | ID del análisis generado                 |
+| boundingBox   | BoundingBox  | Área analizada                           |
+| pointCount    | int          | Número de puntos generados               |
+| maxIntensity  | float        | Intensidad máxima encontrada             |
+| occurredAt    | DateTime     | Timestamp del evento                     |
+
+##### ClustersDetected
+
+Propósito: notifica detección de clusters que requieren atención municipal.
+
+**Atributos**
+
+| Nombre           | Tipo            | Descripción                           |
+| ---------------- | --------------- | ------------------------------------- |
+| analysisId       | UUID            | ID del análisis                       |
+| clusterCount     | int             | Número de clusters detectados         |
+| hotspotDistricts | List<District>  | Distritos con clusters críticos       |
+| occurredAt       | DateTime        | Timestamp del evento                  |
+
+##### FiltersApplied
+
+Propósito: notifica aplicación de filtros sobre un análisis existente.
+
+**Atributos**
+
+| Nombre      | Tipo            | Descripción                      |
+| ----------- | --------------- | -------------------------------- |
+| analysisId  | UUID            | ID del análisis modificado       |
+| filters     | AnalysisFilters | Filtros aplicados                |
+| occurredAt  | DateTime        | Timestamp del evento             |
+
+##### HotspotIdentified
+
+Propósito: notifica identificación de zona crítica con alta concentración de incidencias.
+
+**Atributos**
+
+| Nombre         | Tipo            | Descripción                          |
+| -------------- | --------------- | ------------------------------------ |
+| district       | District        | Distrito afectado                    |
+| incidentCount  | int             | Cantidad de incidencias              |
+| priority       | ClusterPriority | Nivel de prioridad                   |
+| occurredAt     | DateTime        | Timestamp del evento                 |
+
+#### Repository Interfaces
+
+##### IGeoSpatialAnalysisRepository
+
+Propósito: abstrae persistencia de análisis geoespaciales siguiendo patrón Repository.
+
+**Métodos**
+
+| Nombre                         | Parámetros                                                    | Retorno                   | Descripción                                      |
+| ------------------------------ | ------------------------------------------------------------- | ------------------------- | ------------------------------------------------ |
+| save                           | analysis: GeoSpatialAnalysis                                  | void                      | Persiste aggregate completo con sus entities     |
+| findById                       | analysisId: UUID                                              | GeoSpatialAnalysis        | Recupera análisis por ID                         |
+| findByDistrictAndTimeRange     | district: District, range: DateTimeRange                      | List<GeoSpatialAnalysis>  | Busca análisis históricos de un distrito        |
+| delete                         | analysisId: UUID                                              | void                      | Elimina análisis y sus entities relacionadas     |
+
+---
+
+**Nota sobre Clean Architecture en Domain Layer:**
+
+Esta capa NO contiene:
+- ❌ Imports de Django (models, ORM, views)
+- ❌ Referencias a Supabase o PostgreSQL
+- ❌ Lógica HTTP, requests, responses
+- ❌ Configuraciones de frameworks
+
+Esta capa SÍ contiene:
+- ✅ Lógica de negocio pura
+- ✅ Reglas e invariantes del dominio
+- ✅ Interfaces (contratos) que Infrastructure implementará
+- ✅ Domain Events para comunicación desacoplada
+
+**Ejemplo de independencia:**
+```python
+# ✅ CORRECTO - Domain Layer
+class Coordinates:
+    def __init__(self, latitude: Decimal, longitude: Decimal):
+        if not self.is_within_lima(latitude, longitude):
+            raise InvalidCoordinatesError("Outside Lima bounds")
+        self.latitude = latitude
+        self.longitude = longitude
+    
+    def is_within_lima(self, lat: Decimal, lng: Decimal) -> bool:
+        return -12.25 <= lat <= -11.80 and -77.15 <= lng <= -76.70
+
+# ❌ INCORRECTO - NO hacer esto en Domain Layer
+from django.db import models
+class Coordinates(models.Model):  # No usar Django models aquí
+    latitude = models.DecimalField()
+```
+
+---
 
 ### 5.3.2. Interface Layer
 
+**Propósito:** Capa más externa que expone funcionalidades del bounded context a través de APIs REST. Actúa como adaptador entre el mundo HTTP y la lógica de aplicación.
+
+**Responsabilidades:**
+- Exponer endpoints REST con rutas, métodos HTTP y códigos de estado
+- Validar requests (formato, autenticación, autorización)
+- Traducir HTTP requests a Commands/Queries de la Application Layer
+- Serializar Domain Objects a DTOs (Data Transfer Objects) para responses
+- Manejar errores y convertirlos a HTTP status codes apropiados
+
+**Características:**
+- **Depende de Application Layer:** Invoca Command Handlers y Query Handlers
+- **Framework-specific:** Usa Django REST Framework, decoradores, serializers
+- **Thin controllers:** No contienen lógica de negocio, solo orquestación HTTP
+- **Validación de entrada:** Primera línea de defensa contra datos inválidos
+
+La Interface Layer expone endpoints REST para que el dashboard municipal Angular interactúe con las funcionalidades de análisis geoespacial. Todos los endpoints requieren autenticación JWT y validan permisos municipales.
+
+#### Controllers
+
+##### LocationController
+
+Propósito: gestionar operaciones de generación y consulta de análisis geoespaciales.
+
+**Base Path:** `/api/v1/location`
+
+**Endpoints**
+
+| Método | Endpoint                          | Request Body / Query                                                                           | Response                                                        | Descripción                                          | User Stories |
+| ------ | --------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------- | ------------ |
+| POST   | `/api/v1/location/heatmap`        | Body: `{ "district": "150103", "time_range": {...}, "incident_types": [...] }`                | `{ "analysis_id": "uuid", "heatmap_points": [...], "metadata": {...} }` | Genera nuevo mapa de calor con filtros               | US03         |
+| GET    | `/api/v1/location/heatmap/{id}`   | -                                                                                              | `{ "analysis_id": "uuid", "heatmap_points": [...], "clusters": [...] }` | Obtiene análisis existente por ID                    | US03         |
+| POST   | `/api/v1/location/filter`         | Body: `{ "bounding_box": {...}, "incident_types": [...], "min_intensity": 0.5 }`              | `{ "filtered_incidents": [...], "total_count": 150 }`           | Filtra incidencias por criterios geográficos         | US03         |
+| GET    | `/api/v1/location/hotspots`       | Query: `?threshold=0.7&time_window=last_30_days`                                              | `{ "hotspots": [{ "district": "Ate", "incident_count": 45, "priority": "HIGH" }] }` | Identifica zonas críticas                            | US03         |
+
+##### DistrictController
+
+Propósito: proporcionar estadísticas agregadas por distrito de Lima Metropolitana.
+
+**Base Path:** `/api/v1/districts`
+
+**Endpoints**
+
+| Método | Endpoint                                  | Request Body / Query          | Response                                                                  | Descripción                                        | User Stories |
+| ------ | ----------------------------------------- | ----------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------- | ------------ |
+| GET    | `/api/v1/districts`                       | Query: `?include_stats=true`  | `{ "districts": [{ "code": "150103", "name": "Ate", "incident_count": 120 }] }` | Lista todos los distritos con estadísticas         | US03         |
+| GET    | `/api/v1/districts/{code}/statistics`     | -                             | `{ "total_incidents": 120, "by_type": {...}, "avg_resolution_time": 48 }` | Estadísticas detalladas de un distrito             | US03         |
+| GET    | `/api/v1/districts/{code}/incidents`      | Query: `?status=pendiente`    | `{ "incidents": [...], "total": 120 }`                                    | Lista incidencias de un distrito específico        | US03         |
+
+#### Request/Response Models
+
+##### HeatmapRequest
+
+| Campo          | Tipo            | Requerido | Validación                                 |
+| -------------- | --------------- | --------- | ------------------------------------------ |
+| district       | string          | No        | Código UBIGEO válido                       |
+| time_range     | DateTimeRange   | Sí        | end > start, duración <= 365 días          |
+| incident_types | List<string>    | No        | Tipos deben existir en catálogo            |
+| min_incidents  | int             | No        | min_incidents >= 1                         |
+
+##### HeatmapResponse
+
+| Campo          | Tipo                   | Descripción                           |
+| -------------- | ---------------------- | ------------------------------------- |
+| analysis_id    | UUID                   | ID del análisis generado              |
+| heatmap_points | List<HeatmapPoint>     | Puntos del mapa de calor              |
+| metadata       | AnalysisMetadata       | Metadatos: conteo, intensidad máxima  |
+
+##### ClusterResponse
+
+| Campo               | Tipo            | Descripción                                |
+| ------------------- | --------------- | ------------------------------------------ |
+| cluster_id          | UUID            | ID del cluster                             |
+| centroid            | Coordinates     | Punto central                              |
+| incident_ids        | List<UUID>      | IDs de incidencias en el cluster           |
+| priority            | string          | HIGH, MEDIUM, LOW                          |
+| recommended_action  | string          | Acción sugerida basada en análisis         |
+
+#### Error Handling
+
+| Status Code | Error Type                      | Descripción                                            | Ejemplo Response                                                  |
+| ----------- | ------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------- |
+| 400         | InvalidBoundingBoxError         | Bounding box fuera de Lima bounds                      | `{ "error": "InvalidBoundingBox", "message": "Out of Lima bounds" }` |
+| 401         | UnauthorizedError               | Token JWT inválido o expirado                          | `{ "error": "Unauthorized", "message": "Invalid token" }`         |
+| 403         | ForbiddenError                  | Usuario sin permisos municipales                       | `{ "error": "Forbidden", "message": "Municipal role required" }`  |
+| 404         | AnalysisNotFoundError           | Análisis no existe                                     | `{ "error": "NotFound", "message": "Analysis not found" }`        |
+| 422         | InvalidTimeRangeError           | Rango temporal excede 365 días                         | `{ "error": "InvalidTimeRange", "message": "Max 365 days" }`      |
+| 500         | GeospatialProcessingError       | Error en procesamiento geoespacial                     | `{ "error": "InternalError", "message": "Processing failed" }`    |
+
 ### 5.3.3. Application Layer
+
+**Propósito:** Orquestar casos de uso coordinando Domain Services, Repositories y lógica de negocio para cumplir requisitos de aplicación.
+
+**Responsabilidades:**
+- Implementar casos de uso específicos (generar heatmap, detectar clusters)
+- Coordinar llamadas entre Domain Services y Repositories
+- Aplicar patrón CQRS (Command Query Responsibility Segregation) separando escrituras de lecturas
+- Gestionar transacciones y flujos de negocio complejos
+- No contiene lógica de negocio (vive en Domain Layer)
+
+**Características:**
+- **Depende solo de Domain Layer:** Usa Aggregates, Services y Repository Interfaces
+- **Independiente de frameworks:** No conoce HTTP, REST, Django views
+- **Stateless:** Handlers no mantienen estado entre invocaciones
+- **Thin layer:** Delega lógica compleja al Domain Layer
+
+La Application Layer implementa CQRS (Command Query Responsibility Segregation) para separar operaciones de escritura (generación de análisis) de operaciones de lectura (consultas optimizadas).
+
+#### Command Handlers
+
+##### GenerateHeatmapCommandHandler
+
+Propósito: orquesta la generación completa de un mapa de calor obteniendo incidencias, creando el aggregate y persistiendo resultado.
+
+**Command:** GenerateHeatmapCommand
+
+**Campos del Command**
+
+| Campo          | Tipo            | Validación                        |
+| -------------- | --------------- | --------------------------------- |
+| user_id        | UUID            | Usuario debe tener rol municipal  |
+| district       | string          | Código UBIGEO válido (opcional)   |
+| time_range     | DateTimeRange   | Duración <= 365 días              |
+| incident_types | List<string>    | Tipos válidos                     |
+| min_incidents  | int             | >= 1                              |
+
+**Dependencias**
+
+- IGeoSpatialAnalysisRepository
+- IIncidentRepository (cross-context)
+- HeatmapGenerationService
+
+**Flujo de Ejecución**
+
+1. Validar permisos de usuario
+2. Obtener incidencias del período desde Incidents Context
+3. Crear aggregate GeoSpatialAnalysis
+4. Invocar HeatmapGenerationService
+5. Persistir análisis completo
+6. Emitir Domain Event HeatmapGenerated
+
+##### DetectClustersCommandHandler
+
+Propósito: ejecuta algoritmo DBSCAN para detectar y almacenar clusters de incidencias.
+
+**Command:** DetectClustersCommand
+
+**Campos del Command**
+
+| Campo               | Tipo   | Validación              |
+| ------------------- | ------ | ----------------------- |
+| analysis_id         | UUID   | Análisis debe existir   |
+| max_distance_meters | float  | > 0                     |
+| min_points          | int    | >= 2                    |
+
+**Dependencias**
+
+- IIncidentClusterRepository
+- ClusterDetectionService
+- IIncidentRepository
+
+**Flujo de Ejecución**
+
+1. Recuperar análisis existente
+2. Obtener incidencias del área
+3. Ejecutar algoritmo DBSCAN
+4. Crear entities IncidentCluster
+5. Persistir clusters detectados
+6. Emitir Domain Event ClustersDetected
+
+##### ApplyFiltersCommandHandler
+
+Propósito: aplica filtros sobre un análisis existente y regenera puntos del heatmap.
+
+**Command:** ApplyFiltersCommand
+
+**Campos del Command**
+
+| Campo       | Tipo            | Validación            |
+| ----------- | --------------- | --------------------- |
+| analysis_id | UUID            | Análisis debe existir |
+| filters     | AnalysisFilters | Filtros válidos       |
+
+**Dependencias**
+
+- IGeoSpatialAnalysisRepository
+- GeospatialQueryService
+
+#### Query Handlers
+
+##### GetHeatmapDataQueryHandler
+
+Propósito: recupera datos de un mapa de calor con caché optimizado para reducir latencia.
+
+**Query:** GetHeatmapDataQuery
+
+**Campos del Query**
+
+| Campo       | Tipo | Validación |
+| ----------- | ---- | ---------- |
+| analysis_id | UUID | Requerido  |
+
+**Dependencias**
+
+- IGeoSpatialAnalysisRepository
+- RedisCache
+
+**Flujo de Ejecución**
+
+1. Consultar caché Redis primero (key: `heatmap:{analysis_id}`)
+2. Si cache miss, consultar repository
+3. Cachear resultado (TTL: 1 hora)
+4. Retornar datos serializados
+
+##### GetClustersQueryHandler
+
+Propósito: obtiene clusters detectados con filtros opcionales por distrito y prioridad.
+
+**Query:** GetClustersQuery
+
+**Campos del Query**
+
+| Campo      | Tipo            | Validación |
+| ---------- | --------------- | ---------- |
+| district   | string          | Opcional   |
+| priority   | ClusterPriority | Opcional   |
+| time_range | DateTimeRange   | Opcional   |
+
+**Dependencias**
+
+- IIncidentClusterRepository
+
+##### GetDistrictStatisticsQueryHandler
+
+Propósito: calcula estadísticas agregadas de un distrito consumiendo vista materializada.
+
+**Query:** GetDistrictStatisticsQuery
+
+**Campos del Query**
+
+| Campo         | Tipo          | Validación |
+| ------------- | ------------- | ---------- |
+| district_code | string        | Requerido  |
+| time_range    | DateTimeRange | Opcional   |
+
+**Dependencias**
+
+- IDistrictStatisticsRepository (accede vista materializada)
+- IIncidentRepository
+
+##### GetHotspotsQueryHandler
+
+Propósito: identifica zonas críticas que exceden umbral de intensidad configurado.
+
+**Query:** GetHotspotsQuery
+
+**Campos del Query**
+
+| Campo       | Tipo   | Validación              |
+| ----------- | ------ | ----------------------- |
+| threshold   | float  | 0.0 <= threshold <= 1.0 |
+| time_window | string | "last_7_days", "last_30_days" |
+| limit       | int    | <= 100                  |
+
+**Dependencias**
+
+- IHeatmapPointRepository
+- GeospatialQueryService
+
+#### Application Services
+
+##### GeoSpatialOrchestrator
+
+Propósito: coordina ejecución completa de análisis geoespacial incluyendo generación de heatmap y detección de clusters.
+
+**Métodos**
+
+| Nombre              | Parámetros                       | Retorno            | Descripción                                      |
+| ------------------- | -------------------------------- | ------------------ | ------------------------------------------------ |
+| orchestrateAnalysis | command: GenerateHeatmapCommand  | GeoSpatialAnalysis | Ejecuta flujo completo de análisis               |
+
+##### IncidentDataAggregator
+
+Propósito: agrega incidencias por ubicación para facilitar generación de mapas de calor.
+
+**Métodos**
+
+| Nombre               | Parámetros                 | Retorno                 | Descripción                                 |
+| -------------------- | -------------------------- | ----------------------- | ------------------------------------------- |
+| aggregateByLocation  | incidents: List<Incident>  | Dict<Coordinates, int>  | Agrupa incidencias por coordenadas          |
+
+##### DistrictAnalyzer
+
+Propósito: ejecuta análisis completo de un distrito con tendencias y recomendaciones.
+
+**Métodos**
+
+| Nombre           | Parámetros                                     | Retorno                  | Descripción                                    |
+| ---------------- | ---------------------------------------------- | ------------------------ | ---------------------------------------------- |
+| analyzeDistrict  | district_code: string, time_range: DateTimeRange | DistrictAnalysisResult | Análisis completo con métricas y tendencias    |
 
 ### 5.3.4. Infrastructure Layer
 
+**Propósito:** Capa que contiene implementaciones concretas de interfaces definidas en Domain Layer, conectando con tecnologías y servicios externos.
+
+**Responsabilidades:**
+- Implementar Repository Interfaces usando tecnologías específicas (Supabase PostgreSQL + Django ORM)
+- Integrar servicios externos (Azure Maps para geocoding, Redis para caché)
+- Gestionar persistencia, serialización y mapeo objeto-relacional
+- Manejar configuraciones de conexión a bases de datos y APIs externas
+- Traducir Domain Objects a modelos de base de datos y viceversa
+
+**Características:**
+- **Implementa interfaces del Domain:** Cumple contratos definidos por Repository Interfaces
+- **Dependencia invertida:** Depende hacia adentro (Domain Layer), no al revés
+- **Framework-heavy:** Usa Django ORM, Supabase Client, Redis Client, Azure SDK
+- **Reemplazable:** Cambiar PostgreSQL por MongoDB solo afecta esta capa
+- **Detalles técnicos:** Maneja transacciones, índices, optimizaciones de queries
+
+La Infrastructure Layer implementa las interfaces del Domain Layer para persistencia, integración con servicios externos y acceso a datos.
+
+#### Repositories
+
+##### SupabaseGeoSpatialAnalysisRepository
+
+Propósito: implementa IGeoSpatialAnalysisRepository usando Supabase PostgreSQL con Django ORM.
+
+**Tecnología:** Django ORM + Supabase PostgreSQL
+
+**Métodos Implementados**
+
+| Método                         | Implementación                                                              |
+| ------------------------------ | --------------------------------------------------------------------------- |
+| save                           | Transacción atómica: guarda aggregate completo con entities relacionadas    |
+| findById                       | Query con JOIN a heatmap_points e incident_clusters, reconstruye aggregate  |
+| findByDistrictAndTimeRange     | Query con filtros usando índices en district_code y timestamps              |
+| delete                         | DELETE CASCADE automático por constraints de FK                             |
+
+**Modelos Django Mapeados:**
+
+| Modelo                      | Tabla DB                 | Propósito                                          |
+| --------------------------- | ------------------------ | -------------------------------------------------- |
+| GeoSpatialAnalysisModel     | geospatial_analyses      | Metadatos del análisis con JSONB para bounding_box |
+| HeatmapPointModel           | heatmap_points           | Puntos con coordenadas separadas (lat, lng)        |
+| IncidentClusterModel        | incident_clusters        | Clusters con centroide y prioridad                 |
+| DistrictStatisticsModel     | district_statistics      | Vista materializada (read-only desde Django)       |
+
+##### SupabaseHeatmapPointRepository
+
+Propósito: gestiona operaciones CRUD de puntos de mapa de calor con índices compuestos.
+
+**Tecnología:** Django ORM + índices BTREE en (latitude, longitude)
+
+**Métodos Clave**
+
+| Método                        | Descripción                                                |
+| ----------------------------- | ---------------------------------------------------------- |
+| findByIntensityThreshold      | Query con índice en intensity DESC                         |
+| findWithinRadius              | Usa función Haversine personalizada                        |
+
+##### SupabaseIncidentClusterRepository
+
+Propósito: almacena y consulta clusters con operaciones de proximidad geográfica.
+
+**Métodos Clave**
+
+| Método                    | Descripción                                        |
+| ------------------------- | -------------------------------------------------- |
+| findByPriority            | Filtra por enum priority con índice               |
+| calculateClusterCentroid  | Calcula promedio de coordenadas de incidencias    |
+
+#### External Services
+
+##### AzureMapsServiceAdapter
+
+Propósito: integración con Azure Maps API para servicios de mapas y geocoding.
+
+**Tecnología:** Azure Maps REST API / Python SDK
+
+**Métodos**
+
+| Método            | Parámetros                            | Retorno      | Descripción                              |
+| ----------------- | ------------------------------------- | ------------ | ---------------------------------------- |
+| getMapTile        | coordinates: Coordinates, zoom: int   | bytes        | Obtiene tile de mapa en formato PNG      |
+| geocodeAddress    | address: string                       | Coordinates  | Convierte dirección en coordenadas       |
+| reverseGeocode    | coordinates: Coordinates              | string       | Convierte coordenadas en dirección       |
+
+##### RedisCache
+
+Propósito: caché de consultas geoespaciales frecuentes para optimizar rendimiento.
+
+**Tecnología:** Redis
+
+**Cache Keys**
+
+| Pattern                                     | TTL      | Descripción                                   |
+| ------------------------------------------- | -------- | --------------------------------------------- |
+| `heatmap:{analysis_id}`                     | 1 hour   | Datos completos de heatmap                    |
+| `clusters:district:{code}:priority:{level}` | 30 min   | Clusters filtrados por distrito y prioridad   |
+| `district_stats:{code}`                     | 6 hours  | Estadísticas de distrito                      |
+| `hotspots:threshold:{value}:window:{time}`  | 15 min   | Identificación de hotspots                    |
+
+**Estrategia de Invalidación**
+
+- Cache invalidation automática al persistir nuevo análisis
+- Refresh de district_stats sincronizado con vista materializada
+- Pub/Sub para invalidar caché cuando Incidents Context crea nueva incidencia
+
+#### Database Functions
+
+##### calculate_distance (Haversine)
+
+Propósito: calcula distancia entre dos puntos geográficos sin PostGIS usando la fórmula de Haversine.
+
+**Signatura:**
+```sql
+calculate_distance(lat1 DECIMAL, lng1 DECIMAL, lat2 DECIMAL, lng2 DECIMAL) RETURNS DECIMAL
+```
+
+**Descripción:**
+Función inmutable que calcula la distancia geodésica entre dos coordenadas usando el radio de la Tierra (6371 km). Permite realizar búsquedas por proximidad sin necesidad de extensiones geoespaciales como PostGIS.
+
+**Ejemplo de Uso:**
+```sql
+-- Buscar puntos dentro de 500 metros de Plaza de Armas
+SELECT * FROM heatmap_points
+WHERE calculate_distance(latitude, longitude, -12.0464, -77.0428) <= 500;
+```
+
+#### Integration with Incidents Context
+
+| Integración                | Mecanismo                           | Descripción                                              |
+| -------------------------- | ----------------------------------- | -------------------------------------------------------- |
+| Lectura de Incidencias     | Shared Database (Supabase)          | Acceso read-only a tabla `incidents`                     |
+| Suscripción a Eventos      | Supabase Real-time Subscriptions    | Escucha eventos `IncidentCreated`, `IncidentStatusUpdated` |
+| Cache Invalidation         | Redis Pub/Sub                       | Invalida caché de heatmaps cuando se crea incidencia     |
+
 ### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama de componentes (C4 Model - Component Level) muestra la arquitectura interna del Location Context con sus controladores, handlers CQRS, servicios de dominio, repositorios e integraciones externas.
+
+![Location Component Diagram](./images/bounded/location/location_component_diagram.png)
+
+**Elementos Principales:**
+
+- **Interface Layer:** LocationController, DistrictController
+- **Application Layer:** GenerateHeatmapHandler, GetHeatmapQueryHandler, ClusterDetectionHandler (CQRS)
+- **Domain Layer:** GeoSpatialAnalysis (Aggregate), HeatmapGenerationService, ClusterDetectionService
+- **Infrastructure Layer:** GeoSpatialRepository, AzureMapsAdapter, RedisCache
+- **External Systems:** Supabase PostgreSQL, Azure Maps, Incidents Context API
+
+**Archivo DSL:** `diagrams/location/location_component.dsl`
+
+**Herramienta:** Structurizr DSL
 
 ### 5.3.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 5.3.6.1. Bounded Context Domain Layer Class Diagrams
 
+El diagrama de clases representa la arquitectura completa del Location Context organizada según **Clean Architecture** con 4 capas claramente diferenciadas. Cada capa está agrupada en su namespace correspondiente mostrando la separación de responsabilidades.
+
+![Location Class Diagram](./images/bounded/location/location_class_diagram.png)
+
+**Organización por Capas:**
+
+1. **Domain Layer Namespace:**
+   - Aggregates: `GeoSpatialAnalysis`
+   - Entities: `HeatmapPoint`, `IncidentCluster`
+   - Value Objects: `Coordinates`, `BoundingBox`, `District`, `DateTimeRange`, `AnalysisFilters`, `UserId`
+   - Enums: `ClusterPriority`, `HeatmapIntensity`
+   - Domain Services: `HeatmapGenerationService`, `ClusterDetectionService`, `GeospatialQueryService`
+   - Domain Events: `HeatmapGenerated`, `ClustersDetected`, `FiltersApplied`, `HotspotIdentified`
+   - Repository Interface: `IGeoSpatialAnalysisRepository`
+
+2. **Application Layer Namespace:**
+   - Command Handlers: `GenerateHeatmapCommandHandler`, `DetectClustersCommandHandler`
+   - Query Handlers: `GetHeatmapDataQueryHandler`, `GetDistrictStatisticsQueryHandler`
+
+3. **Infrastructure Layer Namespace:**
+   - Repository Implementations: `SupabaseGeoSpatialAnalysisRepository`
+   - External Services: `AzureMapsServiceAdapter`, `RedisCache`
+
+4. **Interface Layer Namespace:**
+   - Controllers: `LocationController`, `DistrictController`
+
+**Dependency Flow (Regla de Dependencia de Clean Architecture):**
+
+```
+Interface Layer Controllers
+    ↓ (usa)
+Application Layer Handlers
+    ↓ (usa)
+Domain Layer (Aggregates, Services, Repository Interfaces)
+    ↑ (implementa)
+Infrastructure Layer (Repository Implementations, External Services)
+```
+
+Todas las flechas de dependencia apuntan **hacia el Domain Layer** (centro), respetando la regla fundamental de Clean Architecture.
+
+**Patrones de Diseño Aplicados:**
+
+- **Aggregate Pattern:** GeoSpatialAnalysis como transactional boundary
+- **Entity Pattern:** HeatmapPoint, IncidentCluster con identidad única
+- **Value Object Pattern:** Coordinates, BoundingBox, District (inmutables, equality by value)
+- **Domain Service Pattern:** HeatmapGenerationService, ClusterDetectionService (lógica sin hogar natural)
+- **Repository Pattern:** IGeoSpatialAnalysisRepository (abstracción de persistencia)
+- **Domain Events Pattern:** HeatmapGenerated, ClustersDetected (comunicación entre contextos)
+- **CQRS Pattern:** Separación de Command Handlers (escritura) y Query Handlers (lectura)
+- **Dependency Inversion:** Infrastructure implementa interfaces definidas en Domain
+
+**Invariantes Clave:**
+
+- Coordinates deben estar dentro de Lima bounds (-12.25° a -11.80° lat, -77.15° a -76.70° lng)
+- BoundingBox.northEast debe estar al noreste de southWest
+- DateTimeRange no puede exceder 365 días de duración
+- HeatmapPoint.intensity debe estar entre 0.0 y 1.0
+- IncidentCluster debe contener al menos 2 incidencias
+
+**Archivo Mermaid:** `diagrams/location/location_class_diagram.mmd`
+
+**Herramienta:** Mermaid
+
 #### 5.3.6.2. Bounded Context Database Design Diagram
+
+El diagrama de diseño de base de datos muestra la estructura de persistencia del Location Context en Supabase PostgreSQL, siguiendo un modelo normalizado (1NF, 2NF, 3NF) con tipos estándar de PostgreSQL.
+
+![Location Database Diagram](./images/bounded/location/location_bd_diagram.png)
+
+**Modelo de Datos:**
+
+El modelo está compuesto por 4 tablas que cumplen las tres formas normales:
+
+##### 1. geospatial_analyses (Tabla Principal)
+
+Almacena los metadatos de cada análisis geoespacial generado por el personal municipal.
+
+| Campo            | Tipo         | Constraint  | Descripción                                   |
+| ---------------- | ------------ | ----------- | --------------------------------------------- |
+| analysis_id      | uuid         | PRIMARY KEY | Identificador único del análisis              |
+| bounding_box     | jsonb        | NOT NULL    | Área geográfica analizada {ne, sw}            |
+| time_range_start | timestamp    | NOT NULL    | Inicio del período de análisis                |
+| time_range_end   | timestamp    | NOT NULL    | Fin del período de análisis                   |
+| district_code    | varchar(6)   | NULL        | Código UBIGEO del distrito (opcional)         |
+| generated_at     | timestamp    | NOT NULL    | Fecha de generación del análisis              |
+| requested_by     | uuid         | NOT NULL    | ID del usuario municipal que solicitó         |
+
+##### 2. heatmap_points
+
+Contiene los puntos individuales del mapa de calor con sus intensidades calculadas.
+
+| Campo          | Tipo          | Constraint  | Descripción                                |
+| -------------- | ------------- | ----------- | ------------------------------------------ |
+| point_id       | uuid          | PRIMARY KEY | Identificador único del punto              |
+| analysis_id    | uuid          | FOREIGN KEY | Referencia a geospatial_analyses           |
+| latitude       | decimal(9,6)  | NOT NULL    | Latitud del punto (-12.25 a -11.80)        |
+| longitude      | decimal(9,6)  | NOT NULL    | Longitud del punto (-77.15 a -76.70)       |
+| intensity      | decimal(3,2)  | NOT NULL    | Intensidad normalizada (0.00 a 1.00)       |
+| incident_count | integer       | NOT NULL    | Número de incidencias en este punto        |
+| created_at     | timestamp     | NOT NULL    | Fecha de creación del punto                |
+
+**Relación:** `heatmap_points.analysis_id → geospatial_analyses.analysis_id` (1:N, CASCADE)
+
+##### 3. incident_clusters
+
+Almacena los clusters de incidencias detectados mediante algoritmo DBSCAN.
+
+| Campo               | Tipo          | Constraint  | Descripción                                |
+| ------------------- | ------------- | ----------- | ------------------------------------------ |
+| cluster_id          | uuid          | PRIMARY KEY | Identificador único del cluster            |
+| analysis_id         | uuid          | FOREIGN KEY | Referencia a geospatial_analyses           |
+| centroid_latitude   | decimal(9,6)  | NOT NULL    | Latitud del centroide                      |
+| centroid_longitude  | decimal(9,6)  | NOT NULL    | Longitud del centroide                     |
+| radius              | decimal(10,2) | NOT NULL    | Radio del cluster en metros                |
+| incident_count      | integer       | NOT NULL    | Cantidad de incidencias en el cluster      |
+| priority            | varchar(10)   | NOT NULL    | Prioridad: HIGH, MEDIUM, LOW               |
+| created_at          | timestamp     | NOT NULL    | Fecha de detección del cluster             |
+
+**Relación:** `incident_clusters.analysis_id → geospatial_analyses.analysis_id` (1:N, CASCADE)
+
+##### 4. district_statistics (Materialized View)
+
+Vista materializada con estadísticas pre-calculadas por distrito para optimizar consultas agregadas.
+
+| Campo                   | Tipo         | Constraint  | Descripción                                    |
+| ----------------------- | ------------ | ----------- | ---------------------------------------------- |
+| district_code           | varchar(6)   | PRIMARY KEY | Código UBIGEO del distrito                     |
+| district_name           | varchar(100) | NOT NULL    | Nombre oficial del distrito                    |
+| total_analyses          | integer      | NOT NULL    | Total de análisis generados en el distrito     |
+| total_clusters          | integer      | NOT NULL    | Total de clusters detectados                   |
+| high_priority_clusters  | integer      | NOT NULL    | Clusters de prioridad alta                     |
+| avg_intensity           | decimal(3,2) | NULL        | Intensidad promedio del heatmap                |
+| last_analysis_date      | timestamp    | NULL        | Fecha del último análisis generado             |
+
+**Relación Conceptual:** `district_statistics.district_code ↔ geospatial_analyses.district_code` (Agregación M:N)
+
+**Normalización Aplicada:**
+
+- **1NF (Primera Forma Normal):** ✅ Todos los atributos contienen valores atómicos, sin grupos repetitivos. Cada tabla tiene clave primaria única (UUID).
+  
+- **2NF (Segunda Forma Normal):** ✅ Cumple 1NF y todos los atributos no clave dependen completamente de la clave primaria. No existen dependencias parciales.
+  
+- **3NF (Tercera Forma Normal):** ✅ Cumple 2NF y no existen dependencias transitivas entre atributos no clave. Las estadísticas por distrito se almacenan en tabla separada (`district_statistics`) para evitar redundancia.
+
+**Características Técnicas:**
+
+- **Coordenadas:** Almacenadas como columnas separadas (latitude, longitude) para permitir índices eficientes en búsquedas geográficas
+- **JSONB:** Usado para `bounding_box` que contiene estructuras complejas {north_east, south_west}
+- **Función Haversine:** Implementada para calcular distancias entre puntos sin necesidad de PostGIS
+- **Vista Materializada:** `district_statistics` se actualiza periódicamente para optimizar consultas de estadísticas agregadas
+- **Cascade Deletes:** Al eliminar un análisis (`geospatial_analyses`), se eliminan automáticamente sus puntos de heatmap y clusters relacionados
+
+**Integraciones Cross-Context:**
+
+- `requested_by` → **IAM Context** (users table) - Identificación del usuario municipal
+- Datos de incidencias → **Incidents Context** (incidents table) - Fuente de datos para análisis geoespacial
+- `district_code` → Catálogo de distritos de Lima Metropolitana (43 distritos con códigos UBIGEO)
+
+**Archivo DBML:** `diagrams/location/location_database.dbml`
+
+**Herramienta:** dbdiagram.io
+
+---
 
 # Capítulo VI: Solution UX Design
 
