@@ -2182,7 +2182,7 @@ El siguiente diagrama de clases representa el modelo de dominio del IAM Context,
 #### 5.1.6.2. Bounded Context Database Design Diagram
 El siguiente diagrama de base de datos está diseñado para funcionar con Supabase, aprovechando PostgreSQL con funcionalidades extendidas como Row Level Security (RLS), triggers automáticos y integración nativa con Supabase Auth.
 
-
+![IAM COMPONENT Diagram](./images/diagrams/diagrama-bd-iam.png)
 
 ## 5.2. Bounded Context: Incidents Context
 
