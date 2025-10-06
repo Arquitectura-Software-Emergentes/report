@@ -2087,13 +2087,166 @@ En la app móvil para los ciudadanos, se optó por el patrón de navegación tip
 
 ## 6.3. Landing Page UI Design.
 ### 6.3.1. Landing Page Wireframe.
+
+El wireframe es un esquema estructural de baja a media fidelidad que representa la arquitectura de la información y la disposición de elementos en la landing page de LimaUrban. Utiliza una paleta monocromática de grises para enfocarse únicamente en la estructura, jerarquía y distribución espacial.
+**Características del Wireframe**
+
+Secciones Documentadas:
+- Navbar - Muestra la disposición del logo y menú horizontal
+- Hero - Estructura del título principal, subtítulo y botones CTA
+- About - Layout a dos columnas con bloques de texto e insignia
+- Stats - Grid de 4 elementos con números destacados
+- User Types - Dos tarjetas con listas de funcionalidades
+- CTA - Sección centrada con título y botón
+- Footer - Grid de 4 columnas con diferentes tipos de contenido
+- Leyenda - Explicación de los elementos del wireframe
+
+Planificar la estructura antes de invertir en diseño visual
+Validar la organización de información con el equipo
+Identificar problemas de usabilidad tempranamente
+Comunicar la visión del proyecto a todos los stakeholders
+Establecer prioridades de desarrollo basadas en la jerarquía visual.
+
+![alt text](images/application_wireframes/wireframe_lanidng.png)
+
+
 ### 6.3.2. Landing Page Mock-up.
+
+**Descripción General**
+El mockup de la landing page de LimaUrban es una representación visual completa y funcional del sitio web, diseñada con HTML y CSS puro. Este prototipo de alta fidelidad muestra exactamente cómo se verá y comportará la página una vez implementada en producción.
+**Características del Mockup**
+Paleta de Colores Aplicada:
+- #1A1E29 - Color principal para navbar, footer y elementos de fondo oscuro
+- #00C48E - Color de acento para botones, enlaces y elementos destacados
+- #132D46 - Utilizado en títulos y gradientes de secciones especiales
+- #FFFFFF - Fondo principal para mantener limpieza y legibilidad
+
+**Estructura de Contenido:**
+- Navbar fijo - Permanece visible durante el scroll para facilitar la navegación
+- Hero Section - Primera impresión con título impactante y llamados a la acción
+- Sobre Nosotros - Presenta al equipo UPC con layout a dos columnas
+- Estadísticas - Muestra el impacto del proyecto con métricas visuales
+- Tipos de Usuarios - Dos tarjetas diferenciadas para Municipalidades y Ciudadanos
+- CTA Final - Invitación clara a registrarse en la plataforma
+- Footer completo - Información de contacto, enlaces y redes sociales
+
+Este diseño sirve como referencia visual definitiva para desarrolladores, diseñadores y stakeholders. Al ser completamente funcional, permite realizar pruebas de usuario, ajustar detalles visuales y validar la experiencia de usuario antes del desarrollo final.
+
+![alt text](images/applications_mockups/landing_mockup.png)
+
 ## 6.4. Applications UX/UI Design.
 ### 6.4.1. Applications Wireframes.
+
+#### **Aplicación web**
+
+**Inicio de sesión de la aplicación:** Esta sección es la primera vista que tendrán las autoridades. <br>
+![alt text](images/application_wireframes/inicio_sesión.png)
+
+**Incidentes:** En esta sección se visualizan todos los incidentes registrados. <br>
+![alt text](images/application_wireframes/Incidentes.png) 
+
+**Filtro de incidentes:** En esta sección se visualiza un ejemplo de uno de los filtros de la tabla general de incidentes.<br>
+![alt text](images/application_wireframes/Incidentes-1.png)
+
+**Detalle de incidentes:** En esta sección se visualiza el detalle del incidente junto con los comentarios dejados por la autoridad y por el ciudadano. <br>
+![alt text](images/application_wireframes/Incidentes-2.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa de calor.<br>
+![alt text](images/application_wireframes/Mapa.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa geográfico.<br>
+![alt text](images/application_wireframes/Mapa2.png)
+
+**Perfil municipal** En esta sección las autoridades podrásn ver mas información sobre su cuenta en Lima Urban. <br>
+![alt text](images/application_wireframes/Perfil_municipal.png)
+
+#### **Aplicación móvil**
+
 ### 6.4.2. Applications Wireflow Diagrams.
+
+#### **Aplicación web**
+
+
+#### **Aplicación móvil**
+
 ### 6.4.2. Applications Mock-ups.
+
+#### **Aplicación web**
+
+**Inicio de sesión de la aplicación:** Esta sección es la primera vista que tendrán las autoridades. <br>
+![alt text](images/applications_mockups/inicio_sesión.png)
+
+**Incidentes:** En esta sección se visualizan todos los incidentes registrados. <br>
+![alt text](images/applications_mockups/Incidentes.png)
+
+**Filtro de incidentes:** En esta sección se visualiza un ejemplo de uno de los filtros de la tabla general de incidentes.<br>
+![alt text](images/applications_mockups/Incidentes-1.png)
+
+**Detalle de incidentes:** En esta sección se visualiza el detalle del incidente junto con los comentarios dejados por la autoridad y por el ciudadano. <br>
+![alt text](images/applications_mockups/Incidentes-2.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa de calor.<br>
+![alt text](images/applications_mockups/Mapa.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa geográfico.<br>
+![alt text](images/applications_mockups/Mapa2.png)
+
+**Perfil municipal** En esta sección las autoridades podrásn ver mas información sobre su cuenta en Lima Urban. <br>
+![alt text](images/applications_mockups/Perfil_municipal.png)
+
+
+#### **Aplicación móvil**
+
+
 ### 6.4.3. Applications User Flow Diagrams.
+
+#### **Aplicación web**
+**User Goal: Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.** Este objetivo abarca la experiencia del usuario al explorar la página principal de la plataforma.
+![alt text](images/userflow_diagram/inicio-sesion.png)
+
+**User Goal: Como personal municipal, quiero ver el número total de incidencias registradas para monitorear el volumen general.** Este objetivo refleja la necesidad del usuario de ver un dashboard para la gestión de los incidentes.
+
+![alt text](images/userflow_diagram/ver-total-incidencias.png)
+
+**User Goal: Como personal municipal, quiero enviar comentarios en las incidencias para comunicar acciones tomadas.** Este objetivo refleja la necesidad del usuario de ver los detalles del incidente y mantener informado al ciudadano sobre los avances.
+![alt text](images/userflow_diagram/ver-detalle-incidencia.png)
+
+**User Goal: Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial.** Este objetivo refleja la necesidad del usuario de ver un dashboard para la gestión de los incidentes.
+![alt text](images/userflow_diagram/maps.png)
+
+**User Goal: Como personal municipal, quiero ver los detalles de la municipalidad para acceder a información institucional centralizada.** Este objetivo refleja la necesidad del usuario de ver más información sobre su cuenta en LimaUrban.
+![alt text](images/userflow_diagram/perfil_municipalidad.png)
+
+
+
+#### **Aplicación móvil**
+
 ## 6.5. Applications Prototyping.
+
+
+**Aplicación web**
+- **Ver Total de Incidentes:** Consulta en tiempo real el número total de incidencias reportadas por los ciudadanos. Panel con métricas actualizadas que incluyen incidentes pendientes, en proceso y resueltos.
+- **Ver Detalles de Incidente:** Accede a la información completa de cada reporte: descripción detallada, ubicación exacta, fotografías adjuntas, historial de actualizaciones, comentarios y seguimiento completo del caso.
+- **Ver Detalles de la Municipalidad:** Consulta información institucional, zonas de cobertura, estadísticas generales del municipio y datos de contacto de los diferentes departamentos.
+- **Filtrar Incidentes:** Sistema avanzado de filtros múltiples que permite organizar y visualizar incidentes según diferentes criterios:
+  - Por Tipo: Alumbrado público, baches, limpieza, infraestructura, seguridad y otros
+  - Por Distrito: San miguel, La Victoria, etc. 
+  - Por Prioridad: Alta, Media o Baja
+  - Por Fecha: Selección de rango de fechas o fecha específica de reporte
+- **Priorizar Incidentes:** Asigna o modifica el nivel de prioridad de cada incidente (Alta, Media, Baja) según la urgencia y el impacto en la comunidad. Sistema visual con código de colores para identificación rápida.
+- **Actualizar Estado del Incidente:** Cambia el estado de las incidencias a medida que avanzan en el proceso de resolución: 
+  - Pendiente: Recién reportado, en espera de atención
+  - En Proceso: Equipo asignado trabajando en la solución
+  - Resuelto: Incidente completamente solucionado
+- **Enviar Comentario sobre el Incidente:** Agrega notas, observaciones y actualizaciones en cada caso. Mantén un historial completo de comunicación y acciones tomadas para transparencia y seguimiento.
+- **Mapa de Calor:** Identifica zonas críticas con mayor concentración de incidencias mediante gradientes de color por intensidad
+
+![alt text](images/application-protoyping/web-prototyping.png)
+
+Video de explicación: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk)
+
+#### **Aplicación móvil**
+
 
 # Conclusiones
 
