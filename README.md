@@ -2279,6 +2279,8 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 
 ### 6.4.3. Applications User Flow Diagrams.
 
+Link del User Flow: https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing
+
 #### **Aplicación web**
 **User Goal: Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.** Este objetivo abarca la experiencia del usuario al explorar la página principal de la plataforma.
 ![alt text](images/userflow_diagram/inicio-sesion.png)
@@ -2300,27 +2302,23 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 #### **Aplicación móvil**
 
 **User Goal: Como ciudadano, quiero registrarme en la aplicación para poder reportar incidencias urbanas.** Este objetivo abarca el proceso completo de creación de cuenta desde cero, incluyendo la validación de datos y confirmación de registro.
-![alt text](images/userflow_diagram/registro-ciudadano.png)
+![alt text](images/userflow_diagram/registro-m.png)
 
 **User Goal: Como ciudadano, quiero iniciar sesión para acceder a mis reportes y funciones principales.** Este objetivo refleja el flujo de autenticación del usuario y acceso a la aplicación tras completar el registro.
 ![alt text](images/userflow_diagram/login-ciudadano.png)
 
 **User Goal: Como ciudadano, quiero reportar una incidencia urbana con fotografía para documentar problemas en mi ciudad.** Este objetivo comprende el flujo completo desde la captura de foto hasta la confirmación del reporte enviado, incluyendo el procesamiento con IA.
-![alt text](images/userflow_diagram/reportar-incidencia.png)
+![alt text](images/userflow_diagram/reportar-m.png)
 
 **User Goal: Como ciudadano, quiero ver el historial de mis reportes para dar seguimiento a las incidencias que he registrado.** Este objetivo permite al usuario consultar todos sus reportes previos y verificar el estado de cada uno.
-![alt text](images/userflow_diagram/historial-reportes.png)
-
+![alt text](images/userflow_diagram/reportes-lista-m.png)
 **User Goal: Como ciudadano, quiero ver la pantalla principal para acceder rápidamente a las funciones más importantes de la app.** Este objetivo refleja la experiencia del usuario al navegar por el dashboard personal con resumen de actividad.
-![alt text](images/userflow_diagram/pantalla-principal.png)
+![alt text](images/userflow_diagram/dashboard-m.png)
 
 **User Goal: Como ciudadano, quiero gestionar mi perfil personal para mantener actualizados mis datos y configuraciones.** Este objetivo abarca la visualización y edición de información personal, estadísticas y preferencias de la cuenta.
-![alt text](images/userflow_diagram/perfil-usuario.png)
-
-Estos user flows están directamente alineados con los mockups que presentaste y cubren los flujos principales de navegación y funcionalidad de tu aplicación móvil ciudadana.
+![alt text](images/userflow_diagram/profile-m.png)
 
 ## 6.5. Applications Prototyping.
-
 
 **Aplicación web**
 - **Ver Total de Incidentes:** Consulta en tiempo real el número total de incidencias reportadas por los ciudadanos. Panel con métricas actualizadas que incluyen incidentes pendientes, en proceso y resueltos.
@@ -2341,10 +2339,25 @@ Estos user flows están directamente alineados con los mockups que presentaste y
 
 ![alt text](images/application-protoyping/web-prototyping.png)
 
-Video de explicación: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk)
+Video de explicación: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk
 
 #### **Aplicación móvil**
+**Aplicación móvil**
 
+- **Registro de Usuario:** Proceso simplificado para crear cuenta, con validación de email en tiempo real, verificación de contraseña segura y activación mediante código enviado por correo electrónico.
+- **Inicio de Sesión:** Autenticación segura por email y contraseña, opción "Recordar sesión" y enlace para recuperación de contraseña.
+- **Dashboard Principal (Home):** Pantalla central con resumen de actividad, reportes recientes, estadísticas de participación y accesos rápidos a funciones principales. Feed dinámico con actualizaciones y notificaciones.
+- **Captura de Incidencia:** Interfaz de cámara intuitiva con guías visuales para fotografiar incidencias urbanas y geolocalización automática de la ubicación del problema.
+- **Confirmación de Fotografía:** Pantalla de revisión para validar la imagen capturada, con opción de retomar la foto si no cumple estándares o repetir la captura.
+- **Procesamiento con IA:** Pantalla de carga que informa sobre el análisis automático de la imagen mediante algoritmos YOLO, mostrando progreso y clasificación inteligente.
+- **Formulario de Reporte:** Pantalla para finalizar el reporte con campos pre-rellenados por IA (categoría sugerida, descripción automática, ubicación confirmada), opción de agregar comentarios y verificación de datos antes del envío.
+- **Confirmación de Envío:** Diálogo de éxito que confirma la recepción del reporte, muestra número de seguimiento, tiempo estimado de respuesta y opciones para compartir o crear nuevo reporte.
+- **Historial de Reportes:** Lista cronológica de reportes realizados, mostrando estado actual, fecha, tipo de incidencia y acceso a detalles completos de cada caso.
+- **Perfil de Usuario:** Sección para gestionar información personal, revisar estadísticas de participación, configurar notificaciones y acceder a soporte técnico y políticas de privacidad.
+
+![alt text](images/application-protoyping/mobile.png)
+
+Video de explicación: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v
 
 # Conclusiones
 
