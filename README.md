@@ -2162,6 +2162,56 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 
 #### **Aplicación móvil**
 
+## 6.4. Applications UX/UI Design
+### 6.4.1. Applications Wireframes
+
+#### **Aplicación web**
+
+**Inicio de sesión de la aplicación:** Esta sección es la primera vista que tendrán las autoridades. <br>
+![alt text](images/application_wireframes/inicio_sesión.png)
+
+**Incidentes:** En esta sección se visualizan todos los incidentes registrados. <br>
+![alt text](images/application_wireframes/Incidentes.png) 
+
+**Filtro de incidentes:** En esta sección se visualiza un ejemplo de uno de los filtros de la tabla general de incidentes.<br>
+![alt text](images/application_wireframes/Incidentes-1.png)
+
+**Detalle de incidentes:** En esta sección se visualiza el detalle del incidente junto con los comentarios dejados por la autoridad y por el ciudadano. <br>
+![alt text](images/application_wireframes/Incidentes-2.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa de calor.<br>
+![alt text](images/application_wireframes/Mapa.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa geográfico.<br>
+![alt text](images/application_wireframes/Mapa2.png)
+
+**Perfil municipal** En esta sección las autoridades podrán ver más información sobre su cuenta en Lima Urban. <br>
+![alt text](images/application_wireframes/Perfil_municipal.png)
+
+#### Aplicación móvil
+
+**Pantalla de inicio (Home):** Vista principal donde el ciudadano puede ver un resumen de su actividad y acceder a las funciones principales de la aplicación. <br>
+![alt text](images/application_wireframes/W-Home.png)
+
+**Captura de incidencia:** Interfaz de la cámara integrada que permite al ciudadano fotografiar la incidencia urbana detectada con guías visuales para una captura óptima. <br>
+![alt text](images/application_wireframes/Camara.png)
+
+**Confirmación de fotografía:** Diálogo que permite al ciudadano revisar la imagen capturada y decidir si mantenerla o tomar una nueva foto antes de proceder con el reporte. <br>
+![alt text](images/application_wireframes/Dialog%20Confirmar.png)
+
+**Procesamiento con IA:** Pantalla de carga que informa al usuario que el sistema está analizando la imagen mediante YOLO para clasificar automáticamente el tipo de incidencia. <br>
+![alt text](images/application_wireframes/Procesando%20la%20IA.png)
+
+**Formulario de reporte:** Pantalla donde el ciudadano completa los detalles del reporte, incluyendo descripción, categoría sugerida por IA y ubicación automática detectada. <br>
+![alt text](images/application_wireframes/Reporte.png)
+
+**Confirmación de reporte enviado:** Diálogo de confirmación que notifica al ciudadano que su reporte ha sido enviado exitosamente y proporciona un número de seguimiento. <br>
+![alt text](images/application_wireframes/Dialog%20Report.png)
+
+**Historial de reportes:** Lista completa de todas las incidencias reportadas por el ciudadano, mostrando estado actual, fecha y tipo de cada reporte para seguimiento personal. <br>
+![alt text](images/application_wireframes/Reportes.png)
+
+
 ### 6.4.2. Applications Wireflow Diagrams.
 
 #### **Aplicación web**
@@ -2197,6 +2247,35 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 
 #### **Aplicación móvil**
 
+**Pantalla de registro:** Mockup de alta fidelidad del proceso de creación de cuenta para nuevos ciudadanos con formulario de registro optimizado para dispositivos móviles. Incluye campos de entrada estilizados para email, contraseña y datos personales básicos, validaciones en tiempo real, políticas de privacidad integradas y diseño centrado en la facilidad de uso con tipografía Space Grotesk y paleta corporativa consistente. <br>
+![alt text](images/applications_mockups/Registrar.png)
+
+**Pantalla de inicio de sesión:** Diseño completo de la interfaz de autenticación con campos de entrada para email y contraseña, opciones de recuperación de cuenta, checkbox para recordar sesión y botones de acción principales claramente diferenciados. Incorpora elementos de seguridad visual, mensajes de error contextuales y acceso rápido al proceso de registro para usuarios nuevos, manteniendo coherencia con la identidad visual establecida. <br>
+![alt text](images/applications_mockups/Inicio%20sesion.png)
+
+**Perfil de usuario:** Mockup completo de la pantalla de perfil personal que permite al ciudadano gestionar su información de cuenta, visualizar estadísticas de reportes realizados y configurar preferencias de notificación. Incluye sección de datos personales editables, resumen de actividad reciente, progreso de reportes históricos, configuraciones de privacidad y opción de cierre de sesión, todo diseñado con elementos visuales consistentes y navegación intuitiva. <br>
+![alt text](images/applications_mockups/Cuenta.png)
+
+**Pantalla principal (Home):** Mockup de alta fidelidad que muestra el diseño final de la pantalla de inicio con colores corporativos, tipografía Space Grotesk y elementos interactivos. Incluye cards de resumen de actividad del usuario, accesos rápidos a funciones principales y feed de actualizaciones de la comunidad. <br>
+![alt text](images/applications_mockups/Home.png)
+
+**Interfaz de cámara:** Diseño completo de la interfaz de captura fotográfica con overlay visual que guía al usuario para obtener imágenes óptimas de incidencias urbanas. Incorpora elementos de UI nativos, botones de acción claramente identificables y indicadores de estado GPS activo para geolocalización automática. <br>
+![alt text](images/applications_mockups/Camara.png)
+
+**Modal de confirmación fotográfica:** Mockup del diálogo modal con diseño visual finalizado que presenta la imagen capturada en preview completo, botones de acción con estilo corporativo (confirmar/rehacer) y opciones de edición básica antes de proceder con el reporte de la incidencia. <br>
+![alt text](images/applications_mockups/Dialog%20Confirmar.png)
+
+**Pantalla de procesamiento IA:** Diseño final de la pantalla de carga con animaciones y elementos visuales que comunican el análisis inteligente de la imagen mediante algoritmos YOLO. Incluye indicadores de progreso, mensajes informativos sobre el proceso de clasificación automática y branding coherente con la identidad visual. <br>
+![alt text](images/applications_mockups/Procesando%20la%20IA.png)
+
+**Formulario completo de reporte:** Mockup de alta fidelidad del formulario de creación de reporte con todos los campos de entrada estilizados, categoría pre-sugerida por IA, mapa interactivo de confirmación de ubicación y botones de envío con estados visuales diferenciados según la completitud de datos. <br>
+![alt text](images/applications_mockups/Reporte.png)
+
+**Modal de confirmación de envío:** Diseño final del diálogo de éxito que confirma la recepción del reporte con elementos visuales de retroalimentación positiva, código de seguimiento generado automáticamente, tiempo estimado de respuesta y opciones para compartir o crear nuevo reporte. <br>
+![alt text](images/applications_mockups/Dialog%20Reporte.png)
+
+**Listado de reportes históricos:** Mockup completo de la pantalla de historial con diseño de cards optimizado para navegación móvil, estados visuales diferenciados por color, filtros de búsqueda integrados, indicadores de progreso y acceso directo a detalles de cada incidencia reportada por el usuario. <br>
+![alt text](images/applications_mockups/Reportes.png)
 
 ### 6.4.3. Applications User Flow Diagrams.
 
@@ -2218,8 +2297,27 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 ![alt text](images/userflow_diagram/perfil_municipalidad.png)
 
 
-
 #### **Aplicación móvil**
+
+**User Goal: Como ciudadano, quiero registrarme en la aplicación para poder reportar incidencias urbanas.** Este objetivo abarca el proceso completo de creación de cuenta desde cero, incluyendo la validación de datos y confirmación de registro.
+![alt text](images/userflow_diagram/registro-ciudadano.png)
+
+**User Goal: Como ciudadano, quiero iniciar sesión para acceder a mis reportes y funciones principales.** Este objetivo refleja el flujo de autenticación del usuario y acceso a la aplicación tras completar el registro.
+![alt text](images/userflow_diagram/login-ciudadano.png)
+
+**User Goal: Como ciudadano, quiero reportar una incidencia urbana con fotografía para documentar problemas en mi ciudad.** Este objetivo comprende el flujo completo desde la captura de foto hasta la confirmación del reporte enviado, incluyendo el procesamiento con IA.
+![alt text](images/userflow_diagram/reportar-incidencia.png)
+
+**User Goal: Como ciudadano, quiero ver el historial de mis reportes para dar seguimiento a las incidencias que he registrado.** Este objetivo permite al usuario consultar todos sus reportes previos y verificar el estado de cada uno.
+![alt text](images/userflow_diagram/historial-reportes.png)
+
+**User Goal: Como ciudadano, quiero ver la pantalla principal para acceder rápidamente a las funciones más importantes de la app.** Este objetivo refleja la experiencia del usuario al navegar por el dashboard personal con resumen de actividad.
+![alt text](images/userflow_diagram/pantalla-principal.png)
+
+**User Goal: Como ciudadano, quiero gestionar mi perfil personal para mantener actualizados mis datos y configuraciones.** Este objetivo abarca la visualización y edición de información personal, estadísticas y preferencias de la cuenta.
+![alt text](images/userflow_diagram/perfil-usuario.png)
+
+Estos user flows están directamente alineados con los mockups que presentaste y cubren los flujos principales de navegación y funcionalidad de tu aplicación móvil ciudadana.
 
 ## 6.5. Applications Prototyping.
 
