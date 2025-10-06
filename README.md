@@ -65,13 +65,13 @@ El objetivo de esta sección es resumir las modificaciones relevantes que se rea
 
 Para el Trabajo Parcial, se asignaron responsabilidades específicas a cada integrante, las cuales se detallan a continuación:
 
-| Miembro del Equipo | Tarea Asignada |
-| :----------------: | :------------: |
-|    Aldo Baldeon    | Desarrollo del Capítulo I (Introducción), incluyendo la definición del startup profile, solution profile, análisis de antecedentes y problemática, proceso Lean UX y identificación de segmentos objetivo. Colaboración en la arquitectura de software del Capítulo IV. |
-|  Barbara Quezada   | Elaboración del Capítulo II (Requirements Elicitation & Analysis), enfocándose en el análisis competitivo, diseño y ejecución de entrevistas, actividades de needfinding (user personas, empathy mapping, as-is scenario mapping) y definición del ubiquitous language. |
-|   Steve Castillo   | Desarrollo del Capítulo III (Requirements Specification), incluyendo to-be scenario mapping, especificación de user stories, impact mapping y estructuración del product backlog. Contribución en la definición de la startup en el Capítulo I. |
+| Miembro del Equipo |                                                                                                                                               Tarea Asignada                                                                                                                                                |
+| :----------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|    Aldo Baldeon    |                   Desarrollo del Capítulo I (Introducción), incluyendo la definición del startup profile, solution profile, análisis de antecedentes y problemática, proceso Lean UX y identificación de segmentos objetivo. Colaboración en la arquitectura de software del Capítulo IV.                   |
+|  Barbara Quezada   |                   Elaboración del Capítulo II (Requirements Elicitation & Analysis), enfocándose en el análisis competitivo, diseño y ejecución de entrevistas, actividades de needfinding (user personas, empathy mapping, as-is scenario mapping) y definición del ubiquitous language.                   |
+|   Steve Castillo   |                               Desarrollo del Capítulo III (Requirements Specification), incluyendo to-be scenario mapping, especificación de user stories, impact mapping y estructuración del product backlog. Contribución en la definición de la startup en el Capítulo I.                               |
 |    Jimena Cama     | Elaboración del Capítulo IV (Strategic-Level Software Design), enfocándose en el strategic-level attribute-driven design, análisis de quality attribute scenarios, identificación de constraints y desarrollo de diagramas arquitectónicos C4. Apoyo en la definición de segmentos objetivo del Capítulo I. |
-|   Jair Castillo    | Desarrollo del strategic-level domain-driven design del Capítulo IV, incluyendo EventStorming, candidate context discovery, domain message flows modeling, bounded context canvases y context mapping. Colaboración en el análisis competitivo del Capítulo II. |
+|   Jair Castillo    |                       Desarrollo del strategic-level domain-driven design del Capítulo IV, incluyendo EventStorming, candidate context discovery, domain message flows modeling, bounded context canvases y context mapping. Colaboración en el análisis competitivo del Capítulo II.                       |
 
 Cabe destacar que, durante la creación del informe, se realizaron commits específicos para cada tarea asignada, lo que permitió garantizar un control de versiones y una colaboración efectiva en tiempo real. El equipo mantuvo reuniones semanales de sincronización para asegurar la coherencia entre los diferentes capítulos y compartir avances.
 
@@ -152,6 +152,7 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
   - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
   ## Capítulo V: Tactical-Level Software Design
 - [5.1. Bounded Context: Iam Context](#51-bounded-context-nombre-del-contexto)
+
   - [5.1.1. Domain Layer](#511-domain-layer)
   - [5.1.2. Interface Layer](#512-interface-layer)
   - [5.1.3. Application Layer](#513-application-layer)
@@ -162,6 +163,7 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
     - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
 
 - [5.2. Bounded Context: Incidents Context](#51-bounded-context-nombre-del-contexto)
+
   - [5.2.1. Domain Layer](#511-domain-layer)
   - [5.2.2. Interface Layer](#512-interface-layer)
   - [5.2.3. Application Layer](#513-application-layer)
@@ -1916,24 +1918,24 @@ Este bounded context se encarga de identificar usuarios, autenticarlos y autoriz
 En esta capa se modela el core de IAM con Entities, Value Objects, Aggregates, Domain Services, Repositories (interfaces) y Domain Events.
 
 #### Aggregates Roots
- 
+
 ##### User (Aggregate Root)
 
 Propósito: representar la cuenta de usuario.
 
 **Atributos**
 
-| Nombre | Tipo | Visibilidad | Descripción |
-|--------|------|-------------|-------------|
-| userId | UUID | Private | Identificador único del usuario |
-| email | String | Private | Correo electrónico del usuario |
-| passwordHash | String | Private | Hash de la contraseña |
-| status | Enum | Private | ACTIVE\|BLOCKED |
-| createdAt | DateTime | Private | Fecha de creación |
+| Nombre       | Tipo     | Visibilidad | Descripción                     |
+| ------------ | -------- | ----------- | ------------------------------- |
+| userId       | UUID     | Private     | Identificador único del usuario |
+| email        | String   | Private     | Correo electrónico del usuario  |
+| passwordHash | String   | Private     | Hash de la contraseña           |
+| status       | Enum     | Private     | ACTIVE\|BLOCKED                 |
+| createdAt    | DateTime | Private     | Fecha de creación               |
 
 **Relaciones**
 
-1..* con Role (vía asignaciones); 1..* con AuditLog.
+1.._ con Role (vía asignaciones); 1.._ con AuditLog.
 
 **Invariantes**
 
@@ -1941,11 +1943,11 @@ email único; status consistente con verificación de correo.
 
 **Métodos**
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-|--------|-----------------|-------------|-------------|
-| register | void | Public | register(email, rawPassword) |
-| changePassword | void | Public | changePassword(old, new) |
-| block | void | Public | block(reason) |
+| Nombre         | Tipo de retorno | Visibilidad | Descripción                  |
+| -------------- | --------------- | ----------- | ---------------------------- |
+| register       | void            | Public      | register(email, rawPassword) |
+| changePassword | void            | Public      | changePassword(old, new)     |
+| block          | void            | Public      | block(reason)                |
 
 ##### Role
 
@@ -1953,11 +1955,11 @@ Propósito: agrupar permisos y simplificar autorización.
 
 **Atributos**
 
-| Nombre | Tipo | Visibilidad | Descripción |
-|--------|------|-------------|-------------|
-| roleId | UUID | Private | Identificador único del rol |
-| code | Enum | Private | CITIZEN\|MUNICIPAL |
-| description | String | Private | Descripción del rol |
+| Nombre      | Tipo   | Visibilidad | Descripción                 |
+| ----------- | ------ | ----------- | --------------------------- |
+| roleId      | UUID   | Private     | Identificador único del rol |
+| code        | Enum   | Private     | CITIZEN\|MUNICIPAL          |
+| description | String | Private     | Descripción del rol         |
 
 **Relaciones**
 
@@ -1967,19 +1969,18 @@ many-to-many con Permission (a través de RolePermission).
 
 Propósito: representar capacidades atómicas (p.ej., INCIDENT_REVIEW, INCIDENT_ASSIGN).
 
-
 ##### RoleAssignment (Entity)
 
 Propósito: asignar uno o más roles a un User.
 
 **Atributos**
 
-| Nombre | Tipo | Visibilidad | Descripción |
-|--------|------|-------------|-------------|
-| userId | UUID | Private | Identificador del usuario |
-| roleId | UUID | Private | Identificador del rol |
-| grantedAt | DateTime | Private | Fecha de asignación |
-| grantedBy | UUID | Private | Usuario que asignó el rol |
+| Nombre    | Tipo     | Visibilidad | Descripción               |
+| --------- | -------- | ----------- | ------------------------- |
+| userId    | UUID     | Private     | Identificador del usuario |
+| roleId    | UUID     | Private     | Identificador del rol     |
+| grantedAt | DateTime | Private     | Fecha de asignación       |
+| grantedBy | UUID     | Private     | Usuario que asignó el rol |
 
 ##### RefreshToken (Entity)
 
@@ -1987,13 +1988,12 @@ Propósito: soporte a sesiones seguras y rotación de tokens.
 
 **Atributos**
 
-| Nombre | Tipo | Visibilidad | Descripción |
-|--------|------|-------------|-------------|
-| tokenId | UUID | Private | Identificador único del token |
-| userId | UUID | Private | Identificador del usuario |
-| expiresAt | DateTime | Private | Fecha de expiración |
-| isRevoked | Boolean | Private | Indica si el token está revocado |
-
+| Nombre    | Tipo     | Visibilidad | Descripción                      |
+| --------- | -------- | ----------- | -------------------------------- |
+| tokenId   | UUID     | Private     | Identificador único del token    |
+| userId    | UUID     | Private     | Identificador del usuario        |
+| expiresAt | DateTime | Private     | Fecha de expiración              |
+| isRevoked | Boolean  | Private     | Indica si el token está revocado |
 
 ##### AuditLog
 
@@ -2001,14 +2001,13 @@ Propósito: rastrear eventos de seguridad (login, intentos fallidos, asignacione
 
 **Atributos**
 
-| Nombre | Tipo | Visibilidad | Descripción |
-|--------|------|-------------|-------------|
-| auditId | UUID | Private | Identificador único del log |
-| userId | UUID | Private | Identificador del usuario |
-| action | String | Private | Acción realizada |
-| entityId | UUID | Private | Identificador de la entidad (opcional) |
-| createdAt | DateTime | Private | Fecha del evento |
-
+| Nombre    | Tipo     | Visibilidad | Descripción                            |
+| --------- | -------- | ----------- | -------------------------------------- |
+| auditId   | UUID     | Private     | Identificador único del log            |
+| userId    | UUID     | Private     | Identificador del usuario              |
+| action    | String   | Private     | Acción realizada                       |
+| entityId  | UUID     | Private     | Identificador de la entidad (opcional) |
+| createdAt | DateTime | Private     | Fecha del evento                       |
 
 #### Value Objects
 
@@ -2018,12 +2017,12 @@ Garantizan formato/validez y evitan primitive obsession.
 
 #### Domain Services
 
-| Servicio | Descripción |
-|----------|-------------|
-| PasswordService | verifica fortaleza, reutilización y caducidad. |
-| AuthorizationService | evalúa hasRole(user, role) y can(user, permission). |
-| CaptchaPolicy | regla de negocio que exige captcha en registro/login tras N intentos. |
-| TokenService | generación, rotation y refresh tokens. |
+| Servicio             | Descripción                                                           |
+| -------------------- | --------------------------------------------------------------------- |
+| PasswordService      | verifica fortaleza, reutilización y caducidad.                        |
+| AuthorizationService | evalúa hasRole(user, role) y can(user, permission).                   |
+| CaptchaPolicy        | regla de negocio que exige captcha en registro/login tras N intentos. |
+| TokenService         | generación, rotation y refresh tokens.                                |
 
 #### Repositories (interfaces)
 
@@ -2043,56 +2042,56 @@ esta capa publica endpoints REST y maneja validaciones superficiales (DTOs, capt
 
 Controlador para los métodos de autenticación y registro de usuarios.
 
-| Endpoint | Descripción |
-|----------|-------------|
-| POST /auth/register-citizen | correo/clave, permisos de cámara/ubicación si aplica al flujo |
-| POST /auth/register-municipal | Registro de personal municipal |
-| POST /auth/login | Inicio de sesión |
-| POST /auth/logout | Cierre de sesión |
-| POST /auth/refresh | Renovación de token |
-| POST /auth/request-password-reset | Solicitar restablecimiento de contraseña |
-| POST /auth/reset-password | Restablecer contraseña |
+| Endpoint                          | Descripción                                                   |
+| --------------------------------- | ------------------------------------------------------------- |
+| POST /auth/register-citizen       | correo/clave, permisos de cámara/ubicación si aplica al flujo |
+| POST /auth/register-municipal     | Registro de personal municipal                                |
+| POST /auth/login                  | Inicio de sesión                                              |
+| POST /auth/logout                 | Cierre de sesión                                              |
+| POST /auth/refresh                | Renovación de token                                           |
+| POST /auth/request-password-reset | Solicitar restablecimiento de contraseña                      |
+| POST /auth/reset-password         | Restablecer contraseña                                        |
 
 ##### UserController
 
 Controlador para la gestión de usuarios.
 
-| Endpoint | Descripción |
-|----------|-------------|
-| GET /me | perfil y roles
-| GET /users/{id} | Obtener usuario por ID |
+| Endpoint              | Descripción                 |
+| --------------------- | --------------------------- |
+| GET /me               | perfil y roles              |
+| GET /users/{id}       | Obtener usuario por ID      |
 | GET /users/{id}/roles | Obtener roles de un usuario |
 
 ##### RoleController
 
 Controlador para la gestión de roles y permisos.
 
-| Endpoint | Descripción |
-|----------|-------------|
-| GET /roles | Listar roles disponibles |
-| GET /permissions | Listar permisos disponibles |
-| POST /users/{id}/roles/{roleId} | asignar |
-| DELETE /users/{id}/roles/{roleId} | revocar |
+| Endpoint                          | Descripción                 |
+| --------------------------------- | --------------------------- |
+| GET /roles                        | Listar roles disponibles    |
+| GET /permissions                  | Listar permisos disponibles |
+| POST /users/{id}/roles/{roleId}   | asignar                     |
+| DELETE /users/{id}/roles/{roleId} | revocar                     |
 
 ##### AuditController
 
 Controlador para consulta de eventos de auditoría.
 
-| Endpoint | Descripción |
-|----------|-------------|
+| Endpoint                              | Descripción                      |
+| ------------------------------------- | -------------------------------- |
 | GET /audits?userId=&action=&from=&to= | consulta de eventos de seguridad |
 
 #### Respuestas típicas
 
-| Código | Descripción |
-|--------|-------------|
-| 200/201 | OK/Creado |
-| 400 | validación |
-| 401 | no autenticado |
-| 403 | no autorizado |
-| 409 | duplicado |
-| 429 | rate limit |
-| 500 | error interno |
+| Código  | Descripción    |
+| ------- | -------------- |
+| 200/201 | OK/Creado      |
+| 400     | validación     |
+| 401     | no autenticado |
+| 403     | no autorizado  |
+| 409     | duplicado      |
+| 429     | rate limit     |
+| 500     | error interno  |
 
 ### 5.1.3. Application Layer
 
@@ -2104,48 +2103,48 @@ Aquí los Command/Query Handlers orquestan los flujos de negocio de IAM y delega
 
 Gestiona la ejecución del registro de ciudadanos
 
-| Pasos |
-|-------|
-| validar DTO → User.register() → persistir  → AuditLog(LOG_USER_REGISTERED). |
+| Pasos                                                                      |
+| -------------------------------------------------------------------------- |
+| validar DTO → User.register() → persistir → AuditLog(LOG_USER_REGISTERED). |
 
 ##### RegisterMunicipalUserCommandHandler
 
 Gestiona la ejecución del registro de personal municipal
 
-| Descripción |
-|-------------|
+| Descripción                                                           |
+| --------------------------------------------------------------------- |
 | Incluye validación del rol MUNICIPAL y (opcional) aprobación interna. |
 
 ##### LoginCommandHandler
 
 Gestiona la ejecución del inicio de sesión
 
-| Pasos |
-|-------|
+| Pasos                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------- |
 | Verifica credenciales → políticas de bloqueo → emite accessToken + refreshToken → AuditLog(LOG_LOGIN_OK/FAIL). |
 
 #### Otros Commands
 
-| Command |
-|---------|
-| RequestPasswordResetCommand, ResetPasswordCommand. |
+| Command                                                                                |
+| -------------------------------------------------------------------------------------- |
+| RequestPasswordResetCommand, ResetPasswordCommand.                                     |
 | AssignRoleCommand / RevokeRoleCommand → actualiza RoleAssignment (registra auditoría). |
-| LogoutCommand, RefreshTokenCommand → rotate y/o invalidate RefreshToken. |
+| LogoutCommand, RefreshTokenCommand → rotate y/o invalidate RefreshToken.               |
 
 #### Queries & Query Handlers
 
-| Query | Descripción |
-|-------|-------------|
-| GetCurrentUserQuery | perfil + roles/permisos |
+| Query                                | Descripción                         |
+| ------------------------------------ | ----------------------------------- |
+| GetCurrentUserQuery                  | perfil + roles/permisos             |
 | ListRolesQuery, ListPermissionsQuery | Listar roles y permisos del sistema |
-| ListAuditLogsQuery | filtro por usuario/acción/rango |
+| ListAuditLogsQuery                   | filtro por usuario/acción/rango     |
 
 #### Reglas transaccionales
 
-| Regla |
-|-------|
+| Regla                                                                                       |
+| ------------------------------------------------------------------------------------------- |
 | Registro/Login envuelven cambios en una transacción atómica (usuario + tokens + auditoría). |
-| Idempotencia en  request-password-reset. |
+| Idempotencia en request-password-reset.                                                     |
 
 ### 5.1.4. Infrastructure Layer
 
@@ -2155,19 +2154,19 @@ Esta capa implementa repositorios, mapeos relacionales y adapters a servicios ex
 
 ##### Tablas principales
 
-| Tabla | Estructura |
-|-------|-----------|
-| user | user_id PK, email UNIQUE, password_hash, status, created_at |
-| role | role_id PK, code UNIQUE, description |
-| role_permission | role_id FK, permission_code PK/FK |
-| audit_log | audit_id PK, user_id FK, action, entity_id, created_at |
+| Tabla           | Estructura                                                  |
+| --------------- | ----------------------------------------------------------- |
+| user            | user_id PK, email UNIQUE, password_hash, status, created_at |
+| role            | role_id PK, code UNIQUE, description                        |
+| role_permission | role_id FK, permission_code PK/FK                           |
+| audit_log       | audit_id PK, user_id FK, action, entity_id, created_at      |
 
 #### Repositorios (implementaciones)
 
 JpaUserRepository/UserRepository, RoleRepository, RoleAssignmentRepository, RefreshTokenRepository, AuditLogRepository.
 
-
 ### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
 Este diagrama de componentes ilustra la arquitectura del contexto IAM usando Supabase como Backend as a Service, donde las aplicaciones Flutter y Angular se conectan mediante SDKs nativos que facilitan la comunicación directa con servicios gestionados, eliminando la necesidad de un backend personalizado. El flujo permite que las aplicaciones envíen credenciales a través de conexiones HTTPS seguras hacia Supabase Auth, que maneja el ciclo completo de identidades incluyendo registro, login y generación de tokens JWT, mientras se comunica con PostgreSQL para almacenar datos de usuarios de forma segura. La arquitectura integra Row Level Security para garantizar acceso controlado a datos y genera automáticamente APIs REST mediante PostgREST, creando un flujo bidireccional donde los SDKs procesan respuestas y actualizan interfaces en tiempo real para una experiencia fluida y segura en el sistema Urban Lima.
 
 ![IAM COMPONENT Diagram](./images/bounded/iam/component.png)
@@ -2175,11 +2174,13 @@ Este diagrama de componentes ilustra la arquitectura del contexto IAM usando Sup
 ### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
 El siguiente diagrama de clases representa el modelo de dominio del IAM Context, diseñado para trabajar con Supabase como Backend as a Service. Las clases mantienen la lógica de negocio esencial mientras Supabase maneja la persistencia y autenticación a nivel de infraestructura.
 
 ![IAM Diagram](./images/diagrams/diagram-iam.png)
 
 #### 5.1.6.2. Bounded Context Database Design Diagram
+
 El siguiente diagrama de base de datos está diseñado para funcionar con Supabase, aprovechando PostgreSQL con funcionalidades extendidas como Row Level Security (RLS), triggers automáticos y integración nativa con Supabase Auth.
 
 ![IAM COMPONENT Diagram](./images/diagrams/diagrama-bd-iam.png)
@@ -2198,79 +2199,81 @@ En esta capa se modela el core del contexto de Incidencias con Aggregates, Entit
 
 **Propósito:** Representar una incidencia urbana reportada por un ciudadano.
 
-| **Atributo** | **Tipo** | **Visibilidad** | **Descripción** |
-|--------------|----------|-----------------|-----------------|
-| incidentId | UUID | Private | Identificador único del incidente |
-| title | String | Private | Título descriptivo del incidente |
-| description | String | Private | Descripción detallada del problema reportado |
-| type | IncidentType | Private | Tipo de incidencia (bache, basura, graffiti, infraestructura, etc.) |
-| status | IncidentStatus | Private | Estado actual (PENDING, IN_PROGRESS, RESOLVED, CLOSED) |
-| priority | Priority | Private | Nivel de prioridad (LOW, MEDIUM, HIGH, CRITICAL) |
-| location | Location | Private | Ubicación georreferenciada del incidente |
-| reportedBy | UserId | Private | ID del ciudadano que reportó |
-| assignedTo | UserId | Private | ID del personal municipal asignado |
-| photoUrls | List<String> | Private | URLs de las fotografías adjuntas |
-| createdAt | DateTime | Private | Fecha y hora de creación |
-| updatedAt | DateTime | Private | Fecha y hora de última actualización |
-| resolvedAt | DateTime | Private | Fecha y hora de resolución |
+| **Atributo** | **Tipo**       | **Visibilidad** | **Descripción**                                                     |
+| ------------ | -------------- | --------------- | ------------------------------------------------------------------- |
+| incidentId   | UUID           | Private         | Identificador único del incidente                                   |
+| title        | String         | Private         | Título descriptivo del incidente                                    |
+| description  | String         | Private         | Descripción detallada del problema reportado                        |
+| type         | IncidentType   | Private         | Tipo de incidencia (bache, basura, graffiti, infraestructura, etc.) |
+| status       | IncidentStatus | Private         | Estado actual (PENDING, IN_PROGRESS, RESOLVED, CLOSED)              |
+| priority     | Priority       | Private         | Nivel de prioridad (LOW, MEDIUM, HIGH, CRITICAL)                    |
+| location     | Location       | Private         | Ubicación georreferenciada del incidente                            |
+| reportedBy   | UserId         | Private         | ID del ciudadano que reportó                                        |
+| assignedTo   | UserId         | Private         | ID del personal municipal asignado                                  |
+| photoUrls    | List<String>   | Private         | URLs de las fotografías adjuntas                                    |
+| createdAt    | DateTime       | Private         | Fecha y hora de creación                                            |
+| updatedAt    | DateTime       | Private         | Fecha y hora de última actualización                                |
+| resolvedAt   | DateTime       | Private         | Fecha y hora de resolución                                          |
 
-**Relaciones:** 1..* con Comment, 1..* con StatusHistory
+**Relaciones:** 1.._ con Comment, 1.._ con StatusHistory
 
 **Invariantes:** location debe estar dentro de los límites de Lima Metropolitana; status debe seguir flujo válido de estados.
 
 **Métodos:**
 
-| **Nombre** | **Tipo de retorno** | **Visibilidad** | **Descripción** |
-|------------|---------------------|-----------------|-----------------|
-| reportIncident | void | Public | Registra una nueva incidencia |
-| updateStatus | void | Public | Actualiza el estado de la incidencia |
-| assignPriority | void | Public | Asigna nivel de prioridad |
-| addComment | void | Public | Añade comentario al historial |
-| assignToMunicipalStaff | void | Public | Asigna incidencia a personal municipal |
-| markAsResolved | void | Public | Marca la incidencia como resuelta |
-| close | void | Public | Cierra la incidencia |
+| **Nombre**             | **Tipo de retorno** | **Visibilidad** | **Descripción**                        |
+| ---------------------- | ------------------- | --------------- | -------------------------------------- |
+| reportIncident         | void                | Public          | Registra una nueva incidencia          |
+| updateStatus           | void                | Public          | Actualiza el estado de la incidencia   |
+| assignPriority         | void                | Public          | Asigna nivel de prioridad              |
+| addComment             | void                | Public          | Añade comentario al historial          |
+| assignToMunicipalStaff | void                | Public          | Asigna incidencia a personal municipal |
+| markAsResolved         | void                | Public          | Marca la incidencia como resuelta      |
+| close                  | void                | Public          | Cierra la incidencia                   |
 
 ##### Comment (Entity)
 
 **Propósito:** Representar comentarios y comunicación entre ciudadanos y personal municipal.
 
-| **Atributo** | **Tipo** | **Visibilidad** | **Descripción** |
-|--------------|----------|-----------------|-----------------|
-| commentId | UUID | Private | Identificador único del comentario |
-| incidentId | UUID | Private | ID del incidente al que pertenece |
-| authorId | UUID | Private | ID del usuario que escribió el comentario |
-| content | String | Private | Contenido del comentario |
-| authorType | UserType | Private | Tipo de usuario (CITIZEN, MUNICIPAL) |
-| createdAt | DateTime | Private | Fecha y hora de creación |
+| **Atributo** | **Tipo** | **Visibilidad** | **Descripción**                           |
+| ------------ | -------- | --------------- | ----------------------------------------- |
+| commentId    | UUID     | Private         | Identificador único del comentario        |
+| incidentId   | UUID     | Private         | ID del incidente al que pertenece         |
+| authorId     | UUID     | Private         | ID del usuario que escribió el comentario |
+| content      | String   | Private         | Contenido del comentario                  |
+| authorType   | UserType | Private         | Tipo de usuario (CITIZEN, MUNICIPAL)      |
+| createdAt    | DateTime | Private         | Fecha y hora de creación                  |
 
 ##### StatusHistory (Entity)
 
 **Propósito:** Mantener el historial de cambios de estado de las incidencias para transparencia y auditoría.
 
-| **Atributo** | **Tipo** | **Visibilidad** | **Descripción** |
-|--------------|----------|-----------------|-----------------|
-| historyId | UUID | Private | Identificador único del registro |
-| incidentId | UUID | Private | ID del incidente |
-| previousStatus | IncidentStatus | Private | Estado anterior |
-| newStatus | IncidentStatus | Private | Estado nuevo |
-| changedBy | UUID | Private | ID del usuario que realizó el cambio |
-| changeReason | String | Private | Motivo del cambio de estado |
-| changedAt | DateTime | Private | Fecha y hora del cambio |
+| **Atributo**   | **Tipo**       | **Visibilidad** | **Descripción**                      |
+| -------------- | -------------- | --------------- | ------------------------------------ |
+| historyId      | UUID           | Private         | Identificador único del registro     |
+| incidentId     | UUID           | Private         | ID del incidente                     |
+| previousStatus | IncidentStatus | Private         | Estado anterior                      |
+| newStatus      | IncidentStatus | Private         | Estado nuevo                         |
+| changedBy      | UUID           | Private         | ID del usuario que realizó el cambio |
+| changeReason   | String         | Private         | Motivo del cambio de estado          |
+| changedAt      | DateTime       | Private         | Fecha y hora del cambio              |
 
 #### Value Objects
 
 ##### Location
-| **Atributo** | **Tipo** | **Descripción** |
-|--------------|----------|-----------------|
-| latitude | Double | Coordenada de latitud |
-| longitude | Double | Coordenada de longitud |
-| address | String | Dirección textual |
-| district | String | Distrito donde se ubica |
-| zone | String | Zona específica |
+
+| **Atributo** | **Tipo** | **Descripción**         |
+| ------------ | -------- | ----------------------- |
+| latitude     | Double   | Coordenada de latitud   |
+| longitude    | Double   | Coordenada de longitud  |
+| address      | String   | Dirección textual       |
+| district     | String   | Distrito donde se ubica |
+| zone         | String   | Zona específica         |
 
 ##### IncidentType (Enum)
+
 - POTHOLE (Bache)
-- TRASH (Basura) 
+- TRASH (Basura)
 - GRAFFITI (Graffiti)
 - STREET_LIGHTING (Alumbrado público)
 - INFRASTRUCTURE (Infraestructura)
@@ -2279,6 +2282,7 @@ En esta capa se modela el core del contexto de Incidencias con Aggregates, Entit
 - OTHER (Otro)
 
 ##### IncidentStatus (Enum)
+
 - PENDING (Pendiente)
 - IN_REVIEW (En revisión)
 - IN_PROGRESS (En progreso)
@@ -2287,6 +2291,7 @@ En esta capa se modela el core del contexto de Incidencias con Aggregates, Entit
 - REJECTED (Rechazado)
 
 ##### Priority (Enum)
+
 - LOW (Baja)
 - MEDIUM (Media)
 - HIGH (Alta)
@@ -2300,30 +2305,30 @@ Esta capa expone los controladores que permiten la interacción con las entidade
 
 Controlador para los métodos CRUD relacionado con las incidencias urbanas.
 
-| **Atributos** |  |  |  |
-|---------------|---------------|---------------|---------------|
-| **Nombre** | **Tipo** | **Visibilidad** | **Descripción** |
-| incident Command Handler | IIncident Command Handler | Private | Servicio del gestor de comandos |
-| incident Query Handler | IIncident Query Handler | Private | Servicio del gestor de queries |
+| **Atributos**            |                           |                 |                                 |
+| ------------------------ | ------------------------- | --------------- | ------------------------------- |
+| **Nombre**               | **Tipo**                  | **Visibilidad** | **Descripción**                 |
+| incident Command Handler | IIncident Command Handler | Private         | Servicio del gestor de comandos |
+| incident Query Handler   | IIncident Query Handler   | Private         | Servicio del gestor de queries  |
 
-| **Métodos** |  |  |  |
-|-------------|-------------|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Visibilidad** | **Descripción** |
-| reportIncident | ResponseEntity | Public | Método para reportar una nueva incidencia |
-| getIncidents | ResponseEntity | Public | Solicitar todas las incidencias |
-| getIncidents ByStatus | ResponseEntity | Public | Solicitar las incidencias filtradas por estado |
-| getIncident ById | ResponseEntity | Public | Solicitar la incidencia por su id |
-| getIncidents ByUserId | ResponseEntity | Public | Solicitar las incidencias reportadas por un usuario |
-| updateIncident Status | ResponseEntity | Public | Actualizar el estado de una incidencia |
-| assignIncident Priority | ResponseEntity | Public | Asignar prioridad a una incidencia |
-| assignIncident ToStaff | ResponseEntity | Public | Asignar incidencia a personal municipal |
-| addComment ToIncident | ResponseEntity | Public | Añadir comentario a una incidencia |
-| getIncident Comments | ResponseEntity | Public | Obtener comentarios de una incidencia |
-| getIncident History | ResponseEntity | Public | Obtener historial de cambios de estado |
-| filterIncidents ByType | ResponseEntity | Public | Filtrar incidencias por tipo |
-| filterIncidents ByLocation | ResponseEntity | Public | Filtrar incidencias por ubicación |
-| filterIncidents ByPriority | ResponseEntity | Public | Filtrar incidencias por prioridad |
-| closeIncident | ResponseEntity | Public | Cerrar una incidencia |
+| **Métodos**                |                     |                 |                                                     |
+| -------------------------- | ------------------- | --------------- | --------------------------------------------------- |
+| **Nombre**                 | **Tipo de retorno** | **Visibilidad** | **Descripción**                                     |
+| reportIncident             | ResponseEntity      | Public          | Método para reportar una nueva incidencia           |
+| getIncidents               | ResponseEntity      | Public          | Solicitar todas las incidencias                     |
+| getIncidents ByStatus      | ResponseEntity      | Public          | Solicitar las incidencias filtradas por estado      |
+| getIncident ById           | ResponseEntity      | Public          | Solicitar la incidencia por su id                   |
+| getIncidents ByUserId      | ResponseEntity      | Public          | Solicitar las incidencias reportadas por un usuario |
+| updateIncident Status      | ResponseEntity      | Public          | Actualizar el estado de una incidencia              |
+| assignIncident Priority    | ResponseEntity      | Public          | Asignar prioridad a una incidencia                  |
+| assignIncident ToStaff     | ResponseEntity      | Public          | Asignar incidencia a personal municipal             |
+| addComment ToIncident      | ResponseEntity      | Public          | Añadir comentario a una incidencia                  |
+| getIncident Comments       | ResponseEntity      | Public          | Obtener comentarios de una incidencia               |
+| getIncident History        | ResponseEntity      | Public          | Obtener historial de cambios de estado              |
+| filterIncidents ByType     | ResponseEntity      | Public          | Filtrar incidencias por tipo                        |
+| filterIncidents ByLocation | ResponseEntity      | Public          | Filtrar incidencias por ubicación                   |
+| filterIncidents ByPriority | ResponseEntity      | Public          | Filtrar incidencias por prioridad                   |
+| closeIncident              | ResponseEntity      | Public          | Cerrar una incidencia                               |
 
 ### 5.2.3. Application Layer
 
@@ -2335,23 +2340,23 @@ Esta capa maneja la lógica de negocio y las interacciones entre los comandos y 
 
 Gestiona la ejecución de comandos de las incidencias
 
-| **Atributos** |  |  |  |
-|---------------|---------------|---------------|---------------|
-| **Nombre** | **Tipo** | **Visibilidad** | **Descripción** |
-| Incident Repository | IIncident Repository | Private | Repositorio de las incidencias |
-| User Repository | IUser Repository | Private | Repositorio de los usuarios |
-| Location Service | ILocation Service | Private | Servicio de geolocalización |
-| Notification Service | INotification Service | Private | Servicio de notificaciones |
+| **Atributos**        |                       |                 |                                |
+| -------------------- | --------------------- | --------------- | ------------------------------ |
+| **Nombre**           | **Tipo**              | **Visibilidad** | **Descripción**                |
+| Incident Repository  | IIncident Repository  | Private         | Repositorio de las incidencias |
+| User Repository      | IUser Repository      | Private         | Repositorio de los usuarios    |
+| Location Service     | ILocation Service     | Private         | Servicio de geolocalización    |
+| Notification Service | INotification Service | Private         | Servicio de notificaciones     |
 
-| **Métodos** |  |  |  |
-|-------------|-------------|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Visibilidad** | **Descripción** |
-| create Incident | Incident | Public | Método para crear una nueva incidencia con foto y ubicación |
-| update IncidentStatus | Incident | Public | Método para actualizar el estado de una incidencia |
-| assign IncidentPriority | Incident | Public | Método para asignar prioridad a una incidencia |
-| assign IncidentToStaff | Incident | Public | Método para asignar incidencia a personal municipal |
-| add CommentToIncident | Comment | Public | Método para añadir comentario a una incidencia |
-| close Incident | Incident | Public | Método para cerrar una incidencia |
+| **Métodos**             |                     |                 |                                                             |
+| ----------------------- | ------------------- | --------------- | ----------------------------------------------------------- |
+| **Nombre**              | **Tipo de retorno** | **Visibilidad** | **Descripción**                                             |
+| create Incident         | Incident            | Public          | Método para crear una nueva incidencia con foto y ubicación |
+| update IncidentStatus   | Incident            | Public          | Método para actualizar el estado de una incidencia          |
+| assign IncidentPriority | Incident            | Public          | Método para asignar prioridad a una incidencia              |
+| assign IncidentToStaff  | Incident            | Public          | Método para asignar incidencia a personal municipal         |
+| add CommentToIncident   | Comment             | Public          | Método para añadir comentario a una incidencia              |
+| close Incident          | Incident            | Public          | Método para cerrar una incidencia                           |
 
 #### Query handlers
 
@@ -2359,26 +2364,26 @@ Gestiona la ejecución de comandos de las incidencias
 
 Gestiona la ejecución de queries de las incidencias
 
-| **Atributos** |  |  |  |
-|---------------|---------------|---------------|---------------|
-| **Nombre** | **Tipo** | **Visibilidad** | **Descripción** |
-| Incident Repository | IIncident Repository | Private | Repositorio de las incidencias |
-| User Repository | IUser Repository | Private | Repositorio de los usuarios |
-| Comment Repository | IComment Repository | Private | Repositorio de los comentarios |
-| StatusHistory Repository | IStatusHistory Repository | Private | Repositorio del historial de estados |
+| **Atributos**            |                           |                 |                                      |
+| ------------------------ | ------------------------- | --------------- | ------------------------------------ |
+| **Nombre**               | **Tipo**                  | **Visibilidad** | **Descripción**                      |
+| Incident Repository      | IIncident Repository      | Private         | Repositorio de las incidencias       |
+| User Repository          | IUser Repository          | Private         | Repositorio de los usuarios          |
+| Comment Repository       | IComment Repository       | Private         | Repositorio de los comentarios       |
+| StatusHistory Repository | IStatusHistory Repository | Private         | Repositorio del historial de estados |
 
-| **Métodos** |  |  |  |
-|-------------|-------------|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Visibilidad** | **Descripción** |
-| getIncidents | List.Incident | Public | Retorna todas las incidencias |
-| getIncidents ByStatus | List.Incident | Public | Retorna las incidencias filtradas por estado |
-| getIncident ById | Incident | Public | Retorna la incidencia por su id |
-| getIncidents ByUserId | List.Incident | Public | Retorna las incidencias reportadas por un usuario |
-| getIncidents ByType | List.Incident | Public | Retorna las incidencias filtradas por tipo |
-| getIncidents ByLocation | List.Incident | Public | Retorna las incidencias filtradas por ubicación |
-| getIncidents ByPriority | List.Incident | Public | Retorna las incidencias filtradas por prioridad |
-| getIncident Comments | List.Comment | Public | Retorna los comentarios de una incidencia |
-| getIncident History | List.StatusHistory | Public | Retorna el historial de cambios de una incidencia |
+| **Métodos**             |                     |                 |                                                   |
+| ----------------------- | ------------------- | --------------- | ------------------------------------------------- |
+| **Nombre**              | **Tipo de retorno** | **Visibilidad** | **Descripción**                                   |
+| getIncidents            | List.Incident       | Public          | Retorna todas las incidencias                     |
+| getIncidents ByStatus   | List.Incident       | Public          | Retorna las incidencias filtradas por estado      |
+| getIncident ById        | Incident            | Public          | Retorna la incidencia por su id                   |
+| getIncidents ByUserId   | List.Incident       | Public          | Retorna las incidencias reportadas por un usuario |
+| getIncidents ByType     | List.Incident       | Public          | Retorna las incidencias filtradas por tipo        |
+| getIncidents ByLocation | List.Incident       | Public          | Retorna las incidencias filtradas por ubicación   |
+| getIncidents ByPriority | List.Incident       | Public          | Retorna las incidencias filtradas por prioridad   |
+| getIncident Comments    | List.Comment        | Public          | Retorna los comentarios de una incidencia         |
+| getIncident History     | List.StatusHistory  | Public          | Retorna el historial de cambios de una incidencia |
 
 ### 5.2.4. Infrastructure Layer
 
@@ -2388,67 +2393,67 @@ Esta capa se encarga de la persistencia de datos y las interacciones con servici
 
 Interfaz que define los métodos para gestionar las incidencias
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| findIncident ByStatus | List.Incident | Retorna las incidencias filtradas por estado |
-| findIncident ByUserId | List.Incident | Retorna las incidencias reportadas por un usuario |
-| findIncident ByType | List.Incident | Retorna las incidencias filtradas por tipo |
-| findIncident ByLocation | List.Incident | Retorna las incidencias filtradas por ubicación geográfica |
-| findIncident ByPriority | List.Incident | Retorna las incidencias filtradas por nivel de prioridad |
-| findIncident ById | Incident | Retorna una incidencia específica por su identificador |
-| save Incident | Incident | Guarda una nueva incidencia en la base de datos |
-| update Incident | Incident | Actualiza una incidencia existente |
-| delete Incident | Boolean | Elimina una incidencia de la base de datos |
+| **Métodos**             |                     |
+| ----------------------- | ------------------- | ---------------------------------------------------------- |
+| **Nombre**              | **Tipo de retorno** | **Descripción**                                            |
+| findIncident ByStatus   | List.Incident       | Retorna las incidencias filtradas por estado               |
+| findIncident ByUserId   | List.Incident       | Retorna las incidencias reportadas por un usuario          |
+| findIncident ByType     | List.Incident       | Retorna las incidencias filtradas por tipo                 |
+| findIncident ByLocation | List.Incident       | Retorna las incidencias filtradas por ubicación geográfica |
+| findIncident ByPriority | List.Incident       | Retorna las incidencias filtradas por nivel de prioridad   |
+| findIncident ById       | Incident            | Retorna una incidencia específica por su identificador     |
+| save Incident           | Incident            | Guarda una nueva incidencia en la base de datos            |
+| update Incident         | Incident            | Actualiza una incidencia existente                         |
+| delete Incident         | Boolean             | Elimina una incidencia de la base de datos                 |
 
 #### ICommentRepository
 
 Interfaz que representa la tabla "Comment" y maneja los métodos para gestionar comentarios
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| findComments ByIncidentId | List.Comment | Retorna todos los comentarios de una incidencia específica |
-| findComment ById | Comment | Retorna un comentario específico por su identificador |
-| save Comment | Comment | Guarda un nuevo comentario en la base de datos |
-| update Comment | Comment | Actualiza un comentario existente |
-| delete Comment | Boolean | Elimina un comentario de la base de datos |
+| **Métodos**               |                     |
+| ------------------------- | ------------------- | ---------------------------------------------------------- |
+| **Nombre**                | **Tipo de retorno** | **Descripción**                                            |
+| findComments ByIncidentId | List.Comment        | Retorna todos los comentarios de una incidencia específica |
+| findComment ById          | Comment             | Retorna un comentario específico por su identificador      |
+| save Comment              | Comment             | Guarda un nuevo comentario en la base de datos             |
+| update Comment            | Comment             | Actualiza un comentario existente                          |
+| delete Comment            | Boolean             | Elimina un comentario de la base de datos                  |
 
 #### IStatusHistoryRepository
 
 Interfaz que representa la tabla "StatusHistory" y maneja el historial de cambios de estado
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| findHistory ByIncidentId | List.StatusHistory | Retorna el historial completo de cambios de una incidencia |
-| findHistory ByUserId | List.StatusHistory | Retorna el historial de cambios realizados por un usuario |
-| save StatusHistory | StatusHistory | Guarda un nuevo registro de cambio de estado |
-| findLatest StatusByIncidentId | StatusHistory | Retorna el último cambio de estado de una incidencia |
+| **Métodos**                   |                     |
+| ----------------------------- | ------------------- | ---------------------------------------------------------- |
+| **Nombre**                    | **Tipo de retorno** | **Descripción**                                            |
+| findHistory ByIncidentId      | List.StatusHistory  | Retorna el historial completo de cambios de una incidencia |
+| findHistory ByUserId          | List.StatusHistory  | Retorna el historial de cambios realizados por un usuario  |
+| save StatusHistory            | StatusHistory       | Guarda un nuevo registro de cambio de estado               |
+| findLatest StatusByIncidentId | StatusHistory       | Retorna el último cambio de estado de una incidencia       |
 
 #### ILocationService
 
 Interfaz para servicios de geolocalización externos
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| validateLocation | Boolean | Valida si las coordenadas están dentro de Lima Metropolitana |
-| getAddress FromCoordinates | String | Convierte coordenadas GPS en dirección textual |
-| getDistrict FromCoordinates | String | Obtiene el distrito basado en coordenadas |
-| calculateDistance | Double | Calcula distancia entre dos ubicaciones |
+| **Métodos**                 |                     |
+| --------------------------- | ------------------- | ------------------------------------------------------------ |
+| **Nombre**                  | **Tipo de retorno** | **Descripción**                                              |
+| validateLocation            | Boolean             | Valida si las coordenadas están dentro de Lima Metropolitana |
+| getAddress FromCoordinates  | String              | Convierte coordenadas GPS en dirección textual               |
+| getDistrict FromCoordinates | String              | Obtiene el distrito basado en coordenadas                    |
+| calculateDistance           | Double              | Calcula distancia entre dos ubicaciones                      |
 
 #### INotificationService
 
 Interfaz para servicios de notificaciones en tiempo real
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| sendStatusUpdate Notification | Boolean | Envía notificación de cambio de estado via WebSocket |
-| sendComment Notification | Boolean | Envía notificación de nuevo comentario |
-| sendAssignment Notification | Boolean | Notifica asignación de incidencia a personal municipal |
-| updateNotification Badge | Boolean | Actualiza contador de notificaciones en tiempo real |
+| **Métodos**                   |                     |
+| ----------------------------- | ------------------- | ------------------------------------------------------ |
+| **Nombre**                    | **Tipo de retorno** | **Descripción**                                        |
+| sendStatusUpdate Notification | Boolean             | Envía notificación de cambio de estado via WebSocket   |
+| sendComment Notification      | Boolean             | Envía notificación de nuevo comentario                 |
+| sendAssignment Notification   | Boolean             | Notifica asignación de incidencia a personal municipal |
+| updateNotification Badge      | Boolean             | Actualiza contador de notificaciones en tiempo real    |
 
 ### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
 
@@ -2489,22 +2494,39 @@ El diagrama de base de datos define la estructura de persistencia específica de
 #### 5.3.6.2. Bounded Context Database Design Diagram
 
 # Capítulo VI: Solution UX Design
+
 ## 6.1. Style Guidelines.
+
 ### 6.1.1. General Style Guidelines.
+
 ### 6.1.2. Web, Mobile & Devices Style Guidelines.
+
 ## 6.2. Information Architecture.
+
 ### 6.2.2. Labeling Systems.
+
 ### 6.2.3. Searching Systems.
+
 ### 6.2.4. SEO Tags and Meta Tags.
+
 ### 6.2.5. Navigation Systems.
+
 ## 6.3. Landing Page UI Design.
+
 ### 6.3.1. Landing Page Wireframe.
+
 ### 6.3.2. Landing Page Mock-up.
+
 ## 6.4. Applications UX/UI Design.
+
 ### 6.4.1. Applications Wireframes.
+
 ### 6.4.2. Applications Wireflow Diagrams.
+
 ### 6.4.2. Applications Mock-ups.
+
 ### 6.4.3. Applications User Flow Diagrams.
+
 ## 6.5. Applications Prototyping.
 
 # Conclusiones
