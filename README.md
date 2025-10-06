@@ -281,7 +281,7 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
 | ![Perfil de Barbara](./images/profiles/barbara_profile.jpg) | **Nombre y Apellido:** Barbara Susana Quezada Portalatino<br>**Código:** U202211800<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Barbara Susana Quezada Portalatino, cursando el séptimo ciclo de la carrera de software, trabajo mayormente bajo un rol de líder que me ayuda a poder organizar no solo la ideas de mi grupo sino que las ideas aterricen en la ejecución. Soy una persona muy disciplinada y detallista.                                                                                                                                                                                                                                                                                                                                                |
 | ![Perfil de Jimena](./images/profiles/jimena_profile.jpg)   | **Nombre y Apellido:** Jimena Tamara Cama Salvatierra<br>**Código:** U2022210778<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y actualmente estoy cursando el 8vo ciclo. Me considero una persona curiosa, determinada y organizada. Con la experiencia en proyectos de startup y trabajos en equipo, trabajaré junto a mis compañeros para lograr un óptimo resultado del proyecto.                                                                                                                                                                                                                                                                                                                     |
 | ![Perfil de Jair](./images/profiles/jair_profile.jpg)       | **Nombre y Apellido:** Jair Alexander Castillo Castillo<br>**Código:** U202211390<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y me encuentro en el 7to ciclo. Me considero una persona dedicada, comprensiva y metódica. Con mis habilidades de liderazgo y mi capacidad para trabajar en equipo en un ambiente de respeto, estoy segura de que podré dirigir la implementación de la startup de nuestro proyecto de manera exitosa.                                                                                                                                                                                                                                                                    |
-| ![Perfil de Franz](./images/profiles/steve_profile.jpg)     | **Nombre y Apellido:** Steve Roger Castillo Robles<br>**Código:** U202012378<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Steve, estudiante del 9no ciclo de Ingeniería de Software y desarrollador Full-Stack, con experiencia en tecnologías como Angular, React.js, Next.js, Spring Boot, Flutter, PostgreSQL y servicios cloud como Azure, Firebase y Supabase. Mi experiencia abarca desde el desarrollo y migración de aplicaciones hasta el diseño y optimización de bases de datos, aplicando principios de arquitectura limpia, DDD y metodologías ágiles como Scrum. Me destaco por mi capacidad para trabajar en equipo, mi enfoque metódico y mi constante pasión por aprender y aplicar nuevas tecnologías para llevar los proyectos al siguiente nivel. |
+| ![Perfil de Franz](./images/profiles/steve_profile.jpg)     | **Nombre y Apellido:** Steve Roger Castillo Robles<br>**Código:** U202012378<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Steve, estudiante del 9no ciclo de Ingeniería de Software y desarrollador Full-Stack, con experiencia en tecnologías como Angular, React.js, Next.js, Spring Boot, Flutter, PostgreSQL y servicios Supabase. Mi experiencia abarca desde el desarrollo y migración de aplicaciones hasta el diseño y optimización de bases de datos, aplicando principios de arquitectura limpia, DDD y metodologías ágiles como Scrum. Me destaco por mi capacidad para trabajar en equipo, mi enfoque metódico y mi constante pasión por aprender y aplicar nuevas tecnologías para llevar los proyectos al siguiente nivel. |
 
 ## 1.2. Solution Profile
 
@@ -1048,10 +1048,10 @@ Las siguientes User Stories representan las funcionalidades primarias que tienen
 
 | Epic/User Story ID | Título | Impacto Arquitectónico | Relacionado con (Epic ID) |
 |-------------------|--------|------------------------|-------------------------|
-| **US01/US02** | **Gestión de Autenticación Municipal** | Sistema de autenticación diferenciado para personal municipal con integración Azure AD | E01 |
+| **US01/US02** | **Gestión de Autenticación Municipal** | Sistema de autenticación diferenciado para personal municipal | E01 |
 | **US13/US14** | **Gestión de Autenticación Ciudadana** | Sistema de registro y autenticación para ciudadanos con validación de email | E01 |
 | **TS07** | **WebSocket para Notificaciones** | Comunicación en tiempo real para actualizaciones de estado y badges de notificación | E01 |
-| **TS04** | **Georreferenciación Azure Maps** | Integración con servicios de mapas para visualización geoespacial y heatmaps | E05 |
+| **TS04** | **Georreferenciación MapBox** | Integración con servicios de mapas para visualización geoespacial y heatmaps | E05 |
 
 Aquí están las secciones actualizadas para reflejar los cambios en Primary Functionality:
 
@@ -1098,7 +1098,7 @@ En esta sección se incluye la especificación de la primera versión de los esc
 | **Atributo de Calidad** | Escalabilidad |
 | **Fuente de Estímulo** | Múltiples usuarios durante emergencia |
 | **Estímulo** | 10,000 ciudadanos intentan reportar incidencias simultáneamente durante una emergencia urbana que afecta múltiples distritos de Lima. |
-| **Artefacto** | Arquitectura modular monolítica desplegada en Azure |
+| **Artefacto** | Arquitectura modular monolítica desplegada |
 | **Entorno** | Pico de carga excepcional durante emergencia que supera 10x el tráfico normal |
 | **Respuesta** | El sistema mantiene operatividad sin degradación significativa, procesando todos los reportes y mantiendo tiempos de respuesta aceptables. |
 | **Medida de respuesta** | Capacidad de procesar 10,000+ reportes por hora manteniendo latencia <5 segundos sin pérdida de datos. |
@@ -1155,12 +1155,12 @@ Las siguientes restricciones técnicas han sido establecidas por el cliente y so
 
 | Technical Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 |-------------------|--------|-------------|------------------------|-------------------------|
-| TS01 | Infraestructura Azure | Como equipo de desarrollo, quiero desplegar la plataforma exclusivamente en servicios de Microsoft Azure para cumplir con las políticas de infraestructura municipal establecidas y garantizar soporte técnico oficial. | **Escenario 1:** Despliegue exitoso en Azure<br>**Dado que** necesitamos cumplir políticas municipales de infraestructura cloud<br>**Cuando** desplegamos el backend y base de datos<br>**Entonces** debe utilizarse Azure App Service para el backend y Azure Database para almacenamiento<br>**Y** todos los servicios deben estar dentro del ecosistema Azure<br><br>**Escenario 2:** Validación de servicios<br>**Dado que** la infraestructura debe ser exclusivamente Azure<br>**Cuando** se configura el entorno de producción<br>**Entonces** no debe utilizarse ningún servicio de AWS, Google Cloud u otros proveedores<br>**Y** debe documentarse la justificación de cada servicio Azure seleccionado | Todos los Epics |
-| TS02 | Base de Datos Escalable | Como equipo técnico, quiero configurar una base de datos en Azure SQL Database con escalabilidad automática para manejar el crecimiento de información de incidencias y usuarios. | **Escenario 1:** Configuración inicial exitosa<br>**Dado que** se crea la base de datos en Azure SQL<br>**Cuando** se conecta con la plataforma<br>**Entonces** queda lista para almacenar información<br><br>**Escenario 2:** Escalabilidad automática<br>**Dado que** aumenta la cantidad de registros<br>**Cuando** la carga supera el umbral<br>**Entonces** la base de datos escala automáticamente | Todos los Epics |
+| TS01 | Infraestructura | Como equipo de desarrollo, quiero desplegar la plataforma  para cumplir con las políticas de infraestructura municipal establecidas y garantizar soporte técnico oficial. | **Escenario 1:** Despliegue exitoso <br>**Dado que** necesitamos cumplir políticas municipales de infraestructura <br>**Cuando** desplegamos el backend y base de datos<br>**Entonces** debe utilizarse  App Service para el backend y  Supabase para almacenamiento<br>**Y** todos los servicios deben estar dentro del ecosistema <br><br>**Escenario 2:** Validación de servicios<br>**Dado que** la infraestructura debe ser exclusivamente escalable<br>**Cuando** se configura el entorno de producción<br>**Entonces** no debe utilizarse ningún servicio de AWS, Google Cloud u otros proveedores<br>**Y** debe documentarse la justificación de cada servicio  seleccionado | Todos los Epics |
+| TS02 | Base de Datos Escalable | Como equipo técnico, quiero configurar una base de datos en Supabase con escalabilidad automática para manejar el crecimiento de información de incidencias y usuarios. | **Escenario 1:** Configuración inicial exitosa<br>**Dado que** se crea la base de datos en Supabase<br>**Cuando** se conecta con la plataforma<br>**Entonces** queda lista para almacenar información<br><br>**Escenario 2:** Escalabilidad automática<br>**Dado que** aumenta la cantidad de registros<br>**Cuando** la carga supera el umbral<br>**Entonces** la base de datos escala automáticamente | Todos los Epics |
 | TS03 | Frontend Web Angular | Como desarrollador frontend, quiero implementar el dashboard municipal en Angular para mantener coherencia con los sistemas municipales existentes y aprovechar la expertise del equipo en este framework. | **Escenario 1:** Compatibilidad con sistemas municipales<br>**Dado que** existen sistemas Angular en la municipalidad<br>**Cuando** desarrollo el dashboard municipal<br>**Entonces** debe usar Angular 15+ con TypeScript<br>**Y** debe ser compatible con navegadores Chrome, Firefox y Edge<br><br>**Escenario 2:** Integración API exitosa<br>**Dado que** necesito conectar con el backend<br>**Cuando** implemento las funcionalidades del dashboard<br>**Entonces** debe integrarse correctamente con APIs REST<br>**Y** debe manejar errores de conectividad de forma elegante | E05 |
 | TS04 | Aplicación Móvil Flutter | Como desarrollador móvil, quiero desarrollar la aplicación ciudadana en Flutter para soportar Android e iOS con una sola base de código y reducir costos de desarrollo y mantenimiento. | **Escenario 1:** Multiplataforma exitosa<br>**Dado que** necesito soporte para Android e iOS<br>**Cuando** desarrollo la aplicación móvil<br>**Entonces** debe usar Flutter 3.0+ con Dart 3.0+<br>**Y** debe funcionar nativamente en ambas plataformas<br><br>**Escenario 2:** Acceso a funcionalidades nativas<br>**Dado que** requiero acceso a cámara y GPS<br>**Cuando** implemento el reporte de incidencias<br>**Entonces** debe acceder correctamente a hardware del dispositivo<br>**Y** debe solicitar permisos de forma clara al usuario | E02 |
 | TS05 | Comunicación WebSocket | Como developer, quiero implementar comunicación en tiempo real mediante WebSocket para las notificaciones, para que los badges de incidentes y los mensajes se actualicen automáticamente sin necesidad de refrescar la aplicación. | **Escenario 1:** Envío de notificación en tiempo real<br>**Dado que** se registra un nuevo incidente<br>**Cuando** el servidor lo transmite mediante WebSocket<br>**Entonces** el cliente recibe la notificación automáticamente<br><br>**Escenario 2:** Actualización de badge en tiempo real<br>**Dado que** hay un incidente nuevo<br>**Cuando** el cliente recibe el evento<br>**Entonces** el badge del ícono de notificaciones incrementa su valor<br><br>**Escenario 3:** Reinicio de badge<br>**Dado que** el badge muestra incidentes pendientes<br>**Cuando** el usuario abre el módulo de notificaciones<br>**Entonces** el badge se reinicia a 0 | E04 |
-| TS06 | Georreferenciación Azure Maps | Como equipo de desarrollo, quiero integrar servicios de mapas de Azure Maps para mostrar incidencias en un tablero geoespacial con mapas de calor interactivos. | **Escenario 1:** Visualización en mapa<br>**Dado que** existen incidencias registradas<br>**Cuando** se abre el tablero<br>**Entonces** se muestran las incidencias en el mapa con su ubicación georreferenciada<br><br>**Escenario 2:** Generación de mapas de calor<br>**Dado que** el usuario necesita ver concentraciones<br>**Cuando** selecciona vista de mapa de calor<br>**Entonces** se generan visualizaciones de densidad por zona geográfica | E05 |
+| TS06 | Georreferenciación MapBox | Como equipo de desarrollo, quiero integrar servicios de mapas de MapBox para mostrar incidencias en un tablero geoespacial con mapas de calor interactivos. | **Escenario 1:** Visualización en mapa<br>**Dado que** existen incidencias registradas<br>**Cuando** se abre el tablero<br>**Entonces** se muestran las incidencias en el mapa con su ubicación georreferenciada<br><br>**Escenario 2:** Generación de mapas de calor<br>**Dado que** el usuario necesita ver concentraciones<br>**Cuando** selecciona vista de mapa de calor<br>**Entonces** se generan visualizaciones de densidad por zona geográfica | E05 |
 
 ---
 
@@ -1171,33 +1171,95 @@ Resultado del proceso de Quality Attribute Workshop, priorizando drivers por imp
 |---------------|------------|-----------------|----------------|-----------------|
 | **QA01** | Disponibilidad durante Alta Concurrencia | Mantener 99.5% disponibilidad mensual procesando reportes en <3 segundos durante picos de 5,000+ usuarios simultáneos | High | High |
 | **QA02** | Rendimiento Dashboard Geoespacial | Generar mapas de calor interactivos en <2 segundos con filtros temporales para 500+ reportes acumulados | High | High |
-| **C01** | Restricción Tecnológica Azure | Desplegar exclusivamente en Azure cumpliendo políticas municipales de infraestructura cloud | High | Medium |
+| **C01** | Restricción Tecnológica  | Desplegar exclusivamente  cumpliendo políticas municipales de infraestructura cloud | High | Medium |
 | **FD01** | Reporte con Geolocalización Flutter | Permitir captura automática de ubicación GPS y fotografía mediante app Flutter multiplataforma | High | Medium |
 | **FD02** | Gestión de Estados de Incidencias | Sistema de actualización de estados con notificaciones automáticas bidireccionales entre ciudadanos y personal municipal | High | Medium |
 | **QA03** | Escalabilidad durante Emergencias | Soportar 10,000+ reportes por hora manteniendo latencia <5 segundos durante emergencias urbanas | High | High |
 | **QA04** | Experiencia de Usuario Móvil | Lograr que 90% de usuarios nuevos completen reportes en <40 segundos con interfaz Flutter intuitiva | High | Medium |
 | **C02** | Frontend Angular Municipal | Desarrollar dashboard web en Angular para coherencia con sistemas municipales existentes | Medium | Low |
 | **C03** | Comunicación WebSocket Tiempo Real | Implementar notificaciones automáticas con badges dinámicos para transparencia del proceso municipal | Medium | Medium |
-| **C04** | Georreferenciación Azure Maps | Integrar Azure Maps para visualización geoespacial y generación de mapas de calor interactivos | Medium | Medium |
+| **C04** | Georreferenciación MapBox | Integrar MapBoxpara visualización geoespacial y generación de mapas de calor interactivos | Medium | Medium |
 | **QA05** | Interoperabilidad Municipal | Facilitar integración con sistemas SIG municipales mediante APIs compatibles con estándares GeoJSON y OGC | Medium | Medium |
 | **QA06** | Seguridad de Datos Ciudadanos | Proteger información personal y prevenir reportes maliciosos mediante autenticación robusta | Medium | High |
 
+
+### 4.1.3. Architectural Design Decisions
+Durante el Quality Attribute Workshop, el equipo analizó los Architectural Drivers seleccionados para la solución LimaUrban, evaluando distintas tácticas y patrones de diseño para asegurar su cumplimiento. Se analizaron patrones como MVC (aplicado como MVT en Django), arquitectura en Capas y Cliente-Servidor. A continuación, se detallan los pros y contras de cada patrón respecto a cada Driver:
+
+| Driver ID | Título de Driver | MVC / MVT | Capas | Cliente-Servidor |
+| :--- | :--- | :--- | :--- | :--- |
+| | | **Pro** | **Con** | **Pro** | **Con** | **Pro** | **Con** |
+| **QA01** | **Disponibilidad** | Permite separar lógica de negocio y datos, reduciendo el impacto de fallos en la presentación. | La sincronización de datos en tiempo real entre el modelo y la vista puede ser compleja y propensa a fallos. | Permite distribuir la carga en capas independientes (ej. web, aplicación, datos), mejorando la disponibilidad general. | Un fallo en una capa intermedia puede afectar la operación global del sistema si no hay redundancia. | Permite operación continua en el cliente (Flutter) incluso ante fallas parciales del servidor . | Dependencia de una conexión de red continua al servidor para la mayoría de las funcionalidades. |
+| **QA04** | **Usabilidad** | Facilita el desarrollo de interfaces de usuario (vistas) intuitivas y desacopladas de la lógica de negocio. | Si la comunicación entre controlador y vista no es eficiente, puede aumentar la latencia y afectar la fluidez. | Optimiza cada capa para su propósito (ej. UI, lógica), mejorando la experiencia del usuario final. | Riesgo de inconsistencias en la experiencia si las capas de presentación (móvil y web) no se coordinan bien. | Permite actualizaciones rápidas de la interfaz de usuario en Flutter/Angular sin afectar el backend. | La latencia de la red puede afectar negativamente la usabilidad si las APIs no están optimizadas para baja conectividad. |
+| **QA06** | **Seguridad** | El controlador actúa como un punto de entrada único, facilitando la aplicación de controles de seguridad y validación. | La protección de múltiples puntos de acceso (APIs) para vistas y modelos puede aumentar la complejidad. | Permite aislar servicios críticos (ej. autenticación) en capas específicas, reforzando la protección. | Aumenta el número de superficies de ataque que requieren monitoreo y defensa (entre-capas). | La comunicación vía TLS/HTTPS asegura el canal entre cliente y servidor. APIs expuestas aumentan el riesgo. | La lógica en el cliente puede ser vulnerable si no se valida adecuadamente en el servidor. |
+| **N/A** | **Modificabilidad** | Separar la lógica facilita cambios localizados (ej. agregar un nuevo tipo de incidencia) sin afectar la presentación. | Puede ser difícil de mantener si los flujos de datos entre Modelo, Vista y Controlador no están bien documentados. | Cambios en una capa (ej. migrar la BD) no deberían afectar a otras si las interfaces están bien definidas. | Cambios que atraviesan múltiples capas pueden volverse costosos si la modularidad no se gestiona bien. | Permite la actualización independiente del backend y las aplicaciones cliente (Flutter/Angular). | Se debe mantener la compatibilidad (versionado de APIs) entre diferentes versiones del cliente y el servidor. |
+
+---
+### 4.1.4. Quality Attribute Scenario Refinements
+Al finalizar el Quality Attribute Workshop, el equipo priorizó los escenarios de calidad más relevantes para la solución LimaUrban, tomando en cuenta su impacto sobre la experiencia de usuario, la estabilidad de la aplicación y la facilidad de mantenimiento. A continuación, se presenta la versión refinada de los escenarios priorizados, ordenados por importancia para el negocio y el proyecto.
+
+#### Scenario Refinement for Scenario 1
+| | |
+| :--- | :--- |
+| **Scenario(s):** | Un ciudadano sin experiencia técnica previa utiliza la aplicación móvil por primera vez para reportar una acumulación de basura en su calle. |
+| **Business Goals:** | Fomentar la adopción de la plataforma y la participación ciudadana a través de una experiencia de reporte simple, rápida e intuitiva. |
+| **Relevant Quality Attributes:** | Usabilidad, Eficiencia. |
+| **Scenario Components** | |
+| *Stimulus:* | El ciudadano abre la aplicación LimaUrban e inicia el proceso para crear un nuevo reporte de incidencia. |
+| *Stimulus Source:* | Ciudadano. |
+| *Environment:* | Aplicación móvil Flutter en un smartphone estándar, con conexión a internet móvil que puede ser intermitente. |
+| *Artifact (if Known):* | Módulo de reporte de incidencias de la aplicación (UI, lógica de captura de foto y GPS). |
+| *Response:* | La aplicación guía al usuario a través de un flujo simple: tomar foto, confirmar ubicación automática y enviar el reporte, mostrando una confirmación inmediata. |
+| **Response Measure:** | El 90% de los usuarios nuevos deben poder completar y enviar su primer reporte en menos de 40 segundos. |
+| **Questions:** | ¿Cómo podemos minimizar los pasos y la entrada manual de datos para acelerar el proceso de reporte? |
+| **Issues:** | Asegurar un flujo de usuario fluido, gestionar correctamente los permisos de cámara y ubicación, y proveer feedback claro y constante al usuario durante el proceso. |
+
+#### Scenario Refinement for Scenario 2
+| | |
+| :--- | :--- |
+| **Scenario(s):** | Un ciudadano intenta reportar un bache en una vía principal durante la hora pico matutina, cuando miles de otros usuarios están activos en el sistema. |
+| **Business Goals:** | Garantizar la fiabilidad y confianza en el sistema, asegurando que todos los reportes de los ciudadanos sean capturados exitosamente, incluso bajo alta demanda. |
+| **Relevant Quality Attributes:** | Disponibilidad, Rendimiento, Escalabilidad. |
+| **Scenario Components** | |
+| *Stimulus:* | El ciudadano envía el formulario de reporte de incidencia desde la aplicación móvil. |
+| *Stimulus Source:* | Ciudadano. |
+| *Environment:* | Operación normal del sistema pero con un pico de carga de más de 5,000 usuarios concurrentes en la infraestructura . |
+| *Artifact (if Known):* | El stack completo de la aplicación: cliente Flutter, API Gateway, backend Django y base de datos supabase |
+| *Response:* | El sistema recibe la solicitud, procesa los datos, almacena la imagen en supabase, guarda el registro en la base de datos y devuelve un mensaje de éxito al dispositivo del usuario. |
+| **Response Measure:** | El tiempo desde el envío hasta la confirmación en pantalla no debe superar los 3 segundos en el 99.5% de los casos durante las horas pico. |
+| **Questions:** | ¿Cómo podemos garantizar que la infraestructura escale de manera automática y eficiente para manejar los picos de carga? |
+| **Issues:** | Optimizar las consultas a la base de datos, gestionar el almacenamiento eficiente de un alto volumen de imágenes y prevenir cuellos de botella en la API. |
+
+#### Scenario Refinement for Scenario 3
+| | |
+| :--- | :--- |
+| **Scenario(s):** | El personal municipal cambia el estado de una incidencia de "Recibido" a "En Proceso", y el ciudadano que la reportó necesita ser informado inmediatamente. |
+| **Business Goals:** | Aumentar la transparencia del proceso municipal y mejorar la comunicación con el ciudadano, reduciendo la incertidumbre y la necesidad de consultas manuales. |
+| **Relevant Quality Attributes:** | Rendimiento, Usabilidad. |
+| **Scenario Components** | |
+| *Stimulus:* | El sistema detecta una actualización en el campo de estado de un registro de incidencia en la base de datos. |
+| *Stimulus Source:* | Sistema (iniciado por una acción del personal municipal). |
+| *Environment:* | Operación normal con múltiples ciudadanos y personal municipal conectados simultáneamente. El ciudadano tiene la app instalada. |
+| *Artifact (if Known):* | Módulo de notificaciones (basado en WebSockets) y el servicio de notificaciones push de la aplicación móvil. |
+| *Response:* | El sistema genera y envía una notificación push inmediata al dispositivo del ciudadano informando sobre el cambio de estado. |
+| **Response Measure:** | El 95% de las notificaciones de cambio de estado deben ser entregadas en el dispositivo del usuario en menos de 5 segundos tras la actualización. |
+| **Questions:** | ¿Cómo asegurar la entrega de notificaciones si el dispositivo del usuario está temporalmente offline? |
+| **Issues:** | Implementar un servicio de WebSockets robusto y escalable, y diseñar un mecanismo de reintentos o una cola de notificaciones para manejar fallas en la red o dispositivos desconectados. |
 
 ## 4.2. Strategic-Level Domain-Driven Design
 
 El proceso de **Domain-Driven Design** aplicado en Urban Lima nos permitió organizar el dominio de la solución en áreas delimitadas de responsabilidad. Esta división se realizó en dos fases: primero con la sesión de **EventStorming**, donde se visualizaron los eventos centrales del sistema y sus relaciones, y posteriormente con el **Candidate Context Discovery**, donde se definieron los **Bounded Contexts** específicos del proyecto.
 
-- **Miro Board - Event Storming y DDD:** [Tablero de Event-Storming](https://miro.com/welcomeonboard/ek8ya3dQQW54WFdodkVEckNPNWVxUmlEVURYKytJVVpndXB5dklQbGVQY3ZydjVIV2FUdkpROG81V1krWThYSzFqQXF0NHMxanZHYWJtUmM1RTgzTy9lUnk0bFdmNkVFWnFhamo2cEJaZ2xEN1BOQzBDUkN0M205eDFLclN3N3VNakdSWkpBejJWRjJhRnhhb1UwcS9BPT0hdjE=?share_link_id=250207850579)
+- **Miro Board - Event Storming y DDD:** [Tablero de Event-Storming](https://miro.com/welcomeonboard/a1I1RjhRK2JtNVA3bGRWbC82M1ZtTGtlTE1Dd2h5YnZIVHpacXhMV3VieDI3T3kwbU1jMDBFWmVCZGRhN0hDQ0JDeSt2N0JwMisrSVNrMjFzdk1ZLytObXJSWFBrMFA2QW9PUXFWbzVaYmxtRDN0eENrazQxcjVITUpkVzhtQU5zVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=721662336048)
 
 
 ### 4.2.1. EventStorming
 La sesión de EventStorming se centró en mapear los flujos clave del sistema a partir de las historias de usuario priorizadas. Durante la dinámica se identificaron los siguientes elementos relevantes para el proyecto:
-![event-storming](./images/bounded/event-storming.png)
+![event-storming](./images/bounded/event-storming-corregido.jpg)
 
 - **Eventos principales**: *Usuario municipal registrado*, *Ciudadano registrado*, *Sesión iniciada*, *Incidencia creada*, *Estado actualizado*, *Reporte exportado*, *Mapa geoespacial generado*.  
 - **Comandos clave**: *Registrar usuario*, *Iniciar sesión*, *Reportar incidencia con foto y ubicación*, *Actualizar estado*, *Asignar prioridad*, *Generar reporte CSV*.  
 - **Agregados principales**: *Usuario*, *Incidencia*, *Reporte*.  
-- **Sistemas externos**: *Azure Active Directory* (autenticación), *Azure SQL Database* (persistencia y escalabilidad), *Azure Maps* (georreferenciación).  
 
 El análisis permitió seguir una línea temporal desde el registro de los actores (municipales y ciudadanos), la creación y gestión de incidencias, hasta la explotación de la información a nivel de reportes y dashboards. Con este mapeo se identificaron dependencias críticas (ejemplo: no es posible registrar incidencias sin un usuario autenticado) y se evidenciaron las transiciones que marcan puntos de separación natural dentro del sistema.
 
@@ -1206,27 +1268,20 @@ El análisis permitió seguir una línea temporal desde el registro de los actor
 A partir del EventStorming, se llevó a cabo la sesión de Candidate Context Discovery, cuyo objetivo fue organizar los eventos y comandos en **Bounded Contexts** que respondieran a responsabilidades específicas. El resultado fue la definición de cuatro contextos estratégicos en Urban Lima:
 
 #### IAM Context
-Este contexto agrupa todo lo relacionado con la **gestión de identidades y accesos**. Incluye los procesos de registro y autenticación tanto para ciudadanos como para personal municipal. También contempla la integración con **Azure Active Directory** para reforzar la seguridad y garantizar la administración centralizada de credenciales. Su relevancia radica en ser el punto de entrada seguro a la plataforma.
-![event-storming](./images/bounded/event-storming4.png)
+Este contexto agrupa todo lo relacionado con la **gestión de identidades y accesos**. Incluye los procesos de registro y autenticación tanto para ciudadanos como para personal municipal. Para reforzar la seguridad se tendra la administración centralizada de credenciales. Su relevancia radica en ser el punto de entrada seguro a la plataforma.
+![event-storming](./images/event-storming-corregido-iam.jpg)
 
 #### Incidencias Context
-Se ocupa de todos los procesos de **registro, autenticación y control de acceso** tanto para ciudadanos como para personal municipal. Aquí se definieron funcionalidades como la creación de cuentas, inicio y cierre de sesión, y la validación de credenciales a través de Azure Active Directory.  
+Se ocupa de todos los procesos de **registro, autenticación y control de acceso** tanto para ciudadanos como para personal municipal. Aquí se definieron funcionalidades como la creación de cuentas, inicio y cierre de sesión, y la validación de credenciales.  
 
-![event-storming](./images/bounded/event-storming3.png)
+![event-storming](./images/event-storming-corregido-incident.jpg)
 
 En Urban Lima, este contexto asegura que la plataforma solo sea utilizada por usuarios autorizados, protegiendo la información sensible y garantizando el cumplimiento de políticas de seguridad municipales.
 
-#### Analytics Context
-Reúne las capacidades de **generación de reportes y análisis de datos**. Abarca la visualización de totales de incidencias, filtros por múltiples criterios y la construcción de dashboards de seguimiento.  
-
-![event-storming](./images/bounded/event-storming2.png)
-
-En Urban Lima, este contexto es clave para que la municipalidad pueda tomar decisiones informadas, asignar recursos y medir la efectividad de sus intervenciones. Su delimitación independiente permite concentrar las reglas de negocio relacionadas con el análisis, sin mezclarlas con la operación diaria de incidencias.
-
 #### Location Context
-Enfocado en la **dimensión geoespacial** de la información, este contexto integra Azure Maps para mostrar incidencias en mapas de calor, aplicar filtros geográficos y permitir la exploración espacial de los reportes.  
+Enfocado en la **dimensión geoespacial** de la información, este contexto integra MapBox para mostrar incidencias en mapas de calor, aplicar filtros geográficos y permitir la exploración espacial de los reportes.  
 
-![event-storming](./images/bounded/event-storming1.png)
+![event-storming](./images/event-storming-corregido-location.jpg)
 
 Para Urban Lima, este contexto añade un valor diferencial, ya que convierte los reportes ciudadanos en información territorial, facilitando la priorización de zonas críticas y la planificación urbana basada en datos reales.
 
@@ -1265,8 +1320,8 @@ El servicio valida datos, intenta **deduplicar** reportes similares y publica el
 ---
 
 ##### 4) Dashboard geoespacial municipal
-El planificador abre el tablero en el panel y este solicita al **Servicio de Analytics** el heatmap para un rango de fechas.  
-Analytics responde con la URL del **tileset**, leyenda y totales; el panel carga esas capas en el **proveedor de mapas** y renderiza el mapa interactivo.  
+El planificador abre el tablero en el panel y este solicita  el heatmap para un rango de fechas.  
+responde con la URL del **tileset**, leyenda y totales; el panel carga esas capas en el **proveedor de mapas** y renderiza el mapa interactivo.  
 El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones.
 
 ##### **Éxito:** mapa interactivo con métricas agregadas.  
@@ -1301,11 +1356,10 @@ El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones
 
 ## 4.2.5. Context Mapping
 
-Con los Bounded Contexts identificados (IAM, Incidencias, Analytics y Location), se procedió a construir los **context maps**, es decir, las visualizaciones que permiten entender cómo se relacionan entre sí. El proceso incluyó la exploración de alternativas de agrupamiento y separación, considerando preguntas como:
+Con los Bounded Contexts identificados (IAM, Incidencias y Location), se procedió a construir los **context maps**, es decir, las visualizaciones que permiten entender cómo se relacionan entre sí. El proceso incluyó la exploración de alternativas de agrupamiento y separación, considerando preguntas como:
 
 - ¿Qué ocurriría si el manejo de georreferenciación se integrara al contexto de incidencias en lugar de estar aislado?
-- ¿Qué beneficios tendría separar el contexto de Analytics para evitar sobrecargar el de Incidencias?
-- ¿Es necesario que IAM tenga dependencia directa con Analytics o basta con su relación con Incidencias?
+- ¿Es necesario que IAM tenga dependencia directa con Location o basta con su relación con Incidencias?
 
 Estas reflexiones permitieron validar que la división propuesta mantiene un balance entre independencia y colaboración, reduciendo acoplamientos innecesarios y asegurando que cada contexto tenga un propósito bien definido.
 
@@ -1360,10 +1414,6 @@ El análisis de alternativas condujo al siguiente Context Map, que establece las
 - **Incidencias → Location:** Incidencias provee coordenadas para visualización
 - **Location → Analytics:** Location provee mapas de calor para dashboards
 
-##### 2. Conformist Pattern
-- **IAM ← Azure AD:** Adopta completamente el modelo de autenticación de Azure
-- **Location ← Azure Maps:** Se conforma a las APIs y estándares de Azure Maps
-
 ##### 3. Anti-corruption Layer Pattern
 - **Incidencias ← EmailJS:** Capa de abstracción para servicios de email externos
 
@@ -1390,7 +1440,6 @@ La arquitectura de Context Mapping seleccionada logra:
 2. **Bajo Acoplamiento:** Las dependencias están claramente definidas y son unidireccionales
 3. **Alta Cohesión:** Las capacidades dentro de cada contexto están relacionadas
 4. **Escalabilidad:** Permite evolución independiente de cada contexto
-5. **Integración Externa:** Maneja apropiadamente las dependencias con servicios de Azure
 
 Esta estructura facilita el desarrollo en equipos paralelos, el testing independiente y futuras migraciones hacia microservicios si el proyecto escala significativamente.
 
