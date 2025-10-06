@@ -3444,35 +3444,431 @@ Vista materializada con estadísticas pre-calculadas por distrito para optimizar
 
 ### 6.1.1. General Style Guidelines.
 
+En el General Style Guideline se reuniren los lineamientos visuales y de diseño que debe seguir un proyecto para mantener coherencia en su identidad. Su propósito principal es asegurar que todos los elementos gráficos, como logotipo, tipografía, paleta de colores, cuerpo de texto y botones, se utilicen de manera consistente, lo que refuerza la imagen del proyecto y facilita la experiencia del usuario. Además, de funcionar como una guía de referencia tanto para diseñadores como para desarrolladores, evitando inconsistencias y permitiendo que el producto evolucione sin perder unidad visual ni funcional.
+
+![general_style_guideline](images/style_guideline/general_style_guideline.png)
+<br>
+
+Se muestra el logo que refuerza el reconocimiento de marca y se utiliza en todas las interfaces principales. El _body text_ emplea una tipografía clara y legible, por ello se eligió Space Grotesk. La paleta de colores está cuidadosamente seleccionada para transmitir la personalidad del proyecto, aplicando tonos principales y secundarios de manera uniforme en fondos, textos y elementos destacados. Los botones se diseñan con estilos coherentes, respetando la paleta definida y manteniendo estados diferenciados que garantizan una experiencia de interacción uniforme.
+
+
 ### 6.1.2. Web, Mobile & Devices Style Guidelines.
+
+**Mobile Style Guideline**
+
+Esta guía establece los principios de diseño y usabilidad para aplicaciones móviles, con el objetivo de mantener consistencia visual y funcional en todas las pantallas. Su finalidad es optimizar la experiencia del usuario en dispositivos móviles, considerando aspectos clave como legibilidad en pantallas reducidas, uso eficiente del espacio, interacción táctil y navegación intuitiva. Este documento sirve como referencia para diseñadores y desarrolladores, garantizando que la aplicación móvil se construya bajo estándares unificados que refuercen la identidad del proyecto, aseguren accesibilidad y ofrezcan una experiencia fluida y coherente en diferentes tamaños de pantalla y sistemas operativos.
+
+![mobile_style_guideline](images/style_guideline/mobile_style_guideline.png)
+
+En los estilos presentados, se establece la paleta de colores con los colores principales de la aplicación además de la tipografía, el GRID que se usará para la aplicaicón móvil y la barra de navegación, entre otros componentes.
+
+**Web Style Guideline**
+
+En esta sección se defininen los estándares de diseño y presentación para aplicaciones y sitios web, con el objetivo de mantener coherencia visual, funcional y de marca en todas las páginas. Su propósito es guiar a diseñadores y desarrolladores en la implementación de elementos como tipografía, paleta de colores, botones, logotipo y layouts, asegurando que la experiencia del usuario sea uniforme, intuitiva y accesible en distintos navegadores y tamaños de pantalla. Además, esta guía facilita la creación de interfaces consistentes, mejora la usabilidad, refuerza la identidad visual del proyecto y permite que los equipos trabajen de manera alineada y eficiente.
+
+![web_style_guideline](images/style_guideline/web_style_guideline.png)
+
+En los estilos presentados, se establece la paleta de colores con los colores principales de la aplicación además de la tipografía, el GRID que se usará para la aplicaicón web y la barra de navegación, entre otros componentes.
+
 
 ## 6.2. Information Architecture.
 
 ### 6.2.2. Labeling Systems.
 
+<br>Este sistema de etiquetado se integró en nuestro tablero de gestión de tareas (Trello/Jira) y permite identificar rápidamente el tipo de trabajo pendiente ([FEAT], [FIX]), su prioridad ([P1], [P2]) y el módulo involucrado ([UI], [DB]). Por ejemplo, la tarea [FEAT][P1][UI][TODO] Crear pantalla de inicio indica que es una nueva funcionalidad prioritaria de interfaz aún pendiente de desarrollo.<br>
+
+| **Etiqueta**            | **Descripción**               |
+|---------------------|---------------------------|
+| **Tipo de tarea**       |                           |
+| [FEAT]              | Nueva característica      |
+| [FIX]               | Corrección de errores     |
+| [REFACTOR]          | Refactorización de código |
+| [DOCS]              | Documentación             |
+| [TEST]              | Pruebas                   |
+| **Prioridad**           |                           |
+| [P1]                | Alta prioridad            |
+| [P2]                | Prioridad media           |
+| [P3]                | Baja prioridad            |
+| **Módulo o componente** |                           |
+| [UI]                | Interfaz de usuario       |
+| [API]               | Lógica de la API          |
+| [DB]                | Base de datos             |
+| [AUTH]              | Autenticación             |
+| [PERF]              | Rendimiento               |
+| **Estado**              |                           |
+| [TODO]              | Por hacer                 |
+| [WIP]               | En progreso               |
+| [REVIEW]            | En revisión               |
+| [DONE]              | Completado                |
+
+
+
 ### 6.2.3. Searching Systems.
+
+El sistema de búsqueda propuesto para LimaUrban permitirá a los usuarios personalizar su experiencia de aventurera de acuerdo a sus preferencias. Este sistema facilitará el uso de la aplicación filtrandolo por zona, tipo, prioridad, fecha. Los filtros disponibles serán:
+
+| Nombre del filtro    | Descripción                                                                                                              |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------|
+| Zonas  | Permitirá ver los incidentes por zonas registradas.         |
+| Tipo  | Permitirá organizar por tipo de incidente   |
+| Prioridad    | Permitirá filtrar por prioridad de incidentes.    |
+| Fecha        | Permitirá filtrar por fecha en la que se cargó el incidente.     |
+
+
 
 ### 6.2.4. SEO Tags and Meta Tags.
 
+La implementación de estas etiquetas ayudan al posicionamiento de la página en los motores de búsqueda.
+Título
+Indica el tema de la página, debe ser corto y descriptivo, debe mantenerse entre los 55 y 60 caracteres.
+
+    <title>LimaUrban</title>
+
+**Descripción** <br>
+Es una breve descripción  de la página.
+
+	<meta name= “description” content= “loremipsum loremipsum”/>
+
+Robots
+Indican a los motores de búsqueda de lo que deben hacer con la página.
+index/noindex: Indica al motor de búsqueda si debe mostrar la página en el SERP o no.
+follow/nofollow: Les dice a los motores qué hacer con los enlaces en ese objetivo.
+Tipo de contenido
+Es útil para que los motores de búsqueda identifiquen el idioma de la página.
+
+    <meta http-equiv= “tipo de contenido” content= “text/html charset-utf-8” />
+    <meta http-equiv= “tipo de contenido” content= “text/html charset-ISO-6059-1” />
+
+Searchbox de enlaces
+Se utiliza para controlar el cuadro de búsqueda de enlaces del sitio de Google
+
+    <meta name= “google” content = “nositelinkssearchbox”/>
+
+Viewport Meta Tag 
+Es crucial para asegurar que el contenido se vea bien en dispositivos móviles.
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 ### 6.2.5. Navigation Systems.
+
+En la app móvil para los ciudadanos, se optó por el patrón de navegación tipo bottom bar, facilitando el acceso a secciones críticas con el pulgar. En la web para las autoridades, se emplea una barra lateral fija, siguiendo principios de navegación persistente, para evitar pérdida de contexto. Este diseño prioriza las tareas más frecuentes: explorar, buscar y gestionar cuenta, con énfasis visual en los íconos y retroalimentación activa al seleccionar secciones.
+
+**Ciudadano**
+| Nombre | Descripción                                                                                                              |
+|--------|--------------------------------------------------------------------------------------------------------------------------|
+| Inicio | Le muestra un resumen personal de su interacción en la aplicación y su actividad reciente.                               |
+| Incidencias | El ciudadano podrá ver pertes cercanos registrados por otros ciudadanos.                                            |
+| Reportar | El ciudadano podrá subir una foto con descripción adjunta para reportar una incidencia.                                |
+| Perfil | Este apartado permite que el usuario gestione su cuenta.                                                                 |
+<br>
+
+**Autoridad**
+| Nombre       | Descripción                                                                                          |
+|--------------|------------------------------------------------------------------------------------------------------|
+| Incidencias  | Le muestra los incidentes de todos los ciudadanos.                                                   |
+| Mapa | Mostrará un mapa y un mapa de calor con las incidencias.                                                     |
+| Perfil       | Este apartado permite que el usuario gestione su cuenta.                                             |
+
 
 ## 6.3. Landing Page UI Design.
 
 ### 6.3.1. Landing Page Wireframe.
 
+El wireframe es un esquema estructural de baja a media fidelidad que representa la arquitectura de la información y la disposición de elementos en la landing page de LimaUrban. Utiliza una paleta monocromática de grises para enfocarse únicamente en la estructura, jerarquía y distribución espacial.
+**Características del Wireframe**
+
+Secciones Documentadas:
+- Navbar - Muestra la disposición del logo y menú horizontal
+- Hero - Estructura del título principal, subtítulo y botones CTA
+- About - Layout a dos columnas con bloques de texto e insignia
+- Stats - Grid de 4 elementos con números destacados
+- User Types - Dos tarjetas con listas de funcionalidades
+- CTA - Sección centrada con título y botón
+- Footer - Grid de 4 columnas con diferentes tipos de contenido
+- Leyenda - Explicación de los elementos del wireframe
+
+Planificar la estructura antes de invertir en diseño visual
+Validar la organización de información con el equipo
+Identificar problemas de usabilidad tempranamente
+Comunicar la visión del proyecto a todos los stakeholders
+Establecer prioridades de desarrollo basadas en la jerarquía visual.
+
+![alt text](images/application_wireframes/wireframe_lanidng.png)
+
+
+
 ### 6.3.2. Landing Page Mock-up.
+
+**Descripción General**
+El mockup de la landing page de LimaUrban es una representación visual completa y funcional del sitio web, diseñada con HTML y CSS puro. Este prototipo de alta fidelidad muestra exactamente cómo se verá y comportará la página una vez implementada en producción.
+**Características del Mockup**
+Paleta de Colores Aplicada:
+- #1A1E29 - Color principal para navbar, footer y elementos de fondo oscuro
+- #00C48E - Color de acento para botones, enlaces y elementos destacados
+- #132D46 - Utilizado en títulos y gradientes de secciones especiales
+- #FFFFFF - Fondo principal para mantener limpieza y legibilidad
+
+**Estructura de Contenido:**
+- Navbar fijo - Permanece visible durante el scroll para facilitar la navegación
+- Hero Section - Primera impresión con título impactante y llamados a la acción
+- Sobre Nosotros - Presenta al equipo UPC con layout a dos columnas
+- Estadísticas - Muestra el impacto del proyecto con métricas visuales
+- Tipos de Usuarios - Dos tarjetas diferenciadas para Municipalidades y Ciudadanos
+- CTA Final - Invitación clara a registrarse en la plataforma
+- Footer completo - Información de contacto, enlaces y redes sociales
+
+Este diseño sirve como referencia visual definitiva para desarrolladores, diseñadores y stakeholders. Al ser completamente funcional, permite realizar pruebas de usuario, ajustar detalles visuales y validar la experiencia de usuario antes del desarrollo final.
+
+![alt text](images/applications_mockups/landing_mockup.png)
+
 
 ## 6.4. Applications UX/UI Design.
 
 ### 6.4.1. Applications Wireframes.
 
+#### **Aplicación web**
+
+**Inicio de sesión de la aplicación:** Esta sección es la primera vista que tendrán las autoridades. <br>
+![alt text](images/application_wireframes/inicio_sesión.png)
+
+**Incidentes:** En esta sección se visualizan todos los incidentes registrados. <br>
+![alt text](images/application_wireframes/Incidentes.png) 
+
+**Filtro de incidentes:** En esta sección se visualiza un ejemplo de uno de los filtros de la tabla general de incidentes.<br>
+![alt text](images/application_wireframes/Incidentes-1.png)
+
+**Detalle de incidentes:** En esta sección se visualiza el detalle del incidente junto con los comentarios dejados por la autoridad y por el ciudadano. <br>
+![alt text](images/application_wireframes/Incidentes-2.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa de calor.<br>
+![alt text](images/application_wireframes/Mapa.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa geográfico.<br>
+![alt text](images/application_wireframes/Mapa2.png)
+
+**Perfil municipal** En esta sección las autoridades podrásn ver mas información sobre su cuenta en Lima Urban. <br>
+![alt text](images/application_wireframes/Perfil_municipal.png)
+
+#### **Aplicación móvil**
+
+## 6.4. Applications UX/UI Design
+### 6.4.1. Applications Wireframes
+
+#### **Aplicación web**
+
+**Inicio de sesión de la aplicación:** Esta sección es la primera vista que tendrán las autoridades. <br>
+![alt text](images/application_wireframes/inicio_sesión.png)
+
+**Incidentes:** En esta sección se visualizan todos los incidentes registrados. <br>
+![alt text](images/application_wireframes/Incidentes.png) 
+
+**Filtro de incidentes:** En esta sección se visualiza un ejemplo de uno de los filtros de la tabla general de incidentes.<br>
+![alt text](images/application_wireframes/Incidentes-1.png)
+
+**Detalle de incidentes:** En esta sección se visualiza el detalle del incidente junto con los comentarios dejados por la autoridad y por el ciudadano. <br>
+![alt text](images/application_wireframes/Incidentes-2.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa de calor.<br>
+![alt text](images/application_wireframes/Mapa.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa geográfico.<br>
+![alt text](images/application_wireframes/Mapa2.png)
+
+**Perfil municipal** En esta sección las autoridades podrán ver más información sobre su cuenta en Lima Urban. <br>
+![alt text](images/application_wireframes/Perfil_municipal.png)
+
+#### Aplicación móvil
+
+**Pantalla de inicio (Home):** Vista principal donde el ciudadano puede ver un resumen de su actividad y acceder a las funciones principales de la aplicación. <br>
+![alt text](images/application_wireframes/W-Home.png)
+
+**Captura de incidencia:** Interfaz de la cámara integrada que permite al ciudadano fotografiar la incidencia urbana detectada con guías visuales para una captura óptima. <br>
+![alt text](images/application_wireframes/Camara.png)
+
+**Confirmación de fotografía:** Diálogo que permite al ciudadano revisar la imagen capturada y decidir si mantenerla o tomar una nueva foto antes de proceder con el reporte. <br>
+![alt text](images/application_wireframes/Dialog%20Confirmar.png)
+
+**Procesamiento con IA:** Pantalla de carga que informa al usuario que el sistema está analizando la imagen mediante YOLO para clasificar automáticamente el tipo de incidencia. <br>
+![alt text](images/application_wireframes/Procesando%20la%20IA.png)
+
+**Formulario de reporte:** Pantalla donde el ciudadano completa los detalles del reporte, incluyendo descripción, categoría sugerida por IA y ubicación automática detectada. <br>
+![alt text](images/application_wireframes/Reporte.png)
+
+**Confirmación de reporte enviado:** Diálogo de confirmación que notifica al ciudadano que su reporte ha sido enviado exitosamente y proporciona un número de seguimiento. <br>
+![alt text](images/application_wireframes/Dialog%20Report.png)
+
+**Historial de reportes:** Lista completa de todas las incidencias reportadas por el ciudadano, mostrando estado actual, fecha y tipo de cada reporte para seguimiento personal. <br>
+![alt text](images/application_wireframes/Reportes.png)
+
+
+
 ### 6.4.2. Applications Wireflow Diagrams.
+
+Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
+
+#### **Aplicación web**
+
+**User Goal: Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.** Este objetivo abarca la experiencia del usuario al explorar la página principal de la plataforma.<br>
+![alt text](images/wireflow_diagram/inicio_sesion.png)
+
+**User Goal: Como personal municipal, quiero ver el número total de incidencias registradas para monitorear el volumen general.** Este objetivo refleja la necesidad del usuario de ver un dashboard para la gestión de los incidentes. <br>
+![alt text](images/wireflow_diagram/ver-total-incidencias.png)
+
+**User Goal: Como personal municipal, quiero enviar comentarios en las incidencias para comunicar acciones tomadas.** Este objetivo refleja la necesidad del usuario de ver los detalles del incidente y mantener informado al ciudadano sobre los avances.<br>
+![alt text](images/wireflow_diagram/ver-detalle.png)
+
+**User Goal: Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial.** Este objetivo refleja la necesidad del usuario de ver un dashboard para la gestión de los incidentes.<br>
+![alt text](images/wireflow_diagram/maps.png)
+
+**User Goal: Como personal municipal, quiero ver los detalles de la municipalidad para acceder a información institucional centralizada.** Este objetivo refleja la necesidad del usuario de ver más información sobre su cuenta en LimaUrban. <br>
+![alt text](images/wireflow_diagram/cuenta-personalmunicipal.png)
+
+
+#### **Aplicación móvil**
+
 
 ### 6.4.2. Applications Mock-ups.
 
+#### **Aplicación web**
+
+**Inicio de sesión de la aplicación:** Esta sección es la primera vista que tendrán las autoridades. <br>
+![alt text](images/applications_mockups/inicio_sesión.png)
+
+**Incidentes:** En esta sección se visualizan todos los incidentes registrados. <br>
+![alt text](images/applications_mockups/Incidentes.png)
+
+**Filtro de incidentes:** En esta sección se visualiza un ejemplo de uno de los filtros de la tabla general de incidentes.<br>
+![alt text](images/applications_mockups/Incidentes-1.png)
+
+**Detalle de incidentes:** En esta sección se visualiza el detalle del incidente junto con los comentarios dejados por la autoridad y por el ciudadano. <br>
+![alt text](images/applications_mockups/Incidentes-2.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa de calor.<br>
+![alt text](images/applications_mockups/Mapa.png)
+
+**Mapa de calor:** En la sección de mapas tenemos la vista del mapa geográfico.<br>
+![alt text](images/applications_mockups/Mapa2.png)
+
+**Perfil municipal** En esta sección las autoridades podrásn ver mas información sobre su cuenta en Lima Urban. <br>
+![alt text](images/applications_mockups/Perfil_municipal.png)
+
+
+#### **Aplicación móvil**
+
+**Pantalla de registro:** Mockup de alta fidelidad del proceso de creación de cuenta para nuevos ciudadanos con formulario de registro optimizado para dispositivos móviles. Incluye campos de entrada estilizados para email, contraseña y datos personales básicos, validaciones en tiempo real, políticas de privacidad integradas y diseño centrado en la facilidad de uso con tipografía Space Grotesk y paleta corporativa consistente. <br>
+![alt text](images/applications_mockups/Registrar.png)
+
+**Pantalla de inicio de sesión:** Diseño completo de la interfaz de autenticación con campos de entrada para email y contraseña, opciones de recuperación de cuenta, checkbox para recordar sesión y botones de acción principales claramente diferenciados. Incorpora elementos de seguridad visual, mensajes de error contextuales y acceso rápido al proceso de registro para usuarios nuevos, manteniendo coherencia con la identidad visual establecida. <br>
+![alt text](images/applications_mockups/Inicio%20sesion.png)
+
+**Perfil de usuario:** Mockup completo de la pantalla de perfil personal que permite al ciudadano gestionar su información de cuenta, visualizar estadísticas de reportes realizados y configurar preferencias de notificación. Incluye sección de datos personales editables, resumen de actividad reciente, progreso de reportes históricos, configuraciones de privacidad y opción de cierre de sesión, todo diseñado con elementos visuales consistentes y navegación intuitiva. <br>
+![alt text](images/applications_mockups/Cuenta.png)
+
+**Pantalla principal (Home):** Mockup de alta fidelidad que muestra el diseño final de la pantalla de inicio con colores corporativos, tipografía Space Grotesk y elementos interactivos. Incluye cards de resumen de actividad del usuario, accesos rápidos a funciones principales y feed de actualizaciones de la comunidad. <br>
+![alt text](images/applications_mockups/Home.png)
+
+**Interfaz de cámara:** Diseño completo de la interfaz de captura fotográfica con overlay visual que guía al usuario para obtener imágenes óptimas de incidencias urbanas. Incorpora elementos de UI nativos, botones de acción claramente identificables y indicadores de estado GPS activo para geolocalización automática. <br>
+![alt text](images/applications_mockups/Camara.png)
+
+**Modal de confirmación fotográfica:** Mockup del diálogo modal con diseño visual finalizado que presenta la imagen capturada en preview completo, botones de acción con estilo corporativo (confirmar/rehacer) y opciones de edición básica antes de proceder con el reporte de la incidencia. <br>
+![alt text](images/applications_mockups/Dialog%20Confirmar.png)
+
+**Pantalla de procesamiento IA:** Diseño final de la pantalla de carga con animaciones y elementos visuales que comunican el análisis inteligente de la imagen mediante algoritmos YOLO. Incluye indicadores de progreso, mensajes informativos sobre el proceso de clasificación automática y branding coherente con la identidad visual. <br>
+![alt text](images/applications_mockups/Procesando%20la%20IA.png)
+
+**Formulario completo de reporte:** Mockup de alta fidelidad del formulario de creación de reporte con todos los campos de entrada estilizados, categoría pre-sugerida por IA, mapa interactivo de confirmación de ubicación y botones de envío con estados visuales diferenciados según la completitud de datos. <br>
+![alt text](images/applications_mockups/Reporte.png)
+
+**Modal de confirmación de envío:** Diseño final del diálogo de éxito que confirma la recepción del reporte con elementos visuales de retroalimentación positiva, código de seguimiento generado automáticamente, tiempo estimado de respuesta y opciones para compartir o crear nuevo reporte. <br>
+![alt text](images/applications_mockups/Dialog%20Reporte.png)
+
+**Listado de reportes históricos:** Mockup completo de la pantalla de historial con diseño de cards optimizado para navegación móvil, estados visuales diferenciados por color, filtros de búsqueda integrados, indicadores de progreso y acceso directo a detalles de cada incidencia reportada por el usuario. <br>
+![alt text](images/applications_mockups/Reportes.png)
+
+
 ### 6.4.3. Applications User Flow Diagrams.
 
+Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
+
+#### **Aplicación web**
+**User Goal: Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.** Este objetivo abarca la experiencia del usuario al explorar la página principal de la plataforma.
+![alt text](images/userflow_diagram/inicio-sesion.png)
+
+**User Goal: Como personal municipal, quiero ver el número total de incidencias registradas para monitorear el volumen general.** Este objetivo refleja la necesidad del usuario de ver un dashboard para la gestión de los incidentes.
+
+![alt text](images/userflow_diagram/ver-total-incidencias.png)
+
+**User Goal: Como personal municipal, quiero enviar comentarios en las incidencias para comunicar acciones tomadas.** Este objetivo refleja la necesidad del usuario de ver los detalles del incidente y mantener informado al ciudadano sobre los avances.
+![alt text](images/userflow_diagram/ver-detalle-incidencia.png)
+
+**User Goal: Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial.** Este objetivo refleja la necesidad del usuario de ver un dashboard para la gestión de los incidentes.
+![alt text](images/userflow_diagram/maps.png)
+
+**User Goal: Como personal municipal, quiero ver los detalles de la municipalidad para acceder a información institucional centralizada.** Este objetivo refleja la necesidad del usuario de ver más información sobre su cuenta en LimaUrban.
+![alt text](images/userflow_diagram/perfil_municipalidad.png)
+
+
+#### **Aplicación móvil**
+
+**User Goal: Como ciudadano, quiero registrarme en la aplicación para poder reportar incidencias urbanas.** Este objetivo abarca el proceso completo de creación de cuenta desde cero, incluyendo la validación de datos y confirmación de registro.
+![alt text](images/userflow_diagram/registro-m.png)
+
+**User Goal: Como ciudadano, quiero iniciar sesión para acceder a mis reportes y funciones principales.** Este objetivo refleja el flujo de autenticación del usuario y acceso a la aplicación tras completar el registro.
+![alt text](images/userflow_diagram/login-ciudadano.png)
+
+**User Goal: Como ciudadano, quiero reportar una incidencia urbana con fotografía para documentar problemas en mi ciudad.** Este objetivo comprende el flujo completo desde la captura de foto hasta la confirmación del reporte enviado, incluyendo el procesamiento con IA.
+![alt text](images/userflow_diagram/reportar-m.png)
+
+**User Goal: Como ciudadano, quiero ver el historial de mis reportes para dar seguimiento a las incidencias que he registrado.** Este objetivo permite al usuario consultar todos sus reportes previos y verificar el estado de cada uno.
+![alt text](images/userflow_diagram/reportes-lista-m.png)
+**User Goal: Como ciudadano, quiero ver la pantalla principal para acceder rápidamente a las funciones más importantes de la app.** Este objetivo refleja la experiencia del usuario al navegar por el dashboard personal con resumen de actividad.
+![alt text](images/userflow_diagram/dashboard-m.png)
+
+**User Goal: Como ciudadano, quiero gestionar mi perfil personal para mantener actualizados mis datos y configuraciones.** Este objetivo abarca la visualización y edición de información personal, estadísticas y preferencias de la cuenta.
+![alt text](images/userflow_diagram/profile-m.png)
+
+
 ## 6.5. Applications Prototyping.
+
+**Aplicación web**
+- **Ver Total de Incidentes:** Consulta en tiempo real el número total de incidencias reportadas por los ciudadanos. Panel con métricas actualizadas que incluyen incidentes pendientes, en proceso y resueltos.
+- **Ver Detalles de Incidente:** Accede a la información completa de cada reporte: descripción detallada, ubicación exacta, fotografías adjuntas, historial de actualizaciones, comentarios y seguimiento completo del caso.
+- **Ver Detalles de la Municipalidad:** Consulta información institucional, zonas de cobertura, estadísticas generales del municipio y datos de contacto de los diferentes departamentos.
+- **Filtrar Incidentes:** Sistema avanzado de filtros múltiples que permite organizar y visualizar incidentes según diferentes criterios:
+  - Por Tipo: Alumbrado público, baches, limpieza, infraestructura, seguridad y otros
+  - Por Distrito: San miguel, La Victoria, etc. 
+  - Por Prioridad: Alta, Media o Baja
+  - Por Fecha: Selección de rango de fechas o fecha específica de reporte
+- **Priorizar Incidentes:** Asigna o modifica el nivel de prioridad de cada incidente (Alta, Media, Baja) según la urgencia y el impacto en la comunidad. Sistema visual con código de colores para identificación rápida.
+- **Actualizar Estado del Incidente:** Cambia el estado de las incidencias a medida que avanzan en el proceso de resolución: 
+  - Pendiente: Recién reportado, en espera de atención
+  - En Proceso: Equipo asignado trabajando en la solución
+  - Resuelto: Incidente completamente solucionado
+- **Enviar Comentario sobre el Incidente:** Agrega notas, observaciones y actualizaciones en cada caso. Mantén un historial completo de comunicación y acciones tomadas para transparencia y seguimiento.
+- **Mapa de Calor:** Identifica zonas críticas con mayor concentración de incidencias mediante gradientes de color por intensidad
+
+![alt text](images/application-protoyping/web-prototyping.png)
+
+Video de explicación:<br> [ https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk]( https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk)
+
+#### **Aplicación móvil**
+**Aplicación móvil**
+
+- **Registro de Usuario:** Proceso simplificado para crear cuenta, con validación de email en tiempo real, verificación de contraseña segura y activación mediante código enviado por correo electrónico.
+- **Inicio de Sesión:** Autenticación segura por email y contraseña, opción "Recordar sesión" y enlace para recuperación de contraseña.
+- **Dashboard Principal (Home):** Pantalla central con resumen de actividad, reportes recientes, estadísticas de participación y accesos rápidos a funciones principales. Feed dinámico con actualizaciones y notificaciones.
+- **Captura de Incidencia:** Interfaz de cámara intuitiva con guías visuales para fotografiar incidencias urbanas y geolocalización automática de la ubicación del problema.
+- **Confirmación de Fotografía:** Pantalla de revisión para validar la imagen capturada, con opción de retomar la foto si no cumple estándares o repetir la captura.
+- **Procesamiento con IA:** Pantalla de carga que informa sobre el análisis automático de la imagen mediante algoritmos YOLO, mostrando progreso y clasificación inteligente.
+- **Formulario de Reporte:** Pantalla para finalizar el reporte con campos pre-rellenados por IA (categoría sugerida, descripción automática, ubicación confirmada), opción de agregar comentarios y verificación de datos antes del envío.
+- **Confirmación de Envío:** Diálogo de éxito que confirma la recepción del reporte, muestra número de seguimiento, tiempo estimado de respuesta y opciones para compartir o crear nuevo reporte.
+- **Historial de Reportes:** Lista cronológica de reportes realizados, mostrando estado actual, fecha, tipo de incidencia y acceso a detalles completos de cada caso.
+- **Perfil de Usuario:** Sección para gestionar información personal, revisar estadísticas de participación, configurar notificaciones y acceder a soporte técnico y políticas de privacidad.
+
+![alt text](images/application-protoyping/mobile.png)
+
+Video de explicación: <br> [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v)
 
 # Conclusiones
 
