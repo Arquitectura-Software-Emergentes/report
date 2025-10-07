@@ -2235,6 +2235,17 @@ Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?us
 
 
 #### **Aplicación móvil**
+**User Goal: Como ciudadano, quiero registrarme en la aplicación para poder reportar incidencias urbanas.** Este flujo describe el proceso de creación de una nueva cuenta, desde la pantalla de inicio hasta la confirmación del registro, permitiendo al usuario acceder a la plataforma. <br>
+![alt text](images/wireflow_diagram/usergoal1.png)
+
+**User Goal: Como ciudadano, quiero iniciar sesión para acceder a mis reportes y funciones principales.** Este flujo muestra el proceso de autenticación de un usuario ya registrado, desde el ingreso de credenciales hasta el acceso al dashboard principal de la aplicación. <br>
+![alt text](images/wireflow_diagram/usergoal2.png)
+
+**User Goal: Como ciudadano, quiero reportar una incidencia urbana con una fotografía para documentar el problema de forma clara y eficiente.** Este es el flujo principal de la aplicación. Abarca desde la captura de la fotografía, la confirmación, el análisis por IA, el llenado de detalles adicionales y la confirmación final del envío del reporte. <br>
+![alt text](images/wireflow_diagram/usergoal3.png)
+
+**User Goal: Como ciudadano, quiero consultar el historial de mis reportes para dar seguimiento al estado de cada incidencia.** Este flujo permite al usuario navegar desde la pantalla principal hasta la lista de sus reportes históricos, donde puede ver el estado y los detalles de cada uno. <br>
+![alt text](images/wireflow_diagram/usergoal4.png)
 
 ### 6.4.2. Applications Mock-ups.
 
