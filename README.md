@@ -1012,157 +1012,81 @@ El To-Be elimina las fricciones identificadas en el As-is creando un ciclo virtu
 
 ### 4.1.1. Design Purpose
 
-El propósito del diseño arquitectónico de LimaUrban es establecer una base técnica sólida que permita la transformación digital de la gestión de incidencias urbanas, integrando tecnologías emergentes como análisis geoespacial e inteligencia artificial para crear un ecosistema eficiente de reporte y gestión ciudadana.
+El propósito del diseño arquitectónico de **LimaUrban** es establecer una base técnica robusta y escalable para una plataforma de gestión de incidencias urbanas. El diseño debe soportar un ecosistema digital que conecte de manera eficiente a los ciudadanos con las autoridades municipales, utilizando tecnologías emergentes como la inteligencia artificial y el análisis geoespacial para optimizar la resolución de problemas en el espacio público.
 
-**Problemática:**
+**Problemática Central:**
+Los ciudadanos de Lima enfrentan canales de comunicación ineficaces y opacos para reportar problemas urbanos. Por otro lado, las municipalidades carecen de herramientas centralizadas para procesar estos reportes de forma ágil y basada en datos, lo que resulta en una gestión reactiva, costosa y que genera desconfianza.
 
-Los ciudadanos limeños enfrentan desafíos significativos para reportar incidencias urbanas debido a la falta de canales de comunicación eficientes y transparentes con las autoridades municipales. Los sistemas tradicionales de reporte son lentos, poco intuitivos y no ofrecen seguimiento en tiempo real, lo que genera desconfianza ciudadana y retrasos en la resolución de problemas urbanos críticos como baches, semáforos dañados, acumulación de basura y vandalismo.
+**Objetivos Principales del Diseño:**
 
-**Objetivos principales del diseño:**
-
-1. **Automatización inteligente del procesamiento de incidencias:** Mediante sistemas de visión por computadora con modelos YOLO entrenados localmente con un dataset mínimo de 2,000 imágenes, la arquitectura debe procesar automáticamente reportes ciudadanos con fotografías, clasificando y validando únicamente dos categorías prioritarias (baches y basura) en tiempo real para reducir el trabajo manual y mejorar la precisión. Esta limitación estratégica responde a los requisitos prácticos de entrenamiento de modelos YOLO que requieren mínimo 1,000 imágenes por categoría para alcanzar precisión operativa.
-
-2. **Escalabilidad y disponibilidad urbana:** La solución debe soportar la carga de 10 mil habitantes, garantizando disponibilidad del 99.5% y capacidad de procesar miles de reportes simultáneos durante emergencias urbanas o eventos críticos.
-
-3. **Integración geoespacial avanzada:** La arquitectura debe facilitar la generación de mapas de calor dinámicos que permitan a las autoridades municipales identificar la zona con más reportes de incidencias.
-
-4. **Experiencia ciudadana simplificada:** Diseñar interfaces que reduzcan el tiempo de reporte a menos de 40 segundos, incluyendo captura fotográfica, geolocalización automática y confirmación de recepción.
-
-5. **Interoperabilidad institucional:** Establecer APIs estandarizadas que permitan la integración con sistemas municipales existentes, facilitando el intercambio de datos y la adopción por parte de diferentes distritos de Lima Metropolitana.
+1.  **Automatización Inteligente del Procesamiento:** La arquitectura debe soportar un sistema de visión por computadora (basado en un modelo YOLO entrenado con un dataset local) para clasificar automáticamente las incidencias en dos categorías prioritarias: **baches y acumulación de basura**. Esto reduce la carga manual y mejora la calidad de los datos de entrada.
+2.  **Escalabilidad y Alta Disponibilidad:** La solución debe estar preparada para servir a una población inicial de 10,000 usuarios activos, garantizando una disponibilidad del **99.5%** y la capacidad de procesar picos de reportes durante emergencias urbanas.
+3.  **Análisis Geoespacial en Tiempo Real:** El diseño debe facilitar la generación de mapas de calor dinámicos e interactivos, permitiendo a las autoridades municipales identificar "hotspots" de incidencias para una planificación estratégica y una asignación de recursos más eficiente.
+4.  **Experiencia de Usuario Optimizada:** La arquitectura debe habilitar una interfaz de reporte ciudadana que sea extremadamente rápida e intuitiva, con el objetivo de que el proceso completo de reporte (incluyendo foto y geolocalización) tome **menos de 40 segundos**.
+5.  **Interoperabilidad Institucional:** Se deben definir APIs RESTful estandarizadas que permitan una futura integración con otros sistemas de gestión municipal (SIG, ERPs), asegurando la escalabilidad de la plataforma a diferentes distritos de Lima.
 
 ### 4.1.2. Attribute-Driven Design Inputs
 
 #### 4.1.2.1. Primary Functionality (Primary User Stories)
 
-Las siguientes User Stories representan las funcionalidades primarias que tienen mayor impacto arquitectónico y son críticas para el éxito de la plataforma:
+Las siguientes User Stories son críticas, ya que definen las funcionalidades primarias que impulsan las decisiones arquitectónicas más importantes de LimaUrban.
 
 | Epic/User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
-|-------------------|--------|-------------|------------------------|-------------------------|
-| **US16** | **Reporte de Incidencia con Foto** | Como ciudadano, quiero reportar una incidencia urbana adjuntando fotografía y ubicación automática para documentar el problema de forma completa. | **Escenario 1:** Captura exitosa<br>**Dado que** detecto una incidencia<br>**Cuando** tomo una foto<br>**Entonces** el sistema guarda la foto y coordenadas GPS automáticamente<br><br>**Escenario 2:** Rechazo de captura<br>**Dado que** no deseo usar la foto tomada<br>**Cuando** tomo otra foto<br>**Entonces** el sistema me permite reemplazarla<br><br>**Escenario 3:** Validación de completitud<br>**Dado que** no adjunto foto<br>**Cuando** intento confirmar el reporte<br>**Entonces** el sistema solicita completar la información requerida | E02 |
-| **US11** | **Dashboard Geoespacial Municipal** | Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial. | **Escenario 1:** Visualización de hotspots<br>**Dado que** existen múltiples reportes en el sistema<br>**Cuando** accedo al dashboard geoespacial<br>**Entonces** veo mapas de calor actualizados que muestren concentración de incidencias<br><br>**Escenario 2:** Filtrado temporal y espacial<br>**Dado que** aplico filtros de búsqueda por fecha y zona<br>**Cuando** selecciono los criterios<br>**Entonces** el mapa se actualiza mostrando solo los datos filtrados<br><br>**Escenario 3:** Manejo de zonas sin datos<br>**Dado que** no hay incidencias en una zona específica<br>**Cuando** consulto esa área<br>**Entonces** el sistema muestra mensaje "No hay incidencias en esta zona" | E05 |
-| **US06** | **Actualizar Estado de Incidencia** | Como personal municipal, quiero actualizar el estado de una incidencia para reflejar su progreso y comunicar avances al ciudadano. | **Escenario 1:** Cambio de estado exitoso<br>**Dado que** selecciono una incidencia<br>**Cuando** cambio su estado a "En Proceso" o "Resuelto"<br>**Entonces** el sistema guarda el cambio, actualiza la visualización y envía notificación automática al ciudadano reportante<br><br>**Escenario 2:** Validación de flujo de estados<br>**Dado que** una incidencia está en estado "Cerrado"<br>**Cuando** intento reabrirla<br>**Entonces** el sistema solicita confirmación y justificación<br><br>**Escenario 3:** Trazabilidad de cambios<br>**Dado que** actualizo el estado<br>**Cuando** se registra el cambio<br>**Entonces** el sistema mantiene historial completo de modificaciones con timestamps | E03 / E04 |
-| **US21** | **Seguimiento de Estado** | Como ciudadano, quiero ver el progreso de mi reporte para mantenerme informado sobre su resolución y tener transparencia del proceso municipal. | **Escenario 1:** Visualización de cambios en tiempo real<br>**Dado que** el personal municipal actualiza el estado de mi reporte<br>**Cuando** accedo a mis incidencias<br>**Entonces** veo el nuevo estado reflejado inmediatamente<br><br>**Escenario 2:** Transparencia del proceso completo<br>**Dado que** consulto el historial de mi reporte<br>**Cuando** abro los detalles<br>**Entonces** veo cronología completa de estados, fechas y acciones realizadas<br><br>**Escenario 3:** Notificaciones automáticas<br>**Dado que** mi reporte cambia de estado<br>**Cuando** la municipalidad registra la actualización<br>**Entonces** recibo notificación push con resumen del cambio | E02 / E04 |
-| **US05** | **Priorizar Incidencias** | Como personal municipal, quiero asignar niveles de prioridad a las incidencias para gestionar recursos de forma eficiente y atender primero los casos más críticos. | **Escenario 1:** Asignación de prioridad basada en criterios<br>**Dado que** analizo una incidencia nueva<br>**Cuando** evalúo su impacto, ubicación y tipo<br>**Entonces** puedo asignar prioridad Alta, Media o Baja con justificación<br><br>**Escenario 2:** Reordenamiento dinámico<br>**Dado que** cambio la prioridad de una incidencia<br>**Cuando** guardo la modificación<br>**Entonces** el sistema reordena automáticamente las listas de trabajo<br><br>**Escenario 3:** Visualización por prioridad<br>**Dado que** filtro incidencias por nivel de prioridad<br>**Cuando** selecciono "Alta prioridad"<br>**Entonces** solo se muestran incidencias críticas ordenadas por fecha | E03 |
-
-### **Funcionalidades de Soporte Críticas:**
-
-| Epic/User Story ID | Título | Impacto Arquitectónico | Relacionado con (Epic ID) |
-|-------------------|--------|------------------------|-------------------------|
-| **US01/US02** | **Gestión de Autenticación Municipal** | Sistema de autenticación diferenciado para personal municipal | E01 |
-| **US13/US14** | **Gestión de Autenticación Ciudadana** | Sistema de registro y autenticación para ciudadanos con validación de email | E01 |
-| **TS07** | **WebSocket para Notificaciones** | Comunicación en tiempo real para actualizaciones de estado y badges de notificación | E01 |
-| **TS04** | **Georreferenciación MapBox** | Integración con servicios de mapas para visualización geoespacial y heatmaps | E05 |
-
-Aquí están las secciones actualizadas para reflejar los cambios en Primary Functionality:
+| :--- | :--- | :--- | :--- | :--- |
+| **US16** | **Reportar Incidencia con Evidencia Fotográfica** | Como ciudadano, quiero reportar una incidencia adjuntando una fotografía y confirmando la ubicación automática para documentar el problema de forma clara y precisa. | **Escenario 1:** El sistema captura la foto y las coordenadas GPS automáticamente.<br>**Escenario 2:** El usuario puede reemplazar la foto si no está satisfecho.<br>**Escenario 3:** El sistema valida que la foto es un campo obligatorio para enviar el reporte. | E02 |
+| **US11** | **Visualizar Dashboard Geoespacial** | Como personal municipal, quiero visualizar las incidencias en un mapa de calor interactivo para identificar zonas críticas y priorizar intervenciones. | **Escenario 1:** El dashboard muestra un mapa de calor con la concentración de incidencias.<br>**Escenario 2:** Se pueden aplicar filtros por fecha, tipo de incidencia y distrito.<br>**Escenario 3:** El mapa se actualiza en tiempo real a medida que se aplican los filtros. | E05 |
+| **US06** | **Actualizar Estado de Incidencia** | Como personal municipal, quiero cambiar el estado de una incidencia (ej. "En Proceso", "Resuelto") para reflejar el avance y notificar al ciudadano. | **Escenario 1:** Al cambiar el estado, el sistema guarda el cambio y envía una notificación automática al ciudadano.<br>**Escenario 2:** El sistema mantiene un historial de todos los cambios de estado con fecha y usuario responsable. | E03 / E04 |
+| **US21** | **Realizar Seguimiento de Reporte** | Como ciudadano, quiero ver el estado actual y el historial de mi reporte para estar informado sobre el proceso de resolución. | **Escenario 1:** La app muestra el estado más reciente de mi reporte.<br>**Escenario 2:** Puedo ver una línea de tiempo con todos los estados anteriores.<br>**Escenario 3:** Recibo notificaciones push cuando hay una actualización importante. | E02 / E04 |
+| **US05** | **Priorizar Incidencias** | Como personal municipal, quiero asignar un nivel de prioridad (Alta, Media, Baja) a las incidencias para organizar el trabajo de las cuadrillas de manera eficiente. | **Escenario 1:** Puedo asignar una prioridad a cada incidencia desde el dashboard.<br>**Escenario 2:** La lista de trabajo se puede ordenar y filtrar por nivel de prioridad.<br>**Escenario 3:** Las incidencias de "Alta" prioridad se destacan visualmente. | E03 |
 
 ## 4.1.2.2. Quality Attribute Scenarios
 En esta sección se incluye la especificación de la primera versión de los escenarios de atributos de calidad que tienen mayor impacto en la arquitectura de la solución LimaUrban. Los escenarios identificados están directamente relacionados con las funcionalidades primarias del sistema y abordan aspectos críticos como disponibilidad, rendimiento, precisión de IA, escalabilidad y usabilidad. Estos escenarios sirven como input fundamental para el proceso de diseño arquitectónico y permiten validar que la solución cumple con los estándares de calidad requeridos para la gestión urbana inteligente.
 
-### Escenario QA-01: Disponibilidad durante Alta Concurrencia
-
 | **Campo** | **Descripción** |
-|-----------|-----------------|
-| **Escenario** | Ciudadano reporta incidencia urbana durante hora pico matutina cuando miles de usuarios acceden simultáneamente al sistema para registrar problemas de infraestructura en toda Lima Metropolitana. |
-| **ID** | QA-01 |
-| **User Stories** | US16 – Reporte de Incidencia con Foto |
-| **Atributo de Calidad** | Disponibilidad |
-| **Fuente de Estímulo** | Ciudadano limeño |
-| **Estímulo** | Usuario intenta reportar una incidencia durante hora pico (8:00-9:00 AM) cuando el sistema experimenta alta concurrencia de 5,000+ usuarios simultáneos. |
-| **Artefacto** | Aplicación móvil Flutter y backend Django |
-| **Entorno** | Operación normal con alta concurrencia durante horarios de mayor movilidad urbana en Lima |
-| **Respuesta** | El sistema procesa el reporte, captura la geolocalización, almacena la fotografía y confirma la recepción sin interrupciones. |
-| **Medida de respuesta** | El sistema debe mantener 99.5% de disponibilidad mensual y procesar reportes en menos de 3 segundos durante picos de carga. |
-
-### Escenario QA-02: Rendimiento del Dashboard Geoespacial
-
-| **Campo** | **Descripción** |
-|-----------|-----------------|
-| **Escenario** | Personal municipal necesita visualizar patrones geoespaciales de incidencias para planificar intervenciones preventivas y optimizar asignación de recursos de mantenimiento urbano. |
-| **ID** | QA-02 |
-| **User Stories** | US11 – Dashboard Geoespacial Municipal |
-| **Atributo de Calidad** | Rendimiento |
-| **Fuente de Estímulo** | Personal municipal autorizado |
-| **Estímulo** | Funcionario municipal accede al dashboard para generar mapas de calor con filtros temporales sobre una base de datos con 500+ reportes acumulados. |
-| **Artefacto** | Dashboard Angular integrado con sistema de análisis geoespacial PostGIS |
-| **Entorno** | Sesión de trabajo normal con base de datos poblada con reportes históricos de múltiples distritos |
-| **Respuesta** | El sistema genera visualizaciones interactivas de mapas de calor, aplicando filtros y mostrando concentraciones de incidencias por zona geográfica. |
-| **Medida de respuesta** | Visualización completa de mapas de calor en menos de 2 segundos, incluyendo aplicación de filtros temporales y geográficos. |
-
-### Escenario QA-03: Escalabilidad durante Emergencias
-
-| **Campo** | **Descripción** |
-|-----------|-----------------|
-| **Escenario** | Durante una emergencia urbana (inundación, terremoto), miles de ciudadanos reportan incidencias simultáneamente, sobrecargando el sistema con un volumen excepcional de datos. |
-| **ID** | QA-03 |
-| **User Stories** | US16 – Reporte de Incidencia con Foto, US06 – Actualizar Estado de Incidencia |
-| **Atributo de Calidad** | Escalabilidad |
-| **Fuente de Estímulo** | Múltiples usuarios durante emergencia |
-| **Estímulo** | 10,000 ciudadanos intentan reportar incidencias simultáneamente durante una emergencia urbana que afecta múltiples distritos de Lima. |
-| **Artefacto** | Arquitectura modular monolítica desplegada |
-| **Entorno** | Pico de carga excepcional durante emergencia que supera 10x el tráfico normal |
-| **Respuesta** | El sistema mantiene operatividad sin degradación significativa, procesando todos los reportes y mantiendo tiempos de respuesta aceptables. |
-| **Medida de respuesta** | Capacidad de procesar 10,000+ reportes por hora manteniendo latencia <5 segundos sin pérdida de datos. |
-
-### Escenario QA-04: Usabilidad para Usuarios Nuevos
-
-| **Campo** | **Descripción** |
-|-----------|-----------------|
-| **Escenario** | Un ciudadano sin experiencia técnica previa utiliza la aplicación móvil por primera vez para reportar una incidencia urbana, requiriendo una experiencia intuitiva y eficiente. |
-| **ID** | QA-04 |
-| **User Stories** | US16 – Reporte de Incidencia con Foto |
+| :--- | :--- |
+| **ID** | **QA-01: Usabilidad en el Primer Uso** |
+| **Escenario** | Un ciudadano sin experiencia técnica previa utiliza la aplicación por primera vez para reportar una incidencia. |
 | **Atributo de Calidad** | Usabilidad |
-| **Fuente de Estímulo** | Ciudadano nuevo |
-| **Estímulo** | Usuario sin experiencia previa descarga la aplicación e intenta completar su primer reporte de incidencia urbana siguiendo la interfaz intuitiva. |
-| **Artefacto** | Interfaz móvil Flutter |
-| **Entorno** | Usuario real sin capacitación previa, utilizando smartphone estándar en condiciones normales de uso |
-| **Respuesta** | El usuario completa exitosamente el reporte incluyendo fotografía, geolocalización y categorización sin asistencia externa. |
-| **Medida de respuesta** | 90% de usuarios nuevos deben completar su primer reporte en menos de 40 segundos sin errores críticos. |
-
-### Escenario QA-05: Comunicación en Tiempo Real
+| **Estímulo** | Usuario nuevo intenta completar su primer reporte. |
+| **Respuesta** | El usuario completa el reporte (foto, ubicación, categoría) sin necesidad de ayuda externa. |
+| **Medida de respuesta** | El 90% de los usuarios nuevos deben completar su primer reporte en menos de 40 segundos. |
 
 | **Campo** | **Descripción** |
-|-----------|-----------------|
-| **Escenario** | Ciudadano reportante y personal municipal requieren comunicación bidireccional en tiempo real sobre el progreso de incidencias para mantener transparencia y coordinación efectiva. |
-| **ID** | QA-05 |
-| **User Stories** | US21 – Seguimiento de Estado, US06 – Actualizar Estado de Incidencia |
-| **Atributo de Calidad** | Disponibilidad de Comunicación |
-| **Fuente de Estímulo** | Sistema de notificaciones WebSocket |
-| **Estímulo** | Personal municipal actualiza el estado de una incidencia de "En Verificación" a "En Proceso" y necesita notificar automáticamente al ciudadano reportante. |
-| **Artefacto** | Sistema de notificaciones WebSocket y módulo de gestión de estados |
-| **Entorno** | Operación normal con múltiples usuarios conectados simultáneamente |
-| **Respuesta** | El sistema envía notificación push al ciudadano, actualiza badge de notificaciones y registra el cambio en el historial de la incidencia. |
-| **Medida de respuesta** | 95% de notificaciones entregadas en menos de 5 segundos, con badge actualizado automáticamente. |
-
-### Escenario QA-06: Interoperabilidad con Sistemas Municipales
+| :--- | :--- |
+| **ID** | **QA-02: Disponibilidad en Horas Pico** |
+| **Escenario** | Un ciudadano reporta una incidencia durante la hora pico matutina, cuando miles de usuarios están activos en el sistema. |
+| **Atributo de Calidad** | Disponibilidad, Rendimiento |
+| **Estímulo** | Usuario envía un reporte mientras el sistema gestiona más de 5,000 usuarios concurrentes. |
+| **Respuesta** | El sistema procesa el reporte y devuelve una confirmación de éxito sin demoras perceptibles. |
+| **Medida de respuesta** | El sistema debe mantener una disponibilidad del 99.5% y procesar el 99% de los reportes en menos de 3 segundos durante horas pico. |
 
 | **Campo** | **Descripción** |
-|-----------|-----------------|
-| **Escenario** | Sistemas municipales existentes requieren integración con la plataforma para intercambiar datos de incidencias y mantener sincronización con procesos operativos actuales. |
-| **ID** | QA-06 |
-| **User Stories** | US11 – Dashboard Geoespacial Municipal |
-| **Atributo de Calidad** | Interoperabilidad |
-| **Fuente de Estímulo** | Sistema municipal externo |
-| **Estímulo** | Sistema SIG municipal solicita datos de incidencias vía API para integración con flujos de trabajo de mantenimiento existentes. |
-| **Artefacto** | API pública de la plataforma LimaUrban |
-| **Entorno** | Integración con sistemas municipales heredados que utilizan estándares GIS convencionales |
-| **Respuesta** | La API entrega datos estructurados en formatos estándar compatibles con sistemas municipales existentes. |
-| **Medida de respuesta** | 100% compatibilidad con estándares GeoJSON y OGC, con tiempo de respuesta API <1 segundo para consultas estándar. |
+| :--- | :--- |
+| **ID** | **QA-03: Rendimiento del Dashboard Geoespacial** |
+| **Escenario** | Un gestor municipal accede al dashboard para analizar la distribución de 500+ incidencias acumuladas en un mapa de calor. |
+| **Atributo de Calidad** | Rendimiento |
+| **Estímulo** | El usuario aplica filtros de fecha y tipo de incidencia en el mapa de calor. |
+| **Respuesta** | El dashboard renderiza el mapa de calor actualizado con los datos filtrados de forma interactiva. |
+| **Medida de respuesta** | La visualización del mapa de calor y la aplicación de filtros deben completarse en menos de 2 segundos. |
 
----
+| **Campo** | **Descripción** |
+| :--- | :--- |
+| **ID** | **QA-04: Escalabilidad ante Emergencias** |
+| **Escenario** | Tras una lluvia intensa, se produce un pico masivo de reportes de baches y aniegos en toda la ciudad. |
+| **Atributo de Calidad** | Escalabilidad |
+| **Estímulo** | El sistema recibe 10,000 reportes en una hora, superando 10 veces el tráfico normal. |
+| **Respuesta** | La infraestructura escala automáticamente para procesar todos los reportes sin pérdida de datos ni degradación crítica del servicio. |
+| **Medida de respuesta** | Capacidad de procesar 10,000 reportes por hora manteniendo una latencia de API inferior a 5 segundos. |
 
 ## 4.1.2.3. Constraints
 Las siguientes restricciones técnicas han sido establecidas por el cliente y son no negociables para la elaboración de la solución:
-
 | Technical Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 |-------------------|--------|-------------|------------------------|-------------------------|
 | TS01 | Infraestructura | Como equipo de desarrollo, quiero desplegar la plataforma  para cumplir con las políticas de infraestructura municipal establecidas y garantizar soporte técnico oficial. | **Escenario 1:** Despliegue exitoso <br>**Dado que** necesitamos cumplir políticas municipales de infraestructura <br>**Cuando** desplegamos el backend y base de datos<br>**Entonces** debe utilizarse  App Service para el backend y  Supabase para almacenamiento<br>**Y** todos los servicios deben estar dentro del ecosistema <br><br>**Escenario 2:** Validación de servicios<br>**Dado que** la infraestructura debe ser exclusivamente escalable<br>**Cuando** se configura el entorno de producción<br>**Entonces** no debe utilizarse ningún servicio de AWS, Google Cloud u otros proveedores<br>**Y** debe documentarse la justificación de cada servicio  seleccionado | Todos los Epics |
 | TS02 | Base de Datos Escalable | Como equipo técnico, quiero configurar una base de datos en Supabase con escalabilidad automática para manejar el crecimiento de información de incidencias y usuarios. | **Escenario 1:** Configuración inicial exitosa<br>**Dado que** se crea la base de datos en Supabase<br>**Cuando** se conecta con la plataforma<br>**Entonces** queda lista para almacenar información<br><br>**Escenario 2:** Escalabilidad automática<br>**Dado que** aumenta la cantidad de registros<br>**Cuando** la carga supera el umbral<br>**Entonces** la base de datos escala automáticamente | Todos los Epics |
 | TS03 | Frontend Web Angular | Como desarrollador frontend, quiero implementar el dashboard municipal en Angular para mantener coherencia con los sistemas municipales existentes y aprovechar la expertise del equipo en este framework. | **Escenario 1:** Compatibilidad con sistemas municipales<br>**Dado que** existen sistemas Angular en la municipalidad<br>**Cuando** desarrollo el dashboard municipal<br>**Entonces** debe usar Angular 15+ con TypeScript<br>**Y** debe ser compatible con navegadores Chrome, Firefox y Edge<br><br>**Escenario 2:** Integración API exitosa<br>**Dado que** necesito conectar con el backend<br>**Cuando** implemento las funcionalidades del dashboard<br>**Entonces** debe integrarse correctamente con APIs REST<br>**Y** debe manejar errores de conectividad de forma elegante | E05 |
 | TS04 | Aplicación Móvil Flutter | Como desarrollador móvil, quiero desarrollar la aplicación ciudadana en Flutter para soportar Android e iOS con una sola base de código y reducir costos de desarrollo y mantenimiento. | **Escenario 1:** Multiplataforma exitosa<br>**Dado que** necesito soporte para Android e iOS<br>**Cuando** desarrollo la aplicación móvil<br>**Entonces** debe usar Flutter 3.0+ con Dart 3.0+<br>**Y** debe funcionar nativamente en ambas plataformas<br><br>**Escenario 2:** Acceso a funcionalidades nativas<br>**Dado que** requiero acceso a cámara y GPS<br>**Cuando** implemento el reporte de incidencias<br>**Entonces** debe acceder correctamente a hardware del dispositivo<br>**Y** debe solicitar permisos de forma clara al usuario | E02 |
-| TS05 | Comunicación WebSocket | Como developer, quiero implementar comunicación en tiempo real mediante WebSocket para las notificaciones, para que los badges de incidentes y los mensajes se actualicen automáticamente sin necesidad de refrescar la aplicación. | **Escenario 1:** Envío de notificación en tiempo real<br>**Dado que** se registra un nuevo incidente<br>**Cuando** el servidor lo transmite mediante WebSocket<br>**Entonces** el cliente recibe la notificación automáticamente<br><br>**Escenario 2:** Actualización de badge en tiempo real<br>**Dado que** hay un incidente nuevo<br>**Cuando** el cliente recibe el evento<br>**Entonces** el badge del ícono de notificaciones incrementa su valor<br><br>**Escenario 3:** Reinicio de badge<br>**Dado que** el badge muestra incidentes pendientes<br>**Cuando** el usuario abre el módulo de notificaciones<br>**Entonces** el badge se reinicia a 0 | E04 |
-| TS06 | Georreferenciación MapBox | Como equipo de desarrollo, quiero integrar servicios de mapas de MapBox para mostrar incidencias en un tablero geoespacial con mapas de calor interactivos. | **Escenario 1:** Visualización en mapa<br>**Dado que** existen incidencias registradas<br>**Cuando** se abre el tablero<br>**Entonces** se muestran las incidencias en el mapa con su ubicación georreferenciada<br><br>**Escenario 2:** Generación de mapas de calor<br>**Dado que** el usuario necesita ver concentraciones<br>**Cuando** selecciona vista de mapa de calor<br>**Entonces** se generan visualizaciones de densidad por zona geográfica | E05 |
-
----
+| TS05 | Georreferenciación MapBox | Como equipo de desarrollo, quiero integrar servicios de mapas de MapBox para mostrar incidencias en un tablero geoespacial con mapas de calor interactivos. | **Escenario 1:** Visualización en mapa<br>**Dado que** existen incidencias registradas<br>**Cuando** se abre el tablero<br>**Entonces** se muestran las incidencias en el mapa con su ubicación georreferenciada<br><br>**Escenario 2:** Generación de mapas de calor<br>**Dado que** el usuario necesita ver concentraciones<br>**Cuando** selecciona vista de mapa de calor<br>**Entonces** se generan visualizaciones de densidad por zona geográfica | E05 |
 
 ## 4.1.2.4. Architectural Drivers Backlog
 Resultado del proceso de Quality Attribute Workshop, priorizando drivers por importancia para stakeholders e impacto en complejidad técnica arquitectónica:
