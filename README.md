@@ -728,7 +728,7 @@ Validación de concepto
 
 - **Inicio:** 0:00
 - **Fin:** 3:24
-- **Enlace de entrevista:** [https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing](https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing)
+- **Enlace de entrevista:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/Ef0mPSeBWX5AtLkikwCFejkBY-n_wCrGuG4DbWxKQSwaeA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Kr57aN](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/Ef0mPSeBWX5AtLkikwCFejkBY-n_wCrGuG4DbWxKQSwaeA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Kr57aN)
 - **Resumen:** Rosalynn es ama de casa que se desplaza diariamente en transporte público. Ha observado múltiples baches en la Av. Evitamiento y acumulación de basura cerca del mercado de Chosica. Intentó reportar por teléfono al municipio pero nunca recibió respuesta. Le parece muy útil la idea de una app con foto porque "sería una prueba de que el problema existe". Su principal motivación sería "ver que realmente hacen algo con mi reporte".
 
 #### Entrevista 02
@@ -743,7 +743,7 @@ Validación de concepto
 - **Inicio:** 0:12
 - **Fin:** 5:56
 - **Enlace de entrevista:**
-  [https://drive.google.com/file/d/1CVDQx8Ue15xk7yt8oukkN1S87bAc7TeB/view?usp=sharing](https://drive.google.com/file/d/1CVDQx8Ue15xk7yt8oukkN1S87bAc7TeB/view?usp=sharing)
+  []()
 - **Resumen:** Diego es estudiante de secundaria que camina diariamente al colegio. Ha notado varios postes de luz malogrados en su cuadra y grafitis en las paredes del parque. Nunca ha reportado nada porque "no sabía cómo hacerlo". Usa mucho su celular y le encanta la idea de una app: "Sería como Instagram pero para arreglar el barrio". Le interesaría ver reportes de otros para saber qué pasa en su zona.
 
 #### Entrevista 03
@@ -758,7 +758,7 @@ Validación de concepto
 
 - **Inicio:** 0:00
 - **Fin:** 3:05
-- **Enlace de entrevista:** [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
+- **Enlace de entrevista:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EX85TwgismJAvpQ2-K8-iHEBYrH2CitKWtaBWFIu0qFDoQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=k6TtrS](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EX85TwgismJAvpQ2-K8-iHEBYrH2CitKWtaBWFIu0qFDoQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=k6TtrS)
 
 #### Entrevista 03
 
@@ -771,7 +771,7 @@ Validación de concepto
 - **Inicio:** xxx
 - **Fin:** xxx
 - **Enlace de entrevista:**
-  [Entrevistas - Ciudadanos.mp4](https://drive.google.com/file/d/1234567890/view)
+  []()
 
 #### Entrevista 04
 
@@ -785,7 +785,7 @@ Validación de concepto
 - **Inicio:** 00:20
 - **Fin:** 4:56
 - **Enlace de entrevista:**
-  [https://drive.google.com/file/d/1Trk5RaI-122b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
+  []()
 - **Resumen:** Jenna trabaja en la Gerencia de Servicios Públicos hace 3 años. Reciben reportes principalmente por teléfono y ventanilla, registrándolos en hojas Excel. La priorización se basa en "urgencia percibida" y disponibilidad de cuadrillas. No usan mapas digitales. Ve mucho valor en la propuesta: "Nos ayudaría a organizar mejor el trabajo y mostrar resultados concretos". Su principal preocupación es la capacitación del personal.
 
 #### Entrevista 05
@@ -800,7 +800,7 @@ Validación de concepto
 - **Inicio:** 0:20
 - **Fin:** 7:56
 - **Enlace de entrevista:**
-  [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
+  []()
 - **Resumen:** Carol es coordinadora de Obras Públicas con 5 años de experiencia. Gestiona un promedio de 40 reportes semanales que llegan por múltiples canales (teléfono, Facebook, presencial). Toma aproximadamente 1 semana priorizar y asignar cuadrillas. Valora especialmente la idea de mapas de calor: "Podríamos ver dónde se concentran los problemas y hacer mantenimiento preventivo". Le preocupa la integración con sus sistemas actuales.
 
 #### Entrevista 06
@@ -815,7 +815,7 @@ Validación de concepto
 - **Inicio:** 0:05
 - **Fin:** 7:05
 - **Enlace de entrevista:**
-  [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1234567890/view)
+  []()
 - **Resumen:** Ana es jefa del área de Mantenimiento Urbano con 7 años en el municipio. Maneja un presupuesto anual de S/. 2.8 millones para mantenimiento. Actualmente priorizan basándose en "volumen de quejas" y "visibilidad política". No tienen datos históricos organizados. Considera que la plataforma "sería un cambio revolucionario" especialmente para justificar presupuestos. Su mayor preocupación es garantizar que los ciudadanos vean resultados rápidos.
 
 ### 2.2.3. Análisis de entrevistas
