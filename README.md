@@ -1051,33 +1051,17 @@ Basándose en la propuesta de valor de "disminuir tiempo de priorización y brin
 
 **Métricas To-Be Logradas:**
 
-- Reducción tiempo priorización: 50% vs baseline (meta ≥40% ✓)
-- Uso semanal dashboard: 100% gerencias piloto con ≥4 sesiones (meta ≥1 gerencia ✓)
-- SLA primera acción: +35% mejora vs baseline (meta ≥25% ✓)
-- Reportes inválidos: <10% tras depuración automática (meta <15% ✓)
+- Reducción tiempo priorización: 50% vs baseline (meta ≥40%)
+- Uso semanal dashboard: 100% gerencias piloto con ≥4 sesiones (meta ≥1 gerencia)
+- Reportes inválidos: <10% tras depuración automática (meta <15%)
 
-### 3.1.3. Transformación Sistémica Habilitada
-
-**Circuito de Retroalimentación Optimizado:**
-El To-Be elimina las fricciones identificadas en el As-is creando un ciclo virtuoso donde:
+Llegamos a la conclusión de que el To-Be elimina las fricciones identificadas en el As-is creando un ciclo virtuoso donde:
 
 - Ciudadanos reportan más por facilidad y transparencia (≥30% recurrencia)
 - Municipalidad prioriza mejor con datos georreferenciados (≥40% reducción tiempo)
 - Resoluciones más rápidas incrementan confianza ciudadana (≥60% satisfacción)
 - Mayor volumen de reportes calificados mejora la analítica predictiva
 
-**Diferenciación vs Competidores:**
-
-- **TheShield App:** Enfoque integral urbano vs solo seguridad
-- **Proyectos UPC:** Producción escalable vs prototipos académicos
-- **Tesis viales:** UX ciudadana + dashboard municipal vs solo metodología técnica
-
-**Alineación con Arquitectura:**
-
-- **App móvil:** React Native con modo offline (ciudadanos)
-- **Backend:** Microservicios con IA de clasificación (automatización)
-- **Dashboard:** Mapas de calor PostGIS en tiempo real (municipalidad)
-- **APIs:** Integración con sistemas municipales existentes (escalabilidad)
 
 ## 3.2. User Stories
 
