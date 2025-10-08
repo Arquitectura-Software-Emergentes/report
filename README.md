@@ -805,18 +805,18 @@ Validación de concepto
 
 #### Entrevista 06
 
-- **Nombres:** Ana
-- **Apellidos:** Torres
-- **Edad:** 32
+- **Nombres:** Edwin
+- **Apellidos:** Fernandez
+- **Edad:** 52
 - **Distrito:** San Miguel
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-  ![interview_ana](images/interviews/entrevista_ana.jpg)
+  ![interview_ana](images/interviews/imagen-entrevista-muni.jpg)
 - **Inicio:** 0:05
-- **Fin:** 7:05
+- **Fin:** 3:20
 - **Enlace de entrevista:**
-  []()
-- **Resumen:** Ana es jefa del área de Mantenimiento Urbano con 7 años en el municipio. Maneja un presupuesto anual de S/. 2.8 millones para mantenimiento. Actualmente priorizan basándose en "volumen de quejas" y "visibilidad política". No tienen datos históricos organizados. Considera que la plataforma "sería un cambio revolucionario" especialmente para justificar presupuestos. Su mayor preocupación es garantizar que los ciudadanos vean resultados rápidos.
+  [enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211390_upc_edu_pe/ESqA-LOcBDVOtmZPcIy8eFYBPYqTxmbGSbdttB0J0cvTHA?e=Skagyr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+- **Resumen:**  Edwin es encargado del área de Mantenimiento Urbano con 2 años en el municipio. Maneja un presupuesto anual de S/. 1.8 millones para mantenimiento. Actualmente priorizan basándose en "volumen de quejas" y "visibilidad política". No tienen datos históricos organizados. Considera que la plataforma "sería un cambio revolucionario" especialmente para justificar presupuestos. Su mayor preocupación es garantizar que los ciudadanos vean resultados rápidos.
 
 ### 2.2.3. Análisis de entrevistas
 
