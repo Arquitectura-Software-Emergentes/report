@@ -760,10 +760,11 @@ Validación de concepto
 - **Distrito:** Pueblo Libre
 - **Perfil:** Ciudadano Reportante
 - **Evidencia de la reunión:**
-- **Inicio:** xxx
-- **Fin:** xxx
+  ![Interviwe_jhair](images/interviews/entrevista_jhair.png)
+- **Inicio:** 0:00
+- **Fin:** 4:49
 - **Enlace de entrevista:**
-  []()
+  [Entrevista Jhair - Ciudadano Reportante](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202122633_upc_edu_pe/ETrVkK7-_uNCq16H2hmZR50BpDhINCS_fFV90bStkxNxng?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hbm5Wt)
 - **Resumen:** Jhair Armando Quispe Marca, de 22 años, reside en Pueblo Libre y camina frecuentemente por el distrito. Ha observado acumulación de basura en esquinas donde los camiones demoran en pasar y postes con cables colgando. No suele reportar problemas debido a falta de tiempo y desconocimiento de canales efectivos, ya que redes sociales no generan acciones. Le parece interesante la idea de una app con foto y geolocalización, especialmente si tiene soporte municipal y seguimiento rápido. Beneficios personales: ahorro de tiempo al reportar caminando, mejora del distrito y mayor comodidad al vivir ahí. Le interesaría ver reportes de otros ciudadanos para conocer problemas cercanos y evitar duplicados. Factores motivadores: que funcione (reportes atendidos con actualizaciones de estado), facilidad de uso (especialmente para adultos mayores preocupados por la apariencia del distrito).
 
 #### Entrevista 04
