@@ -754,16 +754,17 @@ Validación de concepto
 
 #### Entrevista 03
 
-- **Nombres:** xxx
-- **Apellidos:** xxx
-- **Edad:** xxx
-- **Distrito:** xxx
+- **Nombres:** Jhair Armando
+- **Apellidos:** Quispe Marca
+- **Edad:** 22 años
+- **Distrito:** Pueblo Libre
 - **Perfil:** Ciudadano Reportante
 - **Evidencia de la reunión:**
 - **Inicio:** xxx
 - **Fin:** xxx
 - **Enlace de entrevista:**
   []()
+- **Resumen:** Jhair Armando Quispe Marca, de 22 años, reside en Pueblo Libre y camina frecuentemente por el distrito. Ha observado acumulación de basura en esquinas donde los camiones demoran en pasar y postes con cables colgando. No suele reportar problemas debido a falta de tiempo y desconocimiento de canales efectivos, ya que redes sociales no generan acciones. Le parece interesante la idea de una app con foto y geolocalización, especialmente si tiene soporte municipal y seguimiento rápido. Beneficios personales: ahorro de tiempo al reportar caminando, mejora del distrito y mayor comodidad al vivir ahí. Le interesaría ver reportes de otros ciudadanos para conocer problemas cercanos y evitar duplicados. Factores motivadores: que funcione (reportes atendidos con actualizaciones de estado), facilidad de uso (especialmente para adultos mayores preocupados por la apariencia del distrito).
 
 #### Entrevista 04
 
@@ -2320,67 +2321,67 @@ Esta capa se encarga de la persistencia de datos y las interacciones con servici
 
 Interfaz que define los métodos para gestionar las incidencias
 
-| **Métodos**             |                     |
-| ----------------------- | ------------------- | ---------------------------------------------------------- |
-| **Nombre**              | **Tipo de retorno** | **Descripción**                                            |
-| findIncident ByStatus   | List.Incident       | Retorna las incidencias filtradas por estado               |
-| findIncident ByUserId   | List.Incident       | Retorna las incidencias reportadas por un usuario          |
-| findIncident ByType     | List.Incident       | Retorna las incidencias filtradas por tipo                 |
-| findIncident ByLocation | List.Incident       | Retorna las incidencias filtradas por ubicación geográfica |
-| findIncident ByPriority | List.Incident       | Retorna las incidencias filtradas por nivel de prioridad   |
-| findIncident ById       | Incident            | Retorna una incidencia específica por su identificador     |
-| save Incident           | Incident            | Guarda una nueva incidencia en la base de datos            |
-| update Incident         | Incident            | Actualiza una incidencia existente                         |
-| delete Incident         | Boolean             | Elimina una incidencia de la base de datos                 |
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| findIncident ByStatus | List.Incident | Retorna las incidencias filtradas por estado |
+| findIncident ByUserId | List.Incident | Retorna las incidencias reportadas por un usuario |
+| findIncident ByType | List.Incident | Retorna las incidencias filtradas por tipo |
+| findIncident ByLocation | List.Incident | Retorna las incidencias filtradas por ubicación geográfica |
+| findIncident ByPriority | List.Incident | Retorna las incidencias filtradas por nivel de prioridad |
+| findIncident ById | Incident | Retorna una incidencia específica por su identificador |
+| save Incident | Incident | Guarda una nueva incidencia en la base de datos |
+| update Incident | Incident | Actualiza una incidencia existente |
+| delete Incident | Boolean | Elimina una incidencia de la base de datos |
 
 #### ICommentRepository
 
 Interfaz que representa la tabla "Comment" y maneja los métodos para gestionar comentarios
 
-| **Métodos**               |                     |
-| ------------------------- | ------------------- | ---------------------------------------------------------- |
-| **Nombre**                | **Tipo de retorno** | **Descripción**                                            |
-| findComments ByIncidentId | List.Comment        | Retorna todos los comentarios de una incidencia específica |
-| findComment ById          | Comment             | Retorna un comentario específico por su identificador      |
-| save Comment              | Comment             | Guarda un nuevo comentario en la base de datos             |
-| update Comment            | Comment             | Actualiza un comentario existente                          |
-| delete Comment            | Boolean             | Elimina un comentario de la base de datos                  |
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| findComments ByIncidentId | List.Comment | Retorna todos los comentarios de una incidencia específica |
+| findComment ById | Comment | Retorna un comentario específico por su identificador |
+| save Comment | Comment | Guarda un nuevo comentario en la base de datos |
+| update Comment | Comment | Actualiza un comentario existente |
+| delete Comment | Boolean | Elimina un comentario de la base de datos |
 
 #### IStatusHistoryRepository
 
 Interfaz que representa la tabla "StatusHistory" y maneja el historial de cambios de estado
 
-| **Métodos**                   |                     |
-| ----------------------------- | ------------------- | ---------------------------------------------------------- |
-| **Nombre**                    | **Tipo de retorno** | **Descripción**                                            |
-| findHistory ByIncidentId      | List.StatusHistory  | Retorna el historial completo de cambios de una incidencia |
-| findHistory ByUserId          | List.StatusHistory  | Retorna el historial de cambios realizados por un usuario  |
-| save StatusHistory            | StatusHistory       | Guarda un nuevo registro de cambio de estado               |
-| findLatest StatusByIncidentId | StatusHistory       | Retorna el último cambio de estado de una incidencia       |
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| findHistory ByIncidentId | List.StatusHistory | Retorna el historial completo de cambios de una incidencia |
+| findHistory ByUserId | List.StatusHistory | Retorna el historial de cambios realizados por un usuario |
+| save StatusHistory | StatusHistory | Guarda un nuevo registro de cambio de estado |
+| findLatest StatusByIncidentId | StatusHistory | Retorna el último cambio de estado de una incidencia |
 
 #### ILocationService
 
 Interfaz para servicios de geolocalización externos
 
-| **Métodos**                 |                     |
-| --------------------------- | ------------------- | ------------------------------------------------------------ |
-| **Nombre**                  | **Tipo de retorno** | **Descripción**                                              |
-| validateLocation            | Boolean             | Valida si las coordenadas están dentro de Lima Metropolitana |
-| getAddress FromCoordinates  | String              | Convierte coordenadas GPS en dirección textual               |
-| getDistrict FromCoordinates | String              | Obtiene el distrito basado en coordenadas                    |
-| calculateDistance           | Double              | Calcula distancia entre dos ubicaciones                      |
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| validateLocation | Boolean | Valida si las coordenadas están dentro de Lima Metropolitana |
+| getAddress FromCoordinates | String | Convierte coordenadas GPS en dirección textual |
+| getDistrict FromCoordinates | String | Obtiene el distrito basado en coordenadas |
+| calculateDistance | Double | Calcula distancia entre dos ubicaciones |
 
 #### INotificationService
 
 Interfaz para servicios de notificaciones en tiempo real
 
-| **Métodos**                   |                     |
-| ----------------------------- | ------------------- | ------------------------------------------------------ |
-| **Nombre**                    | **Tipo de retorno** | **Descripción**                                        |
-| sendStatusUpdate Notification | Boolean             | Envía notificación de cambio de estado via WebSocket   |
-| sendComment Notification      | Boolean             | Envía notificación de nuevo comentario                 |
-| sendAssignment Notification   | Boolean             | Notifica asignación de incidencia a personal municipal |
-| updateNotification Badge      | Boolean             | Actualiza contador de notificaciones en tiempo real    |
+| **Métodos** |  |
+|-------------|-------------|
+| **Nombre** | **Tipo de retorno** | **Descripción** |
+| sendStatusUpdate Notification | Boolean | Envía notificación de cambio de estado via WebSocket |
+| sendComment Notification | Boolean | Envía notificación de nuevo comentario |
+| sendAssignment Notification | Boolean | Notifica asignación de incidencia a personal municipal |
+| updateNotification Badge | Boolean | Actualiza contador de notificaciones en tiempo real |
 
 ### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
 
