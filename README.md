@@ -775,35 +775,21 @@ Validación de concepto
 
 #### Entrevista 04
 
-- **Nombres:** Jenna
+- **Nombres:** Maria
 - **Apellidos:** Lopez
 - **Edad:** 26
 - **Distrito:** Surco
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-  ![interview_jenna](images/interviews/municipal.png)
+  ![interview_jenna](images/entrevista-maria-lopez.png)
 - **Inicio:** 00:20
 - **Fin:** 4:56
 - **Enlace de entrevista:**
-  []()
-- **Resumen:** Jenna trabaja en la Gerencia de Servicios Públicos hace 3 años. Reciben reportes principalmente por teléfono y ventanilla, registrándolos en hojas Excel. La priorización se basa en "urgencia percibida" y disponibilidad de cuadrillas. No usan mapas digitales. Ve mucho valor en la propuesta: "Nos ayudaría a organizar mejor el trabajo y mostrar resultados concretos". Su principal preocupación es la capacitación del personal.
+  [enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/Ec3UM76mNdVChS6WrhO4ze4B04_Iwt_HBcJyD0k3dwA5GA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ygNcWy)
+- **Resumen:** Maria trabaja en la Gerencia de Servicios Públicos hace 3 años. Reciben reportes principalmente por teléfono y ventanilla, registrándolos en hojas Excel. La priorización se basa en "urgencia percibida" y disponibilidad de cuadrillas. No usan mapas digitales. Ve mucho valor en la propuesta: "Nos ayudaría a organizar mejor el trabajo y mostrar resultados concretos". Su principal preocupación es la capacitación del personal.
+
 
 #### Entrevista 05
-
-- **Nombres:** Carol
-- **Apellidos:** Mogrovejo
-- **Edad:** 30
-- **Distrito:** San Miguel
-- **Perfil:** Personal Municipal
-- **Evidencia de la reunión:**
-  ![interview_jenna](images/interviews/interview_muni1.png)
-- **Inicio:** 0:20
-- **Fin:** 7:56
-- **Enlace de entrevista:**
-  []()
-- **Resumen:** Carol es coordinadora de Obras Públicas con 5 años de experiencia. Gestiona un promedio de 40 reportes semanales que llegan por múltiples canales (teléfono, Facebook, presencial). Toma aproximadamente 1 semana priorizar y asignar cuadrillas. Valora especialmente la idea de mapas de calor: "Podríamos ver dónde se concentran los problemas y hacer mantenimiento preventivo". Le preocupa la integración con sus sistemas actuales.
-
-#### Entrevista 06
 
 - **Nombres:** Edwin
 - **Apellidos:** Fernandez
