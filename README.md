@@ -553,7 +553,7 @@ El éxito se medirá en términos de reportes válidos, precisión en la clasifi
 
 Esta sección define los segmentos objetivo iniciales sobre los cuales se construirá y validará la propuesta de valor de la plataforma. La selección se orienta a maximizar aprendizaje validado en el menor tiempo, reduciendo incertidumbre sobre adopción y utilidad. Se priorizan únicamente dos segmentos núcleo para mantener foco operativo y claridad en las métricas tempranas.
 
-### 1.3.1 **_Segmento: Ciudadano Reportante_**
+### 1.3.1 **Segmento: Ciudadano Reportante**
 
 **Descripción:** Residente urbano con smartphone (predominio Android) que se desplaza por la ciudad y está dispuesto a registrar incidencias visibles (baches, residuos, luminarias dañadas, daños estructurales menores) mediante fotografía y ubicación automática. Utilizará exclusivamente la aplicación móvil.
 
@@ -583,7 +583,7 @@ Esta sección define los segmentos objetivo iniciales sobre los cuales se constr
 - Modo offline con sincronización diferida.
 - Mensajes educativos breves sobre cómo tomar fotos válidas.
 
-### 1.3.2 **_Segmento: Municipalidad (personal técnico y de gestión)_**
+### 1.3.2 **Segmento: Municipalidad (personal técnico y de gestión)**
 
 **Descripción:** Equipo técnico y de gestión (obras, mantenimiento, servicios públicos o innovación) que revisa, prioriza y asigna recursos para intervención de incidencias. Consumirá exclusivamente el dashboard web (visualización geoespacial, panel de métricas y filtros).
 
@@ -773,7 +773,7 @@ Validación de concepto
 - **Distrito:** Surco
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-  ![interview_jenna](images/entrevista-maria-lopez.png)
+  ![interview_jenna](images/interviews/entrevista-maria-lopez.png)
 - **Inicio:** 00:20
 - **Fin:** 4:56
 - **Enlace de entrevista:**
@@ -1494,7 +1494,7 @@ Resultado del proceso de Quality Attribute Workshop, priorizando drivers por imp
 
 | **Driver ID** | **Título**                               | **Descripción**                                                                                                          | **Importancia** | **Complejidad** |
 | ------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------- | --------------- |
-| **QA01**      | Disponibilidad durante Alta Concurrencia | Mantener 99.5% disponibilidad mensual procesando reportes en <3 segundos durante picos de 5,000+ usuarios simultáneos    | High            | High            |
+| **QA01**      | Disponibilidad durante Alta Concurrencia | Mantener 99.5% disponibilidad mensual procesando reportes en < 3 segundos durante picos de 5,000+ usuarios simultáneos    | High            | High            |
 | **QA02**      | Rendimiento Dashboard Geoespacial        | Generar mapas de calor interactivos en <2 segundos con filtros temporales para 500+ reportes acumulados                  | High            | High            |
 | **C01**       | Restricción Tecnológica                  | Desplegar exclusivamente cumpliendo políticas municipales de infraestructura cloud                                       | High            | Medium          |
 | **FD01**      | Reporte con Geolocalización Flutter      | Permitir captura automática de ubicación GPS y fotografía mediante app Flutter multiplataforma                           | High            | Medium          |
@@ -1511,10 +1511,9 @@ Resultado del proceso de Quality Attribute Workshop, priorizando drivers por imp
 
 Durante el Quality Attribute Workshop, el equipo analizó los Architectural Drivers seleccionados para la solución LimaUrban, evaluando distintas tácticas y patrones de diseño para asegurar su cumplimiento. Se analizaron patrones como MVC (aplicado como MVT en Django), arquitectura en Capas y Cliente-Servidor. A continuación, se detallan los pros y contras de cada patrón respecto a cada Driver:
 
-| Driver ID | Título de Driver    | MVC / MVT                                                                                                              | Capas                                                                                                              | Cliente-Servidor                                                                                                       |
-| :-------- | :------------------ | :--------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-|           |                     | **Pro**                                                                                                                | **Con**                                                                                                            | **Pro**                                                                                                                | **Con**                                                                                                      | **Pro**                                                                                                     | **Con**                                                                                                                  |
-| **QA01**  | **Disponibilidad**  | Permite separar lógica de negocio y datos, reduciendo el impacto de fallos en la presentación.                         | La sincronización de datos en tiempo real entre el modelo y la vista puede ser compleja y propensa a fallos.       | Permite distribuir la carga en capas independientes (ej. web, aplicación, datos), mejorando la disponibilidad general. | Un fallo en una capa intermedia puede afectar la operación global del sistema si no hay redundancia.         | Permite operación continua en el cliente (Flutter) incluso ante fallas parciales del servidor .             | Dependencia de una conexión de red continua al servidor para la mayoría de las funcionalidades.                          |
+| Driver ID | Título de Driver    | MVC / MVT Pro                                                                                                          | MVC / MVT Con                                                                                                      | Capas Pro                                                                                                              | Capas Con                                                                                                    | Cliente-Servidor Pro                                                                                        | Cliente-Servidor Con                                                                                                     |
+| :-------- | :------------------ | :--------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| **QA01**  | **Disponibilidad**  | Permite separar lógica de negocio y datos, reduciendo el impacto de fallos en la presentación.                         | La sincronización de datos en tiempo real entre el modelo y la vista puede ser compleja y propensa a fallos.       | Permite distribuir la carga en capas independientes (ej. web, aplicación, datos), mejorando la disponibilidad general. | Un fallo en una capa intermedia puede afectar la operación global del sistema si no hay redundancia.         | Permite operación continua en el cliente (Flutter) incluso ante fallas parciales del servidor.             | Dependencia de una conexión de red continua al servidor para la mayoría de las funcionalidades.                          |
 | **QA04**  | **Usabilidad**      | Facilita el desarrollo de interfaces de usuario (vistas) intuitivas y desacopladas de la lógica de negocio.            | Si la comunicación entre controlador y vista no es eficiente, puede aumentar la latencia y afectar la fluidez.     | Optimiza cada capa para su propósito (ej. UI, lógica), mejorando la experiencia del usuario final.                     | Riesgo de inconsistencias en la experiencia si las capas de presentación (móvil y web) no se coordinan bien. | Permite actualizaciones rápidas de la interfaz de usuario en Flutter/Angular sin afectar el backend.        | La latencia de la red puede afectar negativamente la usabilidad si las APIs no están optimizadas para baja conectividad. |
 | **QA06**  | **Seguridad**       | El controlador actúa como un punto de entrada único, facilitando la aplicación de controles de seguridad y validación. | La protección de múltiples puntos de acceso (APIs) para vistas y modelos puede aumentar la complejidad.            | Permite aislar servicios críticos (ej. autenticación) en capas específicas, reforzando la protección.                  | Aumenta el número de superficies de ataque que requieren monitoreo y defensa (entre-capas).                  | La comunicación vía TLS/HTTPS asegura el canal entre cliente y servidor. APIs expuestas aumentan el riesgo. | La lógica en el cliente puede ser vulnerable si no se valida adecuadamente en el servidor.                               |
 | **N/A**   | **Modificabilidad** | Separar la lógica facilita cambios localizados (ej. agregar un nuevo tipo de incidencia) sin afectar la presentación.  | Puede ser difícil de mantener si los flujos de datos entre Modelo, Vista y Controlador no están bien documentados. | Cambios en una capa (ej. migrar la BD) no deberían afectar a otras si las interfaces están bien definidas.             | Cambios que atraviesan múltiples capas pueden volverse costosos si la modularidad no se gestiona bien.       | Permite la actualización independiente del backend y las aplicaciones cliente (Flutter/Angular).            | Se debe mantener la compatibilidad (versionado de APIs) entre diferentes versiones del cliente y el servidor.            |
@@ -1600,13 +1599,13 @@ A partir del EventStorming, se llevó a cabo la sesión de Candidate Context Dis
 #### IAM Context
 
 Este contexto agrupa todo lo relacionado con la **gestión de identidades y accesos**. Incluye los procesos de registro y autenticación tanto para ciudadanos como para personal municipal. Para reforzar la seguridad se tendra la administración centralizada de credenciales. Su relevancia radica en ser el punto de entrada seguro a la plataforma.
-![event-storming](./images/event-storming-corregido-iam.jpg)
+![event-storming](./images/bounded/event-storming-corregido-iam.jpg)
 
 #### Incidencias Context
 
 Se ocupa de todos los procesos de **registro, autenticación y control de acceso** tanto para ciudadanos como para personal municipal. Aquí se definieron funcionalidades como la creación de cuentas, inicio y cierre de sesión, y la validación de credenciales.
 
-![event-storming](./images/event-storming-corregido-incident.jpg)
+![event-storming](./images/bounded/event-storming-corregido-incident.jpg)
 
 En Urban Lima, este contexto asegura que la plataforma solo sea utilizada por usuarios autorizados, protegiendo la información sensible y garantizando el cumplimiento de políticas de seguridad municipales.
 
@@ -1614,7 +1613,7 @@ En Urban Lima, este contexto asegura que la plataforma solo sea utilizada por us
 
 Enfocado en la **dimensión geoespacial** de la información, este contexto integra MapBox para mostrar incidencias en mapas de calor, aplicar filtros geográficos y permitir la exploración espacial de los reportes.
 
-![event-storming](./images/event-storming-corregido-location.jpg)
+![event-storming](./images/bounded/event-storming-corregido-location.jpg)
 
 Para Urban Lima, este contexto añade un valor diferencial, ya que convierte los reportes ciudadanos en información territorial, facilitando la priorización de zonas críticas y la planificación urbana basada en datos reales.
 
