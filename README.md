@@ -329,25 +329,25 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
 
 ### 1.1.1. Descripción de la Startup
 
-[actualizar]
+LimaUrban se constituye como una iniciativa tecnológica en el ámbito de la tecnología cívica, cuyo objetivo principal es optimizar los canales de comunicación entre los ciudadanos y las entidades municipales. La propuesta se materializa en una plataforma digital que emplea modelos de inteligencia artificial para facilitar a los residentes el reporte estructurado de incidencias en la infraestructura y los servicios urbanos, tales como baches, deficiencias en el alumbrado público o acumulación de residuos. Dicho proceso se realiza a través de una aplicación móvil diseñada para la captura y transmisión eficiente de datos.
+
+Como contraparte, la solución provee al personal municipal una plataforma web de gestión centralizada. Este sistema está diseñado para la recepción, clasificación, priorización y seguimiento de los reportes ciudadanos, con el fin de optimizar los tiempos de respuesta y la asignación de recursos. De este modo, LimaUrban busca transformar la participación ciudadana en datos accionables, contribuyendo a la construcción de entornos urbanos más eficientes, seguros y colaborativos.
 
 ### 1.1.2. Perfiles de integrantes del equipo
-
-## 1.1.2. Perfiles de integrantes del equipo
 
 | Foto                                                        | Información                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Perfil de Aldo](./images/profiles/aldo_profile.jpg)       | **Nombre y Apellido:** Aldo Alberto Baldeon Fabian<br>**Código:** U202122633<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Aldo Alberto Baldeon Fabian, estudio la carrera de Ingeniería de Software en la UPC. Escogí esta carrera porque me interesó el desarrollo de aplicaciones. Soy responsable y me gusta trabajar en equipo. Poseo conocimientos básicos en C#, java, JavaScript, HTML y CSS. También, poseo conocimientos intermedios en C + +, SQL y MongoDB, además de contar con experiencia en Git y GitHub.                                                                                                                                                                                                                                              |
-| ![Perfil de Barbara](./images/profiles/barbara_profile.jpg) | **Nombre y Apellido:** Barbara Susana Quezada Portalatino<br>**Código:** U202211800<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Barbara Susana Quezada Portalatino, cursando el séptimo ciclo de la carrera de software, trabajo mayormente bajo un rol de líder que me ayuda a poder organizar no solo la ideas de mi grupo sino que las ideas aterricen en la ejecución. Soy una persona muy disciplinada y detallista.                                                                                                                                                                                                                                                                                                                                                |
+| ![Perfil de Barbara](./images/profiles/barbara_profile.jpg) | **Nombre y Apellido:** Barbara Susana Quezada Portalatino<br>**Código:** U202211800<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Barbara Susana Quezada Portalatino, cursando el octavo ciclo de la carrera de software, trabajo mayormente bajo un rol de líder que me ayuda a poder organizar no solo la ideas de mi grupo sino que las ideas aterricen en la ejecución. Soy una persona muy disciplinada y detallista.                                                                                                                                                                                                                                                                                                                                                 |
 | ![Perfil de Jimena](./images/profiles/jimena_profile.jpg)   | **Nombre y Apellido:** Jimena Tamara Cama Salvatierra<br>**Código:** U2022210778<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y actualmente estoy cursando el 8vo ciclo. Me considero una persona curiosa, determinada y organizada. Con la experiencia en proyectos de startup y trabajos en equipo, trabajaré junto a mis compañeros para lograr un óptimo resultado del proyecto.                                                                                                                                                                                                                                                                                                                     |
-| ![Perfil de Jair](./images/profiles/jair_profile.jpg)       | **Nombre y Apellido:** Jair Alexander Castillo Castillo<br>**Código:** U202211390<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y me encuentro en el 7to ciclo. Me considero una persona dedicada, comprensiva y metódica. Con mis habilidades de liderazgo y mi capacidad para trabajar en equipo en un ambiente de respeto, estoy segura de que podré dirigir la implementación de la startup de nuestro proyecto de manera exitosa.                                                                                                                                                                                                                                                                    |
+| ![Perfil de Jair](./images/profiles/jair_profile.jpg)       | **Nombre y Apellido:** Jair Alexander Castillo Castillo<br>**Código:** U202211390<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy estudiante de la carrera de Ingeniería de Software en la UPC y me encuentro en el 8to ciclo. Me considero una persona dedicada, comprensiva y metódica. Con mis habilidades de liderazgo y mi capacidad para trabajar en equipo en un ambiente de respeto, estoy segura de que podré dirigir la implementación de la startup de nuestro proyecto de manera exitosa.                                                                                                                                                                                                                                                                    |
 | ![Perfil de Steve](./images/profiles/steve_profile.jpg)     | **Nombre y Apellido:** Steve Roger Castillo Robles<br>**Código:** U202012378<br>**Carrera:** Ingeniería de Software<br>**Acerca de:** Soy Steve, estudiante del 9no ciclo de Ingeniería de Software y desarrollador Full-Stack, con experiencia en tecnologías como Angular, React.js, Next.js, Spring Boot, Flutter, PostgreSQL y servicios cloud como Azure, Firebase y Supabase. Mi experiencia abarca desde el desarrollo y migración de aplicaciones hasta el diseño y optimización de bases de datos, aplicando principios de arquitectura limpia, DDD y metodologías ágiles como Scrum. Me destaco por mi capacidad para trabajar en equipo, mi enfoque metódico y mi constante pasión por aprender y aplicar nuevas tecnologías para llevar los proyectos al siguiente nivel. |
 
 ## 1.2. Solution Profile
 
-**[Nombre del proyecto]**
+**LimaUrban**
 
-Nuestra propuesta es crear una plataforma urbana inteligente centrada en Lima, que aprovecha tecnologías de visión por computadora y análisis geoespacial para transformar la gestión de incidencias urbanas. A través de una aplicación móvil, los limeños podrán reportar problemas específicos como baches y acumulación de basura, adjuntando fotografías y ubicación automática. Estas imágenes serán procesadas por un backend con inteligencia artificial, donde un sistema de visión por computadora YOLO entrenado con un dataset local mínimo de 2,000 imágenes identificará y clasificará automáticamente cada incidencia en estas dos categorías prioritarias.
+Nuestra propuesta es crear una plataforma urbana inteligente centrada en Lima, que aprovecha tecnologías de visión por computadora y análisis geoespacial para transformar la gestión de incidencias urbanas. A través de una aplicación móvil, los limeños podrán reportar problemas como baches, grafitis, basura o incidencias estructurales (por ejemplo, daños en infraestructura pública), adjuntando fotografías y ubicación automática. Estas imágenes serán procesadas por un backend con inteligencia artificial, donde un sistema de visión por computadora entrenado con datos locales identificará y clasificará automáticamente cada incidencia.
 
 Simultáneamente, la plataforma generará mapas de calor georreferenciados utilizando herramientas de análisis geoespacial, mostrando en tiempo real las zonas con mayor concentración de reportes. Estas herramientas permitirán a las autoridades visualizar la distribución de incidencias por distrito y planificar intervenciones de forma estratégica.
 
@@ -371,8 +371,10 @@ El impacto se concentra en Lima Metropolitana, especialmente en distritos céntr
 
 **¿Quiénes son los beneficiarios?**
 
-- **Ciudadanos limeños:** Vecinos que reportan problemas y pueden dar seguimiento a sus solicitudes, obteniendo transparencia en el proceso de resolución.
-- **Autoridades municipales:** Personal técnico y de gestión (gerencias de obras, mantenimiento, servicios públicos) que requieren herramientas para supervisar infraestructuras, priorizar recursos y asignar cuadrillas de manera eficiente.
+- Autoridades municipales: Alcaldes y gerencias de obras que requieren herramientas para supervisar infraestructuras y priorizar recursos.
+- Ciudadanos limeños: Vecinos que reportan problemas y pueden dar seguimiento a sus solicitudes.
+- Personal operativo municipal: Obreros y contratistas que asignan cuadrillas de mantenimiento de manera eficiente.
+- Sector privado y académico: Empresas y universidades que acceden a datos abiertos para estudios de urbanismo y desarrollo de soluciones complementarias.
 
 **¿Por qué persiste el problema?**
 
@@ -392,7 +394,7 @@ Las consecuencias son notables: la congestión vehicular y el deterioro vial obl
 
 **Beneficiarios directos e impacto adicional**
 
-La plataforma impacta a casi toda la población de Lima (~10.29 millones), permitiendo a las autoridades municipales detectar incidencias temprano, asignar recursos óptimamente y tomar decisiones informadas. El personal municipal visualiza puntos críticos mediante mapas de calor y dashboards analíticos, facilitando la priorización y asignación eficiente de recursos. Los ciudadanos cuentan con un canal claro para reportar problemas y recibir transparencia en el seguimiento. Además, Lima avanzaría hacia una ciudad más inteligente y resiliente, optimizando inversiones y mejorando la preparación ante emergencias.
+La plataforma impacta a casi toda la población de Lima (~10.29 millones), permitiendo a las autoridades detectar incidencias temprano, asignar recursos óptimamente y tomar decisiones informadas. Los equipos de mantenimiento visualizan puntos críticos y asignan cuadrillas eficientemente, mientras que los ciudadanos cuentan con un canal claro para reportar problemas y recibir transparencia en el seguimiento. El sector privado y académico accede a datos abiertos para estudios y desarrollo de soluciones. Además, Lima avanzaría hacia una ciudad más inteligente y resiliente, optimizando inversiones y mejorando la preparación ante emergencias.
 
 **Innovación tecnológica y valor diferencial**
 
@@ -418,7 +420,7 @@ La gestión de incidencias urbanas en Lima Metropolitana es actualmente reactiva
 
 **Problema:**
 
-Ciudadanos conectados digitalmente (18–45 y segmentos activos de reporte cívico) experimentan frustración y desconfianza al no poder visualizar el progreso de sus reportes de baches y acumulación de basura, dos de las incidencias urbanas más frecuentes del espacio público. Paralelamente, las gerencias municipales carecen de un repositorio unificado y de analítica geoespacial que permita detectar patrones (hotspots) y priorizar intervenciones preventivas. Esto ocasiona: duplicidad de reclamos, tiempos prolongados a primera acción, uso ineficiente de cuadrillas y percepción negativa de respuesta institucional.
+Ciudadanos conectados digitalmente (18–45 y segmentos activos de reporte cívico) experimentan frustración y desconfianza al no poder visualizar el progreso de sus reportes de baches, residuos, luminarias dañadas u otras incidencias del espacio público. Paralelamente, las gerencias municipales carecen de un repositorio unificado y de analítica geoespacial que permita detectar patrones (hotspots) y priorizar intervenciones preventivas. Esto ocasiona: duplicidad de reclamos, tiempos prolongados a primera acción, uso ineficiente de cuadrillas y percepción negativa de respuesta institucional.
 
 **Impacto:**
 
@@ -463,6 +465,7 @@ Municipalidad:
 - Dashboard geoespacial con mapas de calor, filtros por tipo, tiempo y severidad.
 - Modo offline con sincronización diferida.
 - Notificaciones (push / correo) en hitos clave.
+- (Opcional fase posterior) Publicación de datos agregados anonimizada.
 
 **Business Assumptions:**
 
@@ -530,6 +533,10 @@ A continuación, se presentan las hipótesis clave relacionadas con las funciona
   Creemos que el modo offline incrementará la cobertura en zonas de conectividad limitada.
   Sabremos que hemos tenido éxito cuando ≥15% de los reportes provengan de sesiones iniciadas sin conexión y sincronizadas posteriormente.
 
+- Hypothesis Statement 7:
+  Creemos que la publicación de datos agregados fomentará colaboración externa y reutilización.
+  Sabremos que hemos tenido éxito cuando al menos 2 actores externos consuman el endpoint público y entreguen retroalimentación formal durante el piloto.
+
 Estas hipótesis se priorizarán por impacto y nivel de incertidumbre; las de mayor riesgo (precisión del modelo, adopción institucional, retención inicial) serán abordadas en los primeros ciclos experimentales para reducir desperdicio de esfuerzo.
 
 #### 1.2.2.4. Lean UX Canvas
@@ -546,9 +553,9 @@ El éxito se medirá en términos de reportes válidos, precisión en la clasifi
 
 Esta sección define los segmentos objetivo iniciales sobre los cuales se construirá y validará la propuesta de valor de la plataforma. La selección se orienta a maximizar aprendizaje validado en el menor tiempo, reduciendo incertidumbre sobre adopción y utilidad. Se priorizan únicamente dos segmentos núcleo para mantener foco operativo y claridad en las métricas tempranas.
 
-### 1.3.1 **Segmento: Ciudadano Reportante**
+### 1.3.1 **_Segmento: Ciudadano Reportante_**
 
-**Descripción:** Residente urbano con smartphone (predominio Android) que se desplaza por la ciudad y está dispuesto a registrar incidencias visibles específicamente baches y acumulación de basura mediante fotografía y ubicación automática. Utilizará exclusivamente la aplicación móvil.
+**Descripción:** Residente urbano con smartphone (predominio Android) que se desplaza por la ciudad y está dispuesto a registrar incidencias visibles (baches, residuos, luminarias dañadas, daños estructurales menores) mediante fotografía y ubicación automática. Utilizará exclusivamente la aplicación móvil.
 
 **Necesidades Clave:**
 
@@ -576,7 +583,7 @@ Esta sección define los segmentos objetivo iniciales sobre los cuales se constr
 - Modo offline con sincronización diferida.
 - Mensajes educativos breves sobre cómo tomar fotos válidas.
 
-### 1.3.2 **Segmento: personal Municipal (técnico y de gestión)**
+### 1.3.2 **_Segmento: Municipalidad (personal técnico y de gestión)_**
 
 **Descripción:** Equipo técnico y de gestión (obras, mantenimiento, servicios públicos o innovación) que revisa, prioriza y asigna recursos para intervención de incidencias. Consumirá exclusivamente el dashboard web (visualización geoespacial, panel de métricas y filtros).
 
@@ -728,25 +735,10 @@ Validación de concepto
 
 - **Inicio:** 0:00
 - **Fin:** 3:24
-- **Enlace de entrevista:** [https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing](https://drive.google.com/file/d/1k16nT_7CvDAej8H3e1fnXmgkZEBjm6CN/view?usp=sharing)
+- **Enlace de entrevista:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/Ef0mPSeBWX5AtLkikwCFejkBY-n_wCrGuG4DbWxKQSwaeA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Kr57aN](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/Ef0mPSeBWX5AtLkikwCFejkBY-n_wCrGuG4DbWxKQSwaeA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Kr57aN)
 - **Resumen:** Rosalynn es ama de casa que se desplaza diariamente en transporte público. Ha observado múltiples baches en la Av. Evitamiento y acumulación de basura cerca del mercado de Chosica. Intentó reportar por teléfono al municipio pero nunca recibió respuesta. Le parece muy útil la idea de una app con foto porque "sería una prueba de que el problema existe". Su principal motivación sería "ver que realmente hacen algo con mi reporte".
 
 #### Entrevista 02
-
-- **Nombres:** Diego
-- **Apellidos:** Gomez
-- **Edad:** 16
-- **Distrito:** Comas
-- **Perfil:** Ciudadano Reportante
-- **Evidencia de la reunión:**
-  ![interview_diego](images/interviews/interview-ciudadano.png)
-- **Inicio:** 0:12
-- **Fin:** 5:56
-- **Enlace de entrevista:**
-  [https://drive.google.com/file/d/1CVDQx8Ue15xk7yt8oukkN1S87bAc7TeB/view?usp=sharing](https://drive.google.com/file/d/1CVDQx8Ue15xk7yt8oukkN1S87bAc7TeB/view?usp=sharing)
-- **Resumen:** Diego es estudiante de secundaria que camina diariamente al colegio. Ha notado varios postes de luz malogrados en su cuadra y grafitis en las paredes del parque. Nunca ha reportado nada porque "no sabía cómo hacerlo". Usa mucho su celular y le encanta la idea de una app: "Sería como Instagram pero para arreglar el barrio". Le interesaría ver reportes de otros para saber qué pasa en su zona.
-
-#### Entrevista 03
 
 - **Nombres:** Silvia
 - **Apellidos:** Salvatierra
@@ -758,7 +750,7 @@ Validación de concepto
 
 - **Inicio:** 0:00
 - **Fin:** 3:05
-- **Enlace de entrevista:** [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
+- **Enlace de entrevista:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EX85TwgismJAvpQ2-K8-iHEBYrH2CitKWtaBWFIu0qFDoQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=k6TtrS](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EX85TwgismJAvpQ2-K8-iHEBYrH2CitKWtaBWFIu0qFDoQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=k6TtrS)
 
 #### Entrevista 03
 
@@ -771,52 +763,37 @@ Validación de concepto
 - **Inicio:** xxx
 - **Fin:** xxx
 - **Enlace de entrevista:**
-  [Entrevistas - Ciudadanos.mp4](https://drive.google.com/file/d/1234567890/view)
+  []()
 
 #### Entrevista 04
 
-- **Nombres:** Jenna
+- **Nombres:** Maria
 - **Apellidos:** Lopez
 - **Edad:** 26
 - **Distrito:** Surco
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-  ![interview_jenna](images/interviews/municipal.png)
+  ![interview_jenna](images/entrevista-maria-lopez.png)
 - **Inicio:** 00:20
 - **Fin:** 4:56
 - **Enlace de entrevista:**
-  [https://drive.google.com/file/d/1Trk5RaI-122b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
-- **Resumen:** Jenna trabaja en la Gerencia de Servicios Públicos hace 3 años. Reciben reportes principalmente por teléfono y ventanilla, registrándolos en hojas Excel. La priorización se basa en "urgencia percibida" y disponibilidad de cuadrillas. No usan mapas digitales. Ve mucho valor en la propuesta: "Nos ayudaría a organizar mejor el trabajo y mostrar resultados concretos". Su principal preocupación es la capacitación del personal.
+  [enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/Ec3UM76mNdVChS6WrhO4ze4B04_Iwt_HBcJyD0k3dwA5GA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ygNcWy)
+- **Resumen:** Maria trabaja en la Gerencia de Servicios Públicos hace 3 años. Reciben reportes principalmente por teléfono y ventanilla, registrándolos en hojas Excel. La priorización se basa en "urgencia percibida" y disponibilidad de cuadrillas. No usan mapas digitales. Ve mucho valor en la propuesta: "Nos ayudaría a organizar mejor el trabajo y mostrar resultados concretos". Su principal preocupación es la capacitación del personal.
 
 #### Entrevista 05
 
-- **Nombres:** Carol
-- **Apellidos:** Mogrovejo
-- **Edad:** 30
+- **Nombres:** Edwin
+- **Apellidos:** Fernandez
+- **Edad:** 52
 - **Distrito:** San Miguel
 - **Perfil:** Personal Municipal
 - **Evidencia de la reunión:**
-  ![interview_jenna](images/interviews/interview_muni1.png)
-- **Inicio:** 0:20
-- **Fin:** 7:56
-- **Enlace de entrevista:**
-  [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing)
-- **Resumen:** Carol es coordinadora de Obras Públicas con 5 años de experiencia. Gestiona un promedio de 40 reportes semanales que llegan por múltiples canales (teléfono, Facebook, presencial). Toma aproximadamente 1 semana priorizar y asignar cuadrillas. Valora especialmente la idea de mapas de calor: "Podríamos ver dónde se concentran los problemas y hacer mantenimiento preventivo". Le preocupa la integración con sus sistemas actuales.
-
-#### Entrevista 06
-
-- **Nombres:** Ana
-- **Apellidos:** Torres
-- **Edad:** 32
-- **Distrito:** San Miguel
-- **Perfil:** Personal Municipal
-- **Evidencia de la reunión:**
-  ![interview_ana](images/interviews/entrevista_ana.jpg)
+  ![interview_ana](images/interviews/imagen-entrevista-muni.jpg)
 - **Inicio:** 0:05
-- **Fin:** 7:05
+- **Fin:** 3:20
 - **Enlace de entrevista:**
-  [https://drive.google.com/file/d/1Trk5RaI-7b8vEiCClu6NsdXGdaMnVTXr/view?usp=sharing](https://drive.google.com/file/d/1234567890/view)
-- **Resumen:** Ana es jefa del área de Mantenimiento Urbano con 7 años en el municipio. Maneja un presupuesto anual de S/. 2.8 millones para mantenimiento. Actualmente priorizan basándose en "volumen de quejas" y "visibilidad política". No tienen datos históricos organizados. Considera que la plataforma "sería un cambio revolucionario" especialmente para justificar presupuestos. Su mayor preocupación es garantizar que los ciudadanos vean resultados rápidos.
+  [enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211390_upc_edu_pe/ESqA-LOcBDVOtmZPcIy8eFYBPYqTxmbGSbdttB0J0cvTHA?e=Skagyr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+- **Resumen:** Edwin es encargado del área de Mantenimiento Urbano con 2 años en el municipio. Maneja un presupuesto anual de S/. 1.8 millones para mantenimiento. Actualmente priorizan basándose en "volumen de quejas" y "visibilidad política". No tienen datos históricos organizados. Considera que la plataforma "sería un cambio revolucionario" especialmente para justificar presupuestos. Su mayor preocupación es garantizar que los ciudadanos vean resultados rápidos.
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -1051,33 +1028,16 @@ Basándose en la propuesta de valor de "disminuir tiempo de priorización y brin
 
 **Métricas To-Be Logradas:**
 
-- Reducción tiempo priorización: 50% vs baseline (meta ≥40% ✓)
-- Uso semanal dashboard: 100% gerencias piloto con ≥4 sesiones (meta ≥1 gerencia ✓)
-- SLA primera acción: +35% mejora vs baseline (meta ≥25% ✓)
-- Reportes inválidos: <10% tras depuración automática (meta <15% ✓)
+- Reducción tiempo priorización: 50% vs baseline (meta ≥40%)
+- Uso semanal dashboard: 100% gerencias piloto con ≥4 sesiones (meta ≥1 gerencia)
+- Reportes inválidos: <10% tras depuración automática (meta <15%)
 
-### 3.1.3. Transformación Sistémica Habilitada
-
-**Circuito de Retroalimentación Optimizado:**
-El To-Be elimina las fricciones identificadas en el As-is creando un ciclo virtuoso donde:
+Llegamos a la conclusión de que el To-Be elimina las fricciones identificadas en el As-is creando un ciclo virtuoso donde:
 
 - Ciudadanos reportan más por facilidad y transparencia (≥30% recurrencia)
 - Municipalidad prioriza mejor con datos georreferenciados (≥40% reducción tiempo)
 - Resoluciones más rápidas incrementan confianza ciudadana (≥60% satisfacción)
 - Mayor volumen de reportes calificados mejora la analítica predictiva
-
-**Diferenciación vs Competidores:**
-
-- **TheShield App:** Enfoque integral urbano vs solo seguridad
-- **Proyectos UPC:** Producción escalable vs prototipos académicos
-- **Tesis viales:** UX ciudadana + dashboard municipal vs solo metodología técnica
-
-**Alineación con Arquitectura:**
-
-- **App móvil:** React Native con modo offline (ciudadanos)
-- **Backend:** Microservicios con IA de clasificación (automatización)
-- **Dashboard:** Mapas de calor PostGIS en tiempo real (municipalidad)
-- **APIs:** Integración con sistemas municipales existentes (escalabilidad)
 
 ## 3.2. User Stories
 
@@ -1098,37 +1058,37 @@ Las siguientes épicas representan funcionalidades de gran alcance que engloban 
 
 Las presentes user stories descomponen las épicas en requerimientos más específicos, descritos desde la perspectiva del usuario final o del rol involucrado. Cada historia captura una necesidad concreta y el valor que aporta al sistema, permitiendo priorizar funcionalidades y mantener el enfoque en la experiencia de nuestros usuarios. </br> </br>
 
-| Epic / User Story ID | Título                                | Descripción                                                                                                                                                                                     | Criterios de aceptación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Relacionado con (Epic ID) |      Segmento      |
-| -------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | :----------------: |
-| US01                 | Registro de personal municipales      | Como personal municipal, quiero registrarme en la plataforma para acceder a las funcionalidades de gestión.                                                                                     | Escenario 1: Registro exitoso<br>Dado que la personal municipal completa todos los campos<br>Cuando confirma el registro<br>Entonces el sistema crea su cuenta y envía confirmación.<br><br>Escenario 2: Datos incompletos<br>Dado que el formulario está incompleto<br>Cuando intenta registrarse<br>Entonces el sistema muestra un mensaje de error indicando los campos faltantes.<br><br>Escenario 3: Usuario ya existe<br>Dado que el correo ya está registrado<br>Cuando intenta registrarse<br>Entonces el sistema muestra mensaje de cuenta existente. | E01                       | Personal Municipal |
-| US02                 | Inicio de sesión personal municipal   | Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.                                                                                                 | Escenario 1: Inicio exitoso<br>Dado que ingreso credenciales correctas<br>Cuando inicio sesión<br>Entonces accedo al panel principal.<br><br>Escenario 2: Credenciales incorrectas<br>Dado que ingreso datos erróneos<br>Cuando intento iniciar sesión<br>Entonces el sistema rechaza el acceso y muestra error.<br><br>Escenario 3: Campos obligatorios<br><br>Dado que intento iniciar sesión<br><br>Cuando dejo campos vacíos<br><br>Entonces el sistema me solicita completar la información.                                                              | E01                       | Personal Municipal |
-| US03                 | Ver total de incidencias              | Como personal municipal, quiero ver el número total de incidencias registradas para monitorear el volumen general.                                                                              | Escenario 1: Visualización de total<br>Dado que accedo al panel<br>Cuando selecciono “Total de Incidencias”<br>Entonces se muestra el número acumulado.<br><br>Escenario 2: Actualización automática<br>Dado que se registra una nueva incidencia<br>Cuando refresco la vista<br>Entonces el total se actualiza automáticamente.<br><br>Escenario 3: Sin incidencias<br>Dado que no hay incidencias registradas<br>Cuando accedo al panel<br>Entonces veo el mensaje “No hay incidencias”.                                                                     | E03                       | Personal Municipal |
-| US04                 | Filtrar incidencias                   | Como personal municipal, quiero filtrar incidencias por tipo, zona, prioridad o fecha para gestionarlas de forma más eficiente.                                                                 | Escenario 1: Filtrado por tipo<br>Dado que selecciono “tipo”<br>Cuando aplico el filtro<br>Entonces se muestran solo las incidencias de ese tipo.<br><br>Escenario 2: Filtrado por múltiples criterios<br>Dado que aplico varios filtros<br>Cuando ejecuto búsqueda<br>Entonces veo solo las incidencias que cumplen todos los criterios.<br><br>Escenario 3: Sin resultados<br>Dado que no existen coincidencias<br>Cuando aplico filtro<br>Entonces el sistema muestra “No se encontraron incidencias”.                                                      | E03                       | Personal Municipal |
-| US05                 | Priorizar incidencias                 | Como personal municipal, quiero asignar prioridad a las incidencias para gestionar primero las más críticas.                                                                                    | Escenario 1: Asignar prioridad<br>Dado que veo una incidencia<br>Cuando selecciono un nivel de prioridad<br>Entonces se guarda la prioridad asignada.<br><br>Escenario 2: Cambiar prioridad<br>Dado que una incidencia ya tiene prioridad<br>Cuando la modifico<br>Entonces se actualiza correctamente.<br><br>Escenario 3: Visualización de prioridades<br>Dado que filtro por prioridad<br>Cuando selecciono “Alta”<br>Entonces solo se muestran incidencias de alta prioridad.                                                                              | E03                       | Personal Municipal |
-| US06                 | Actualizar estado de incidencia       | Como personal municipal, quiero actualizar el estado de una incidencia para reflejar su progreso.                                                                                               | Escenario 1: Cambio exitoso<br>Dado que selecciono una incidencia<br>Cuando cambio su estado<br>Entonces el sistema guarda, muestra y notifica el nuevo estado al ciudadano.<br><br>Escenario 2: Validación de flujo<br>Dado que una incidencia ya está cerrada<br>Cuando intento reabrirla<br>Entonces el sistema solicita confirmación.<br><br>Escenario 3: Estado sin cambios<br>Dado que ingreso a una incidencia<br>Cuando no realizo ninguna modificación<br>Entonces el sistema mantiene el estado anterior.                                            | E03 / E04                 | Personal Municipal |
-| US07                 | Enviar comentario sobre incidencia    | Como personal municipal, quiero enviar comentarios en las incidencias para comunicar acciones tomadas.                                                                                          | Escenario 1: Comentario exitoso<br>Dado que abro una incidencia<br>Cuando escribo un comentario<br>Entonces se guarda y asocia al caso.<br><br>Escenario 2: Comentario vacío<br>Dado que no escribo nada<br>Cuando intento enviar<br>Entonces el sistema muestra advertencia.<br><br>Escenario 3: Visualización de comentarios previos<br>Dado que accedo a una incidencia<br>Cuando reviso los comentarios<br>Entonces veo el historial completo.                                                                                                             | E04                       | Personal Municipal |
-| US08                 | Exportar reporte de incidencias       | Como personal municipal, quiero exportar reportes en CSV para análisis y gestión.                                                                                                               | Escenario 1: Exportación exitosa<br>Dado que hay incidencias<br>Cuando selecciono el botón de exportar<br>Entonces se genera archivo descargable en formato CSV.<br><br>Escenario 2: Sin incidencias<br>Dado que no hay registros<br>Cuando intento exportar<br>Entonces se muestra mensaje de “No hay incidencias que exportar”.<br><br>Escenario 3: Botón siempre visible<br>Dado que estoy en la sección de reportes<br>Cuando accedo a la página<br>Entonces el botón de exportar está disponible.                                                         | E05                       | Personal Municipal |
-| US09                 | Ver detalles de la municipalidad      | Como personal municipal, quiero ver los detalles de la municipalidad para acceder a información institucional centralizada.                                                                     | Escenario 1: Información visible<br>Dado que accedo a la sección municipalidad<br>Cuando entro<br>Entonces veo datos de la municipalidad.<br><br>Escenario 2: Datos actualizados<br>Dado que hay cambios<br>Cuando accedo<br>Entonces se muestran datos vigentes.<br><br>Escenario 3: Error de carga<br>Dado que ocurre un fallo<br>Cuando accedo<br>Entonces el sistema muestra mensaje “Error al cargar información”.                                                                                                                                        | E06                       | Personal Municipal |
-| US10                 | Ver detalle de incidencia             | Como personal municipal, quiero ver información detallada de cada incidencia para analizar su contexto.                                                                                         | Escenario 1: Visualización completa<br>Dado que selecciono una incidencia<br>Cuando la abro<br>Entonces veo tipo, fecha, ubicación, prioridad y comentarios.<br><br>Escenario 2: Historial visible<br>Dado que reviso incidencia<br>Cuando entro<br>Entonces veo historial de cambios y estados.<br><br>Escenario 1: Filtrado por tipo<br>Dado que la incidencia fue eliminada<br>Cuando intento verla<br>Entonces el sistema muestra “Incidencia no disponible”.                                                                                              | E03                       | Personal Municipal |
-| US11                 | Dashboard geoespacial municipal       | Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial.                                          | Escenario 1: Visualización de hotspots<br>Dado que existen múltiples reportes<br>Cuando accedo al dashboard<br>Entonces veo mapas de calor actualizados.<br><br>Escenario 2: Filtrado temporal<br>Dado que aplico filtros de búsqueda<br>Cuando selecciono rango de fechas<br>Entonces el mapa se actualiza con esos datos.<br><br>Escenario 3: Sin incidencias en zona<br>Dado que no hay incidencias<br>Cuando consulto una zona<br>Entonces el sistema muestra “No hay incidencias en esta zona”.                                                           | E05                       | Personal Municipal |
-| US12                 | Cerrar sesión como personal municipal | Como personal municipal, quiero cerrar mi sesión de manera segura desde la aplicación,<br>para proteger la información de la plataforma y garantizar que nadie más acceda con mis credenciales. | Escenario 1: Cierre de sesión exitoso<br>Dado que tengo mi sesión iniciada en la plataforma<br>Cuando selecciono la opción “Cerrar sesión”<br>Entonces el sistema me redirige al login y mi sesión queda invalidada.<br><br>Escenario 2: Intento de acceso luego del cierre<br>Dado que ya cerré sesión<br>Cuando intento acceder a un módulo de gestión<br>Entonces el sistema me solicita ingresar mis credenciales nuevamente.                                                                                                                              | E01                       | Personal Municipal |
-| US13                 | Registro de ciudadanos                | Como ciudadano, quiero registrarme en la aplicación para poder reportar incidencias.                                                                                                            | Escenario 1: Registro exitoso<br>Dado que ingreso datos válidos<br>Cuando confirmo<br>Entonces se crea mi cuenta.<br><br>Escenario 2: Datos faltantes<br>Dado que omito campos<br>Cuando envío el formulario<br>Entonces el sistema muestra advertencia.<br><br>Escenario 3: Usuario ya existente<br>Dado que ingreso un correo ya registrado<br>Cuando confirmo<br>Entonces el sistema rechaza el registro.                                                                                                                                                   | E01                       |     Cuidadano      |
-| US14                 | Inicio de sesión ciudadano            | Como ciudadano, quiero iniciar sesión para acceder a mis reportes y perfil.                                                                                                                     | Escenario 1: Inicio exitoso<br>Dado que ingreso datos correctos<br>Cuando confirmo<br>Entonces accedo al menú principal.<br><br>Escenario 2: Error de credenciales<br>Dado que ingreso mal los datos<br>Cuando intento entrar<br>Entonces el sistema muestra error.<br><br>Escenario 3: Campos obligatorios<br><br>Dado que intento iniciar sesión<br><br>Cuando dejo campos vacíos<br><br>Entonces el sistema me solicita completar la información.                                                                                                           | E01                       |     Cuidadano      |
-| US15                 | Ver perfil                            | Como ciudadano, quiero ver mi perfil para revisar mis datos y configuraciones.                                                                                                                  | Escenario 1: Visualización exitosa<br>Dado que accedo a mi perfil<br>Cuando entro<br>Entonces veo mis datos registrados.<br><br>Escenario 2: Perfil incompleto<br>Dado que faltan datos<br>Cuando accedo<br>Entonces el sistema muestra campos vacíos con opción de completar.<br><br>Escenario 3: Error de carga<br>Dado que hay un fallo<br>Cuando accedo<br>Entonces se muestra mensaje de error.                                                                                                                                                           | E01                       |     Cuidadano      |
-| US16                 | Reporte de incidencia con foto        | Como ciudadano, quiero reportar una incidencia urbana adjuntando fotografía y ubicación automática para documentar el problema de forma completa.                                               | Escenario 1: Captura exitosa<br>Dado que detecto una incidencia<br>Cuando tomo una foto<br>Entonces el sistema guarda la foto y coordenadas.<br><br>Escenario 2: Rechazo de captura<br>Dado que no deseo usar la foto<br>Cuando tomo otra<br>Entonces el sistema me permite reemplazarla.<br><br>Escenario 3: Reporte incompleto<br>Dado que no adjunto foto<br>Cuando confirmo<br>Entonces el incidente no se envía.                                                                                                                                          | E02                       |     Cuidadano      |
-| US17                 | Ver resumen de incidencias reportadas | Como ciudadano, quiero ver un resumen de mis incidencias para dar seguimiento general.                                                                                                          | Escenario 1: Resumen visible<br>Dado que tengo incidencias<br>Cuando accedo al resumen<br>Entonces veo listado con fecha, tipo y estado.<br><br>Escenario 2: Sin incidencias<br>Dado que no he reportado<br>Cuando accedo<br>Entonces el sistema muestra “Aún no tienes incidencias”.<br><br>Escenario 3: Actualización automática<br>Dado que reporto una nueva incidencia<br>Cuando refresco<br>Entonces el listado se actualiza.                                                                                                                            | E02                       |     Cuidadano      |
-| US18                 | Ver detalle de incidencia             | Como ciudadano, quiero ver los detalles de una incidencia que reporté para conocer su estado actual.                                                                                            | Escenario 1: Información completa<br>Dado que selecciono una incidencia<br>Cuando entro<br>Entonces veo todos los datos y estado.<br><br>Escenario 2: Incidencia cerrada<br>Dado que reviso una incidencia cerrada<br>Cuando entro<br>Entonces veo estado “Cerrado” con fecha de resolución.<br><br>Escenario 3: Incidencia no encontrada<br>Dado que selecciono un reporte eliminado<br>Cuando accedo<br>Entonces el sistema muestra “No disponible”.                                                                                                         | E02                       |     Cuidadano      |
-| US19                 | Filtrar incidencias (App)             | Como ciudadano, quiero filtrar mis incidencias por tipo o zona para encontrar casos específicos.                                                                                                | Escenario 1: Filtrado por tipo<br>Dado que selecciono “tipo”<br>Cuando aplico el filtro<br>Entonces veo solo esas incidencias.<br><br>Escenario 2: Filtrado por zona<br>Dado que selecciono “zona”<br>Cuando aplico<br>Entonces aparecen incidencias en esa ubicación.<br><br>Escenario 3: Sin coincidencias<br>Dado que aplico filtros<br>Cuando no hay resultados<br>Entonces el sistema muestra mensaje vacío.                                                                                                                                              | E02                       |     Cuidadano      |
-| US20                 | Ver estado de incidencias             | Como ciudadano, quiero ver el estado de mis reportes para mantenerme informado.                                                                                                                 | Escenario 1: Estado actualizado<br>Dado que el personal municipal cambia el estado<br>Cuando entro<br>Entonces veo el nuevo estado.<br><br>Escenario 2: Estado histórico<br>Dado que accedo a una incidencia<br>Cuando reviso<br>Entonces veo historial de cambios.<br><br>Escenario 3: Sin actualizaciones<br>Dado que la incidencia aún no se procesa<br>Cuando entro<br>Entonces aparece “En espera de revisión”.                                                                                                                                           | E02 / E04                 |     Cuidadano      |
-| US21                 | Seguimiento de estado                 | Como ciudadano, quiero ver el progreso de mi reporte para mantenerme informado sobre su resolución.                                                                                             | Escenario 1: Visualización de cambio de estado<br>Dado que mi reporte cambia<br>Cuando la municipalidad actualiza<br>Entonces veo el nuevo estado.<br><br>Escenario 2: Transparencia del proceso<br>Dado que consulto historial<br>Cuando abro un reporte<br>Entonces veo historial completo de cambios.<br><br>Escenario 3: Estado sin cambios<br>Dado que consulto un reporte<br>Cuando aún no ha sido actualizado<br>Entonces el sistema muestra el estado actual sin modificaciones.                                                                       | E02 / E04                 |     Cuidadano      |
-| US22                 | Ver comentarios sobre incidencia      | Como ciudadano, quiero ver los comentarios de la municipalidad en mis incidencias para entender el seguimiento dado.                                                                            | Escenario 1: Comentarios visibles<br>Dado que la municipalidad envía un comentario<br>Cuando accedo a la incidencia<br>Entonces veo el texto.<br><br>Escenario 2: Sin comentarios<br>Dado que aún no hay<br>Cuando accedo<br>Entonces el sistema muestra “Sin comentarios aún”.<br><br>Escenario 3: Historial de comentarios<br>Dado que reviso una incidencia<br>Cuando accedo<br>Entonces veo todos los comentarios previos.                                                                                                                                 | E04                       |     Cuidadano      |
-| US23                 | Ver otrosincidentes reportados        | Como ciudadano, quiero ver incidencias de otros vecinos para estar informado de lo que ocurre en mi comunidad.                                                                                  | Escenario 1: Listado disponible<br>Dado que otros ciudadanos reportaron<br>Cuando accedo<br>Entonces veo listado general.<br><br>Escenario 2: Filtro de zona<br>Dado que quiero ver incidencias de mi zona<br>Cuando aplico filtro<br>Entonces se muestran solo esas.<br><br>Escenario 3: Sin incidencias públicas<br>Dado que no hay reportes<br>Cuando accedo<br>Entonces aparece “No hay incidencias disponibles”.                                                                                                                                          | E02                       |     Cuidadano      |
-| US24                 | Cerrar sesión como ciudadano          | Como ciudadano, quiero cerrar mi sesión de manera segura desde la aplicación,<br>para proteger mis datos personales y evitar accesos no autorizados.                                            | Escenario 1: Cierre de sesión exitoso<br>Dado que estoy autenticado en la aplicación<br>Cuando selecciono la opción “Cerrar sesión”<br>Entonces la aplicación me redirige a la pantalla de inicio de sesión y mi sesión se invalida.<br><br>Escenario 2: Intento de acción tras cerrar sesión<br>Dado que he cerrado mi sesión<br>Cuando intento acceder a una funcionalidad restringida<br>Entonces se me solicita iniciar sesión nuevamente.                                                                                                                 | E01                       |     Cuidadano      |
-| US25                 | Ver Home                              | Como visitante, quiero ver la página de inicio para conocer la propuesta de la plataforma.                                                                                                      | Escenario 1: Acceso exitoso<br>Dado que entro al sitio<br>Cuando cargo la página<br>Entonces se muestran secciones principales.<br><br>Escenario 2: Contenido incompleto<br>Dado que falta información<br>Cuando accedo<br>Entonces se indica “En actualización”.<br><br>Escenario 3: Navegación rápida<br>Dado que quiero ir a otra sección<br>Cuando hago clic en un menú<br>Entonces el sistema me redirige correctamente.                                                                                                                                  | E05                       |      Landing       |
-| US26                 | Sobre nosotros                        | Como visitante, quiero ver la sección “Sobre nosotros” para conocer la misión y visión de la plataforma.                                                                                        | Escenario 1: Información disponible<br>Dado que accedo a la sección<br>Cuando hago scroll<br>Entonces veo misión, visión y valores.<br><br>Escenario 2: En construcción<br>Dado que aún no se publica contenido<br>Cuando accedo<br>Entonces la página muestra “En construcción”.<br><br>Escenario 3: Navegación correcta<br>Dado que quiero volver al home<br>Cuando hago clic en el logo<br>Entonces regreso al inicio.                                                                                                                                      | E05                       |      Landing       |
-| US27                 | Ver testimonios                       | Como visitante, quiero ver testimonios de ciudadanos y municipalidades para confiar en la plataforma.                                                                                           | Escenario 1: Testimonios disponibles<br>Dado que hay testimonios cargados<br>Cuando accedo<br>Entonces los veo con nombre y foto.<br><br>Escenario 2: Sin testimonios<br>Dado que aún no hay<br>Cuando accedo<br>Entonces aparece un mensaje vacío.<br><br>Escenario 3: Cambio dinámico<br>Dado que hay varios testimonios<br>Cuando navego<br>Entonces se alternan en carrusel.                                                                                                                                                                               | E05                       |      Landing       |
-| US28                 | Beneficios municipalidad              | Como visitante, quiero ver los beneficios de la plataforma para la municipalidad para evaluar su utilidad.                                                                                      | Escenario 1: Información visible<br>Dado que accedo<br>Cuando entro a la sección<br>Entonces veo lista de beneficios claros.<br><br>Escenario 2: Detalle incompleto<br>Dado que falta contenido<br>Cuando entro<br>Entonces se muestra “Información pendiente”.<br><br>Escenario 3: Navegación sencilla<br>Dado que quiero ir a contacto<br>Cuando hago clic en el botón<br>Entonces soy redirigido.                                                                                                                                                           | E05                       |      Landing       |
-| US29                 | Beneficios ciudadano                  | Como visitante, quiero ver los beneficios de la plataforma para ciudadanos para saber cómo me ayuda.                                                                                            | Escenario 1: Información visible<br>Dado que accedo<br>Cuando entro a la sección<br>Entonces veo lista de beneficios claros.<br><br>Escenario 2: Sin información<br>Dado que aún no está publicada<br>Cuando entro<br>Entonces se muestra aviso de actualización.<br><br>Escenario 3: Navegación sencilla<br>Dado que quiero ir a registrarme<br>Cuando hago clic en el botón<br>Entonces soy redirigido al registro.                                                                                                                                          | E05                       |      Landing       |
+| Epic / User Story ID | Título                                | Descripción                                                                                                                                                                                     | Criterios de aceptación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Relacionado con (Epic ID) |      Segmento      |
+| -------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | :----------------: |
+| US01                 | Registro de personal municipales      | Como personal municipal, quiero registrarme en la plataforma para acceder a las funcionalidades de gestión.                                                                                     | Escenario 1: Registro exitoso<br>Dado que la personal municipal completa todos los campos<br>Cuando confirma el registro<br>Entonces el sistema crea su cuenta y envía confirmación.<br><br>Escenario 2: Datos incompletos<br>Dado que el formulario está incompleto<br>Cuando intenta registrarse<br>Entonces el sistema muestra un mensaje de error indicando los campos faltantes.<br><br>Escenario 3: Usuario ya existe<br>Dado que el correo ya está registrado<br>Cuando intenta registrarse<br>Entonces el sistema muestra mensaje de cuenta existente.                         | E01                       | Personal Municipal |
+| US02                 | Inicio de sesión personal municipal   | Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.                                                                                                 | Escenario 1: Inicio exitoso<br>Dado que ingreso credenciales correctas<br>Cuando inicio sesión<br>Entonces accedo al panel principal.<br><br>Escenario 2: Credenciales incorrectas<br>Dado que ingreso datos erróneos<br>Cuando intento iniciar sesión<br>Entonces el sistema rechaza el acceso y muestra error.<br><br>Escenario 3: Campos obligatorios<br><br>Dado que intento iniciar sesión<br><br>Cuando dejo campos vacíos<br><br>Entonces el sistema me solicita completar la información.                                                                                      | E01                       | Personal Municipal |
+| US03                 | Ver total de incidencias              | Como personal municipal, quiero ver el número total de incidencias registradas para monitorear el volumen general.                                                                              | Escenario 1: Visualización de total<br>Dado que accedo al panel<br>Cuando selecciono “Total de Incidencias”<br>Entonces se muestra el número acumulado.<br><br>Escenario 2: Actualización automática<br>Dado que se registra una nueva incidencia<br>Cuando refresco la vista<br>Entonces el total se actualiza automáticamente.<br><br>Escenario 3: Sin incidencias<br>Dado que no hay incidencias registradas<br>Cuando accedo al panel<br>Entonces veo el mensaje “No hay incidencias”.                                                                                             | E03                       | Personal Municipal |
+| US04                 | Filtrar incidencias                   | Como personal municipal, quiero filtrar incidencias por tipo, zona, prioridad o fecha para gestionarlas de forma más eficiente.                                                                 | Escenario 1: Filtrado por tipo<br>Dado que selecciono “tipo”<br>Cuando aplico el filtro<br>Entonces se muestran solo las incidencias de ese tipo.<br><br>Escenario 2: Filtrado por múltiples criterios<br>Dado que aplico varios filtros<br>Cuando ejecuto búsqueda<br>Entonces veo solo las incidencias que cumplen todos los criterios.<br><br>Escenario 3: Sin resultados<br>Dado que no existen coincidencias<br>Cuando aplico filtro<br>Entonces el sistema muestra “No se encontraron incidencias”.                                                                              | E03                       | Personal Municipal |
+| US05                 | Priorizar incidencias                 | Como personal municipal, quiero asignar prioridad a las incidencias para gestionar primero las más críticas.                                                                                    | Escenario 1: Asignar prioridad<br>Dado que veo una incidencia<br>Cuando selecciono un nivel de prioridad<br>Entonces se guarda la prioridad asignada.<br><br>Escenario 2: Cambiar prioridad<br>Dado que una incidencia ya tiene prioridad<br>Cuando la modifico<br>Entonces se actualiza correctamente.<br><br>Escenario 3: Visualización de prioridades<br>Dado que filtro por prioridad<br>Cuando selecciono “Alta”<br>Entonces solo se muestran incidencias de alta prioridad.                                                                                                      | E03                       | Personal Municipal |
+| US06                 | Actualizar estado de incidencia       | Como personal municipal, quiero actualizar el estado de una incidencia para reflejar su progreso.                                                                                               | Escenario 1: Cambio exitoso<br>Dado que selecciono una incidencia<br>Cuando cambio su estado<br>Entonces el sistema guarda, muestra y notifica el nuevo estado al ciudadano.<br><br>Escenario 2: Validación de flujo<br>Dado que una incidencia ya está cerrada<br>Cuando intento reabrirla<br>Entonces el sistema solicita confirmación.<br><br>Escenario 3: Estado sin cambios<br>Dado que ingreso a una incidencia<br>Cuando no realizo ninguna modificación<br>Entonces el sistema mantiene el estado anterior.                                                                    | E03 / E04                 | Personal Municipal |
+| US07                 | Enviar comentario sobre incidencia    | Como personal municipal, quiero enviar comentarios en las incidencias para comunicar acciones tomadas.                                                                                          | Escenario 1: Comentario exitoso<br>Dado que abro una incidencia<br>Cuando escribo un comentario<br>Entonces se guarda y asocia al caso.<br><br>Escenario 2: Comentario vacío<br>Dado que no escribo nada<br>Cuando intento enviar<br>Entonces el sistema muestra advertencia.<br><br>Escenario 3: Visualización de comentarios previos<br>Dado que accedo a una incidencia<br>Cuando reviso los comentarios<br>Entonces veo el historial completo.                                                                                                                                     | E04                       | Personal Municipal |
+| US08                 | Exportar reporte de incidencias       | Como personal municipal, quiero exportar reportes en CSV para análisis y gestión.                                                                                                               | Escenario 1: Exportación exitosa<br>Dado que hay incidencias<br>Cuando selecciono el botón de exportar<br>Entonces se genera archivo descargable en formato CSV.<br><br>Escenario 2: Sin incidencias<br>Dado que no hay registros<br>Cuando intento exportar<br>Entonces se muestra mensaje de “No hay incidencias que exportar”.<br><br>Escenario 3: Botón siempre visible<br>Dado que estoy en la sección de reportes<br>Cuando accedo a la página<br>Entonces el botón de exportar está disponible.                                                                                 | E05                       | Personal Municipal |
+| US09                 | Ver detalles de la municipalidad      | Como personal municipal, quiero ver los detalles de la municipalidad para acceder a información institucional centralizada.                                                                     | Escenario 1: Información visible<br>Dado que accedo a la sección municipalidad<br>Cuando entro<br>Entonces veo datos de la municipalidad.<br><br>Escenario 2: Datos actualizados<br>Dado que hay cambios<br>Cuando accedo<br>Entonces se muestran datos vigentes.<br><br>Escenario 3: Error de carga<br>Dado que ocurre un fallo<br>Cuando accedo<br>Entonces el sistema muestra mensaje “Error al cargar información”.                                                                                                                                                                | E06                       | Personal Municipal |
+| US10                 | Ver detalle de incidencia             | Como personal municipal, quiero ver información detallada de cada incidencia para analizar su contexto.                                                                                         | Escenario 1: Visualización completa<br>Dado que selecciono una incidencia<br>Cuando la abro<br>Entonces veo tipo, fecha, ubicación, prioridad y comentarios.<br><br>Escenario 2: Historial visible<br>Dado que reviso incidencia<br>Cuando entro<br>Entonces veo historial de cambios y estados.<br><br>Escenario 1: Filtrado por tipo<br>Dado que la incidencia fue eliminada<br>Cuando intento verla<br>Entonces el sistema muestra “Incidencia no disponible”.                                                                                                                      | E03                       | Personal Municipal |
+| US11                 | Dashboard geoespacial municipal       | Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial.                                          | Escenario 1: Visualización de hotspots<br>Dado que existen múltiples reportes<br>Cuando accedo al dashboard<br>Entonces veo mapas de calor actualizados.<br><br>Escenario 2: Filtrado por tipo de incidencia<br>Dado que existen distintos tipos de incidencias reportadas<br>Cuando selecciono un tipo de incidencia en el panel de filtros<br>Entonces el mapa se actualiza mostrando solo los hotspots correspondientes a ese tipo.<br><br>Escenario 3: Sin incidencias en zona<br>Dado que no hay incidencias<br>Cuando consulto una zona<br>Entonces el mapa no muestra hotspots. | E05                       | Personal Municipal |
+| US12                 | Cerrar sesión como personal municipal | Como personal municipal, quiero cerrar mi sesión de manera segura desde la aplicación,<br>para proteger la información de la plataforma y garantizar que nadie más acceda con mis credenciales. | Escenario 1: Cierre de sesión exitoso<br>Dado que tengo mi sesión iniciada en la plataforma<br>Cuando selecciono la opción “Cerrar sesión”<br>Entonces el sistema me redirige al login y mi sesión queda invalidada.<br><br>Escenario 2: Intento de acceso luego del cierre<br>Dado que ya cerré sesión<br>Cuando intento acceder a un módulo de gestión<br>Entonces el sistema me solicita ingresar mis credenciales nuevamente.                                                                                                                                                      | E01                       | Personal Municipal |
+| US13                 | Registro de ciudadanos                | Como ciudadano, quiero registrarme en la aplicación para poder reportar incidencias.                                                                                                            | Escenario 1: Registro exitoso<br>Dado que ingreso datos válidos<br>Cuando confirmo<br>Entonces se crea mi cuenta.<br><br>Escenario 2: Datos faltantes<br>Dado que omito campos<br>Cuando envío el formulario<br>Entonces el sistema muestra advertencia.<br><br>Escenario 3: Usuario ya existente<br>Dado que ingreso un correo ya registrado<br>Cuando confirmo<br>Entonces el sistema rechaza el registro.                                                                                                                                                                           | E01                       |     Cuidadano      |
+| US14                 | Inicio de sesión ciudadano            | Como ciudadano, quiero iniciar sesión para acceder a mis reportes y perfil.                                                                                                                     | Escenario 1: Inicio exitoso<br>Dado que ingreso datos correctos<br>Cuando confirmo<br>Entonces accedo al menú principal.<br><br>Escenario 2: Error de credenciales<br>Dado que ingreso mal los datos<br>Cuando intento entrar<br>Entonces el sistema muestra error.<br><br>Escenario 3: Campos obligatorios<br><br>Dado que intento iniciar sesión<br><br>Cuando dejo campos vacíos<br><br>Entonces el sistema me solicita completar la información.                                                                                                                                   | E01                       |     Cuidadano      |
+| US15                 | Ver perfil                            | Como ciudadano, quiero ver mi perfil para revisar mis datos y configuraciones.                                                                                                                  | Escenario 1: Visualización exitosa<br>Dado que accedo a mi perfil<br>Cuando entro<br>Entonces veo mis datos registrados.<br><br>Escenario 2: Perfil incompleto<br>Dado que faltan datos<br>Cuando accedo<br>Entonces el sistema muestra campos vacíos con opción de completar.<br><br>Escenario 3: Error de carga<br>Dado que hay un fallo<br>Cuando accedo<br>Entonces se muestra mensaje de error.                                                                                                                                                                                   | E01                       |     Cuidadano      |
+| US16                 | Reporte de incidencia con foto        | Como ciudadano, quiero reportar una incidencia urbana adjuntando fotografía y ubicación automática para documentar el problema de forma completa.                                               | Escenario 1: Captura exitosa<br>Dado que detecto una incidencia<br>Cuando tomo una foto<br>Entonces el sistema guarda la foto y coordenadas.<br><br>Escenario 2: Rechazo de captura<br>Dado que no deseo usar la foto<br>Cuando tomo otra<br>Entonces el sistema me permite reemplazarla.<br><br>Escenario 3: Reporte incompleto<br>Dado que no adjunto foto<br>Cuando confirmo<br>Entonces el incidente no se envía.                                                                                                                                                                  | E02                       |     Cuidadano      |
+| US17                 | Ver resumen de incidencias reportadas | Como ciudadano, quiero ver un resumen de mis incidencias para dar seguimiento general.                                                                                                          | Escenario 1: Resumen visible<br>Dado que tengo incidencias<br>Cuando accedo al resumen<br>Entonces veo listado con fecha, tipo y estado.<br><br>Escenario 2: Sin incidencias<br>Dado que no he reportado<br>Cuando accedo<br>Entonces el sistema muestra “Aún no tienes incidencias”.<br><br>Escenario 3: Actualización automática<br>Dado que reporto una nueva incidencia<br>Cuando refresco<br>Entonces el listado se actualiza.                                                                                                                                                    | E02                       |     Cuidadano      |
+| US18                 | Ver detalle de incidencia             | Como ciudadano, quiero ver los detalles de una incidencia que reporté para conocer su estado actual.                                                                                            | Escenario 1: Información completa<br>Dado que selecciono una incidencia<br>Cuando entro<br>Entonces veo todos los datos y estado.<br><br>Escenario 2: Incidencia cerrada<br>Dado que reviso una incidencia cerrada<br>Cuando entro<br>Entonces veo estado “Cerrado” con fecha de resolución.<br><br>Escenario 3: Incidencia no encontrada<br>Dado que selecciono un reporte eliminado<br>Cuando accedo<br>Entonces el sistema muestra “No disponible”.                                                                                                                                 | E02                       |     Cuidadano      |
+| US19                 | Filtrar incidencias (App)             | Como ciudadano, quiero filtrar mis incidencias por tipo o zona para encontrar casos específicos.                                                                                                | Escenario 1: Filtrado por tipo<br>Dado que selecciono “tipo”<br>Cuando aplico el filtro<br>Entonces veo solo esas incidencias.<br><br>Escenario 2: Filtrado por zona<br>Dado que selecciono “zona”<br>Cuando aplico<br>Entonces aparecen incidencias en esa ubicación.<br><br>Escenario 3: Sin coincidencias<br>Dado que aplico filtros<br>Cuando no hay resultados<br>Entonces el sistema muestra mensaje vacío.                                                                                                                                                                      | E02                       |     Cuidadano      |
+| US20                 | Ver estado de incidencias             | Como ciudadano, quiero ver el estado de mis reportes para mantenerme informado.                                                                                                                 | Escenario 1: Estado actualizado<br>Dado que el personal municipal cambia el estado<br>Cuando entro<br>Entonces veo el nuevo estado.<br><br>Escenario 2: Estado histórico<br>Dado que accedo a una incidencia<br>Cuando reviso<br>Entonces veo historial de cambios.<br><br>Escenario 3: Sin actualizaciones<br>Dado que la incidencia aún no se procesa<br>Cuando entro<br>Entonces aparece “En espera de revisión”.                                                                                                                                                                   | E02 / E04                 |     Cuidadano      |
+| US21                 | Seguimiento de estado                 | Como ciudadano, quiero ver el progreso de mi reporte para mantenerme informado sobre su resolución.                                                                                             | Escenario 1: Visualización de cambio de estado<br>Dado que mi reporte cambia<br>Cuando la municipalidad actualiza<br>Entonces veo el nuevo estado.<br><br>Escenario 2: Transparencia del proceso<br>Dado que consulto historial<br>Cuando abro un reporte<br>Entonces veo historial completo de cambios.<br><br>Escenario 3: Estado sin cambios<br>Dado que consulto un reporte<br>Cuando aún no ha sido actualizado<br>Entonces el sistema muestra el estado actual sin modificaciones.                                                                                               | E02 / E04                 |     Cuidadano      |
+| US22                 | Ver comentarios sobre incidencia      | Como ciudadano, quiero ver los comentarios de la municipalidad en mis incidencias para entender el seguimiento dado.                                                                            | Escenario 1: Comentarios visibles<br>Dado que la municipalidad envía un comentario<br>Cuando accedo a la incidencia<br>Entonces veo el texto.<br><br>Escenario 2: Sin comentarios<br>Dado que aún no hay<br>Cuando accedo<br>Entonces el sistema muestra “Sin comentarios aún”.<br><br>Escenario 3: Historial de comentarios<br>Dado que reviso una incidencia<br>Cuando accedo<br>Entonces veo todos los comentarios previos.                                                                                                                                                         | E04                       |     Cuidadano      |
+| US23                 | Ver otros incidentes reportados       | Como ciudadano, quiero ver incidencias de otros vecinos para estar informado de lo que ocurre en mi comunidad.                                                                                  | Escenario 1: Listado disponible<br>Dado que otros ciudadanos reportaron<br>Cuando accedo<br>Entonces veo listado general.<br><br>Escenario 2: Filtro de zona<br>Dado que quiero ver incidencias de mi zona<br>Cuando aplico filtro<br>Entonces se muestran solo esas.<br><br>Escenario 3: Sin incidencias públicas<br>Dado que no hay reportes<br>Cuando accedo<br>Entonces aparece “No hay incidencias disponibles”.                                                                                                                                                                  | E02                       |     Cuidadano      |
+| US24                 | Cerrar sesión como ciudadano          | Como ciudadano, quiero cerrar mi sesión de manera segura desde la aplicación,<br>para proteger mis datos personales y evitar accesos no autorizados.                                            | Escenario 1: Cierre de sesión exitoso<br>Dado que estoy autenticado en la aplicación<br>Cuando selecciono la opción “Cerrar sesión”<br>Entonces la aplicación me redirige a la pantalla de inicio de sesión y mi sesión se invalida.<br><br>Escenario 2: Intento de acción tras cerrar sesión<br>Dado que he cerrado mi sesión<br>Cuando intento acceder a una funcionalidad restringida<br>Entonces se me solicita iniciar sesión nuevamente.                                                                                                                                         | E01                       |     Cuidadano      |
+| US25                 | Ver Home                              | Como visitante, quiero ver la página de inicio para conocer la propuesta de la plataforma.                                                                                                      | Escenario 1: Acceso exitoso<br>Dado que entro al sitio<br>Cuando cargo la página<br>Entonces se muestran secciones principales.<br><br>Escenario 2: Contenido incompleto<br>Dado que falta información<br>Cuando accedo<br>Entonces se indica “En actualización”.<br><br>Escenario 3: Navegación rápida<br>Dado que quiero ir a otra sección<br>Cuando hago clic en un menú<br>Entonces el sistema me redirige correctamente.                                                                                                                                                          | E05                       |      Landing       |
+| US26                 | Sobre nosotros                        | Como visitante, quiero ver la sección “Sobre nosotros” para conocer la misión y visión de la plataforma.                                                                                        | Escenario 1: Información disponible<br>Dado que accedo a la sección<br>Cuando hago scroll<br>Entonces veo misión, visión y valores.<br><br>Escenario 2: En construcción<br>Dado que aún no se publica contenido<br>Cuando accedo<br>Entonces la página muestra “En construcción”.<br><br>Escenario 3: Navegación correcta<br>Dado que quiero volver al home<br>Cuando hago clic en el logo<br>Entonces regreso al inicio.                                                                                                                                                              | E05                       |      Landing       |
+| US27                 | Ver testimonios                       | Como visitante, quiero ver testimonios de ciudadanos y municipalidades para confiar en la plataforma.                                                                                           | Escenario 1: Testimonios disponibles<br>Dado que hay testimonios cargados<br>Cuando accedo<br>Entonces los veo con nombre y foto.<br><br>Escenario 2: Sin testimonios<br>Dado que aún no hay<br>Cuando accedo<br>Entonces aparece un mensaje vacío.<br><br>Escenario 3: Cambio dinámico<br>Dado que hay varios testimonios<br>Cuando navego<br>Entonces se alternan en carrusel.                                                                                                                                                                                                       | E05                       |      Landing       |
+| US28                 | Beneficios municipalidad              | Como visitante, quiero ver los beneficios de la plataforma para la municipalidad para evaluar su utilidad.                                                                                      | Escenario 1: Información visible<br>Dado que accedo<br>Cuando entro a la sección<br>Entonces veo lista de beneficios claros.<br><br>Escenario 2: Detalle incompleto<br>Dado que falta contenido<br>Cuando entro<br>Entonces se muestra “Información pendiente”.<br><br>Escenario 3: Navegación sencilla<br>Dado que quiero ir a contacto<br>Cuando hago clic en el botón<br>Entonces soy redirigido.                                                                                                                                                                                   | E05                       |      Landing       |
+| US29                 | Beneficios ciudadano                  | Como visitante, quiero ver los beneficios de la plataforma para ciudadanos para saber cómo me ayuda.                                                                                            | Escenario 1: Información visible<br>Dado que accedo<br>Cuando entro a la sección<br>Entonces veo lista de beneficios claros.<br><br>Escenario 2: Sin información<br>Dado que aún no está publicada<br>Cuando entro<br>Entonces se muestra aviso de actualización.<br><br>Escenario 3: Navegación sencilla<br>Dado que quiero ir a registrarme<br>Cuando hago clic en el botón<br>Entonces soy redirigido al registro.                                                                                                                                                                  | E05                       |      Landing       |
 
 ### Technical User Stories
 
@@ -1450,168 +1410,83 @@ Este enfoque garantiza que tanto ciudadanos como personal municipal trabajen de 
 
 ### 4.1.1. Design Purpose
 
-El propósito del diseño arquitectónico de LimaUrban es establecer una base técnica sólida que permita la transformación digital de la gestión de incidencias urbanas, integrando tecnologías emergentes como análisis geoespacial e inteligencia artificial para crear un ecosistema eficiente de reporte y gestión ciudadana.
+El propósito del diseño arquitectónico de **LimaUrban** es establecer una base técnica robusta y escalable para una plataforma de gestión de incidencias urbanas. El diseño debe soportar un ecosistema digital que conecte de manera eficiente a los ciudadanos con las autoridades municipales, utilizando tecnologías emergentes como la inteligencia artificial y el análisis geoespacial para optimizar la resolución de problemas en el espacio público.
 
-**Problemática:**
+**Problemática Central:**
+Los ciudadanos de Lima enfrentan canales de comunicación ineficaces y opacos para reportar problemas urbanos. Por otro lado, las municipalidades carecen de herramientas centralizadas para procesar estos reportes de forma ágil y basada en datos, lo que resulta en una gestión reactiva, costosa y que genera desconfianza.
 
-Los ciudadanos limeños enfrentan desafíos significativos para reportar incidencias urbanas debido a la falta de canales de comunicación eficientes y transparentes con las autoridades municipales. Los sistemas tradicionales de reporte son lentos, poco intuitivos y no ofrecen seguimiento en tiempo real, lo que genera desconfianza ciudadana y retrasos en la resolución de problemas urbanos críticos como baches, semáforos dañados, acumulación de basura y vandalismo.
+**Objetivos Principales del Diseño:**
 
-**Objetivos principales del diseño:**
-
-1. **Automatización inteligente del procesamiento de incidencias:** Mediante sistemas de visión por computadora con modelos YOLO entrenados localmente con un dataset mínimo de 2,000 imágenes, la arquitectura debe procesar automáticamente reportes ciudadanos con fotografías, clasificando y validando únicamente dos categorías prioritarias (baches y basura) en tiempo real para reducir el trabajo manual y mejorar la precisión. Esta limitación estratégica responde a los requisitos prácticos de entrenamiento de modelos YOLO que requieren mínimo 1,000 imágenes por categoría para alcanzar precisión operativa.
-
-2. **Escalabilidad y disponibilidad urbana:** La solución debe soportar la carga de 10 mil habitantes, garantizando disponibilidad del 99.5% y capacidad de procesar miles de reportes simultáneos durante emergencias urbanas o eventos críticos.
-
-3. **Integración geoespacial avanzada:** La arquitectura debe facilitar la generación de mapas de calor dinámicos que permitan a las autoridades municipales identificar la zona con más reportes de incidencias.
-
-4. **Experiencia ciudadana simplificada:** Diseñar interfaces que reduzcan el tiempo de reporte a menos de 40 segundos, incluyendo captura fotográfica, geolocalización automática y confirmación de recepción.
-
-5. **Interoperabilidad institucional:** Establecer APIs estandarizadas que permitan la integración con sistemas municipales existentes, facilitando el intercambio de datos y la adopción por parte de diferentes distritos de Lima Metropolitana.
+1.  **Automatización Inteligente del Procesamiento:** La arquitectura debe soportar un sistema de visión por computadora (basado en un modelo YOLO entrenado con un dataset local) para clasificar automáticamente las incidencias en dos categorías prioritarias: **baches y acumulación de basura**. Esto reduce la carga manual y mejora la calidad de los datos de entrada.
+2.  **Escalabilidad y Alta Disponibilidad:** La solución debe estar preparada para servir a una población inicial de 10,000 usuarios activos, garantizando una disponibilidad del **99.5%** y la capacidad de procesar picos de reportes durante emergencias urbanas.
+3.  **Análisis Geoespacial en Tiempo Real:** El diseño debe facilitar la generación de mapas de calor dinámicos e interactivos, permitiendo a las autoridades municipales identificar "hotspots" de incidencias para una planificación estratégica y una asignación de recursos más eficiente.
+4.  **Experiencia de Usuario Optimizada:** La arquitectura debe habilitar una interfaz de reporte ciudadana que sea extremadamente rápida e intuitiva, con el objetivo de que el proceso completo de reporte (incluyendo foto y geolocalización) tome **menos de 40 segundos**.
+5.  **Interoperabilidad Institucional:** Se deben definir APIs RESTful estandarizadas que permitan una futura integración con otros sistemas de gestión municipal (SIG, ERPs), asegurando la escalabilidad de la plataforma a diferentes distritos de Lima.
 
 ### 4.1.2. Attribute-Driven Design Inputs
 
 #### 4.1.2.1. Primary Functionality (Primary User Stories)
 
-Las siguientes User Stories representan las funcionalidades primarias que tienen mayor impacto arquitectónico y son críticas para el éxito de la plataforma:
+Las siguientes User Stories son críticas, ya que definen las funcionalidades primarias que impulsan las decisiones arquitectónicas más importantes de LimaUrban.
 
-| Epic/User Story ID | Título                              | Descripción                                                                                                                                                         | Criterios de Aceptación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Relacionado con (Epic ID) |
-| ------------------ | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| **US16**           | **Reporte de Incidencia con Foto**  | Como ciudadano, quiero reportar una incidencia urbana adjuntando fotografía y ubicación automática para documentar el problema de forma completa.                   | **Escenario 1:** Captura exitosa<br>**Dado que** detecto una incidencia<br>**Cuando** tomo una foto<br>**Entonces** el sistema guarda la foto y coordenadas GPS automáticamente<br><br>**Escenario 2:** Rechazo de captura<br>**Dado que** no deseo usar la foto tomada<br>**Cuando** tomo otra foto<br>**Entonces** el sistema me permite reemplazarla<br><br>**Escenario 3:** Validación de completitud<br>**Dado que** no adjunto foto<br>**Cuando** intento confirmar el reporte<br>**Entonces** el sistema solicita completar la información requerida                                                                                                                                                    | E02                       |
-| **US11**           | **Dashboard Geoespacial Municipal** | Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial.              | **Escenario 1:** Visualización de hotspots<br>**Dado que** existen múltiples reportes en el sistema<br>**Cuando** accedo al dashboard geoespacial<br>**Entonces** veo mapas de calor actualizados que muestren concentración de incidencias<br><br>**Escenario 2:** Filtrado temporal y espacial<br>**Dado que** aplico filtros de búsqueda por fecha y zona<br>**Cuando** selecciono los criterios<br>**Entonces** el mapa se actualiza mostrando solo los datos filtrados<br><br>**Escenario 3:** Manejo de zonas sin datos<br>**Dado que** no hay incidencias en una zona específica<br>**Cuando** consulto esa área<br>**Entonces** el sistema muestra mensaje "No hay incidencias en esta zona"           | E05                       |
-| **US06**           | **Actualizar Estado de Incidencia** | Como personal municipal, quiero actualizar el estado de una incidencia para reflejar su progreso y comunicar avances al ciudadano.                                  | **Escenario 1:** Cambio de estado exitoso<br>**Dado que** selecciono una incidencia<br>**Cuando** cambio su estado a "En Proceso" o "Resuelto"<br>**Entonces** el sistema guarda el cambio, actualiza la visualización y envía notificación automática al ciudadano reportante<br><br>**Escenario 2:** Validación de flujo de estados<br>**Dado que** una incidencia está en estado "Cerrado"<br>**Cuando** intento reabrirla<br>**Entonces** el sistema solicita confirmación y justificación<br><br>**Escenario 3:** Trazabilidad de cambios<br>**Dado que** actualizo el estado<br>**Cuando** se registra el cambio<br>**Entonces** el sistema mantiene historial completo de modificaciones con timestamps | E03 / E04                 |
-| **US21**           | **Seguimiento de Estado**           | Como ciudadano, quiero ver el progreso de mi reporte para mantenerme informado sobre su resolución y tener transparencia del proceso municipal.                     | **Escenario 1:** Visualización de cambios en tiempo real<br>**Dado que** el personal municipal actualiza el estado de mi reporte<br>**Cuando** accedo a mis incidencias<br>**Entonces** veo el nuevo estado reflejado inmediatamente<br><br>**Escenario 2:** Transparencia del proceso completo<br>**Dado que** consulto el historial de mi reporte<br>**Cuando** abro los detalles<br>**Entonces** veo cronología completa de estados, fechas y acciones realizadas<br><br>**Escenario 3:** Notificaciones automáticas<br>**Dado que** mi reporte cambia de estado<br>**Cuando** la municipalidad registra la actualización<br>**Entonces** recibo notificación push con resumen del cambio                   | E02 / E04                 |
-| **US05**           | **Priorizar Incidencias**           | Como personal municipal, quiero asignar niveles de prioridad a las incidencias para gestionar recursos de forma eficiente y atender primero los casos más críticos. | **Escenario 1:** Asignación de prioridad basada en criterios<br>**Dado que** analizo una incidencia nueva<br>**Cuando** evalúo su impacto, ubicación y tipo<br>**Entonces** puedo asignar prioridad Alta, Media o Baja con justificación<br><br>**Escenario 2:** Reordenamiento dinámico<br>**Dado que** cambio la prioridad de una incidencia<br>**Cuando** guardo la modificación<br>**Entonces** el sistema reordena automáticamente las listas de trabajo<br><br>**Escenario 3:** Visualización por prioridad<br>**Dado que** filtro incidencias por nivel de prioridad<br>**Cuando** selecciono "Alta prioridad"<br>**Entonces** solo se muestran incidencias críticas ordenadas por fecha                | E03                       |
-
-### **Funcionalidades de Soporte Críticas:**
-
-| Epic/User Story ID | Título                                 | Impacto Arquitectónico                                                                 | Relacionado con (Epic ID) |
-| ------------------ | -------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------- |
-| **US01/US02**      | **Gestión de Autenticación Municipal** | Sistema de autenticación diferenciado para personal municipal con integración Azure AD | E01                       |
-| **US13/US14**      | **Gestión de Autenticación Ciudadana** | Sistema de registro y autenticación para ciudadanos con validación de email            | E01                       |
-| **TS07**           | **WebSocket para Notificaciones**      | Comunicación en tiempo real para actualizaciones de estado y badges de notificación    | E01                       |
-| **TS04**           | **Georreferenciación Azure Maps**      | Integración con servicios de mapas para visualización geoespacial y heatmaps           | E05                       |
-
-Aquí están las secciones actualizadas para reflejar los cambios en Primary Functionality:
+| Epic/User Story ID | Título                                            | Descripción                                                                                                                                                          | Criterios de Aceptación                                                                                                                                                                                                                                                          | Relacionado con (Epic ID) |
+| :----------------- | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------ |
+| **US16**           | **Reportar Incidencia con Evidencia Fotográfica** | Como ciudadano, quiero reportar una incidencia adjuntando una fotografía y confirmando la ubicación automática para documentar el problema de forma clara y precisa. | **Escenario 1:** El sistema captura la foto y las coordenadas GPS automáticamente.<br>**Escenario 2:** El usuario puede reemplazar la foto si no está satisfecho.<br>**Escenario 3:** El sistema valida que la foto es un campo obligatorio para enviar el reporte.              | E02                       |
+| **US11**           | **Visualizar Dashboard Geoespacial**              | Como personal municipal, quiero visualizar las incidencias en un mapa de calor interactivo para identificar zonas críticas y priorizar intervenciones.               | **Escenario 1:** El dashboard muestra un mapa de calor con la concentración de incidencias.<br>**Escenario 2:** Se pueden aplicar filtros por fecha, tipo de incidencia y distrito.<br>**Escenario 3:** El mapa se actualiza en tiempo real a medida que se aplican los filtros. | E05                       |
+| **US06**           | **Actualizar Estado de Incidencia**               | Como personal municipal, quiero cambiar el estado de una incidencia (ej. "En Proceso", "Resuelto") para reflejar el avance y notificar al ciudadano.                 | **Escenario 1:** Al cambiar el estado, el sistema guarda el cambio y envía una notificación automática al ciudadano.<br>**Escenario 2:** El sistema mantiene un historial de todos los cambios de estado con fecha y usuario responsable.                                        | E03 / E04                 |
+| **US21**           | **Realizar Seguimiento de Reporte**               | Como ciudadano, quiero ver el estado actual y el historial de mi reporte para estar informado sobre el proceso de resolución.                                        | **Escenario 1:** La app muestra el estado más reciente de mi reporte.<br>**Escenario 2:** Puedo ver una línea de tiempo con todos los estados anteriores.<br>**Escenario 3:** Recibo notificaciones push cuando hay una actualización importante.                                | E02 / E04                 |
+| **US05**           | **Priorizar Incidencias**                         | Como personal municipal, quiero asignar un nivel de prioridad (Alta, Media, Baja) a las incidencias para organizar el trabajo de las cuadrillas de manera eficiente. | **Escenario 1:** Puedo asignar una prioridad a cada incidencia desde el dashboard.<br>**Escenario 2:** La lista de trabajo se puede ordenar y filtrar por nivel de prioridad.<br>**Escenario 3:** Las incidencias de "Alta" prioridad se destacan visualmente.                   | E03                       |
 
 ## 4.1.2.2. Quality Attribute Scenarios
 
-| Epic/User Story ID | Título                          | Descripción                                                                                                                                            | Criterios de Aceptación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Relacionado con (Epic ID) |
-| ------------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
-| E02_US16           | Reporte de Incidencia con Foto  | Como ciudadano, quiero reportar una incidencia urbana adjuntando una fotografía y ubicación automática para documentar el problema de forma completa.  | **Escenario 1:** Captura exitosa<br>Dado que el ciudadano detecta una incidencia<br>Cuando abre la app y toma una fotografía<br>Entonces el sistema captura automáticamente las coordenadas GPS y permite categorizar la incidencia y la guarda en su base de datos<br><br>**Escenario 2:** Rechazo de captura<br>Dado que el usuario quiere descartar la foto<br>Cuando el usuario le da al icono de cámara otra vez<br>Entonces el sistema le permite otro intento de foto y se queda esperando la confirmación de la foto                                                                                                                                                                                                                                 | E02                       |
-| TS_YOLO_01         | Clasificación Automática con IA | Como sistema, quiero clasificar automáticamente las incidencias reportadas mediante IA para reducir el trabajo manual de revisión.                     | **Escenario 1:** Clasificación precisa de categorías prioritarias<br>Dado que se recibe una imagen de incidencia<br>Cuando el modelo YOLO procesa la imagen<br>Entonces debe clasificar correctamente el tipo de incidencia (bache o basura) con precisión ≥80%<br><br>**Escenario 2:** Clasificación manual para casos ambiguos<br>Dado que el modelo YOLO no puede clasificar una imagen<br>Cuando la confianza es <70%<br>Entonces el sistema envía la incidencia para revisión manual por personal municipal<br><br>**Escenario 3:** Requisitos de entrenamiento<br>Dado que necesito entrenar el modelo YOLO<br>Cuando preparo el dataset<br>Entonces debe contener mínimo 1,000 imágenes por categoría (baches y basura) capturadas en contexto limeño | Funcionalidad IA          |
-| E03_US11           | Dashboard Geoespacial Municipal | Como personal municipal, quiero visualizar incidencias en mapas de calor interactivos para priorizar intervenciones basadas en concentración espacial. | **Escenario 1:** Visualización de hotspots<br>Dado que existen múltiples reportes en el sistema<br>Cuando accedo al dashboard de "Mapa de Incidencias"<br>Entonces debo ver mapas de calor actualizados que muestren concentración de incidencias por zona<br><br>**Escenario 2:** Filtrado temporal<br>Dado que estoy en el dashboard<br>Cuando aplico filtros de búsqueda<br>Entonces debo ver la información específica que quiero<br><br>**Escenario 3:** No hay información sobre una zona<br>Dado que no hay incidencias en una zona<br>Cuando el usuario quiere ver la zona<br>Entonces el sistema le muestra un mensaje de "No hay incidencias en esta zona"                                                                                         | E03                       |
-| E02_US21           | Seguimiento de Estado           | Como ciudadano, quiero ver el progreso de mi reporte para mantenerme informado sobre su resolución.                                                    | **Escenario 1:** Visualización de cambio de estado<br>Dado que mi reporte cambia de estado<br>Cuando el personal municipal actualiza el progreso<br>Entonces debo ver el nuevo estado de mi reporte<br><br>**Escenario 2:** Transparencia del proceso<br>Dado que accedo a mi historial de reportes<br>Cuando consulto un reporte específico<br>Entonces debo ver el historial completo de estados y acciones realizadas                                                                                                                                                                                                                                                                                                                                     | E02 / E04                 |
-
-#### 4.1.2.2. Quality Attribute Scenarios
-
 En esta sección se incluye la especificación de la primera versión de los escenarios de atributos de calidad que tienen mayor impacto en la arquitectura de la solución LimaUrban. Los escenarios identificados están directamente relacionados con las funcionalidades primarias del sistema y abordan aspectos críticos como disponibilidad, rendimiento, precisión de IA, escalabilidad y usabilidad. Estos escenarios sirven como input fundamental para el proceso de diseño arquitectónico y permiten validar que la solución cumple con los estándares de calidad requeridos para la gestión urbana inteligente.
 
-### Escenario QA-01: Disponibilidad durante Alta Concurrencia
+| **Campo**               | **Descripción**                                                                                                 |
+| :---------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | **QA-01: Usabilidad en el Primer Uso**                                                                          |
+| **Escenario**           | Un ciudadano sin experiencia técnica previa utiliza la aplicación por primera vez para reportar una incidencia. |
+| **Atributo de Calidad** | Usabilidad                                                                                                      |
+| **Estímulo**            | Usuario nuevo intenta completar su primer reporte.                                                              |
+| **Respuesta**           | El usuario completa el reporte (foto, ubicación, categoría) sin necesidad de ayuda externa.                     |
+| **Medida de respuesta** | El 90% de los usuarios nuevos deben completar su primer reporte en menos de 40 segundos.                        |
 
-| **Campo**               | **Descripción**                                                                                                                                                                                    |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Ciudadano reporta incidencia urbana durante hora pico matutina cuando miles de usuarios acceden simultáneamente al sistema para registrar problemas de infraestructura en toda Lima Metropolitana. |
-| **ID**                  | QA-01                                                                                                                                                                                              |
-| **User Stories**        | US16 – Reporte de Incidencia con Foto                                                                                                                                                              |
-| **Atributo de Calidad** | Disponibilidad                                                                                                                                                                                     |
-| **Fuente de Estímulo**  | Ciudadano limeño                                                                                                                                                                                   |
-| **Estímulo**            | Usuario intenta reportar una incidencia durante hora pico (8:00-9:00 AM) cuando el sistema experimenta alta concurrencia de 5,000+ usuarios simultáneos.                                           |
-| **Artefacto**           | Aplicación móvil Flutter y backend Django                                                                                                                                                          |
-| **Entorno**             | Operación normal con alta concurrencia durante horarios de mayor movilidad urbana en Lima                                                                                                          |
-| **Respuesta**           | El sistema procesa el reporte, captura la geolocalización, almacena la fotografía y confirma la recepción sin interrupciones.                                                                      |
-| **Medida de respuesta** | El sistema debe mantener 99.5% de disponibilidad mensual y procesar reportes en menos de 3 segundos durante picos de carga.                                                                        |
+| **Campo**               | **Descripción**                                                                                                                    |
+| :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | **QA-02: Disponibilidad en Horas Pico**                                                                                            |
+| **Escenario**           | Un ciudadano reporta una incidencia durante la hora pico matutina, cuando miles de usuarios están activos en el sistema.           |
+| **Atributo de Calidad** | Disponibilidad, Rendimiento                                                                                                        |
+| **Estímulo**            | Usuario envía un reporte mientras el sistema gestiona más de 5,000 usuarios concurrentes.                                          |
+| **Respuesta**           | El sistema procesa el reporte y devuelve una confirmación de éxito sin demoras perceptibles.                                       |
+| **Medida de respuesta** | El sistema debe mantener una disponibilidad del 99.5% y procesar el 99% de los reportes en menos de 3 segundos durante horas pico. |
 
-### Escenario QA-02: Rendimiento del Dashboard Geoespacial
+| **Campo**               | **Descripción**                                                                                                           |
+| :---------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| **ID**                  | **QA-03: Rendimiento del Dashboard Geoespacial**                                                                          |
+| **Escenario**           | Un gestor municipal accede al dashboard para analizar la distribución de 500+ incidencias acumuladas en un mapa de calor. |
+| **Atributo de Calidad** | Rendimiento                                                                                                               |
+| **Estímulo**            | El usuario aplica filtros de fecha y tipo de incidencia en el mapa de calor.                                              |
+| **Respuesta**           | El dashboard renderiza el mapa de calor actualizado con los datos filtrados de forma interactiva.                         |
+| **Medida de respuesta** | La visualización del mapa de calor y la aplicación de filtros deben completarse en menos de 2 segundos.                   |
 
-| **Campo**               | **Descripción**                                                                                                                                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Personal municipal necesita visualizar patrones geoespaciales de incidencias para planificar intervenciones preventivas y optimizar asignación de recursos de mantenimiento urbano. |
-| **ID**                  | QA-02                                                                                                                                                                               |
-| **User Stories**        | US11 – Dashboard Geoespacial Municipal                                                                                                                                              |
-| **Atributo de Calidad** | Rendimiento                                                                                                                                                                         |
-| **Fuente de Estímulo**  | Personal municipal autorizado                                                                                                                                                       |
-| **Estímulo**            | Funcionario municipal accede al dashboard para generar mapas de calor con filtros temporales sobre una base de datos con 500+ reportes acumulados.                                  |
-| **Artefacto**           | Dashboard Angular integrado con sistema de análisis geoespacial PostGIS                                                                                                             |
-| **Entorno**             | Sesión de trabajo normal con base de datos poblada con reportes históricos de múltiples distritos                                                                                   |
-| **Respuesta**           | El sistema genera visualizaciones interactivas de mapas de calor, aplicando filtros y mostrando concentraciones de incidencias por zona geográfica.                                 |
-| **Medida de respuesta** | Visualización completa de mapas de calor en menos de 2 segundos, incluyendo aplicación de filtros temporales y geográficos.                                                         |
-
-### Escenario QA-03: Escalabilidad durante Emergencias
-
-| **Campo**               | **Descripción**                                                                                                                                                                |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Escenario**           | Durante una emergencia urbana (inundación, terremoto), miles de ciudadanos reportan incidencias simultáneamente, sobrecargando el sistema con un volumen excepcional de datos. |
-| **ID**                  | QA-03                                                                                                                                                                          |
-| **User Stories**        | US16 – Reporte de Incidencia con Foto, US06 – Actualizar Estado de Incidencia                                                                                                  |
-| **Atributo de Calidad** | Escalabilidad                                                                                                                                                                  |
-| **Fuente de Estímulo**  | Múltiples usuarios durante emergencia                                                                                                                                          |
-| **Estímulo**            | 10,000 ciudadanos intentan reportar incidencias simultáneamente durante una emergencia urbana que afecta múltiples distritos de Lima.                                          |
-| **Artefacto**           | Arquitectura modular monolítica desplegada en Azure                                                                                                                            |
-| **Entorno**             | Pico de carga excepcional durante emergencia que supera 10x el tráfico normal                                                                                                  |
-| **Respuesta**           | El sistema mantiene operatividad sin degradación significativa, procesando todos los reportes y mantiendo tiempos de respuesta aceptables.                                     |
-| **Medida de respuesta** | Capacidad de procesar 10,000+ reportes por hora manteniendo latencia <5 segundos sin pérdida de datos.                                                                         |
-
-### Escenario QA-04: Usabilidad para Usuarios Nuevos
-
-| **Campo**               | **Descripción**                                                                                                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Un ciudadano sin experiencia técnica previa utiliza la aplicación móvil por primera vez para reportar una incidencia urbana, requiriendo una experiencia intuitiva y eficiente. |
-| **ID**                  | QA-04                                                                                                                                                                           |
-| **User Stories**        | US16 – Reporte de Incidencia con Foto                                                                                                                                           |
-| **Atributo de Calidad** | Usabilidad                                                                                                                                                                      |
-| **Fuente de Estímulo**  | Ciudadano nuevo                                                                                                                                                                 |
-| **Estímulo**            | Usuario sin experiencia previa descarga la aplicación e intenta completar su primer reporte de incidencia urbana siguiendo la interfaz intuitiva.                               |
-| **Artefacto**           | Interfaz móvil Flutter                                                                                                                                                          |
-| **Entorno**             | Usuario real sin capacitación previa, utilizando smartphone estándar en condiciones normales de uso                                                                             |
-| **Respuesta**           | El usuario completa exitosamente el reporte incluyendo fotografía, geolocalización y categorización sin asistencia externa.                                                     |
-| **Medida de respuesta** | 90% de usuarios nuevos deben completar su primer reporte en menos de 40 segundos sin errores críticos.                                                                          |
-
-### Escenario QA-05: Comunicación en Tiempo Real
-
-| **Campo**               | **Descripción**                                                                                                                                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Ciudadano reportante y personal municipal requieren comunicación bidireccional en tiempo real sobre el progreso de incidencias para mantener transparencia y coordinación efectiva. |
-| **ID**                  | QA-05                                                                                                                                                                               |
-| **User Stories**        | US21 – Seguimiento de Estado, US06 – Actualizar Estado de Incidencia                                                                                                                |
-| **Atributo de Calidad** | Disponibilidad de Comunicación                                                                                                                                                      |
-| **Fuente de Estímulo**  | Sistema de notificaciones WebSocket                                                                                                                                                 |
-| **Estímulo**            | Personal municipal actualiza el estado de una incidencia de "En Verificación" a "En Proceso" y necesita notificar automáticamente al ciudadano reportante.                          |
-| **Artefacto**           | Sistema de notificaciones WebSocket y módulo de gestión de estados                                                                                                                  |
-| **Entorno**             | Operación normal con múltiples usuarios conectados simultáneamente                                                                                                                  |
-| **Respuesta**           | El sistema envía notificación push al ciudadano, actualiza badge de notificaciones y registra el cambio en el historial de la incidencia.                                           |
-| **Medida de respuesta** | 95% de notificaciones entregadas en menos de 5 segundos, con badge actualizado automáticamente.                                                                                     |
-
-### Escenario QA-06: Interoperabilidad con Sistemas Municipales
-
-| **Campo**               | **Descripción**                                                                                                                                                            |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Escenario**           | Sistemas municipales existentes requieren integración con la plataforma para intercambiar datos de incidencias y mantener sincronización con procesos operativos actuales. |
-| **ID**                  | QA-06                                                                                                                                                                      |
-| **User Stories**        | US11 – Dashboard Geoespacial Municipal                                                                                                                                     |
-| **Atributo de Calidad** | Interoperabilidad                                                                                                                                                          |
-| **Fuente de Estímulo**  | Sistema municipal externo                                                                                                                                                  |
-| **Estímulo**            | Sistema SIG municipal solicita datos de incidencias vía API para integración con flujos de trabajo de mantenimiento existentes.                                            |
-| **Artefacto**           | API pública de la plataforma LimaUrban                                                                                                                                     |
-| **Entorno**             | Integración con sistemas municipales heredados que utilizan estándares GIS convencionales                                                                                  |
-| **Respuesta**           | La API entrega datos estructurados en formatos estándar compatibles con sistemas municipales existentes.                                                                   |
-| **Medida de respuesta** | 100% compatibilidad con estándares GeoJSON y OGC, con tiempo de respuesta API <1 segundo para consultas estándar.                                                          |
-
----
+| **Campo**               | **Descripción**                                                                                                                      |
+| :---------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | **QA-04: Escalabilidad ante Emergencias**                                                                                            |
+| **Escenario**           | Tras una lluvia intensa, se produce un pico masivo de reportes de baches y aniegos en toda la ciudad.                                |
+| **Atributo de Calidad** | Escalabilidad                                                                                                                        |
+| **Estímulo**            | El sistema recibe 10,000 reportes en una hora, superando 10 veces el tráfico normal.                                                 |
+| **Respuesta**           | La infraestructura escala automáticamente para procesar todos los reportes sin pérdida de datos ni degradación crítica del servicio. |
+| **Medida de respuesta** | Capacidad de procesar 10,000 reportes por hora manteniendo una latencia de API inferior a 5 segundos.                                |
 
 ## 4.1.2.3. Constraints
 
 Las siguientes restricciones técnicas han sido establecidas por el cliente y son no negociables para la elaboración de la solución:
-
-| Technical Story ID | Título                        | Descripción                                                                                                                                                                                                                         | Criterios de Aceptación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Relacionado con (Epic ID) |
-| ------------------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| TS01               | Infraestructura Azure         | Como equipo de desarrollo, quiero desplegar la plataforma exclusivamente en servicios de Microsoft Azure para cumplir con las políticas de infraestructura municipal establecidas y garantizar soporte técnico oficial.             | **Escenario 1:** Despliegue exitoso en Azure<br>**Dado que** necesitamos cumplir políticas municipales de infraestructura cloud<br>**Cuando** desplegamos el backend y base de datos<br>**Entonces** debe utilizarse Azure App Service para el backend y Azure Database para almacenamiento<br>**Y** todos los servicios deben estar dentro del ecosistema Azure<br><br>**Escenario 2:** Validación de servicios<br>**Dado que** la infraestructura debe ser exclusivamente Azure<br>**Cuando** se configura el entorno de producción<br>**Entonces** no debe utilizarse ningún servicio de AWS, Google Cloud u otros proveedores<br>**Y** debe documentarse la justificación de cada servicio Azure seleccionado | Todos los Epics           |
-| TS02               | Base de Datos Escalable       | Como equipo técnico, quiero configurar una base de datos en Azure SQL Database con escalabilidad automática para manejar el crecimiento de información de incidencias y usuarios.                                                   | **Escenario 1:** Configuración inicial exitosa<br>**Dado que** se crea la base de datos en Azure SQL<br>**Cuando** se conecta con la plataforma<br>**Entonces** queda lista para almacenar información<br><br>**Escenario 2:** Escalabilidad automática<br>**Dado que** aumenta la cantidad de registros<br>**Cuando** la carga supera el umbral<br>**Entonces** la base de datos escala automáticamente                                                                                                                                                                                                                                                                                                          | Todos los Epics           |
-| TS03               | Frontend Web Angular          | Como desarrollador frontend, quiero implementar el dashboard municipal en Angular para mantener coherencia con los sistemas municipales existentes y aprovechar la expertise del equipo en este framework.                          | **Escenario 1:** Compatibilidad con sistemas municipales<br>**Dado que** existen sistemas Angular en la municipalidad<br>**Cuando** desarrollo el dashboard municipal<br>**Entonces** debe usar Angular 15+ con TypeScript<br>**Y** debe ser compatible con navegadores Chrome, Firefox y Edge<br><br>**Escenario 2:** Integración API exitosa<br>**Dado que** necesito conectar con el backend<br>**Cuando** implemento las funcionalidades del dashboard<br>**Entonces** debe integrarse correctamente con APIs REST<br>**Y** debe manejar errores de conectividad de forma elegante                                                                                                                            | E05                       |
-| TS04               | Aplicación Móvil Flutter      | Como desarrollador móvil, quiero desarrollar la aplicación ciudadana en Flutter para soportar Android e iOS con una sola base de código y reducir costos de desarrollo y mantenimiento.                                             | **Escenario 1:** Multiplataforma exitosa<br>**Dado que** necesito soporte para Android e iOS<br>**Cuando** desarrollo la aplicación móvil<br>**Entonces** debe usar Flutter 3.0+ con Dart 3.0+<br>**Y** debe funcionar nativamente en ambas plataformas<br><br>**Escenario 2:** Acceso a funcionalidades nativas<br>**Dado que** requiero acceso a cámara y GPS<br>**Cuando** implemento el reporte de incidencias<br>**Entonces** debe acceder correctamente a hardware del dispositivo<br>**Y** debe solicitar permisos de forma clara al usuario                                                                                                                                                               | E02                       |
-| TS05               | Comunicación WebSocket        | Como developer, quiero implementar comunicación en tiempo real mediante WebSocket para las notificaciones, para que los badges de incidentes y los mensajes se actualicen automáticamente sin necesidad de refrescar la aplicación. | **Escenario 1:** Envío de notificación en tiempo real<br>**Dado que** se registra un nuevo incidente<br>**Cuando** el servidor lo transmite mediante WebSocket<br>**Entonces** el cliente recibe la notificación automáticamente<br><br>**Escenario 2:** Actualización de badge en tiempo real<br>**Dado que** hay un incidente nuevo<br>**Cuando** el cliente recibe el evento<br>**Entonces** el badge del ícono de notificaciones incrementa su valor<br><br>**Escenario 3:** Reinicio de badge<br>**Dado que** el badge muestra incidentes pendientes<br>**Cuando** el usuario abre el módulo de notificaciones<br>**Entonces** el badge se reinicia a 0                                                      | E04                       |
-| TS06               | Georreferenciación Azure Maps | Como equipo de desarrollo, quiero integrar servicios de mapas de Azure Maps para mostrar incidencias en un tablero geoespacial con mapas de calor interactivos.                                                                     | **Escenario 1:** Visualización en mapa<br>**Dado que** existen incidencias registradas<br>**Cuando** se abre el tablero<br>**Entonces** se muestran las incidencias en el mapa con su ubicación georreferenciada<br><br>**Escenario 2:** Generación de mapas de calor<br>**Dado que** el usuario necesita ver concentraciones<br>**Cuando** selecciona vista de mapa de calor<br>**Entonces** se generan visualizaciones de densidad por zona geográfica                                                                                                                                                                                                                                                          | E05                       |
-
----
+| Technical Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|-------------------|--------|-------------|------------------------|-------------------------|
+| TS01 | Infraestructura | Como equipo de desarrollo, quiero desplegar la plataforma para cumplir con las políticas de infraestructura municipal establecidas y garantizar soporte técnico oficial. | **Escenario 1:** Despliegue exitoso <br>**Dado que** necesitamos cumplir políticas municipales de infraestructura <br>**Cuando** desplegamos el backend y base de datos<br>**Entonces** debe utilizarse App Service para el backend y Supabase para almacenamiento<br>**Y** todos los servicios deben estar dentro del ecosistema <br><br>**Escenario 2:** Validación de servicios<br>**Dado que** la infraestructura debe ser exclusivamente escalable<br>**Cuando** se configura el entorno de producción<br>**Entonces** no debe utilizarse ningún servicio de AWS, Google Cloud u otros proveedores<br>**Y** debe documentarse la justificación de cada servicio seleccionado | Todos los Epics |
+| TS02 | Base de Datos Escalable | Como equipo técnico, quiero configurar una base de datos en Supabase con escalabilidad automática para manejar el crecimiento de información de incidencias y usuarios. | **Escenario 1:** Configuración inicial exitosa<br>**Dado que** se crea la base de datos en Supabase<br>**Cuando** se conecta con la plataforma<br>**Entonces** queda lista para almacenar información<br><br>**Escenario 2:** Escalabilidad automática<br>**Dado que** aumenta la cantidad de registros<br>**Cuando** la carga supera el umbral<br>**Entonces** la base de datos escala automáticamente | Todos los Epics |
+| TS03 | Frontend Web Angular | Como desarrollador frontend, quiero implementar el dashboard municipal en Angular para mantener coherencia con los sistemas municipales existentes y aprovechar la expertise del equipo en este framework. | **Escenario 1:** Compatibilidad con sistemas municipales<br>**Dado que** existen sistemas Angular en la municipalidad<br>**Cuando** desarrollo el dashboard municipal<br>**Entonces** debe usar Angular 15+ con TypeScript<br>**Y** debe ser compatible con navegadores Chrome, Firefox y Edge<br><br>**Escenario 2:** Integración API exitosa<br>**Dado que** necesito conectar con el backend<br>**Cuando** implemento las funcionalidades del dashboard<br>**Entonces** debe integrarse correctamente con APIs REST<br>**Y** debe manejar errores de conectividad de forma elegante | E05 |
+| TS04 | Aplicación Móvil Flutter | Como desarrollador móvil, quiero desarrollar la aplicación ciudadana en Flutter para soportar Android e iOS con una sola base de código y reducir costos de desarrollo y mantenimiento. | **Escenario 1:** Multiplataforma exitosa<br>**Dado que** necesito soporte para Android e iOS<br>**Cuando** desarrollo la aplicación móvil<br>**Entonces** debe usar Flutter 3.0+ con Dart 3.0+<br>**Y** debe funcionar nativamente en ambas plataformas<br><br>**Escenario 2:** Acceso a funcionalidades nativas<br>**Dado que** requiero acceso a cámara y GPS<br>**Cuando** implemento el reporte de incidencias<br>**Entonces** debe acceder correctamente a hardware del dispositivo<br>**Y** debe solicitar permisos de forma clara al usuario | E02 |
+| TS05 | Georreferenciación MapBox | Como equipo de desarrollo, quiero integrar servicios de mapas de MapBox para mostrar incidencias en un tablero geoespacial con mapas de calor interactivos. | **Escenario 1:** Visualización en mapa<br>**Dado que** existen incidencias registradas<br>**Cuando** se abre el tablero<br>**Entonces** se muestran las incidencias en el mapa con su ubicación georreferenciada<br><br>**Escenario 2:** Generación de mapas de calor<br>**Dado que** el usuario necesita ver concentraciones<br>**Cuando** selecciona vista de mapa de calor<br>**Entonces** se generan visualizaciones de densidad por zona geográfica | E05 |
 
 ## 4.1.2.4. Architectural Drivers Backlog
 
@@ -1619,34 +1494,102 @@ Resultado del proceso de Quality Attribute Workshop, priorizando drivers por imp
 
 | **Driver ID** | **Título**                               | **Descripción**                                                                                                          | **Importancia** | **Complejidad** |
 | ------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------- | --------------- |
-| **QA01**      | Disponibilidad durante Alta Concurrencia | Mantener 99.5% disponibilidad mensual procesando reportes en < 03 segundos durante picos de 5,000+ usuarios simultáneos  | High            | High            |
+| **QA01**      | Disponibilidad durante Alta Concurrencia | Mantener 99.5% disponibilidad mensual procesando reportes en <3 segundos durante picos de 5,000+ usuarios simultáneos    | High            | High            |
 | **QA02**      | Rendimiento Dashboard Geoespacial        | Generar mapas de calor interactivos en <2 segundos con filtros temporales para 500+ reportes acumulados                  | High            | High            |
-| **C01**       | Restricción Tecnológica Azure            | Desplegar exclusivamente en Azure cumpliendo políticas municipales de infraestructura cloud                              | High            | Medium          |
+| **C01**       | Restricción Tecnológica                  | Desplegar exclusivamente cumpliendo políticas municipales de infraestructura cloud                                       | High            | Medium          |
 | **FD01**      | Reporte con Geolocalización Flutter      | Permitir captura automática de ubicación GPS y fotografía mediante app Flutter multiplataforma                           | High            | Medium          |
 | **FD02**      | Gestión de Estados de Incidencias        | Sistema de actualización de estados con notificaciones automáticas bidireccionales entre ciudadanos y personal municipal | High            | Medium          |
 | **QA03**      | Escalabilidad durante Emergencias        | Soportar 10,000+ reportes por hora manteniendo latencia <5 segundos durante emergencias urbanas                          | High            | High            |
 | **QA04**      | Experiencia de Usuario Móvil             | Lograr que 90% de usuarios nuevos completen reportes en <40 segundos con interfaz Flutter intuitiva                      | High            | Medium          |
 | **C02**       | Frontend Angular Municipal               | Desarrollar dashboard web en Angular para coherencia con sistemas municipales existentes                                 | Medium          | Low             |
 | **C03**       | Comunicación WebSocket Tiempo Real       | Implementar notificaciones automáticas con badges dinámicos para transparencia del proceso municipal                     | Medium          | Medium          |
-| **C04**       | Georreferenciación Azure Maps            | Integrar Azure Maps para visualización geoespacial y generación de mapas de calor interactivos                           | Medium          | Medium          |
+| **C04**       | Georreferenciación MapBox                | Integrar MapBoxpara visualización geoespacial y generación de mapas de calor interactivos                                | Medium          | Medium          |
 | **QA05**      | Interoperabilidad Municipal              | Facilitar integración con sistemas SIG municipales mediante APIs compatibles con estándares GeoJSON y OGC                | Medium          | Medium          |
 | **QA06**      | Seguridad de Datos Ciudadanos            | Proteger información personal y prevenir reportes maliciosos mediante autenticación robusta                              | Medium          | High            |
+
+### 4.1.3. Architectural Design Decisions
+
+Durante el Quality Attribute Workshop, el equipo analizó los Architectural Drivers seleccionados para la solución LimaUrban, evaluando distintas tácticas y patrones de diseño para asegurar su cumplimiento. Se analizaron patrones como MVC (aplicado como MVT en Django), arquitectura en Capas y Cliente-Servidor. A continuación, se detallan los pros y contras de cada patrón respecto a cada Driver:
+
+| Driver ID | Título de Driver    | MVC / MVT                                                                                                              | Capas                                                                                                              | Cliente-Servidor                                                                                                       |
+| :-------- | :------------------ | :--------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+|           |                     | **Pro**                                                                                                                | **Con**                                                                                                            | **Pro**                                                                                                                | **Con**                                                                                                      | **Pro**                                                                                                     | **Con**                                                                                                                  |
+| **QA01**  | **Disponibilidad**  | Permite separar lógica de negocio y datos, reduciendo el impacto de fallos en la presentación.                         | La sincronización de datos en tiempo real entre el modelo y la vista puede ser compleja y propensa a fallos.       | Permite distribuir la carga en capas independientes (ej. web, aplicación, datos), mejorando la disponibilidad general. | Un fallo en una capa intermedia puede afectar la operación global del sistema si no hay redundancia.         | Permite operación continua en el cliente (Flutter) incluso ante fallas parciales del servidor .             | Dependencia de una conexión de red continua al servidor para la mayoría de las funcionalidades.                          |
+| **QA04**  | **Usabilidad**      | Facilita el desarrollo de interfaces de usuario (vistas) intuitivas y desacopladas de la lógica de negocio.            | Si la comunicación entre controlador y vista no es eficiente, puede aumentar la latencia y afectar la fluidez.     | Optimiza cada capa para su propósito (ej. UI, lógica), mejorando la experiencia del usuario final.                     | Riesgo de inconsistencias en la experiencia si las capas de presentación (móvil y web) no se coordinan bien. | Permite actualizaciones rápidas de la interfaz de usuario en Flutter/Angular sin afectar el backend.        | La latencia de la red puede afectar negativamente la usabilidad si las APIs no están optimizadas para baja conectividad. |
+| **QA06**  | **Seguridad**       | El controlador actúa como un punto de entrada único, facilitando la aplicación de controles de seguridad y validación. | La protección de múltiples puntos de acceso (APIs) para vistas y modelos puede aumentar la complejidad.            | Permite aislar servicios críticos (ej. autenticación) en capas específicas, reforzando la protección.                  | Aumenta el número de superficies de ataque que requieren monitoreo y defensa (entre-capas).                  | La comunicación vía TLS/HTTPS asegura el canal entre cliente y servidor. APIs expuestas aumentan el riesgo. | La lógica en el cliente puede ser vulnerable si no se valida adecuadamente en el servidor.                               |
+| **N/A**   | **Modificabilidad** | Separar la lógica facilita cambios localizados (ej. agregar un nuevo tipo de incidencia) sin afectar la presentación.  | Puede ser difícil de mantener si los flujos de datos entre Modelo, Vista y Controlador no están bien documentados. | Cambios en una capa (ej. migrar la BD) no deberían afectar a otras si las interfaces están bien definidas.             | Cambios que atraviesan múltiples capas pueden volverse costosos si la modularidad no se gestiona bien.       | Permite la actualización independiente del backend y las aplicaciones cliente (Flutter/Angular).            | Se debe mantener la compatibilidad (versionado de APIs) entre diferentes versiones del cliente y el servidor.            |
+
+---
+
+### 4.1.4. Quality Attribute Scenario Refinements
+
+Al finalizar el Quality Attribute Workshop, el equipo priorizó los escenarios de calidad más relevantes para la solución LimaUrban, tomando en cuenta su impacto sobre la experiencia de usuario, la estabilidad de la aplicación y la facilidad de mantenimiento. A continuación, se presenta la versión refinada de los escenarios priorizados, ordenados por importancia para el negocio y el proyecto.
+
+#### Scenario Refinement for Scenario 1
+
+|                                  |                                                                                                                                                                      |
+| :------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Scenario(s):**                 | Un ciudadano sin experiencia técnica previa utiliza la aplicación móvil por primera vez para reportar una acumulación de basura en su calle.                         |
+| **Business Goals:**              | Fomentar la adopción de la plataforma y la participación ciudadana a través de una experiencia de reporte simple, rápida e intuitiva.                                |
+| **Relevant Quality Attributes:** | Usabilidad, Eficiencia.                                                                                                                                              |
+| **Scenario Components**          |                                                                                                                                                                      |
+| _Stimulus:_                      | El ciudadano abre la aplicación LimaUrban e inicia el proceso para crear un nuevo reporte de incidencia.                                                             |
+| _Stimulus Source:_               | Ciudadano.                                                                                                                                                           |
+| _Environment:_                   | Aplicación móvil Flutter en un smartphone estándar, con conexión a internet móvil que puede ser intermitente.                                                        |
+| _Artifact (if Known):_           | Módulo de reporte de incidencias de la aplicación (UI, lógica de captura de foto y GPS).                                                                             |
+| _Response:_                      | La aplicación guía al usuario a través de un flujo simple: tomar foto, confirmar ubicación automática y enviar el reporte, mostrando una confirmación inmediata.     |
+| **Response Measure:**            | El 90% de los usuarios nuevos deben poder completar y enviar su primer reporte en menos de 40 segundos.                                                              |
+| **Questions:**                   | ¿Cómo podemos minimizar los pasos y la entrada manual de datos para acelerar el proceso de reporte?                                                                  |
+| **Issues:**                      | Asegurar un flujo de usuario fluido, gestionar correctamente los permisos de cámara y ubicación, y proveer feedback claro y constante al usuario durante el proceso. |
+
+#### Scenario Refinement for Scenario 2
+
+|                                  |                                                                                                                                                                                      |
+| :------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Scenario(s):**                 | Un ciudadano intenta reportar un bache en una vía principal durante la hora pico matutina, cuando miles de otros usuarios están activos en el sistema.                               |
+| **Business Goals:**              | Garantizar la fiabilidad y confianza en el sistema, asegurando que todos los reportes de los ciudadanos sean capturados exitosamente, incluso bajo alta demanda.                     |
+| **Relevant Quality Attributes:** | Disponibilidad, Rendimiento, Escalabilidad.                                                                                                                                          |
+| **Scenario Components**          |                                                                                                                                                                                      |
+| _Stimulus:_                      | El ciudadano envía el formulario de reporte de incidencia desde la aplicación móvil.                                                                                                 |
+| _Stimulus Source:_               | Ciudadano.                                                                                                                                                                           |
+| _Environment:_                   | Operación normal del sistema pero con un pico de carga de más de 5,000 usuarios concurrentes en la infraestructura .                                                                 |
+| _Artifact (if Known):_           | El stack completo de la aplicación: cliente Flutter, API Gateway, backend Django y base de datos supabase                                                                            |
+| _Response:_                      | El sistema recibe la solicitud, procesa los datos, almacena la imagen en supabase, guarda el registro en la base de datos y devuelve un mensaje de éxito al dispositivo del usuario. |
+| **Response Measure:**            | El tiempo desde el envío hasta la confirmación en pantalla no debe superar los 3 segundos en el 99.5% de los casos durante las horas pico.                                           |
+| **Questions:**                   | ¿Cómo podemos garantizar que la infraestructura escale de manera automática y eficiente para manejar los picos de carga?                                                             |
+| **Issues:**                      | Optimizar las consultas a la base de datos, gestionar el almacenamiento eficiente de un alto volumen de imágenes y prevenir cuellos de botella en la API.                            |
+
+#### Scenario Refinement for Scenario 3
+
+|                                  |                                                                                                                                                                                          |
+| :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Scenario(s):**                 | El personal municipal cambia el estado de una incidencia de "Recibido" a "En Proceso", y el ciudadano que la reportó necesita ser informado inmediatamente.                              |
+| **Business Goals:**              | Aumentar la transparencia del proceso municipal y mejorar la comunicación con el ciudadano, reduciendo la incertidumbre y la necesidad de consultas manuales.                            |
+| **Relevant Quality Attributes:** | Rendimiento, Usabilidad.                                                                                                                                                                 |
+| **Scenario Components**          |                                                                                                                                                                                          |
+| _Stimulus:_                      | El sistema detecta una actualización en el campo de estado de un registro de incidencia en la base de datos.                                                                             |
+| _Stimulus Source:_               | Sistema (iniciado por una acción del personal municipal).                                                                                                                                |
+| _Environment:_                   | Operación normal con múltiples ciudadanos y personal municipal conectados simultáneamente. El ciudadano tiene la app instalada.                                                          |
+| _Artifact (if Known):_           | Módulo de notificaciones (basado en WebSockets) y el servicio de notificaciones push de la aplicación móvil.                                                                             |
+| _Response:_                      | El sistema genera y envía una notificación push inmediata al dispositivo del ciudadano informando sobre el cambio de estado.                                                             |
+| **Response Measure:**            | El 95% de las notificaciones de cambio de estado deben ser entregadas en el dispositivo del usuario en menos de 5 segundos tras la actualización.                                        |
+| **Questions:**                   | ¿Cómo asegurar la entrega de notificaciones si el dispositivo del usuario está temporalmente offline?                                                                                    |
+| **Issues:**                      | Implementar un servicio de WebSockets robusto y escalable, y diseñar un mecanismo de reintentos o una cola de notificaciones para manejar fallas en la red o dispositivos desconectados. |
 
 ## 4.2. Strategic-Level Domain-Driven Design
 
 El proceso de **Domain-Driven Design** aplicado en Urban Lima nos permitió organizar el dominio de la solución en áreas delimitadas de responsabilidad. Esta división se realizó en dos fases: primero con la sesión de **EventStorming**, donde se visualizaron los eventos centrales del sistema y sus relaciones, y posteriormente con el **Candidate Context Discovery**, donde se definieron los **Bounded Contexts** específicos del proyecto.
 
-- **Miro Board - Event Storming y DDD:** [Tablero de Event-Storming](https://miro.com/welcomeonboard/ek8ya3dQQW54WFdodkVEckNPNWVxUmlEVURYKytJVVpndXB5dklQbGVQY3ZydjVIV2FUdkpROG81V1krWThYSzFqQXF0NHMxanZHYWJtUmM1RTgzTy9lUnk0bFdmNkVFWnFhamo2cEJaZ2xEN1BOQzBDUkN0M205eDFLclN3N3VNakdSWkpBejJWRjJhRnhhb1UwcS9BPT0hdjE=?share_link_id=250207850579)
+- **Miro Board - Event Storming y DDD:** [Tablero de Event-Storming](https://miro.com/welcomeonboard/a1I1RjhRK2JtNVA3bGRWbC82M1ZtTGtlTE1Dd2h5YnZIVHpacXhMV3VieDI3T3kwbU1jMDBFWmVCZGRhN0hDQ0JDeSt2N0JwMisrSVNrMjFzdk1ZLytObXJSWFBrMFA2QW9PUXFWbzVaYmxtRDN0eENrazQxcjVITUpkVzhtQU5zVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=721662336048)
 
 ### 4.2.1. EventStorming
 
 La sesión de EventStorming se centró en mapear los flujos clave del sistema a partir de las historias de usuario priorizadas. Durante la dinámica se identificaron los siguientes elementos relevantes para el proyecto:
-![event-storming](./images/bounded/event-storming.png)
+![event-storming](./images/bounded/event-storming-corregido.jpg)
 
 - **Eventos principales**: _Usuario municipal registrado_, _Ciudadano registrado_, _Sesión iniciada_, _Incidencia creada_, _Estado actualizado_, _Reporte exportado_, _Mapa geoespacial generado_.
 - **Comandos clave**: _Registrar usuario_, _Iniciar sesión_, _Reportar incidencia con foto y ubicación_, _Actualizar estado_, _Asignar prioridad_, _Generar reporte CSV_.
 - **Agregados principales**: _Usuario_, _Incidencia_, _Reporte_.
-- **Sistemas externos**: _Azure Active Directory_ (autenticación), _Azure SQL Database_ (persistencia y escalabilidad), _Azure Maps_ (georreferenciación).
 
 El análisis permitió seguir una línea temporal desde el registro de los actores (municipales y ciudadanos), la creación y gestión de incidencias, hasta la explotación de la información a nivel de reportes y dashboards. Con este mapeo se identificaron dependencias críticas (ejemplo: no es posible registrar incidencias sin un usuario autenticado) y se evidenciaron las transiciones que marcan puntos de separación natural dentro del sistema.
 
@@ -1656,30 +1599,22 @@ A partir del EventStorming, se llevó a cabo la sesión de Candidate Context Dis
 
 #### IAM Context
 
-Este contexto agrupa todo lo relacionado con la **gestión de identidades y accesos**. Incluye los procesos de registro y autenticación tanto para ciudadanos como para personal municipal. También contempla la integración con **Azure Active Directory** para reforzar la seguridad y garantizar la administración centralizada de credenciales. Su relevancia radica en ser el punto de entrada seguro a la plataforma.
-![event-storming](./images/bounded/event-storming4.png)
+Este contexto agrupa todo lo relacionado con la **gestión de identidades y accesos**. Incluye los procesos de registro y autenticación tanto para ciudadanos como para personal municipal. Para reforzar la seguridad se tendra la administración centralizada de credenciales. Su relevancia radica en ser el punto de entrada seguro a la plataforma.
+![event-storming](./images/event-storming-corregido-iam.jpg)
 
 #### Incidencias Context
 
-Se ocupa de todos los procesos de **registro, autenticación y control de acceso** tanto para ciudadanos como para personal municipal. Aquí se definieron funcionalidades como la creación de cuentas, inicio y cierre de sesión, y la validación de credenciales a través de Azure Active Directory.
+Se ocupa de todos los procesos de **registro, autenticación y control de acceso** tanto para ciudadanos como para personal municipal. Aquí se definieron funcionalidades como la creación de cuentas, inicio y cierre de sesión, y la validación de credenciales.
 
-![event-storming](./images/bounded/event-storming3.png)
+![event-storming](./images/event-storming-corregido-incident.jpg)
 
 En Urban Lima, este contexto asegura que la plataforma solo sea utilizada por usuarios autorizados, protegiendo la información sensible y garantizando el cumplimiento de políticas de seguridad municipales.
 
-#### Analytics Context
-
-Reúne las capacidades de **generación de reportes y análisis de datos**. Abarca la visualización de totales de incidencias, filtros por múltiples criterios y la construcción de dashboards de seguimiento.
-
-![event-storming](./images/bounded/event-storming2.png)
-
-En Urban Lima, este contexto es clave para que la municipalidad pueda tomar decisiones informadas, asignar recursos y medir la efectividad de sus intervenciones. Su delimitación independiente permite concentrar las reglas de negocio relacionadas con el análisis, sin mezclarlas con la operación diaria de incidencias.
-
 #### Location Context
 
-Enfocado en la **dimensión geoespacial** de la información, este contexto integra Azure Maps para mostrar incidencias en mapas de calor, aplicar filtros geográficos y permitir la exploración espacial de los reportes.
+Enfocado en la **dimensión geoespacial** de la información, este contexto integra MapBox para mostrar incidencias en mapas de calor, aplicar filtros geográficos y permitir la exploración espacial de los reportes.
 
-![event-storming](./images/bounded/event-storming1.png)
+![event-storming](./images/event-storming-corregido-location.jpg)
 
 Para Urban Lima, este contexto añade un valor diferencial, ya que convierte los reportes ciudadanos en información territorial, facilitando la priorización de zonas críticas y la planificación urbana basada en datos reales.
 
@@ -1725,8 +1660,8 @@ El servicio valida datos, intenta **deduplicar** reportes similares y publica el
 
 ##### 4) Dashboard geoespacial municipal
 
-El planificador abre el tablero en el panel y este solicita al **Servicio de Analytics** el heatmap para un rango de fechas.  
-Analytics responde con la URL del **tileset**, leyenda y totales; el panel carga esas capas en el **proveedor de mapas** y renderiza el mapa interactivo.  
+El planificador abre el tablero en el panel y este solicita el heatmap para un rango de fechas.  
+responde con la URL del **tileset**, leyenda y totales; el panel carga esas capas en el **proveedor de mapas** y renderiza el mapa interactivo.  
 El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones.
 
 ##### **Éxito:** mapa interactivo con métricas agregadas.
@@ -1773,11 +1708,10 @@ El usuario explora y filtra por zona, tipo y fecha para priorizar intervenciones
 
 ## 4.2.5. Context Mapping
 
-Con los Bounded Contexts identificados (IAM, Incidencias, Analytics y Location), se procedió a construir los **context maps**, es decir, las visualizaciones que permiten entender cómo se relacionan entre sí. El proceso incluyó la exploración de alternativas de agrupamiento y separación, considerando preguntas como:
+Con los Bounded Contexts identificados (IAM, Incidencias y Location), se procedió a construir los **context maps**, es decir, las visualizaciones que permiten entender cómo se relacionan entre sí. El proceso incluyó la exploración de alternativas de agrupamiento y separación, considerando preguntas como:
 
 - ¿Qué ocurriría si el manejo de georreferenciación se integrara al contexto de incidencias en lugar de estar aislado?
-- ¿Qué beneficios tendría separar el contexto de Analytics para evitar sobrecargar el de Incidencias?
-- ¿Es necesario que IAM tenga dependencia directa con Analytics o basta con su relación con Incidencias?
+- ¿Es necesario que IAM tenga dependencia directa con Location o basta con su relación con Incidencias?
 
 Estas reflexiones permitieron validar que la división propuesta mantiene un balance entre independencia y colaboración, reduciendo acoplamientos innecesarios y asegurando que cada contexto tenga un propósito bien definido.
 
@@ -1836,11 +1770,6 @@ El análisis de alternativas condujo al siguiente Context Map, que establece las
 - **Incidencias → Location:** Incidencias provee coordenadas para visualización
 - **Location → Analytics:** Location provee mapas de calor para dashboards
 
-##### 2. Conformist Pattern
-
-- **IAM ← Azure AD:** Adopta completamente el modelo de autenticación de Azure
-- **Location ← Azure Maps:** Se conforma a las APIs y estándares de Azure Maps
-
 ##### 3. Anti-corruption Layer Pattern
 
 - **Incidencias ← EmailJS:** Capa de abstracción para servicios de email externos
@@ -1870,7 +1799,6 @@ La arquitectura de Context Mapping seleccionada logra:
 2. **Bajo Acoplamiento:** Las dependencias están claramente definidas y son unidireccionales
 3. **Alta Cohesión:** Las capacidades dentro de cada contexto están relacionadas
 4. **Escalabilidad:** Permite evolución independiente de cada contexto
-5. **Integración Externa:** Maneja apropiadamente las dependencias con servicios de Azure
 
 Esta estructura facilita el desarrollo en equipos paralelos, el testing independiente y futuras migraciones hacia microservicios si el proyecto escala significativamente.
 
@@ -2393,67 +2321,67 @@ Esta capa se encarga de la persistencia de datos y las interacciones con servici
 
 Interfaz que define los métodos para gestionar las incidencias
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| findIncident ByStatus | List.Incident | Retorna las incidencias filtradas por estado |
-| findIncident ByUserId | List.Incident | Retorna las incidencias reportadas por un usuario |
-| findIncident ByType | List.Incident | Retorna las incidencias filtradas por tipo |
-| findIncident ByLocation | List.Incident | Retorna las incidencias filtradas por ubicación geográfica |
-| findIncident ByPriority | List.Incident | Retorna las incidencias filtradas por nivel de prioridad |
-| findIncident ById | Incident | Retorna una incidencia específica por su identificador |
-| save Incident | Incident | Guarda una nueva incidencia en la base de datos |
-| update Incident | Incident | Actualiza una incidencia existente |
-| delete Incident | Boolean | Elimina una incidencia de la base de datos |
+| **Métodos**             |                     |
+| ----------------------- | ------------------- | ---------------------------------------------------------- |
+| **Nombre**              | **Tipo de retorno** | **Descripción**                                            |
+| findIncident ByStatus   | List.Incident       | Retorna las incidencias filtradas por estado               |
+| findIncident ByUserId   | List.Incident       | Retorna las incidencias reportadas por un usuario          |
+| findIncident ByType     | List.Incident       | Retorna las incidencias filtradas por tipo                 |
+| findIncident ByLocation | List.Incident       | Retorna las incidencias filtradas por ubicación geográfica |
+| findIncident ByPriority | List.Incident       | Retorna las incidencias filtradas por nivel de prioridad   |
+| findIncident ById       | Incident            | Retorna una incidencia específica por su identificador     |
+| save Incident           | Incident            | Guarda una nueva incidencia en la base de datos            |
+| update Incident         | Incident            | Actualiza una incidencia existente                         |
+| delete Incident         | Boolean             | Elimina una incidencia de la base de datos                 |
 
 #### ICommentRepository
 
 Interfaz que representa la tabla "Comment" y maneja los métodos para gestionar comentarios
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| findComments ByIncidentId | List.Comment | Retorna todos los comentarios de una incidencia específica |
-| findComment ById | Comment | Retorna un comentario específico por su identificador |
-| save Comment | Comment | Guarda un nuevo comentario en la base de datos |
-| update Comment | Comment | Actualiza un comentario existente |
-| delete Comment | Boolean | Elimina un comentario de la base de datos |
+| **Métodos**               |                     |
+| ------------------------- | ------------------- | ---------------------------------------------------------- |
+| **Nombre**                | **Tipo de retorno** | **Descripción**                                            |
+| findComments ByIncidentId | List.Comment        | Retorna todos los comentarios de una incidencia específica |
+| findComment ById          | Comment             | Retorna un comentario específico por su identificador      |
+| save Comment              | Comment             | Guarda un nuevo comentario en la base de datos             |
+| update Comment            | Comment             | Actualiza un comentario existente                          |
+| delete Comment            | Boolean             | Elimina un comentario de la base de datos                  |
 
 #### IStatusHistoryRepository
 
 Interfaz que representa la tabla "StatusHistory" y maneja el historial de cambios de estado
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| findHistory ByIncidentId | List.StatusHistory | Retorna el historial completo de cambios de una incidencia |
-| findHistory ByUserId | List.StatusHistory | Retorna el historial de cambios realizados por un usuario |
-| save StatusHistory | StatusHistory | Guarda un nuevo registro de cambio de estado |
-| findLatest StatusByIncidentId | StatusHistory | Retorna el último cambio de estado de una incidencia |
+| **Métodos**                   |                     |
+| ----------------------------- | ------------------- | ---------------------------------------------------------- |
+| **Nombre**                    | **Tipo de retorno** | **Descripción**                                            |
+| findHistory ByIncidentId      | List.StatusHistory  | Retorna el historial completo de cambios de una incidencia |
+| findHistory ByUserId          | List.StatusHistory  | Retorna el historial de cambios realizados por un usuario  |
+| save StatusHistory            | StatusHistory       | Guarda un nuevo registro de cambio de estado               |
+| findLatest StatusByIncidentId | StatusHistory       | Retorna el último cambio de estado de una incidencia       |
 
 #### ILocationService
 
 Interfaz para servicios de geolocalización externos
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| validateLocation | Boolean | Valida si las coordenadas están dentro de Lima Metropolitana |
-| getAddress FromCoordinates | String | Convierte coordenadas GPS en dirección textual |
-| getDistrict FromCoordinates | String | Obtiene el distrito basado en coordenadas |
-| calculateDistance | Double | Calcula distancia entre dos ubicaciones |
+| **Métodos**                 |                     |
+| --------------------------- | ------------------- | ------------------------------------------------------------ |
+| **Nombre**                  | **Tipo de retorno** | **Descripción**                                              |
+| validateLocation            | Boolean             | Valida si las coordenadas están dentro de Lima Metropolitana |
+| getAddress FromCoordinates  | String              | Convierte coordenadas GPS en dirección textual               |
+| getDistrict FromCoordinates | String              | Obtiene el distrito basado en coordenadas                    |
+| calculateDistance           | Double              | Calcula distancia entre dos ubicaciones                      |
 
 #### INotificationService
 
 Interfaz para servicios de notificaciones en tiempo real
 
-| **Métodos** |  |
-|-------------|-------------|
-| **Nombre** | **Tipo de retorno** | **Descripción** |
-| sendStatusUpdate Notification | Boolean | Envía notificación de cambio de estado via WebSocket |
-| sendComment Notification | Boolean | Envía notificación de nuevo comentario |
-| sendAssignment Notification | Boolean | Notifica asignación de incidencia a personal municipal |
-| updateNotification Badge | Boolean | Actualiza contador de notificaciones en tiempo real |
+| **Métodos**                   |                     |
+| ----------------------------- | ------------------- | ------------------------------------------------------ |
+| **Nombre**                    | **Tipo de retorno** | **Descripción**                                        |
+| sendStatusUpdate Notification | Boolean             | Envía notificación de cambio de estado via WebSocket   |
+| sendComment Notification      | Boolean             | Envía notificación de nuevo comentario                 |
+| sendAssignment Notification   | Boolean             | Notifica asignación de incidencia a personal municipal |
+| updateNotification Badge      | Boolean             | Actualiza contador de notificaciones en tiempo real    |
 
 ### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
 
@@ -2837,7 +2765,6 @@ Propósito: abstrae persistencia de análisis geoespaciales siguiendo patrón Re
 | findById                   | analysisId: UUID                         | GeoSpatialAnalysis       | Recupera análisis por ID                     |
 | findByDistrictAndTimeRange | district: District, range: DateTimeRange | List<GeoSpatialAnalysis> | Busca análisis históricos de un distrito     |
 | delete                     | analysisId: UUID                         | void                     | Elimina análisis y sus entities relacionadas |
-
 
 ### 5.3.2. Interface Layer
 
@@ -3451,7 +3378,6 @@ En el General Style Guideline se reuniren los lineamientos visuales y de diseño
 
 Se muestra el logo que refuerza el reconocimiento de marca y se utiliza en todas las interfaces principales. El _body text_ emplea una tipografía clara y legible, por ello se eligió Space Grotesk. La paleta de colores está cuidadosamente seleccionada para transmitir la personalidad del proyecto, aplicando tonos principales y secundarios de manera uniforme en fondos, textos y elementos destacados. Los botones se diseñan con estilos coherentes, respetando la paleta definida y manteniendo estados diferenciados que garantizan una experiencia de interacción uniforme.
 
-
 ### 6.1.2. Web, Mobile & Devices Style Guidelines.
 
 **Mobile Style Guideline**
@@ -3470,51 +3396,46 @@ En esta sección se defininen los estándares de diseño y presentación para ap
 
 En los estilos presentados, se establece la paleta de colores con los colores principales de la aplicación además de la tipografía, el GRID que se usará para la aplicaicón web y la barra de navegación, entre otros componentes.
 
-
 ## 6.2. Information Architecture.
 
 ### 6.2.2. Labeling Systems.
 
 <br>Este sistema de etiquetado se integró en nuestro tablero de gestión de tareas (Trello/Jira) y permite identificar rápidamente el tipo de trabajo pendiente ([FEAT], [FIX]), su prioridad ([P1], [P2]) y el módulo involucrado ([UI], [DB]). Por ejemplo, la tarea [FEAT][P1][UI][TODO] Crear pantalla de inicio indica que es una nueva funcionalidad prioritaria de interfaz aún pendiente de desarrollo.<br>
 
-| **Etiqueta**            | **Descripción**               |
-|---------------------|---------------------------|
+| **Etiqueta**            | **Descripción**           |
+| ----------------------- | ------------------------- |
 | **Tipo de tarea**       |                           |
-| [FEAT]              | Nueva característica      |
-| [FIX]               | Corrección de errores     |
-| [REFACTOR]          | Refactorización de código |
-| [DOCS]              | Documentación             |
-| [TEST]              | Pruebas                   |
+| [FEAT]                  | Nueva característica      |
+| [FIX]                   | Corrección de errores     |
+| [REFACTOR]              | Refactorización de código |
+| [DOCS]                  | Documentación             |
+| [TEST]                  | Pruebas                   |
 | **Prioridad**           |                           |
-| [P1]                | Alta prioridad            |
-| [P2]                | Prioridad media           |
-| [P3]                | Baja prioridad            |
+| [P1]                    | Alta prioridad            |
+| [P2]                    | Prioridad media           |
+| [P3]                    | Baja prioridad            |
 | **Módulo o componente** |                           |
-| [UI]                | Interfaz de usuario       |
-| [API]               | Lógica de la API          |
-| [DB]                | Base de datos             |
-| [AUTH]              | Autenticación             |
-| [PERF]              | Rendimiento               |
+| [UI]                    | Interfaz de usuario       |
+| [API]                   | Lógica de la API          |
+| [DB]                    | Base de datos             |
+| [AUTH]                  | Autenticación             |
+| [PERF]                  | Rendimiento               |
 | **Estado**              |                           |
-| [TODO]              | Por hacer                 |
-| [WIP]               | En progreso               |
-| [REVIEW]            | En revisión               |
-| [DONE]              | Completado                |
-
-
+| [TODO]                  | Por hacer                 |
+| [WIP]                   | En progreso               |
+| [REVIEW]                | En revisión               |
+| [DONE]                  | Completado                |
 
 ### 6.2.3. Searching Systems.
 
 El sistema de búsqueda propuesto para LimaUrban permitirá a los usuarios personalizar su experiencia de aventurera de acuerdo a sus preferencias. Este sistema facilitará el uso de la aplicación filtrandolo por zona, tipo, prioridad, fecha. Los filtros disponibles serán:
 
-| Nombre del filtro    | Descripción                                                                                                              |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Zonas  | Permitirá ver los incidentes por zonas registradas.         |
-| Tipo  | Permitirá organizar por tipo de incidente   |
-| Prioridad    | Permitirá filtrar por prioridad de incidentes.    |
-| Fecha        | Permitirá filtrar por fecha en la que se cargó el incidente.     |
-
-
+| Nombre del filtro | Descripción                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| Zonas             | Permitirá ver los incidentes por zonas registradas.          |
+| Tipo              | Permitirá organizar por tipo de incidente                    |
+| Prioridad         | Permitirá filtrar por prioridad de incidentes.               |
+| Fecha             | Permitirá filtrar por fecha en la que se cargó el incidente. |
 
 ### 6.2.4. SEO Tags and Meta Tags.
 
@@ -3525,9 +3446,9 @@ Indica el tema de la página, debe ser corto y descriptivo, debe mantenerse entr
     <title>LimaUrban</title>
 
 **Descripción** <br>
-Es una breve descripción  de la página.
+Es una breve descripción de la página.
 
-	<meta name= “description” content= “loremipsum loremipsum”/>
+    <meta name= “description” content= “loremipsum loremipsum”/>
 
 Robots
 Indican a los motores de búsqueda de lo que deben hacer con la página.
@@ -3544,32 +3465,30 @@ Se utiliza para controlar el cuadro de búsqueda de enlaces del sitio de Google
 
     <meta name= “google” content = “nositelinkssearchbox”/>
 
-Viewport Meta Tag 
+Viewport Meta Tag
 Es crucial para asegurar que el contenido se vea bien en dispositivos móviles.
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 ### 6.2.5. Navigation Systems.
 
 En la app móvil para los ciudadanos, se optó por el patrón de navegación tipo bottom bar, facilitando el acceso a secciones críticas con el pulgar. En la web para las autoridades, se emplea una barra lateral fija, siguiendo principios de navegación persistente, para evitar pérdida de contexto. Este diseño prioriza las tareas más frecuentes: explorar, buscar y gestionar cuenta, con énfasis visual en los íconos y retroalimentación activa al seleccionar secciones.
 
 **Ciudadano**
-| Nombre | Descripción                                                                                                              |
+| Nombre | Descripción |
 |--------|--------------------------------------------------------------------------------------------------------------------------|
-| Inicio | Le muestra un resumen personal de su interacción en la aplicación y su actividad reciente.                               |
-| Incidencias | El ciudadano podrá ver pertes cercanos registrados por otros ciudadanos.                                            |
-| Reportar | El ciudadano podrá subir una foto con descripción adjunta para reportar una incidencia.                                |
-| Perfil | Este apartado permite que el usuario gestione su cuenta.                                                                 |
+| Inicio | Le muestra un resumen personal de su interacción en la aplicación y su actividad reciente. |
+| Incidencias | El ciudadano podrá ver pertes cercanos registrados por otros ciudadanos. |
+| Reportar | El ciudadano podrá subir una foto con descripción adjunta para reportar una incidencia. |
+| Perfil | Este apartado permite que el usuario gestione su cuenta. |
 <br>
 
 **Autoridad**
-| Nombre       | Descripción                                                                                          |
+| Nombre | Descripción |
 |--------------|------------------------------------------------------------------------------------------------------|
-| Incidencias  | Le muestra los incidentes de todos los ciudadanos.                                                   |
-| Mapa | Mostrará un mapa y un mapa de calor con las incidencias.                                                     |
-| Perfil       | Este apartado permite que el usuario gestione su cuenta.                                             |
-
+| Incidencias | Le muestra los incidentes de todos los ciudadanos. |
+| Mapa | Mostrará un mapa y un mapa de calor con las incidencias. |
+| Perfil | Este apartado permite que el usuario gestione su cuenta. |
 
 ## 6.3. Landing Page UI Design.
 
@@ -3579,6 +3498,7 @@ El wireframe es un esquema estructural de baja a media fidelidad que representa 
 **Características del Wireframe**
 
 Secciones Documentadas:
+
 - Navbar - Muestra la disposición del logo y menú horizontal
 - Hero - Estructura del título principal, subtítulo y botones CTA
 - About - Layout a dos columnas con bloques de texto e insignia
@@ -3596,20 +3516,20 @@ Establecer prioridades de desarrollo basadas en la jerarquía visual.
 
 ![alt text](images/application_wireframes/wireframe_lanidng.png)
 
-
-
 ### 6.3.2. Landing Page Mock-up.
 
 **Descripción General**
 El mockup de la landing page de LimaUrban es una representación visual completa y funcional del sitio web, diseñada con HTML y CSS puro. Este prototipo de alta fidelidad muestra exactamente cómo se verá y comportará la página una vez implementada en producción.
 **Características del Mockup**
 Paleta de Colores Aplicada:
+
 - #1A1E29 - Color principal para navbar, footer y elementos de fondo oscuro
 - #00C48E - Color de acento para botones, enlaces y elementos destacados
 - #132D46 - Utilizado en títulos y gradientes de secciones especiales
 - #FFFFFF - Fondo principal para mantener limpieza y legibilidad
 
 **Estructura de Contenido:**
+
 - Navbar fijo - Permanece visible durante el scroll para facilitar la navegación
 - Hero Section - Primera impresión con título impactante y llamados a la acción
 - Sobre Nosotros - Presenta al equipo UPC con layout a dos columnas
@@ -3622,7 +3542,6 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 
 ![alt text](images/applications_mockups/landing_mockup.png)
 
-
 ## 6.4. Applications UX/UI Design.
 
 ### 6.4.1. Applications Wireframes.
@@ -3633,7 +3552,7 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 ![alt text](images/application_wireframes/inicio_sesión.png)
 
 **Incidentes:** En esta sección se visualizan todos los incidentes registrados. <br>
-![alt text](images/application_wireframes/Incidentes.png) 
+![alt text](images/application_wireframes/Incidentes.png)
 
 **Filtro de incidentes:** En esta sección se visualiza un ejemplo de uno de los filtros de la tabla general de incidentes.<br>
 ![alt text](images/application_wireframes/Incidentes-1.png)
@@ -3653,6 +3572,7 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 #### **Aplicación móvil**
 
 ## 6.4. Applications UX/UI Design
+
 ### 6.4.1. Applications Wireframes
 
 #### **Aplicación web**
@@ -3661,7 +3581,7 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 ![alt text](images/application_wireframes/inicio_sesión.png)
 
 **Incidentes:** En esta sección se visualizan todos los incidentes registrados. <br>
-![alt text](images/application_wireframes/Incidentes.png) 
+![alt text](images/application_wireframes/Incidentes.png)
 
 **Filtro de incidentes:** En esta sección se visualiza un ejemplo de uno de los filtros de la tabla general de incidentes.<br>
 ![alt text](images/application_wireframes/Incidentes-1.png)
@@ -3701,11 +3621,9 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 **Historial de reportes:** Lista completa de todas las incidencias reportadas por el ciudadano, mostrando estado actual, fecha y tipo de cada reporte para seguimiento personal. <br>
 ![alt text](images/application_wireframes/Reportes.png)
 
-
-
 ### 6.4.2. Applications Wireflow Diagrams.
 
-Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
+Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH\_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
 
 #### **Aplicación web**
 
@@ -3724,9 +3642,19 @@ Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?us
 **User Goal: Como personal municipal, quiero ver los detalles de la municipalidad para acceder a información institucional centralizada.** Este objetivo refleja la necesidad del usuario de ver más información sobre su cuenta en LimaUrban. <br>
 ![alt text](images/wireflow_diagram/cuenta-personalmunicipal.png)
 
-
 #### **Aplicación móvil**
 
+**User Goal: Como ciudadano, quiero registrarme en la aplicación para poder reportar incidencias urbanas.** Este flujo describe el proceso de creación de una nueva cuenta, desde la pantalla de inicio hasta la confirmación del registro, permitiendo al usuario acceder a la plataforma. <br>
+![alt text](images/wireflow_diagram/usergoal1.png)
+
+**User Goal: Como ciudadano, quiero iniciar sesión para acceder a mis reportes y funciones principales.** Este flujo muestra el proceso de autenticación de un usuario ya registrado, desde el ingreso de credenciales hasta el acceso al dashboard principal de la aplicación. <br>
+![alt text](images/wireflow_diagram/usergoal2.png)
+
+**User Goal: Como ciudadano, quiero reportar una incidencia urbana con una fotografía para documentar el problema de forma clara y eficiente.** Este es el flujo principal de la aplicación. Abarca desde la captura de la fotografía, la confirmación, el análisis por IA, el llenado de detalles adicionales y la confirmación final del envío del reporte. <br>
+![alt text](images/wireflow_diagram/usergoal3.png)
+
+**User Goal: Como ciudadano, quiero consultar el historial de mis reportes para dar seguimiento al estado de cada incidencia.** Este flujo permite al usuario navegar desde la pantalla principal hasta la lista de sus reportes históricos, donde puede ver el estado y los detalles de cada uno. <br>
+![alt text](images/wireflow_diagram/usergoal4.png)
 
 ### 6.4.2. Applications Mock-ups.
 
@@ -3752,7 +3680,6 @@ Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?us
 
 **Perfil municipal** En esta sección las autoridades podrásn ver mas información sobre su cuenta en Lima Urban. <br>
 ![alt text](images/applications_mockups/Perfil_municipal.png)
-
 
 #### **Aplicación móvil**
 
@@ -3786,12 +3713,12 @@ Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?us
 **Listado de reportes históricos:** Mockup completo de la pantalla de historial con diseño de cards optimizado para navegación móvil, estados visuales diferenciados por color, filtros de búsqueda integrados, indicadores de progreso y acceso directo a detalles de cada incidencia reportada por el usuario. <br>
 ![alt text](images/applications_mockups/Reportes.png)
 
-
 ### 6.4.3. Applications User Flow Diagrams.
 
-Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
+Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH\_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
 
 #### **Aplicación web**
+
 **User Goal: Como personal municipal, quiero iniciar sesión para acceder al panel de gestión de incidencias.** Este objetivo abarca la experiencia del usuario al explorar la página principal de la plataforma.
 ![alt text](images/userflow_diagram/inicio-sesion.png)
 
@@ -3807,7 +3734,6 @@ Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0W
 
 **User Goal: Como personal municipal, quiero ver los detalles de la municipalidad para acceder a información institucional centralizada.** Este objetivo refleja la necesidad del usuario de ver más información sobre su cuenta en LimaUrban.
 ![alt text](images/userflow_diagram/perfil_municipalidad.png)
-
 
 #### **Aplicación móvil**
 
@@ -3828,20 +3754,20 @@ Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0W
 **User Goal: Como ciudadano, quiero gestionar mi perfil personal para mantener actualizados mis datos y configuraciones.** Este objetivo abarca la visualización y edición de información personal, estadísticas y preferencias de la cuenta.
 ![alt text](images/userflow_diagram/profile-m.png)
 
-
 ## 6.5. Applications Prototyping.
 
 **Aplicación web**
+
 - **Ver Total de Incidentes:** Consulta en tiempo real el número total de incidencias reportadas por los ciudadanos. Panel con métricas actualizadas que incluyen incidentes pendientes, en proceso y resueltos.
 - **Ver Detalles de Incidente:** Accede a la información completa de cada reporte: descripción detallada, ubicación exacta, fotografías adjuntas, historial de actualizaciones, comentarios y seguimiento completo del caso.
 - **Ver Detalles de la Municipalidad:** Consulta información institucional, zonas de cobertura, estadísticas generales del municipio y datos de contacto de los diferentes departamentos.
 - **Filtrar Incidentes:** Sistema avanzado de filtros múltiples que permite organizar y visualizar incidentes según diferentes criterios:
   - Por Tipo: Alumbrado público, baches, limpieza, infraestructura, seguridad y otros
-  - Por Distrito: San miguel, La Victoria, etc. 
+  - Por Distrito: San miguel, La Victoria, etc.
   - Por Prioridad: Alta, Media o Baja
   - Por Fecha: Selección de rango de fechas o fecha específica de reporte
 - **Priorizar Incidentes:** Asigna o modifica el nivel de prioridad de cada incidente (Alta, Media, Baja) según la urgencia y el impacto en la comunidad. Sistema visual con código de colores para identificación rápida.
-- **Actualizar Estado del Incidente:** Cambia el estado de las incidencias a medida que avanzan en el proceso de resolución: 
+- **Actualizar Estado del Incidente:** Cambia el estado de las incidencias a medida que avanzan en el proceso de resolución:
   - Pendiente: Recién reportado, en espera de atención
   - En Proceso: Equipo asignado trabajando en la solución
   - Resuelto: Incidente completamente solucionado
@@ -3850,9 +3776,10 @@ Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0W
 
 ![alt text](images/application-protoyping/web-prototyping.png)
 
-Video de explicación:<br> [ https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk]( https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk)
+Video de explicación:<br> [ https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk)
 
 #### **Aplicación móvil**
+
 **Aplicación móvil**
 
 - **Registro de Usuario:** Proceso simplificado para crear cuenta, con validación de email en tiempo real, verificación de contraseña segura y activación mediante código enviado por correo electrónico.
