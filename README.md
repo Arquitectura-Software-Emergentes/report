@@ -797,6 +797,21 @@ Validación de concepto
   [enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211390_upc_edu_pe/ESqA-LOcBDVOtmZPcIy8eFYBPYqTxmbGSbdttB0J0cvTHA?e=Skagyr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 - **Resumen:** Edwin es encargado del área de Mantenimiento Urbano con 2 años en el municipio. Maneja un presupuesto anual de S/. 1.8 millones para mantenimiento. Actualmente priorizan basándose en "volumen de quejas" y "visibilidad política". No tienen datos históricos organizados. Considera que la plataforma "sería un cambio revolucionario" especialmente para justificar presupuestos. Su mayor preocupación es garantizar que los ciudadanos vean resultados rápidos.
 
+#### Entrevista 06
+
+- **Nombres:** Jennifer
+- **Apellidos:** Espinoza
+- **Edad:** 23 años
+- **Distrito:** Lima Metropolitana
+- **Perfil:** Personal Municipal
+- **Evidencia de la reunión:**
+  ![interview_jennifer](images/interviews/entrevista_jennifer.png)
+- **Inicio:** 0:00
+- **Fin:** 4:45
+- **Enlace de entrevista:**
+  [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202121679_upc_edu_pe/ERtOv7V4HL5Mu-W5ZgZh8AQBrqA0trurcRbUMzyVupWkTg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7emnD1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202121679_upc_edu_pe/ERtOv7V4HL5Mu-W5ZgZh8AQBrqA0trurcRbUMzyVupWkTg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7emnD1)
+- **Resumen:** Jennifer es practicante preprofesional en el área de Infraestructura Urbana de la Municipalidad Metropolitana de Lima con 1 año de experiencia. Se encarga del registro, seguimiento y análisis de reportes ciudadanos sobre incidencias urbanas (baches, alumbrado, mobiliario, señalización). Trabaja con plataformas como Lima 360, portal web institucional y WhatsApp de atención vecinal. Actualmente utilizan mapas georreferenciados, Excel, Power BI y ArcGIS para análisis y reportes. Priorizan según gravedad del riesgo, afectación al tránsito/seguridad peatonal y frecuencia de reclamos. Cuenta con registros históricos que permiten identificar zonas con alta reincidencia y patrones estacionales. Le resulta muy útil una plataforma que integre reportes ciudadanos, geolocalización y seguimiento en un solo lugar para reducir tiempos, evitar duplicados y mejorar la transparencia. Valora métricas como mapa de concentración de incidencias, tiempo promedio de atención por distrito, nivel de satisfacción ciudadana y porcentaje de reincidencias. Sus principales preocupaciones son la integración con sistemas actuales (SQL/Excel/ArcGIS/Lima 360), la calidad de datos (direcciones incompletas, reportes duplicados), la capacitación del personal operativo, el control de roles y la seguridad de la información.
+
 ### 2.2.3. Análisis de entrevistas
 
 Para el proyecto de Plataforma Urbana Inteligente para Lima, se realizaron entrevistas a 3 ciudadanos reportantes y 3 funcionarios municipales de diversos distritos de Lima Metropolitana. A partir de sus respuestas, se identificaron las siguientes características y patrones:
