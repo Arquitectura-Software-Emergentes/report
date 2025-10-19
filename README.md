@@ -1,12 +1,13 @@
 <div align="center">
     <h3>Universidad Peruana de Ciencias Aplicadas</h3>
     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png"></img><br>
-    <strong>Ingeniería de Software - 8vo Ciclo</strong><br>
-    <strong>Arquitecturas De Software Emergentes</strong><br>
-    <strong>1ASI0572</strong><br>
-    <strong>Profesor: Royer Edelwer Rojas Malasquez</strong><br>
-    <br><strong>Report</strong><br>
-    <!--<strong>name solution</strong>-->
+    <strong>Ingeniería de Software</strong><br><br>
+    <strong>Arquitecturas De Software Emergentes</strong><br><br>
+    <strong>Profesor: Royer Edelwer Rojas Malasquez</strong><br><br>
+    <strong>Sección: 7295</strong>
+    <br>
+    <br>
+    <strong>LimaUrban: Automatizando los incidentes en Lima Metropolitana</strong>
     <!--<strong>name startup</strong>-->
 </div>
 
@@ -24,7 +25,7 @@
 
 </div>
 
-<h3 align="center">Septiembre, 2025</h3>
+<h3 align="center">Octubre, 2025</h3>
 
 <br><br>
 
@@ -63,7 +64,7 @@ El objetivo de esta sección es resumir las modificaciones relevantes que se rea
 | Repositorio del Proyecto | https://github.com/orgs/Arquitectura-Software-Emergentes/repositories |
 | Link de la Organización  |       https://github.com/orgs/Arquitectura-Software-Emergentes        |
 
-Para el Trabajo Parcial, se asignaron responsabilidades específicas a cada integrante, las cuales se detallan a continuación:
+Para la entrega de la TB2, se asignaron responsabilidades específicas a cada integrante, las cuales se detallan a continuación:
 
 | Miembro del Equipo |                                                                                                                                               Tarea Asignada                                                                                                                                                |
 | :----------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -735,7 +736,7 @@ Validación de concepto
 
 - **Inicio:** 0:00
 - **Fin:** 3:24
-- **Enlace de entrevista:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/Ef0mPSeBWX5AtLkikwCFejkBY-n_wCrGuG4DbWxKQSwaeA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Kr57aN](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/Ef0mPSeBWX5AtLkikwCFejkBY-n_wCrGuG4DbWxKQSwaeA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Kr57aN)
+- **Enlace de entrevista:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/Ef0mPSeBWX5AtLkikwCFejkBY-n_wCrGuG4DbWxKQSwaeA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Kr57aN
 - **Resumen:** Rosalynn es ama de casa que se desplaza diariamente en transporte público. Ha observado múltiples baches en la Av. Evitamiento y acumulación de basura cerca del mercado de Chosica. Intentó reportar por teléfono al municipio pero nunca recibió respuesta. Le parece muy útil la idea de una app con foto porque "sería una prueba de que el problema existe". Su principal motivación sería "ver que realmente hacen algo con mi reporte".
 
 #### Entrevista 02
@@ -750,7 +751,7 @@ Validación de concepto
 
 - **Inicio:** 0:00
 - **Fin:** 3:05
-- **Enlace de entrevista:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EX85TwgismJAvpQ2-K8-iHEBYrH2CitKWtaBWFIu0qFDoQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=k6TtrS](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EX85TwgismJAvpQ2-K8-iHEBYrH2CitKWtaBWFIu0qFDoQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=k6TtrS)
+- **Enlace de entrevista:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EX85TwgismJAvpQ2-K8-iHEBYrH2CitKWtaBWFIu0qFDoQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=k6TtrS
 
 #### Entrevista 03
 
@@ -764,7 +765,8 @@ Validación de concepto
 - **Inicio:** 0:00
 - **Fin:** 4:49
 - **Enlace de entrevista:**
-  [Entrevista Jhair - Ciudadano Reportante](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202122633_upc_edu_pe/ETrVkK7-_uNCq16H2hmZR50BpDhINCS_fFV90bStkxNxng?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hbm5Wt)
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202122633_upc_edu_pe/ETrVkK7-_uNCq16H2hmZR50BpDhINCS_fFV90bStkxNxng?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hbm5Wt
+
 - **Resumen:** Jhair Armando Quispe Marca, de 22 años, reside en Pueblo Libre y camina frecuentemente por el distrito. Ha observado acumulación de basura en esquinas donde los camiones demoran en pasar y postes con cables colgando. No suele reportar problemas debido a falta de tiempo y desconocimiento de canales efectivos, ya que redes sociales no generan acciones. Le parece interesante la idea de una app con foto y geolocalización, especialmente si tiene soporte municipal y seguimiento rápido. Beneficios personales: ahorro de tiempo al reportar caminando, mejora del distrito y mayor comodidad al vivir ahí. Le interesaría ver reportes de otros ciudadanos para conocer problemas cercanos y evitar duplicados. Factores motivadores: que funcione (reportes atendidos con actualizaciones de estado), facilidad de uso (especialmente para adultos mayores preocupados por la apariencia del distrito).
 
 #### Entrevista 04
@@ -779,7 +781,7 @@ Validación de concepto
 - **Inicio:** 00:20
 - **Fin:** 4:56
 - **Enlace de entrevista:**
-  [enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/Ec3UM76mNdVChS6WrhO4ze4B04_Iwt_HBcJyD0k3dwA5GA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ygNcWy)
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/Ec3UM76mNdVChS6WrhO4ze4B04_Iwt_HBcJyD0k3dwA5GA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ygNcWy
 - **Resumen:** Maria trabaja en la Gerencia de Servicios Públicos hace 3 años. Reciben reportes principalmente por teléfono y ventanilla, registrándolos en hojas Excel. La priorización se basa en "urgencia percibida" y disponibilidad de cuadrillas. No usan mapas digitales. Ve mucho valor en la propuesta: "Nos ayudaría a organizar mejor el trabajo y mostrar resultados concretos". Su principal preocupación es la capacitación del personal.
 
 #### Entrevista 05
@@ -794,23 +796,9 @@ Validación de concepto
 - **Inicio:** 0:05
 - **Fin:** 3:20
 - **Enlace de entrevista:**
-  [enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211390_upc_edu_pe/ESqA-LOcBDVOtmZPcIy8eFYBPYqTxmbGSbdttB0J0cvTHA?e=Skagyr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+ https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211390_upc_edu_pe/ESqA-LOcBDVOtmZPcIy8eFYBPYqTxmbGSbdttB0J0cvTHA?e=Skagyr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 - **Resumen:** Edwin es encargado del área de Mantenimiento Urbano con 2 años en el municipio. Maneja un presupuesto anual de S/. 1.8 millones para mantenimiento. Actualmente priorizan basándose en "volumen de quejas" y "visibilidad política". No tienen datos históricos organizados. Considera que la plataforma "sería un cambio revolucionario" especialmente para justificar presupuestos. Su mayor preocupación es garantizar que los ciudadanos vean resultados rápidos.
 
-#### Entrevista 06
-
-- **Nombres:** Jennifer
-- **Apellidos:** Espinoza
-- **Edad:** 23 años
-- **Distrito:** Lima Metropolitana
-- **Perfil:** Personal Municipal
-- **Evidencia de la reunión:**
-  ![interview_jennifer](images/interviews/entrevista_jennifer.png)
-- **Inicio:** 0:00
-- **Fin:** 4:45
-- **Enlace de entrevista:**
-  [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202121679_upc_edu_pe/ERtOv7V4HL5Mu-W5ZgZh8AQBrqA0trurcRbUMzyVupWkTg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7emnD1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202121679_upc_edu_pe/ERtOv7V4HL5Mu-W5ZgZh8AQBrqA0trurcRbUMzyVupWkTg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7emnD1)
-- **Resumen:** Jennifer es practicante preprofesional en el área de Infraestructura Urbana de la Municipalidad Metropolitana de Lima con 1 año de experiencia. Se encarga del registro, seguimiento y análisis de reportes ciudadanos sobre incidencias urbanas (baches, alumbrado, mobiliario, señalización). Trabaja con plataformas como Lima 360, portal web institucional y WhatsApp de atención vecinal. Actualmente utilizan mapas georreferenciados, Excel, Power BI y ArcGIS para análisis y reportes. Priorizan según gravedad del riesgo, afectación al tránsito/seguridad peatonal y frecuencia de reclamos. Cuenta con registros históricos que permiten identificar zonas con alta reincidencia y patrones estacionales. Le resulta muy útil una plataforma que integre reportes ciudadanos, geolocalización y seguimiento en un solo lugar para reducir tiempos, evitar duplicados y mejorar la transparencia. Valora métricas como mapa de concentración de incidencias, tiempo promedio de atención por distrito, nivel de satisfacción ciudadana y porcentaje de reincidencias. Sus principales preocupaciones son la integración con sistemas actuales (SQL/Excel/ArcGIS/Lima 360), la calidad de datos (direcciones incompletas, reportes duplicados), la capacitación del personal operativo, el control de roles y la seguridad de la información.
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -3639,7 +3627,7 @@ Este diseño sirve como referencia visual definitiva para desarrolladores, dise�
 
 ### 6.4.2. Applications Wireflow Diagrams.
 
-Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH\_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
+Link: https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing
 
 #### **Aplicación web**
 
@@ -3731,7 +3719,7 @@ Link: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH\_/view?u
 
 ### 6.4.3. Applications User Flow Diagrams.
 
-Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH\_/view?usp=sharing](https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing)
+Link del User Flow: https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0Wz2iaH_/view?usp=sharing
 
 #### **Aplicación web**
 
@@ -3792,7 +3780,7 @@ Link del User Flow: [https://drive.google.com/file/d/1onclZ0R5X7AoF9n7aTHXxC5Y0W
 
 ![alt text](images/application-protoyping/web-prototyping.png)
 
-Video de explicación:<br> [ https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk)
+Video de explicación:<br> https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210778_upc_edu_pe/EUFyDEGiCoRGjLFh4AG3XnkBXgXl8Mit2-oKXA4K_jJCyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Cd5czk
 
 #### **Aplicación móvil**
 
@@ -3811,7 +3799,7 @@ Video de explicación:<br> [ https://upcedupe-my.sharepoint.com/:v:/g/personal/u
 
 ![alt text](images/application-protoyping/mobile.png)
 
-Video de explicación: <br> [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v)
+Video de explicación: <br> https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v
 
 # Conclusiones
 
