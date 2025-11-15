@@ -3868,7 +3868,7 @@ Video de explicación: <br> https://upcedupe-my.sharepoint.com/:v:/g/personal/u2
 
 ### 7.1.1. Software Development Environment Configuration
 
-A continuación se detallan los productos de software, herramientas y plataformas utilizadas por el equipo para el desarrollo, gestión y despliegue de **LimaUrban**, respetando las restricciones tecnológicas establecidas en el proyecto.
+A continuación se detallan los productos de software, herramientas y plataformas utilizadas por el equipo para el desarrollo, gestión y despliegue de **LimaUrban**.
 
 ---
 
