@@ -4573,7 +4573,7 @@ Se realizaron entrevistas con 3 participantes por segmento objetivo, para un tot
 - **Edad:** 
 - **Distrito:** 
 - **Duración:**  minutos
-- **URL del video:** [Entrevista Carlos Mendoza](https://example.com/entrevista-carlos)
+- **URL del video:** https://example.com/entrevista-carlos
 - **Resumen:** 
 
 ##### **Entrevista: Ciudadano Reportante**
@@ -4610,22 +4610,32 @@ Se realizaron entrevistas con 3 participantes por segmento objetivo, para un tot
 **AUDITOR:** Arquitectura-Software-Emergentes  
 **CLIENTE(S):** 
   1. Fernanda López (Personal Municipal)
+  2. Silvia Salvatierra (Ciudadano Reportante)
 
 **SITE o APP A EVALUAR:**  
-Landing Page - Plataforma de Gestión de Incidencias Urbanas
+Landing Page y Aplicación Móvil - Plataforma de Gestión de Incidencias Urbanas
 
 **TAREAS A EVALUAR:**  
 El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+**Landing Page:**
 1. Navegación general por la Landing Page
 2. Comprensión de la propuesta de valor
 3. Búsqueda de información sobre beneficios
 4. Localización de botones de registro
 5. Acceso a casos de éxito o testimonios
 
+**Aplicación Móvil:**
+1. Navegación intuitiva entre pantallas
+2. Comprensión de iconos y botones de acción
+3. Contraste y legibilidad de colores
+4. Usabilidad sin orientación previa
+
 No están incluidas en esta versión de la evaluación las siguientes tareas:
 1. Proceso de registro completo
 2. Contacto directo con ventas
-4. Descarga de recursos adicionales
+3. Descarga de recursos adicionales
+4. Funcionalidades avanzadas de reporte de incidencias
 
 **ESCALA DE SEVERIDAD:**  
 Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
@@ -4641,10 +4651,12 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 | # | Problema | Escala de severidad | Heurística/Principio violada(o) |
 |---|----------|-------------------|--------------------------------|
-| 1 | Exceso de texto en algunas secciones | 2 | Usability: Estética y diseño minimalista |
-| 2 | Falta de casos de éxito y ejemplos concretos | 3 | Information Architecture: Is it findable? |
-| 3 | Botones de acción poco visibles | 3 | Usability: Visibilidad del estado del sistema |
-| 4 | Ausencia de estadísticas de efectividad | 2 | Information Architecture: Is it credible? |
+| 1 | Exceso de texto en algunas secciones (Landing Page) | 2 | Usability: Estética y diseño minimalista |
+| 2 | Falta de casos de éxito y ejemplos concretos (Landing Page) | 3 | Information Architecture: Is it findable? |
+| 3 | Botones de acción poco visibles (Landing Page) | 3 | Usability: Visibilidad del estado del sistema |
+| 4 | Ausencia de estadísticas de efectividad (Landing Page) | 2 | Information Architecture: Is it credible? |
+| 5 | Excelente diseño visual en aplicación móvil | 1 | Usability: Estética y diseño minimalista (Fortaleza) |
+| 6 | Alta intuitividad en navegación móvil | 1 | Usability: Flexibilidad y eficiencia de uso (Fortaleza) |
 
 **DESCRIPCIÓN DE PROBLEMAS:**
 
@@ -4679,6 +4691,22 @@ Rediseñar los botones de acción con colores más contrastantes, mayor tamaño 
 La falta de datos cuantitativos sobre la efectividad de la plataforma (como tiempo promedio de resolución de incidencias) limita la capacidad del usuario para evaluar el valor real de la solución.  
 **Recomendación:**  
 Incluir métricas clave como tiempo promedio de resolución, porcentaje de mejora en eficiencia, número de incidencias gestionadas exitosamente, entre otras estadísticas relevantes para el segmento municipal.
+
+**FORTALEZA #5:** Excelente diseño visual en aplicación móvil  
+**Severidad:** 1 (Fortaleza)  
+**Heurística cumplida:** Usabilidad - Estética y diseño minimalista  
+**Observación:**  
+La aplicación móvil demuestra un diseño visual excepcional con colores apropiados, contrastes adecuados y una estética que facilita la navegación. Los usuarios encuentran el diseño amigable y profesional.  
+**Recomendación:**  
+Mantener estos estándares de diseño y considerar aplicar principios similares en futuras actualizaciones de la Landing Page.
+
+**FORTALEZA #6:** Alta intuitividad en navegación móvil  
+**Severidad:** 1 (Fortaleza)  
+**Heurística cumplida:** Usabilidad - Flexibilidad y eficiencia de uso  
+**Observación:**  
+Los usuarios pueden navegar la aplicación móvil sin necesidad de orientación previa, los botones son intuitivos y la experiencia general es fluida. Esto demuestra una excelente arquitectura de información.  
+**Recomendación:**  
+Documentar los patrones de diseño exitosos de la aplicación móvil para replicarlos en otros componentes del sistema.
 
 ## 7.4. Video About-the-Product
 
