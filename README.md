@@ -214,6 +214,29 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
   - [6.4.4. Applications User Flow Diagrams](#644-applications-user-flow-diagrams)
 - [6.5. Applications Prototyping](#65-applications-prototyping)
 
+## Capítulo VII: Product Implementation, Validation & Deployment
+
+- [7.1. Software Configuration Management](#71-software-configuration-management)
+  - [7.1.1. Software Development Environment Configuration](#711-software-development-environment-configuration)
+  - [7.1.2. Source Code Management](#712-source-code-management)
+  - [7.1.3. Source Code Style Guide & Conventions](#713-source-code-style-guide--conventions)
+  - [7.1.4. Software Deployment Configuration](#714-software-deployment-configuration)
+- [7.2. Solution Implementation](#72-solution-implementation)
+  - [7.2.1. Sprint 1](#721-sprint-1)
+    - [7.2.1.1. Sprint Planning 1](#7211-sprint-planning-1)
+    - [7.2.1.2. Sprint Backlog 1](#7212-sprint-backlog-1)
+    - [7.2.1.3. Development Evidence for Sprint Review](#7213-development-evidence-for-sprint-review)
+    - [7.2.1.4. Testing Suite Evidence for Sprint Review](#7214-testing-suite-evidence-for-sprint-review)
+    - [7.2.1.5. Execution Evidence for Sprint Review](#7215-execution-evidence-for-sprint-review)
+    - [7.2.1.6. Services Documentation Evidence for Sprint Review](#7216-services-documentation-evidence-for-sprint-review)
+    - [7.2.1.7. Software Deployment Evidence for Sprint Review](#7217-software-deployment-evidence-for-sprint-review)
+    - [7.2.1.8. Team Collaboration Insights during Sprint](#7218-team-collaboration-insights-during-sprint)
+- [7.3. Validation Interviews](#73-validation-interviews)
+  - [7.3.1. Diseño de Entrevistas](#731-diseño-de-entrevistas)
+  - [7.3.2. Registro de Entrevistas](#732-registro-de-entrevistas)
+  - [7.3.3. Evaluaciones según heurísticas](#733-evaluaciones-según-heurísticas)
+- [7.4. Video About-the-Product](#74-video-about-the-product)
+
 ### [Conclusiones](#conclusiones)
 
 ### [Bibliografía](#bibliografía)
@@ -271,6 +294,22 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
             <b>Quezada Portalatino, Barbara Susana</b><br>
             - 
             <br><br>
+            <b>TB2:</b><br>
+            <b>Baldeon Fabian, Aldo Alberto</b><br>
+            - 
+            <br><br>
+            <b>Cama Salvatierra, Jimena Tamara</b><br>
+            - Lideré el desarrollo del Capítulo VII (Product Implementation, Validation & Deployment), específicamente la sección 7.1.1 Software Development Environment Configuration. Coordiné con el equipo para identificar y documentar todas las herramientas tecnológicas del proyecto (Next.js, React, Supabase, Flutter, Python para IA), estableciendo las rutas de referencia y propósitos de cada producto de software. Comuniqué de manera clara la arquitectura tecnológica del proyecto asegurando que todos los miembros comprendieran el stack tecnológico y su justificación.
+            <br><br>
+            <b>Castillo Castillo, Jair Alexander</b><br>
+            - 
+            <br><br>
+            <b>Castillo Robles, Steve Roger</b><br>
+            - 
+            <br><br>
+            <b>Quezada Portalatino, Barbara Susana</b><br>
+            - 
+            <br><br>
         </td>
         <td>
             <b>TB1:</b><br>
@@ -278,6 +317,9 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
             <br><br>
             <b>TP1:</b><br>
             Como equipo, ejercimos un liderazgo conjunto al asumir responsabilidades según nuestras fortalezas individuales, distribuyendo tareas de forma equitativa y coordinada. A lo largo del proyecto, tomamos decisiones colaborativas que permitieron mantener una visión unificada del sistema, y nos apoyamos mutuamente para superar obstáculos técnicos y organizativos. Esta dinámica nos permitió liderar desde distintos frentes del desarrollo —diseño, backend, frontend y gestión—, asegurando que todos los módulos avanzaran de forma integrada y con sentido de propósito común.
+            <br><br>
+            <b>TB2:</b><br>
+            Para la entrega TB2, el equipo consolidó su capacidad de liderazgo distribuido enfocándose en la implementación práctica del proyecto. Jimena lideró la configuración del entorno de desarrollo documentando el stack tecnológico completo (Next.js, Supabase, Flutter, Python), Barbara coordinó la integración de todos los capítulos, Steve estructuró el Sprint Planning, Jair refinó el diseño táctico y Aldo validó la coherencia estratégica. Este liderazgo conjunto permitió transitar exitosamente de la fase de diseño a la fase de implementación.
         </td>
     </tr>
     <tr>
@@ -315,11 +357,30 @@ conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el l
             <b>Quezada Portalatino, Barbara Susana</b><br>
             - 
             <br><br>
+            <br><br>
+            <b>TB2:</b><br>
+            <b>Baldeon Fabian, Aldo Alberto</b><br>
+            - 
+            <br><br>
+            <b>Cama Salvatierra, Jimena Tamara</b><br>
+            - Planifiqué y estructuré la documentación del Software Development Environment Configuration estableciendo metas claras de completitud para cada categoría (Project Management, Requirements, Design, Development, Testing, Deployment, Documentation). Organicé sesiones colaborativas donde el equipo validó las herramientas seleccionadas y su justificación técnica. Creé tablas comparativas y diagramas de arquitectura que facilitaron la comprensión del stack tecnológico para todos los miembros, asegurando un entorno inclusivo donde tanto perfiles técnicos como no técnicos pudieron contribuir. Cumplí con el objetivo de documentar completamente el entorno de desarrollo antes de iniciar el Sprint 1.
+            <br><br>
+            <b>Castillo Castillo, Jair Alexander</b><br>
+            - 
+            <br><br>
+            <b>Castillo Robles, Steve Roger</b><br>
+            - 
+            <br><br>
+            <b>Quezada Portalatino, Barbara Susana</b><br>
+            - 
+            <br><br>
         </td>
         <td>
             <b>TB1:</b><br>
             A lo largo del desarrollo del proyecto, hemos construido un entorno de trabajo colaborativo y respetuoso, donde cada voz ha sido escuchada y valorada. La planificación de tareas se realizó en base a las fortalezas individuales, estableciendo metas claras para cada entrega. La comunicación constante entre los miembros del grupo permitió resolver dudas, alinear criterios y asegurar el cumplimiento de los objetivos establecidos. Esta dinámica no solo optimizó la ejecución del proyecto, sino que fortaleció la cohesión del equipo.
             <br><br>
+            <b>TB2:</b><br>
+            El equipo consolidó un entorno colaborativo e inclusivo mediante la planificación estructurada de tareas y el establecimiento de metas claras para cada capítulo de TB2. Jimena planificó la documentación del entorno de desarrollo creando tablas y diagramas que facilitaron la comprensión de todos; Barbara coordinó el calendario de entregas con hitos intermedios que permitieron seguimiento continuo; Steve estableció criterios claros para el Sprint Backlog mediante sesiones de refinamiento colaborativas; Jair organizó la validación colectiva de los bounded contexts; y Aldo facilitó la revisión conjunta del capítulo introductorio. El cumplimiento de objetivos se logró mediante comunicación constante, revisiones cruzadas y apoyo mutuo, fortaleciendo la cohesión del equipo en la transición hacia la fase de implementación.
         </td>
     </tr>
 </table>
@@ -3800,6 +3861,161 @@ Video de explicación:<br> https://upcedupe-my.sharepoint.com/:v:/g/personal/u20
 ![alt text](images/application-protoyping/mobile.png)
 
 Video de explicación: <br> https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/EVJfSu7oGGhPgQ3bLK63i60BqMp_X1e4tRJfobOMkX7HJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i8v80v
+
+# Capítulo VII: Product Implementation, Validation & Deployment
+
+## 7.1. Software Configuration Management
+
+### 7.1.1. Software Development Environment Configuration
+
+A continuación se detallan los productos de software, herramientas y plataformas utilizadas por el equipo para el desarrollo, gestión y despliegue de **LimaUrban**, respetando las restricciones tecnológicas establecidas en el proyecto.
+
+---
+
+**Project Management**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Discord** | Comunicación en tiempo real del equipo, reuniones de planificación sprint y daily standups virtuales | https://discord.com |
+| **Google Meet** | Videoconferencias para Sprint Planning, Sprint Review y Sprint Retrospective | https://meet.google.com |
+| **Trello** | Gestión de tableros Kanban para seguimiento de User Stories, tareas del Sprint Backlog y flujo de trabajo del equipo | https://trello.com |
+| **GitHub Projects** | Gestión integrada de issues, milestones y seguimiento de progreso vinculado directamente a los repositorios del código | https://github.com/features/project-management |
+
+
+<br>
+
+**Requirements Management**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Miro** | Elaboración de Lean UX Canvas, Event Storming, User Personas, Empathy Maps, As-Is/To-Be Scenario Mapping y Context Mapping | https://miro.com |
+| **Google Docs** | Documentación colaborativa de User Stories, criterios de aceptación y especificaciones de requerimientos | https://docs.google.com |
+| **Notion** | Base de conocimiento centralizada para documentación de requerimientos, decisiones arquitectónicas y registro de validaciones con stakeholders | https://notion.so |
+
+
+**Product UX/UI Design**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Figma** | Diseño de wireframes, mockups, prototipos interactivos de baja y alta fidelidad para aplicación móvil (Flutter) y dashboard web (Next.js) | https://figma.com |
+
+
+**Backend Development & Database**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Supabase** | Backend-as-a-Service que proporciona PostgreSQL database, autenticación, storage de imágenes, APIs REST autogeneradas y Row Level Security | https://supabase.com |
+| **PostgreSQL** | Base de datos relacional integrada en Supabase para almacenamiento estructurado de usuarios, incidencias, comentarios e historial | Incluido en Supabase |
+| **PostGIS** | Extensión de PostgreSQL para consultas geoespaciales, cálculo de distancias y análisis de ubicaciones dentro de Supabase | Incluido en Supabase |
+| **Supabase CLI** | Herramienta de línea de comandos para gestionar migraciones de base de datos, funciones y triggers localmente | https://supabase.com/docs/guides/cli |
+
+**AI/ML Model Development**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Python 3.11+** | Lenguaje de programación para desarrollo y entrenamiento del modelo YOLO de clasificación de incidencias | https://www.python.org/downloads/ |
+| **PyTorch** | Framework de deep learning para entrenamiento e inferencia del modelo YOLO | https://pytorch.org/get-started/locally/ |
+| **Ultralytics YOLO** | Implementación optimizada de YOLO para detección de baches y basura en imágenes de incidencias | https://docs.ultralytics.com |
+
+<br>
+
+**Frontend Web Development**
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Node.js 18 LTS** | Entorno de ejecución JavaScript para herramientas de desarrollo y build de Next.js | https://nodejs.org/en/download |
+| **Next.js 14+** | Framework React con App Router para desarrollo del dashboard municipal con SSR, optimización de imágenes y rutas API | https://nextjs.org/docs |
+| **React 18+** | Biblioteca de componentes UI para construcción de interfaces interactivas en el dashboard web | https://react.dev |
+| **TypeScript 5.0+** | Superset de JavaScript con tipado estático para desarrollo más robusto en Next.js | https://www.typescriptlang.org/download |
+| **Tailwind CSS** | Framework de CSS utility-first para diseño rápido y consistente de interfaces responsivas | https://tailwindcss.com/docs/installation |
+| **Supabase JS Client** | SDK oficial de JavaScript para integración con Supabase desde Next.js (Auth, Database, Storage) | https://supabase.com/docs/reference/javascript |
+| **MapBox GL JS** | SDK JavaScript para integración de mapas interactivos y visualización de mapas de calor en el dashboard | https://docs.mapbox.com/mapbox-gl-js/guides/install/ |
+
+<br>
+
+**Mobile Development**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Flutter SDK 3.16+** | Framework multiplataforma (Android/iOS) para desarrollo de la aplicación ciudadana | https://docs.flutter.dev/get-started/install |
+| **Dart 3.0+** | Lenguaje de programación utilizado por Flutter | https://dart.dev/get-dart |
+| **Android Studio** | IDE oficial para desarrollo Android con emuladores y herramientas de debugging | https://developer.android.com/studio |
+| **Supabase Flutter Client** | SDK oficial para integración con Supabase desde Flutter (Auth, Database, Storage) | https://supabase.com/docs/reference/dart |
+
+**Version Control & Collaboration**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Git 2.40+** | Sistema de control de versiones distribuido para gestión de código fuente | https://git-scm.com/downloads |
+| **GitHub** | Plataforma de hosting para repositorios Git con gestión de pull requests, code reviews y CI/CD | https://github.com |
+| **Visual Studio Code** | Editor de código principal con extensiones para Python, React, Flutter y integración con Git | https://code.visualstudio.com/download |
+
+
+**Software Deployment**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Supabase** | Backend-as-a-Service para PostgreSQL, autenticación, storage de imágenes y APIs generadas automáticamente | https://supabase.com |
+| **Vercel** | Plataforma de hosting para despliegue del dashboard Next.js con optimizaciones automáticas, edge functions y preview deployments | https://vercel.com |
+| **Python Flask/FastAPI** | Framework ligero para crear API endpoint que sirve el modelo YOLO entrenado para inferencia | https://flask.palletsprojects.com <br> https://fastapi.tiangolo.com |
+
+
+**Software Documentation**
+
+| Producto | Propósito | Ruta de Referencia/Descarga |
+|----------|-----------|----------------------------|
+| **Markdown** | Formato de documentación técnica para README.md, guías de instalación y documentación de APIs en repositorios GitHub | Nativo en editores de texto |
+| **PlantUML** | Generación de diagramas UML (clases, secuencia, despliegue) mediante código declarativo | https://plantuml.com/download |
+| **Google Docs** | Documentación de reportes de sprint, minutas de reuniones y deliverables académicos | https://docs.google.com |
+
+
+### 7.1.2. Source Code Management
+
+### 7.1.3. Source Code Style Guide & Conventions
+
+### 7.1.4. Software Deployment Configuration
+
+## 7.2. Solution Implementation
+
+### 7.2.1. Sprint 1
+
+#### 7.2.1.1. Sprint Planning 1
+
+| Sprint # 	| Sprint 1 	|
+|---	|---	|
+| Sprint Planning Background 	|  	|
+| Date 	| 23/10/2025 	|
+| Time 	| 9:00 PM 	|
+| Location 	| Reunión virtual en Discord 	|
+| Prepared by 	| Castillo Robles, Steve Roger 	|
+| Attendees (to planning meeting) 	| Baldeon Fabian, Aldo Alberto<br>Cama Salvatierra, Jimena Tamara<br>Castillo Robles, Steve Roger<br>Castillo Castillo, Jair Alexander<br>Quezada Portalatino, Barbara Susana 	|
+| Sprint Goal & User stories 	|  	|
+| Sprint 2 Goal 	| Entrenamiento del modelo de YOLO con un backend conectado funcional y un avance del frontend 	|
+| Sprint n Velocity 	|  	|
+| Sum of story points 	|  	|
+
+#### 7.2.1.2. Sprint Backlog 1
+
+#### 7.2.1.3. Development Evidence for Sprint Review
+
+#### 7.2.1.4. Testing Suite Evidence for Sprint Review
+
+#### 7.2.1.5. Execution Evidence for Sprint Review
+
+#### 7.2.1.6. Services Documentation Evidence for Sprint Review
+
+#### 7.2.1.7. Software Deployment Evidence for Sprint Review
+
+#### 7.2.1.8. Team Collaboration Insights during Sprint
+
+## 7.3. Validation Interviews
+
+### 7.3.1. Diseño de Entrevistas
+
+### 7.3.2. Registro de Entrevistas
+
+### 7.3.3. Evaluaciones según heurísticas
+
+## 7.4. Video About-the-Product
 
 # Conclusiones
 
