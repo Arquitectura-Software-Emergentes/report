@@ -4021,7 +4021,7 @@ Se seleccionó una arquitectura tecnológica modular basada en herramientas ampl
 - Framework: Flutter SDK
 - Backend: Supabase Flutter
 - Arquitectura: Clean Architecture con separación por features
-- Plataformas soportadas: Android, iOS, Web
+- Plataformas soportadas: Android
 
 **Landing Page (landing-page)**
 
@@ -4082,7 +4082,7 @@ Ejemplos reales del proyecto:
 
 Con el fin de mantener un código limpio, mantenible y comprensible entre los miembros del equipo de LimaUrban, se establecieron las siguientes convenciones de estilo para los lenguajes y tecnologías utilizadas en el proyecto.
 
-**TypeScript (NestJS - Backend)**
+**TypeScript**
 
 Estructura de archivos por módulo
 
@@ -4104,7 +4104,7 @@ Buenas prácticas
 - Documentar endpoints con Swagger usando decoradores
 - Usar inyección de dependencias apropiadamente
 
-**TypeScript (Next.js - Frontend Web)**
+**TypeScript**
 
 Estructura de archivos por característica
 
