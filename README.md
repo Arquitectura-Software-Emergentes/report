@@ -4439,29 +4439,6 @@ Feature: Enviar comentario sobre incidencia
 
 #### 7.2.1.5. Execution Evidence for Sprint Review
 
-En esta sección se presentan las evidencias de ejecución del sistema LimaUrban desarrollado durante el Sprint 1, mostrando las funcionalidades implementadas y en funcionamiento.
-
-**Landing Page**
-
-Se implementó y desplegó la Landing Page del proyecto LimaUrban, la cual presenta información sobre la plataforma, sus características principales y llamados a la acción para ciudadanos y personal municipal.
-
-![Execution Evidence 1](images/Execution-evidence/execution-evidence1.png)
-
-**Aplicación Web Frontend**
-
-Se desarrolló e implementó la aplicación web frontend con Next.js 15, que permite al personal municipal gestionar las incidencias urbanas reportadas por los ciudadanos. Las principales funcionalidades implementadas incluyen el sistema de autenticación, dashboard geoespacial y gestión de incidencias.
-
-![Execution Evidence 2](images/Execution-evidence/execution-evidence2.png)
-
-Durante este Sprint 1, se logró implementar exitosamente:
-
-- Landing Page responsiva con información institucional
-- Sistema de autenticación mediante Supabase Auth
-- Dashboard principal del personal municipal
-- Visualización geoespacial de incidencias con Mapbox GL
-- Gestión básica de incidencias (visualización, filtrado)
-- Integración con la base de datos PostgreSQL/PostGIS en Supabase
-
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
 
 #### 7.2.1.7. Software Deployment Evidence for Sprint Review
