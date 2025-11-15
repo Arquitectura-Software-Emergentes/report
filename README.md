@@ -4498,14 +4498,160 @@ Durante el Sprint 1, el equipo demostró una colaboración efectiva mediante:
 | report | Todo el equipo | Documentación colaborativa del proyecto |
 
 El trabajo colaborativo permitió cumplir con los objetivos del Sprint 1, entregando componentes funcionales e integrados del sistema LimaUrban.
+ 
+
 
 ## 7.3. Validation Interviews
 
+En esta sección se registran y explican las actividades de entrevistas de validación realizadas durante el proyecto. Estas entrevistas se llevaron a cabo con usuarios de los segmentos objetivo, quienes interactuaron con el **Landing Page** y las **aplicaciones** (móvil y dashboard municipal). El proceso incluyó el diseño de entrevistas, el registro de las mismas y evaluaciones basadas en heurísticas de usabilidad y experiencia de usuario.
+
 ### 7.3.1. Diseño de Entrevistas
+
+El diseño de las entrevistas se estructuró en función de los segmentos objetivo definidos en el proyecto: .
+
+##### **Segmento: Ciudadano Reportante**
+
+**Objetivo:** Validar la experiencia de usuario en la **Landing Page** y la **aplicación móvil**, asegurando que los ciudadanos puedan completar tareas clave de manera intuitiva y eficiente.
+
+**Elementos a incluir:**
+- **Landing Page:** Evaluar claridad de la propuesta de valor, facilidad para encontrar información y motivación para registrarse.
+- **Aplicación Móvil:** Validar los siguientes flujos:
+  1. Registro de usuario.
+  2. Seguimiento del estado de una incidencia reportada.
+  3. Consulta de incidencias reportadas por otros ciudadanos.
+
+**Criterios de éxito:**
+- Completar cada flujo en menos de 40 segundos.
+- Entender claramente el propósito de la plataforma desde la Landing Page.
+- Percibir transparencia y trazabilidad en el seguimiento de incidencias.
+ 
+##### **Segmento: Personal Municipal**
+
+**Objetivo:** Validar la experiencia de usuario en el **dashboard municipal**, asegurando que el personal pueda gestionar incidencias de manera eficiente y tomar decisiones informadas.
+
+**Elementos a incluir:**
+- **Dashboard Municipal:** Validar los siguientes flujos:
+  1. Inicio de sesión y acceso al panel principal.
+  2. Visualización de incidencias en el mapa de calor.
+  3. Filtrado de incidencias por tipo, prioridad y ubicación.
+
+**Criterios de éxito:**
+- Completar cada flujo en menos de 2 minutos.
+- Identificar zonas críticas mediante el mapa de calor.
+- Percibir claridad en la interfaz y facilidad para priorizar incidencias.
+
 
 ### 7.3.2. Registro de Entrevistas
 
+Se realizaron entrevistas con 3 participantes por segmento objetivo, para un total de 6 entrevistas. Cada entrevista fue grabada en video y registrada con los siguientes datos:
+
+##### **Entrevista: Ciudadano Reportante**
+- **Nombre:** 
+- **Edad:** 
+- **Distrito:** 
+- **Duración:**  minutos
+- **URL del video:** [Entrevista Carlos Mendoza](https://example.com/entrevista-carlos)
+- **Resumen:** 
+
+##### **Entrevista: Ciudadano Reportante**
+- **Nombre:** 
+- **Edad:** 
+- **Distrito:** 
+- **Duración:**  minutos
+- **URL del video:** [Entrevista Carlos Mendoza](https://example.com/entrevista-carlos)
+- **Resumen:** 
+
+
+##### **Entrevista: Personal Municipal**
+- **Nombre:** Fernanda López
+- **Edad:** 27
+- **Distrito:** Comas
+- **Duración:** 5:48 minutos
+![mun-valdation-fernanda](images/interviews/fernanda-personal-mun-validation.png)
+
+- **URL del video:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211800_upc_edu_pe/IQAN6ECuAzA-TZDKZDwq7MlhAT5Fwn5x86uoF7w5dzvt7u8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ecn1XW
+- **Resumen:** Fernanda destacó que la Landing Page le parece visualmente atractiva y profesional, con colores y diseño claros. Sin embargo, señaló que algunas secciones contienen demasiado texto. Consideró útil la información presentada, pero expresó la necesidad de ver ejemplos concretos y casos de éxito de otros municipios que hayan implementado la plataforma. En cuanto a la navegación, la encontró fácil de usar, aunque sugirió que los botones de acción como "Regístrate" deberían ser más visibles. Finalmente, recomendó incluir estadísticas y datos que respalden la efectividad de la plataforma, específicamente el tiempo promedio de resolución de incidencias.
+
+
+
 ### 7.3.3. Evaluaciones según heurísticas
+
+**CARRERA:** Ingeniería de Software  
+**CURSO:** Arquitecturas de Software Emergentes  
+**SECCIÓN:**  7295
+**PROFESORES:** Royer Edelwer Rojas Malasquez
+**AUDITOR:** Arquitectura-Software-Emergentes  
+**CLIENTE(S):** 
+  1. Fernanda López (Personal Municipal)
+
+**SITE o APP A EVALUAR:**  
+Landing Page - Plataforma de Gestión de Incidencias Urbanas
+
+**TAREAS A EVALUAR:**  
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+1. Navegación general por la Landing Page
+2. Comprensión de la propuesta de valor
+3. Búsqueda de información sobre beneficios
+4. Localización de botones de registro
+5. Acceso a casos de éxito o testimonios
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+1. Proceso de registro completo
+2. Contacto directo con ventas
+4. Descarga de recursos adicionales
+
+**ESCALA DE SEVERIDAD:**  
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
+
+| Nivel | Descripción |
+|-------|-------------|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario ó ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|----------|-------------------|--------------------------------|
+| 1 | Exceso de texto en algunas secciones | 2 | Usability: Estética y diseño minimalista |
+| 2 | Falta de casos de éxito y ejemplos concretos | 3 | Information Architecture: Is it findable? |
+| 3 | Botones de acción poco visibles | 3 | Usability: Visibilidad del estado del sistema |
+| 4 | Ausencia de estadísticas de efectividad | 2 | Information Architecture: Is it credible? |
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1:** Exceso de texto en algunas secciones  
+**Severidad:** 2  
+**Heurística violada:** Usabilidad - Estética y diseño minimalista  
+**Problema:**  
+Las secciones de la Landing Page contienen demasiado texto, lo que puede abrumar al usuario y dificultar la lectura rápida de información clave. Esto va contra el principio de diseño minimalista que sugiere presentar solo la información esencial.  
+**Recomendación:**  
+Reducir el texto y utilizar elementos visuales como íconos, infografías o bullets points para comunicar la información de manera más concisa y atractiva.
+
+**PROBLEMA #2:** Falta de casos de éxito y ejemplos concretos  
+**Severidad:** 3  
+**Heurística violada:** Information Architecture - Is it findable?  
+**Problema:**  
+Los usuarios del segmento municipal necesitan evidencia concreta de la efectividad de la plataforma antes de tomar decisiones de implementación. La ausencia de casos de éxito reduce la credibilidad y confianza en la propuesta.  
+**Recomendación:**  
+Incluir una sección dedicada a casos de éxito con testimonios específicos, estadísticas de municipios que han implementado la plataforma y ejemplos visuales de resultados obtenidos.
+
+**PROBLEMA #3:** Botones de acción poco visibles  
+**Severidad:** 3  
+**Heurística violada:** Usabilidad - Visibilidad del estado del sistema  
+**Problema:**  
+Los botones principales como "Regístrate" no son suficientemente prominentes, lo que puede resultar en una baja tasa de conversión y dificultad para que los usuarios completen acciones deseadas.  
+**Recomendación:**  
+Rediseñar los botones de acción con colores más contrastantes, mayor tamaño y posicionamiento estratégico para mejorar su visibilidad y accesibilidad.
+
+**PROBLEMA #4:** Ausencia de estadísticas de efectividad  
+**Severidad:** 2  
+**Heurística violada:** Information Architecture - Is it credible?  
+**Problema:**  
+La falta de datos cuantitativos sobre la efectividad de la plataforma (como tiempo promedio de resolución de incidencias) limita la capacidad del usuario para evaluar el valor real de la solución.  
+**Recomendación:**  
+Incluir métricas clave como tiempo promedio de resolución, porcentaje de mejora en eficiencia, número de incidencias gestionadas exitosamente, entre otras estadísticas relevantes para el segmento municipal.
 
 ## 7.4. Video About-the-Product
 
