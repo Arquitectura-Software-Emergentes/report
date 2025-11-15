@@ -4258,7 +4258,184 @@ El deployment en Vercel permite aprovechar características como Edge Functions,
 
 #### 7.2.1.3. Development Evidence for Sprint Review
 
+A continuación, se presentará la lista de commits realizados en los repositorios del proyecto LimaUrban durante el Sprint 1.
+
+**Landing Page**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| landing-page | main | d635804 | feat: inicital commit | 06/10/2025 |
+| landing-page | main | cca2bb7 | feat: add ico logo | 06/10/2025 |
+| landing-page | main | dba0f64 | fix: body font | 06/10/2025 |
+
+**Repositorio landing-page:** [https://github.com/Arquitectura-Software-Emergentes/landing-page](https://github.com/Arquitectura-Software-Emergentes/landing-page)
+
+**Frontend Web**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| front-web-limaurban | master | b634dc7 | Enhanced incident fetching with user details | 10/11/2025 |
+| front-web-limaurban | master | 86775ca | Improved incident detail components and styling | 10/11/2025 |
+| front-web-limaurban | master | 3c76c17 | Sidebar functionality with mobile/desktop collapse | 10/11/2025 |
+| front-web-limaurban | master | 81de671 | Incidents table enhancements with pagination | 10/11/2025 |
+| front-web-limaurban | master | d0f9447 | Incident table display improvements | 10/11/2025 |
+| front-web-limaurban | master | 1100815 | Incident detail and comments functionality implementation | 10/11/2025 |
+| front-web-limaurban | master | fd2c50a | Enhanced authentication forms with accessibility improvements | 10/11/2025 |
+| front-web-limaurban | master | 3beb011 | Loading context implementation with provider components | 10/11/2025 |
+| front-web-limaurban | master | feebc3b | Session handling and user authentication checks | 10/11/2025 |
+| front-web-limaurban | master | 97cc4d8 | Authentication forms refactoring; modularized fields | 13/11/2025 |
+| front-web-limaurban | master | 5b2d73e | Enhanced Incident interface with AI detection fields | 13/11/2025 |
+| front-web-limaurban | master | 3ba6b55 | User and role handling improvements for clarity | 13/11/2025 |
+| front-web-limaurban | master | 59a83a8 | Role handling refactoring; replaced RoleType with Role | 13/11/2025 |
+
+**Repositorio front-web-limaurban:** [https://github.com/Arquitectura-Software-Emergentes/front-web-limaurban](https://github.com/Arquitectura-Software-Emergentes/front-web-limaurban)
+
+**Backend**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| backend-limaurban | main | ba5b4ef | feat: initialize NestJS application with health check module and environment validation | 13/11/2025 |
+| backend-limaurban | main | 2c2d252 | feat: update environment configuration, add JWT secret, and enhance package dependencies | 13/11/2025 |
+| backend-limaurban | main | f7e9643 | feat: implement authentication module with JWT strategy and role-based access control | 13/11/2025 |
+| backend-limaurban | main | e3013ac | feat: add JWT authentication guard and role-based access control guard | 13/11/2025 |
+| backend-limaurban | main | 6964ba3 | feat: implement health check module with Supabase connection verification | 13/11/2025 |
+| backend-limaurban | main | 9bf28d2 | feat: add unit tests for RolesGuard with Supabase integration | 13/11/2025 |
+| backend-limaurban | main | 4a4ad39 | feat: add integration tests for RolesGuard with real database interactions | 13/11/2025 |
+
+**Repositorio backend-limaurban:** [https://github.com/Arquitectura-Software-Emergentes/backend-limaurban](https://github.com/Arquitectura-Software-Emergentes/backend-limaurban)
+
+**Mobile App**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| front-mobile | main | 92e2287 | Initial commit | 27/10/2025 |
+| front-mobile | main | 9809e7f | Add authentication pages, routing, and Supabase integration | 27/10/2025 |
+
+**Repositorio front-mobile:** [https://github.com/Arquitectura-Software-Emergentes/front-mobile](https://github.com/Arquitectura-Software-Emergentes/front-mobile)
+
 #### 7.2.1.4. Testing Suite Evidence for Sprint Review
+
+A continuación, se presentan los escenarios de prueba de aceptación desarrollados en formato Gherkin para las principales User Stories implementadas en el Sprint 1.
+
+**Repositorio acceptance-tests**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| Testing | main | 78620b7 | feat: add features US01 to US21 | 14/11/2025 |
+
+**Repositorio Testing:** [https://github.com/Arquitectura-Software-Emergentes/Testing](https://github.com/Arquitectura-Software-Emergentes/Testing)
+
+**E01_US13 - Registro de ciudadano**
+
+```gherkin
+Feature: Registro de ciudadano
+  Como ciudadano
+  Quiero registrarme en la plataforma
+  Para poder reportar incidencias urbanas
+
+  Scenario: Registro exitoso con datos válidos
+    When el ciudadano ingresa el nombre completo "Juan Pérez"
+    And el ciudadano ingresa el email "juan.perez@example.com"
+    And el ciudadano ingresa una contraseña segura "Passw0rd123!"
+    And el ciudadano confirma la contraseña "Passw0rd123!"
+    And el ciudadano acepta los términos y condiciones
+    And el ciudadano presiona el botón "Registrarse"
+    Then el sistema debe crear la cuenta en Supabase
+    And el sistema debe mostrar el mensaje "Registro exitoso"
+    And el ciudadano debe ser redirigido a la pantalla de inicio de sesión
+```
+
+**E01_US14 - Inicio de sesión ciudadano**
+
+```gherkin
+Feature: Inicio de sesión ciudadano
+  Como ciudadano
+  Quiero iniciar sesión
+  Para acceder a mis reportes y perfil
+
+  Scenario: Inicio de sesión exitoso
+    When el ciudadano ingresa el email "ciudadano@example.com"
+    And el ciudadano ingresa la contraseña correcta "Passw0rd123!"
+    And el ciudadano presiona el botón "Iniciar sesión"
+    Then el sistema debe validar las credenciales en Supabase
+    And el sistema debe generar un token de sesión
+    And el ciudadano debe ser redirigido al dashboard
+    And el sistema debe mostrar el mensaje "Bienvenido"
+```
+
+**E02_US16 - Reporte de incidencia con foto**
+
+```gherkin
+Feature: Reporte de incidencia con foto
+  Como ciudadano
+  Quiero reportar una incidencia urbana adjuntando fotografía y ubicación automática
+  Para documentar el problema de forma completa
+
+  Scenario: Reportar incidencia con foto y clasificación IA
+    When el ciudadano presiona el botón "Reportar Incidencia"
+    And el ciudadano captura una foto de un bache
+    And el sistema detecta la ubicación GPS automáticamente
+    And el ciudadano presiona "Confirmar foto"
+    Then el sistema debe enviar la imagen al servicio YOLO en Azure
+    And el servicio YOLO debe clasificar la imagen como "Bache"
+    And el sistema debe mostrar el formulario con categoría pre-sugerida "Bache"
+    And el mapa debe mostrar la ubicación detectada
+```
+
+**E03_US11 - Dashboard geoespacial municipal**
+
+```gherkin
+Feature: Dashboard geoespacial municipal
+  Como personal municipal
+  Quiero visualizar incidencias en mapas de calor interactivos
+  Para priorizar intervenciones basadas en concentración espacial
+
+  Scenario: Visualizar mapa de calor de incidencias
+    When el personal accede a la sección "Mapas"
+    Then el sistema debe cargar el mapa de Lima usando Mapbox GL
+    And el sistema debe consultar las incidencias con coordenadas desde Supabase
+    And el mapa debe renderizar un mapa de calor con degradado
+    And las zonas con mayor concentración deben mostrarse en rojo
+    And las zonas con menor concentración deben mostrarse en amarillo
+```
+
+**E03_US03 - Ver total de incidencias**
+
+```gherkin
+Feature: Ver total de incidencias
+  Como personal municipal
+  Quiero ver el número total de incidencias registradas
+  Para monitorear el volumen general
+
+  Scenario: Visualizar métricas generales
+    When el personal accede al dashboard
+    Then el sistema debe consultar las incidencias desde Supabase
+    And el dashboard debe mostrar "Total: 150 incidencias"
+    And debe mostrar "Pendientes: 45"
+    And debe mostrar "En Proceso: 80"
+    And debe mostrar "Resueltas: 25"
+    And cada métrica debe estar en una card visual diferenciada
+```
+
+**E04_US07 - Enviar comentario sobre incidencia**
+
+```gherkin
+Feature: Enviar comentario sobre incidencia
+  Como personal municipal
+  Quiero enviar comentarios en las incidencias
+  Para comunicar acciones tomadas
+
+  Scenario: Enviar comentario de actualización
+    When el personal escribe "Hemos enviado cuadrilla. Reparación en 48 horas."
+    And el personal presiona "Enviar comentario"
+    Then el sistema debe guardar el comentario en Supabase
+    And el comentario debe asociarse a "INC-2025-001"
+    And el comentario debe incluir timestamp actual
+    And el comentario debe incluir nombre del personal
+    And el sistema debe mostrar "Comentario enviado"
+    And el comentario debe aparecer en el historial
+    And el ciudadano debe poder ver el comentario en su app móvil
+```
 
 #### 7.2.1.5. Execution Evidence for Sprint Review
 
@@ -4266,7 +4443,61 @@ El deployment en Vercel permite aprovechar características como Edge Functions,
 
 #### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
+En esta sección se presentan las evidencias del despliegue de los componentes del sistema LimaUrban durante el Sprint 1.
+
+**Landing Page Deployment**
+
+La Landing Page del proyecto fue desplegada utilizando GitHub Pages. El proceso consistió en configurar el repositorio para servir contenido estático desde la rama main.
+
+URL de acceso a la Landing Page: Se encuentra desplegada y accesible públicamente mediante GitHub Pages.
+
+![Landing Page Deployment](images/Software-evidence/landing-pages.png)
+
+**Frontend Web Deployment**
+
+La aplicación web frontend fue desplegada en Vercel, aprovechando su integración nativa con Next.js y GitHub. Cada push a la rama main genera automáticamente un nuevo deployment.
+
+URL de producción: [https://lima-urban.vercel.app](https://lima-urban.vercel.app)
+
+Características del deployment:
+- Deployment automático desde GitHub
+- Preview deployments para cada pull request
+- Integración con Supabase mediante variables de entorno
+- Edge Functions habilitadas
+- Certificado SSL automático
+
 #### 7.2.1.8. Team Collaboration Insights during Sprint
+
+A continuación, se presentan las evidencias de colaboración del equipo durante el Sprint 1, mostrando los aportes realizados por cada miembro en los diferentes repositorios del proyecto.
+
+**Repositorio Report - Documentación**
+
+El equipo trabajó colaborativamente en la documentación del proyecto, distribuyendo responsabilidades por capítulos y manteniendo una comunicación constante para asegurar la coherencia del informe.
+
+![Team Collaboration Insights](images/Insights-evidence/insights-evidence.png)
+
+**Análisis de Contribuciones**
+
+Durante el Sprint 1, el equipo demostró una colaboración efectiva mediante:
+
+- **Commits distribuidos**: Cada miembro del equipo realizó contribuciones significativas en sus áreas asignadas
+- **Reuniones de sincronización**: Se mantuvieron reuniones semanales para coordinar avances y resolver impedimentos
+- **Revisión de código**: Se implementó un proceso de code review mediante pull requests antes de integrar cambios a las ramas principales
+- **Uso de Gitflow**: Se siguió la metodología Gitflow para mantener un control de versiones ordenado
+- **Comunicación asíncrona**: Se utilizó Discord para coordinar tareas y resolver dudas en tiempo real
+
+**Repositorios Principales Trabajados**
+
+| Repositorio | Contribuidores | Actividad Principal |
+|-------------|----------------|---------------------|
+| backend-limaurban | Equipo técnico | Implementación de autenticación, guards, health checks |
+| front-web-limaurban | Equipo frontend | Desarrollo de dashboard, tablas de incidencias, mapas |
+| front-mobile | Equipo móvil | Implementación de páginas de autenticación y routing |
+| landing-page | Equipo diseño | Creación de landing page estática |
+| Testing | Equipo QA | Desarrollo de tests de aceptación en Gherkin |
+| report | Todo el equipo | Documentación colaborativa del proyecto |
+
+El trabajo colaborativo permitió cumplir con los objetivos del Sprint 1, entregando componentes funcionales e integrados del sistema LimaUrban.
 
 ## 7.3. Validation Interviews
 
