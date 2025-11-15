@@ -3970,9 +3970,270 @@ A continuación se detallan los productos de software, herramientas y plataforma
 
 ### 7.1.2. Source Code Management
 
+Para gestionar los múltiples cambios de código en los distintos módulos del sistema LimaUrban, se creó una organización en GitHub donde se alojan los repositorios independientes correspondientes al backend (API), frontend web, aplicación móvil y landing page.
+
+**Organización y metodología de trabajo en GitHub**
+
+Los repositorios siguen la metodología GitFlow, que facilita una colaboración estructurada y ágil entre los desarrolladores. Esta metodología promueve buenas prácticas y convenciones claras durante todo el ciclo de vida del desarrollo.
+
+Se establecieron las siguientes nomenclaturas para las ramas de desarrollo:
+
+- **Main:** Contiene una versión estable y funcional del sistema desplegada en producción. Es la rama utilizada por los usuarios finales y por los servicios desplegados en nube.
+
+- **Develop:** Rama de integración donde confluyen los avances realizados durante cada sprint antes de su consolidación en producción.
+
+- **Feature:** Ramas dedicadas al desarrollo de nuevas funcionalidades, como detección de incidencias por imágenes, integración de mapas de calor, optimización de interfaz móvil o mejoras en el dashboard municipal.
+  - Formato: `feature/<nombre-funcionalidad>`
+  - Ejemplos: `feature/auth`, `feature/buckets`, `feature/yolo-detection`
+
+- **Fix:** Ramas empleadas para corregir errores detectados en desarrollo o pruebas.
+  - Formato: `fix/<descripción-error>`
+  - Ejemplos: `fix/chapter-02`, `fix/structure`
+
+- **Hotfix:** Ramas empleadas exclusivamente para corregir errores críticos detectados en producción o versiones estables que requieren atención inmediata.
+
+**Stack tecnológico**
+
+Se seleccionó una arquitectura tecnológica modular basada en herramientas ampliamente adoptadas por la comunidad, compatibles con modelos de despliegue cloud:
+
+**Backend (backend-limaurban)**
+
+- Lenguaje: TypeScript
+- Framework: NestJS 11 con Node.js 22+
+- Base de datos: Supabase (PostgreSQL + PostGIS para operaciones geoespaciales)
+- Autenticación: Passport JWT con estrategia basada en Supabase
+- IA/ML: Integración con servicio YOLO en Azure para detección automática en imágenes
+- Gestión de paquetes: pnpm
+
+**Frontend Web (front-web-limaurban)**
+
+- Lenguaje: TypeScript
+- Framework: Next.js 15 (App Router + Pages Router)
+- UI: React 18 + Tailwind CSS + shadcn/ui + Radix UI
+- Mapas: Mapbox GL + React Map GL
+- Backend: Supabase JS + SSR
+- Validación: Zod
+- Deployment: Vercel
+
+**Aplicación Móvil (front-mobile)**
+
+- Lenguaje: Dart 3.9.2+
+- Framework: Flutter SDK
+- Backend: Supabase Flutter
+- Arquitectura: Clean Architecture con separación por features
+- Plataformas soportadas: Android, iOS, Web
+
+**Landing Page (landing-page)**
+
+- Tecnologías: HTML + CSS
+- Página estática para máxima simplicidad y velocidad
+
+**Convenciones de idioma**
+
+El idioma base del código fuente, los nombres de ramas y los commits es el inglés, debido a que es el estándar de la industria tecnológica y facilita la escalabilidad internacional del proyecto.
+
+El español será utilizado para la documentación interna, reportes institucionales y presentaciones ante stakeholders locales o instituciones municipales.
+
+**Convenciones de versionamiento (Semantic Versioning 2.0.0)**
+
+Para garantizar la trazabilidad de versiones, se adopta la convención de versionado semántico (SemVer), donde cada versión sigue el formato X.Y.Z, con las siguientes reglas:
+
+- **X (versión mayor):** Se incrementa cuando se introducen cambios incompatibles con versiones anteriores (por ejemplo, migraciones de API o cambio en los formatos de entrada).
+
+- **Y (versión menor):** Se incrementa cuando se añaden funcionalidades compatibles, como nuevos endpoints, módulos de mapas de calor o categorías de incidencias.
+
+- **Z (parche):** Se incrementa solo cuando se corrigen errores sin afectar la compatibilidad (bugs menores o mejoras internas).
+
+Ejemplo de evolución de versiones:
+- Versión inicial: 0.1.0
+- Se añade módulo de análisis predictivo: 0.2.0
+- Se corrige un bug visual en el dashboard: 0.2.1
+
+**Convenciones de Commits (Conventional Commits)**
+
+Para mantener un historial limpio, comprensible y alineado a integraciones CI/CD, se adopta el estándar de Conventional Commits, el cual permite automatizar changelogs y facilitar el versionamiento semántico.
+
+Estructura:
+```
+<type>[optional scope]: <description>
+```
+
+- **type:** El tipo de cambio (feat, fix, docs, refactor, test, etc.).
+- **scope:** (opcional) El módulo afectado (auth, incidents, maps, yolo-detection, etc.).
+- **description:** Breve resumen del cambio.
+
+Ejemplos reales del proyecto:
+- `feat: add integration tests for RolesGuard with real database interactions`
+- `feat: implement authentication module with JWT strategy and role-based access control`
+- `fix: body font`
+- `docs(interviews): add details and evidence for interview 06`
+
+**Repositorios y su propósito**
+
+| Repositorio | Descripción | Tecnologías Principales |
+|------------|-------------|------------------------|
+| backend-limaurban | API REST para gestión de incidentes urbanos con detección IA | NestJS, TypeScript, Supabase, Azure YOLO |
+| front-web-limaurban | Aplicación web para ciudadanos y municipalidades | Next.js, React, Tailwind, Mapbox |
+| front-mobile | Aplicación móvil multiplataforma | Flutter, Dart, Supabase |
+| landing-page | Página de aterrizaje informativa | HTML, CSS |
+| report | Documentación académica del proyecto | Markdown |
+
 ### 7.1.3. Source Code Style Guide & Conventions
 
+Con el fin de mantener un código limpio, mantenible y comprensible entre los miembros del equipo de LimaUrban, se establecieron las siguientes convenciones de estilo para los lenguajes y tecnologías utilizadas en el proyecto.
+
+**TypeScript (NestJS - Backend)**
+
+Estructura de archivos por módulo
+
+Cada módulo debe estar organizado siguiendo la estructura estándar de NestJS con separación de controladores, servicios, guards, strategies y DTOs.
+
+Convenciones de nombres
+
+- Archivos y carpetas: kebab-case (jwt-auth.guard.ts, roles.guard.ts)
+- Clases, Interfaces y Types: PascalCase (JwtAuthGuard, RolesGuard, UserEntity)
+- Variables y funciones: camelCase (getUserById, currentUser, isValid)
+- Constantes: UPPER_SNAKE_CASE (JWT_SECRET, MAX_FILE_SIZE)
+
+Buenas prácticas
+
+- Separar lógicamente el código en módulos (auth, incidents, health, config)
+- Usar decoradores de NestJS correctamente (@Injectable(), @Controller(), @Get())
+- Implementar DTOs con class-validator y class-transformer
+- Aplicar Guards para autenticación y autorización
+- Documentar endpoints con Swagger usando decoradores
+- Usar inyección de dependencias apropiadamente
+
+**TypeScript (Next.js - Frontend Web)**
+
+Estructura de archivos por característica
+
+El frontend web sigue una arquitectura DDD con separación clara entre app (rutas), components (componentes reutilizables), hooks (custom hooks), contexts (React contexts), lib (utilidades) y types (definiciones de tipos).
+
+Convenciones de nombres
+
+- Archivos de componentes: kebab-case (incident-card.tsx, map-view.tsx)
+- Componentes React: PascalCase (IncidentCard, MapView, UserProfile)
+- Hooks personalizados: camelCase con prefijo use (useIncidents, useAuth)
+- Variables y funciones: camelCase (fetchIncidents, handleSubmit, isLoading)
+- Tipos e Interfaces: PascalCase (Incident, User, Municipality)
+
+Buenas prácticas
+
+- Usar Server Components por defecto, Client Components solo cuando sea necesario
+- Implementar Server Actions para mutaciones
+- Aplicar shadcn/ui para componentes consistentes
+- Usar Zod para validación de esquemas
+- Implementar loading.tsx y error.tsx para mejor UX
+- Separar lógica de negocio en hooks personalizados
+- Usar TypeScript strict mode
+
+**Dart (Flutter - Mobile)**
+
+Estructura de archivos por feature
+
+La aplicación móvil sigue Clean Architecture con separación por capas: core (funcionalidad central), features (módulos por funcionalidad con subcarpetas data, domain y presentation).
+
+Convenciones de nombres
+
+- Archivos y carpetas: snake_case (login_page.dart, auth_repository.dart)
+- Clases: PascalCase (LoginPage, AuthRepository, UserEntity)
+- Variables y funciones: camelCase (fetchUser, isAuthenticated, userEmail)
+- Constantes: lowerCamelCase (kPrimaryColor, kDefaultPadding)
+
+Buenas prácticas
+
+- Separar lógicamente el código en features (iam, incidents, maps)
+- Aplicar Clean Architecture (presentation, domain, data)
+- Usar Provider o Riverpod para gestión de estado
+- Declarar constantes globales en archivos separados
+- Utilizar const y final en lugar de var cuando sea posible
+- Evitar lógica de negocio en widgets
+- Implementar manejo de errores con clases Failure
+- Usar named parameters en constructores
+
+**HTML/CSS (Landing Page)**
+
+Convenciones de nombres
+
+- Archivos: kebab-case (index.html, styles.css)
+- Clases CSS: kebab-case (.hero-section, .cta-button)
+- IDs: camelCase (#mainNav, #contactForm)
+
+Buenas prácticas
+
+- Usar HTML5 semántico (header, nav, main, footer, article, section)
+- Aplicar BEM methodology para clases CSS cuando sea apropiado
+- Optimizar imágenes
+- Incluir atributos alt en todas las imágenes
+- Usar CSS Grid y Flexbox para layouts
+- Implementar diseño responsive con media queries
+
+**Gherkin (Testing de Aceptación)**
+
+Gherkin es un lenguaje estructurado para describir escenarios de prueba de aceptación utilizando el enfoque Behavior Driven Development (BDD).
+
+En el proyecto LimaUrban, se emplea para documentar cómo debería comportarse el sistema ante ciertas situaciones clave, como el reporte de incidencias urbanas, la detección automática por IA y la visualización de mapas de calor.
+
+Sintaxis y Propósito
+
+| Palabra clave | Propósito |
+|---------------|-----------|
+| Feature | Describe una funcionalidad del sistema a alto nivel |
+| Scenario | Representa un caso de uso específico con pasos detallados |
+| Given | Establece el estado inicial del sistema |
+| When | Describe la acción o evento principal |
+| Then | Describe el resultado esperado |
+| And | Agrega más condiciones dentro de los bloques |
+| Background | Define pasos comunes que se repiten en varios escenarios |
+
+Buenas prácticas
+
+- Usar lenguaje claro y orientado al usuario o negocio, no técnico
+- Nombrar Features y Scenarios con sustantivos y verbos significativos
+- Incluir solo una lógica o flujo por Scenario
+- Evitar duplicación usando Background
+- Asegurar que todos los Then tengan resultados verificables
+- Mantener los escenarios independientes entre sí
+
 ### 7.1.4. Software Deployment Configuration
+
+**Landing Page Deployment Configuration**
+
+Para el despliegue de la Landing Page del proyecto LimaUrban, se utilizó GitHub Pages, una plataforma gratuita ofrecida por GitHub para alojar sitios web estáticos directamente desde un repositorio público.
+
+El proceso de despliegue fue realizado siguiendo los pasos descritos a continuación:
+
+1. Se creó un repositorio específico en GitHub para la Landing Page, incluyendo el archivo index.html y todos los recursos estáticos (CSS, imágenes) en la raíz del proyecto.
+2. Desde la sección Settings del repositorio, se habilitó GitHub Pages accediendo al apartado Pages.
+3. Se seleccionó la rama main y la carpeta raíz (/) como fuente de publicación.
+4. Una vez guardada la configuración, GitHub generó automáticamente la URL pública del sitio.
+
+Finalmente, se verificó el despliegue exitoso ingresando a la URL proporcionada.
+
+**Frontend Web Deployment Configuration**
+
+El frontend web de LimaUrban está configurado para deployment automático en Vercel.
+
+Configuración actual:
+
+- Platform: Vercel
+- Framework: Next.js 15
+- URL de producción: [https://lima-urban.vercel.app](https://lima-urban.vercel.app)
+- Integración con Supabase: Variables de entorno automáticas mediante Supabase Vercel Integration
+
+Proceso de deployment:
+
+1. Conectar repositorio a Vercel: Se importó el repositorio front-web-limaurban desde GitHub. Vercel detecta automáticamente que es un proyecto Next.js.
+
+2. Configurar variables de entorno en el dashboard de Vercel:
+   - NEXT_PUBLIC_SUPABASE_URL
+   - NEXT_PUBLIC_SUPABASE_ANON_KEY
+   - SUPABASE_SERVICE_ROLE_KEY
+
+3. Deploy automático: Cada push a main despliega automáticamente a producción. Cada push a otras ramas crea un preview deployment.
+
+El deployment en Vercel permite aprovechar características como Edge Functions, Incremental Static Regeneration y Analytics integrado para monitorear el rendimiento de la aplicación web.
 
 ## 7.2. Solution Implementation
 
