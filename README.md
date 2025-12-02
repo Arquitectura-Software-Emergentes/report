@@ -231,6 +231,15 @@ La rama "develop" se utilizó como un entorno para integrar las tareas de cada m
     - [7.2.1.6. Services Documentation Evidence for Sprint Review](#7216-services-documentation-evidence-for-sprint-review)
     - [7.2.1.7. Software Deployment Evidence for Sprint Review](#7217-software-deployment-evidence-for-sprint-review)
     - [7.2.1.8. Team Collaboration Insights during Sprint](#7218-team-collaboration-insights-during-sprint)
+  - [7.2.2. Sprint 2](#722-sprint-2)
+    - [7.2.2.1. Sprint Planning 2](#7221-sprint-planning-2)
+    - [7.2.2.2. Sprint Backlog 2](#7222-sprint-backlog-2)
+    - [7.2.2.3. Development Evidence for Sprint Review](#7223-development-evidence-for-sprint-review)
+    - [7.2.2.4. Testing Suite Evidence for Sprint Review](#7224-testing-suite-evidence-for-sprint-review)
+    - [7.2.2.5. Execution Evidence for Sprint Review](#7225-execution-evidence-for-sprint-review)
+    - [7.2.2.6. Services Documentation Evidence for Sprint Review](#7226-services-documentation-evidence-for-sprint-review)
+    - [7.2.2.7. Software Deployment Evidence for Sprint Review](#7227-software-deployment-evidence-for-sprint-review)
+    - [7.2.2.8. Team Collaboration Insights during Sprint](#7228-team-collaboration-insights-during-sprint)
 - [7.3. Validation Interviews](#73-validation-interviews)
   - [7.3.1. Diseño de Entrevistas](#731-diseño-de-entrevistas)
   - [7.3.2. Registro de Entrevistas](#732-registro-de-entrevistas)
@@ -4521,8 +4530,242 @@ Durante el Sprint 1, el equipo demostró una colaboración efectiva mediante:
 | report | Todo el equipo | Documentación colaborativa del proyecto |
 
 El trabajo colaborativo permitió cumplir con los objetivos del Sprint 1, entregando componentes funcionales e integrados del sistema LimaUrban.
- 
 
+### 7.2.2. Sprint 2
+
+#### 7.2.2.1. Sprint Planning 2
+
+#### 7.2.2.2. Sprint Backlog 2
+
+#### 7.2.2.3. Development Evidence for Sprint Review
+
+A continuación, se presentará la lista de commits realizados en los repositorios del proyecto LimaUrban durante el Sprint 2.
+
+**Backend LimaUrban**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| backend-limaurban | main | 8b03824 | Merge pull request #2 from Arquitectura-Software-Emergentes/feature/buckets | 17/11/2025 |
+| backend-limaurban | main | da12dfa | feat: implement geospatial module with heatmap generation functionality and related DTOs | 16/11/2025 |
+
+**Repositorio backend-limaurban:** [https://github.com/Arquitectura-Software-Emergentes/backend-limaurban](https://github.com/Arquitectura-Software-Emergentes/backend-limaurban)
+
+---
+
+**Frontend Web LimaUrban**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| front-web-limaurban | master | 6ce7d67 | feat: integrate Supabase for incident data fetching; replace local incident data with Supabase queries, enhance incident details display, and improve loading states | 16/11/2025 |
+
+**Repositorio front-web-limaurban:** [https://github.com/Arquitectura-Software-Emergentes/front-web-limaurban](https://github.com/Arquitectura-Software-Emergentes/front-web-limaurban)
+
+---
+
+**Frontend Mobile LimaUrban**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| front-mobile | main | 37a9045 | feat: Integrate image picker for report creation | 27/11/2025 |
+| front-mobile | main | 72e6e44 | feat: Implement editable fields for profile management and update functionality | 27/11/2025 |
+| front-mobile | main | 9dbc5db | feat: Enhance ProfilePage UI with background image and improved layout | 27/11/2025 |
+| front-mobile | main | 5b4c4e8 | feat: Add Cuenta.png image asset | 27/11/2025 |
+| front-mobile | main | 8a22bb6 | feat: Add profile management with mock data and UI for profile display | 27/11/2025 |
+| front-mobile | main | a1e1d18 | fix: Implement search and filter functionality for reports in ReportPage | 27/11/2025 |
+| front-mobile | main | 666c46f | fix: Refactor ReportPage layout for improved structure and padding | 27/11/2025 |
+| front-mobile | main | 2093e6f | feat: Refactor ReportPage layout for improved responsiveness and UI consistency | 27/11/2025 |
+| front-mobile | main | eae363f | feat: Implement report management with mock and Supabase data sources, including UI for report display | 27/11/2025 |
+| front-mobile | main | 4727672 | feat: Update summary box dimensions and improve layout for better UI presentation | 26/11/2025 |
+| front-mobile | main | b018033 | feat: Enhance HomePage UI with new summary icons and improved layout | 26/11/2025 |
+| front-mobile | main | 7152b8c | feat: Update HomePage layout and add new icons for improved UI | 26/11/2025 |
+| front-mobile | main | 0a634e4 | feat: Add bottom navigation bar to HomePage | 26/11/2025 |
+| front-mobile | main | bf38b00 | feat: Implement home data fetching with mock and Supabase data sources, including UI updates for home page | 26/11/2025 |
+| front-mobile | main | 384b6ec | Add authentication, navigation, and UI components with first Supabase integration | 26/11/2025 |
+
+**Repositorio front-mobile:** [https://github.com/Arquitectura-Software-Emergentes/front-mobile](https://github.com/Arquitectura-Software-Emergentes/front-mobile)
+
+
+**Repositorio landing-page:** [https://github.com/Arquitectura-Software-Emergentes/landing-page](https://github.com/Arquitectura-Software-Emergentes/landing-page)
+
+---
+
+**Report - Documentación**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|
+| report | develop | 8eecd3f | feat: correcion de links | 18/10/2025 |
+
+
+**Repositorio report:** [https://github.com/Arquitectura-Software-Emergentes/report](https://github.com/Arquitectura-Software-Emergentes/report)
+
+#### 7.2.2.4. Testing Suite Evidence for Sprint Review
+
+En esta sección se presenta la evidencia de las pruebas de aceptación (Acceptance Tests) implementadas para validar que las funcionalidades desarrolladas durante el Sprint 2 cumplen con los requerimientos especificados. Los tests están escritos en formato **Gherkin** siguiendo la metodología **BDD (Behavior Driven Development)**.
+
+##### Repository Information
+
+| Repository | Branch | Commit |
+|------------|--------|--------|
+| [acceptance-tests](https://github.com/Arquitectura-Software-Emergentes/acceptance-tests) | main | feat: add features US01 to US24 |
+| [backend-limaurban](https://github.com/Arquitectura-Software-Emergentes/backend-limaurban) | main | Backend NestJS + Supabase |
+| [front-web-limaurban](https://github.com/Arquitectura-Software-Emergentes/front-web-limaurban) | main | Frontend Web Next.js |
+| [front-mobile](https://github.com/Arquitectura-Software-Emergentes/front-mobile) | main | Mobile App Flutter |
+
+##### Bounded Contexts y Funcionalidades Probadas
+
+###### Epic 01 - Identity and Access Management (IAM)
+
+| User Story | Feature | Scenarios | Descripción |
+|------------|---------|-----------|-------------|
+| US01 | Registro de personal municipal | 2 | Registro exitoso con email institucional, validación de email no institucional |
+| US02 | Inicio de sesión personal municipal | 3 | Login exitoso, credenciales incorrectas, validación de permisos por rol |
+| US12 | Cerrar sesión personal municipal | 2 | Logout exitoso, validación de acceso post-logout |
+| US13 | Registro de ciudadano | 3 | Registro exitoso, email duplicado, contraseña débil |
+| US14 | Inicio de sesión ciudadano | 3 | Login exitoso, credenciales incorrectas, campos vacíos |
+| US15 | Ver perfil | 2 | Visualizar perfil, editar información |
+| US24 | Cerrar sesión ciudadano | 2 | Logout con confirmación, cancelar logout |
+
+**Ejemplo de Gherkin - US14 (Inicio de sesión ciudadano):**
+
+```gherkin
+Feature: Inicio de sesión ciudadano
+  Como ciudadano
+  Quiero iniciar sesión
+  Para acceder a mis reportes y perfil
+
+  Scenario: Inicio de sesión exitoso
+    Given el ciudadano tiene una cuenta registrada
+    And se encuentra en la pantalla de inicio de sesión
+    When el ciudadano ingresa el email "ciudadano@example.com"
+    And el ciudadano ingresa la contraseña correcta "Passw0rd123!"
+    And el ciudadano presiona el botón "Iniciar sesión"
+    Then el sistema debe validar las credenciales en Supabase
+    And el sistema debe generar un token de sesión
+    And el ciudadano debe ser redirigido al dashboard
+    And el sistema debe mostrar el mensaje "Bienvenido"
+```
+
+###### Epic 02 - Gestión de Incidencias (Ciudadano)
+
+| User Story | Feature | Scenarios | Descripción |
+|------------|---------|-----------|-------------|
+| US16 | Reporte de incidencia con foto | 3 | Reporte con clasificación IA (YOLO), envío completo, modo offline |
+| US17 | Ver resumen de incidencias reportadas | 2 | Visualizar historial, estado vacío |
+| US19 | Filtrar incidencias (App) | 3 | Filtrar por tipo, por estado, limpiar filtros |
+| US21 | Seguimiento de estado | 2 | Ver progreso con timeline, notificaciones push |
+
+**Ejemplo de Gherkin - US16 (Reporte con IA):**
+
+```gherkin
+Feature: Reporte de incidencia con foto
+  Como ciudadano
+  Quiero reportar una incidencia urbana adjuntando fotografía y ubicación automática
+  Para documentar el problema de forma completa
+
+  Scenario: Reportar incidencia con foto y clasificación IA
+    Given el ciudadano está autenticado en la aplicación móvil
+    And el ciudadano tiene permisos de cámara habilitados
+    And el ciudadano tiene permisos de geolocalización habilitados
+    When el ciudadano presiona el botón "Reportar Incidencia"
+    And el ciudadano captura una foto de un bache
+    And el sistema detecta la ubicación GPS automáticamente
+    And el ciudadano presiona "Confirmar foto"
+    Then el sistema debe enviar la imagen al servicio YOLO en Azure
+    And el servicio YOLO debe clasificar la imagen como "Bache"
+    And el sistema debe mostrar el formulario con categoría pre-sugerida "Bache"
+```
+
+###### Epic 03 - Dashboard Municipal
+
+| User Story | Feature | Scenarios | Descripción |
+|------------|---------|-----------|-------------|
+| US03 | Ver total de incidencias | 2 | Métricas generales, actualización en tiempo real |
+| US04 | Filtrar incidencias | 5 | Filtrar por tipo, distrito, prioridad, fecha, combinación |
+| US05 | Priorizar incidencias | 2 | Cambiar prioridad, visualización por colores |
+| US06 | Actualizar estado de incidencia | 2 | Cambiar a En Proceso, cambiar a Resuelto |
+| US10 | Ver detalle de incidencia | 1 | Información completa con foto, mapa, historial |
+| US11 | Dashboard geoespacial municipal | 3 | Mapa de calor, filtros geoespaciales, identificar zonas críticas |
+
+**Ejemplo de Gherkin - US11 (Dashboard Geoespacial):**
+
+```gherkin
+Feature: Dashboard geoespacial municipal
+  Como personal municipal
+  Quiero visualizar incidencias en mapas de calor interactivos
+  Para priorizar intervenciones basadas en concentración espacial
+
+  Scenario: Visualizar mapa de calor de incidencias
+    Given el personal municipal está autenticado
+    And existen 200 incidencias georreferenciadas
+    When el personal accede a la sección "Mapas"
+    Then el sistema debe cargar el mapa de Lima usando Mapbox GL
+    And el sistema debe consultar las incidencias con coordenadas desde Supabase
+    And el mapa debe renderizar un mapa de calor con degradado
+    And las zonas con mayor concentración deben mostrarse en rojo
+```
+
+###### Epic 04 - Comunicación
+
+| User Story | Feature | Scenarios | Descripción |
+|------------|---------|-----------|-------------|
+| US07 | Enviar comentario sobre incidencia | 3 | Enviar comentario, validar vacío, ver historial |
+| US22 | Ver comentarios sobre incidencia | 2 | Ver comentarios, notificaciones de nuevos comentarios |
+
+###### Epic 05 - Reportes y Exportación
+
+| User Story | Feature | Scenarios | Descripción |
+|------------|---------|-----------|-------------|
+| US08 | Exportar reporte de incidencias | 2 | Exportar todas en CSV, exportar con filtros |
+
+###### Epic 06 - Configuración Municipal
+
+| User Story | Feature | Scenarios | Descripción |
+|------------|---------|-----------|-------------|
+| US09 | Ver detalles de la municipalidad | 2 | Visualizar información institucional, editar datos |
+
+##### Resumen de Cobertura de Tests
+
+| Bounded Context | User Stories | Scenarios Totales |
+|-----------------|--------------|-------------------|
+| Identity and Access Management (IAM) | 7 | 17 |
+| Gestión de Incidencias (Ciudadano) | 4 | 10 |
+| Dashboard Municipal | 6 | 15 |
+| Comunicación | 2 | 5 |
+| Reportes y Exportación | 1 | 2 |
+| Configuración Municipal | 1 | 2 |
+| **TOTAL** | **21** | **51** |
+
+##### Tecnologías de Validación
+
+Los acceptance tests están diseñados para validar el comportamiento de:
+
+- **Backend**: NestJS + TypeScript + Supabase
+- **Frontend Web**: Next.js + React + Mapbox GL
+- **Mobile**: Flutter + Dart
+- **IA**: Servicio YOLO en Azure para clasificación de imágenes
+
+Los archivos `.feature` pueden ser ejecutados usando frameworks BDD como:
+- **Cucumber** (JavaScript/TypeScript)
+- **Behave** (Python)
+- **SpecFlow** (.NET)
+
+##### Enlaces a Repositorios
+
+| Componente | URL |
+|------------|-----|
+| Acceptance Tests | https://github.com/Arquitectura-Software-Emergentes/acceptance-tests |
+| Backend | https://github.com/Arquitectura-Software-Emergentes/backend-limaurban |
+| Frontend Web | https://github.com/Arquitectura-Software-Emergentes/front-web-limaurban |
+| Mobile App | https://github.com/Arquitectura-Software-Emergentes/front-mobile |
+| Organización | https://github.com/orgs/Arquitectura-Software-Emergentes |
+
+#### 7.2.2.5. Execution Evidence for Sprint Review
+
+#### 7.2.2.6. Services Documentation Evidence for Sprint Review
+
+#### 7.2.2.7. Software Deployment Evidence for Sprint Review
+
+#### 7.2.2.8. Team Collaboration Insights during Sprint
 
 ## 7.3. Validation Interviews
 
