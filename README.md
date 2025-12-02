@@ -4749,16 +4749,6 @@ Los archivos `.feature` pueden ser ejecutados usando frameworks BDD como:
 - **Behave** (Python)
 - **SpecFlow** (.NET)
 
-##### Enlaces a Repositorios
-
-| Componente | URL |
-|------------|-----|
-| Acceptance Tests | https://github.com/Arquitectura-Software-Emergentes/acceptance-tests |
-| Backend | https://github.com/Arquitectura-Software-Emergentes/backend-limaurban |
-| Frontend Web | https://github.com/Arquitectura-Software-Emergentes/front-web-limaurban |
-| Mobile App | https://github.com/Arquitectura-Software-Emergentes/front-mobile |
-| Organización | https://github.com/orgs/Arquitectura-Software-Emergentes |
-
 #### 7.2.2.5. Execution Evidence for Sprint Review
 
 #### 7.2.2.6. Services Documentation Evidence for Sprint Review
